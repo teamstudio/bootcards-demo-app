@@ -1,0 +1,39 @@
+
+						<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Contact Details</h3>
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-primary" onclick="window.location.href='/contacts/{{contact.id}}/edit';">
+						  	<i class="fa fa-pencil"></i>
+						  	<span>Edit</span>
+
+						  </button>
+						</div>							
+					</div>
+					<div class="list-group">
+						<div class="list-group-item">
+							<img src="/images/{{contact.profileImage}}" class="img-rounded pull-left"/>
+							<label>Name</label>
+							<h4 class="list-group-item-heading">{{contact.lastName}}, {{contact.firstName}}</h4>
+						</div>
+						<div class="list-group-item">
+							<label>Company</label>
+							<h4 class="list-group-item-heading">{{contact.company}}</h4>
+						</div>
+						<div class="list-group-item">
+							<label>Job Title</label>
+							<h4 class="list-group-item-heading">Finance Director (ZCT)</h4>
+						</div>
+						<div class="list-group-item">
+							<label>Department</label>
+							<h4 class="list-group-item-heading">Finance</h4>
+						</div>
+						<a class="list-group-item" href="tel://1-650-555-0055">
+							<label>Phone</label>
+							<h4 class="list-group-item-heading">{{contact.phone}}</h4>
+						</a>
+						<a class="list-group-item" href="mailto:{{contact.emailAddress}}">
+							<label>Email</label>
+							<h4 class="list-group-item-heading">{{contact.emailAddress}}</h4>
+						</a>
+					</div>
+				

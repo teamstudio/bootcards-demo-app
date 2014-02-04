@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>CustomerView: Companies: Camion Corp</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<!-- FontAwesome -->	
+	<link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="bootcards.css" rel="stylesheet">
+    <!--<link href="bootcards-android.css" rel="stylesheet">  -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>   
+    <script>
+		$(document).ready(function($){
+		
+			 loadCSS = function(href) {
+			     var cssLink = $("<link rel='stylesheet' type='text/css' href='"+href+"'>");
+			     $("head").append(cssLink); 
+			 };		
+			 
+			 if (navigator.userAgent.match(/Android/i)) {
+				 loadCSS('bootcards-android.css');
+			 }
+			 else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+				 loadCSS('bootcards-ios.css');
+			 }
+			 else {
+				 loadCSS('bootcards-desktop.css');
+			 }
+		});	    	    
+    </script>    
+    
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        	<button type="button" class="btn btn-default btn-back">
+        		<i class="fa fa-lg fa-chevron-left"></i>
+        		<span>Back</span>
+        	</button>
+        	<button type="button" class="btn btn-default btn-menu">
+        		<i class="fa fa-lg fa-bars"></i>
+        		<span>Menu</span>
+        	</button>
+			<a class="navbar-brand" href="#">CustomerView</a>
+        </div>
+	    <div class="navbar-collapse collapse">
+	      <ul class="nav navbar-nav">
+	        <li class="active">
+			  <a href="#">
+			  	<i class="fa fa-building-o"></i>
+			  	Companies
+			  </a>	        
+			</li>
+	        <li>
+			  <a href="#">
+			  	<i class="fa fa-users"></i>
+			  	Contacts
+			  </a>
+	        </li>
+	        <li>
+			  <a href="#">
+			  	<i class="fa fa-calendar"></i>
+			  	Activities
+			  </a>
+	        </li>
+	        <li>
+			  <a href="#">
+			  	<i class="fa fa-film"></i>
+			  	Media
+			  </a>
+	        </li>
+	        <li>
+			  <a href="#">
+			  	<i class="fa fa-gears"></i>
+			  	Tests
+			  </a>
+	        </li>
+	      </ul>
+	    </div>          
+      </div>    
+    </div>
+
+    <div class="container">
+
+		<div class="row">
+
+			<div class="col-md-5 col-sm-5 menu">
+				<div class="list-group">
+				  <a class="list-group-item active" href="#">
+				  	<i class="fa fa-building-o"></i>
+				  	Companies
+				  </a>
+				  <a class="list-group-item" href="#">
+				  	<i class="fa fa-users"></i>
+				  	Contacts
+				  </a>
+				  <a class="list-group-item" href="#">
+				  	<i class="fa fa-calendar"></i>
+				  	Activities
+				  </a>
+				  <a class="list-group-item" href="#">
+				  	<i class="fa fa-film"></i>
+				  	Media
+				  </a>
+				  <a class="list-group-item" href="#">
+				  	<i class="fa fa-gears"></i>
+				  	Tests
+				  </a>
+				</div>
+			</div>
+			
+			<div class="col-md-5 col-sm-5 list">
+				<div class="list-group">
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Burning Core</h4>
+						<p class="list-group-item-text">London, UK</p>
+					</a>
+					<a class="list-group-item active" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Camion Corp</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Derenden Systems</h4>
+						<p class="list-group-item-text">Albuquerque, NM, USA</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<i class="fa fa-2x fa-building-o pull-left"></i>
+						<h4 class="list-group-item-heading">Elparvis</h4>
+						<p class="list-group-item-text">Tokyo, Japan</p>
+					</a>
+				</div>
+			</div>
+		
+			<div class="col-md-7 col-sm-7 cards">
+
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Company Details</h3>
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-primary">
+						  	<i class="fa fa-pencil"></i>
+						  	<span>Edit</span>
+						  </button>
+						</div>							
+					</div>
+					<div class="list-group">
+						<div class="list-group-item">
+							<i class="fa fa-2x fa-building-o pull-left"></i>
+							<label>Name</label>
+							<h4 class="list-group-item-heading">Camion Corp</h4>
+						</div>
+						<a class="list-group-item" href="tel://1-650-555-0055">
+							<label>Phone</label>
+							<h4 class="list-group-item-heading">1-650-555-0055</h4>
+						</a>
+						<a class="list-group-item" href="mailto:Sofia.Acey@masung.com">
+							<label>Email</label>
+							<h4 class="list-group-item-heading">info@camioncorp.co.jp</h4>
+						</a>
+						<a class="list-group-item" href="http://www.camioncorp.co.jp">
+							<label>Homepage</label>
+							<h4 class="list-group-item-heading">www.camioncorp.co.jp</h4>
+						</a>
+						<div class="list-group-item">
+							<label>Address</label>
+							<h4 class="list-group-item-heading">14a Sunrise Building, <br>12-34-1 Marunouchi, <br>Tokyo, <br>Japan <br>100-345</h4>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Contacts</h3>
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-primary">
+						  	<i class="fa fa-plus"></i>
+						  	<span>Add</span>
+						  </button>
+						</div>							
+					</div>
+					<div class="list-group">						
+						<a class="list-group-item" href="#">
+							<img src="jack-88.jpg" class="img-rounded pull-left"/>
+							<h4 class="list-group-item-heading">Chenoweth, Adam</h4>
+							<p class="list-group-item-text">adam.chenoweth@camioncorp.co.jp</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<img src="jack-88.jpg" class="img-rounded pull-left"/>
+							<h4 class="list-group-item-heading">Chenoweth, Adam</h4>
+							<p class="list-group-item-text">adam.chenoweth@camioncorp.co.jp</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<img src="jack-88.jpg" class="img-rounded pull-left"/>
+							<h4 class="list-group-item-heading">Chenoweth, Adam</h4>
+							<p class="list-group-item-text">adam.chenoweth@camioncorp.co.jp</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<img src="jack-88.jpg" class="img-rounded pull-left"/>
+							<h4 class="list-group-item-heading">Chenoweth, Adam</h4>
+							<p class="list-group-item-text">adam.chenoweth@camioncorp.co.jp</p>
+						</a>
+					</div>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Activities</h3>
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-primary">
+						  	<i class="fa fa-plus"></i>
+						  	<span>Add</span>
+						  </button>
+						</div>							
+					</div>	
+					<div class="list-group">
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Contract Upgrade</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Latest Offer</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Contract Upgrade</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Latest Offer</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Fixed footer -->
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+
+		<div class="btn-group">
+		  <button type="button" class="btn btn-default">
+			<i class="fa fa-2x fa-building-o pull-left"></i>
+			Companies
+		  </button>
+		  <button type="button" class="btn btn-default active">
+		  	<i class="fa fa-2x fa-users"></i>
+		  	Contacts
+		  </button>
+		  <button type="button" class="btn btn-default">
+		  	<i class="fa fa-2x fa-calendar"></i>
+		  	Activities
+		  </button>
+		</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>

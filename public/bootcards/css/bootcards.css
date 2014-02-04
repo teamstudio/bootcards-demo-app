@@ -1,0 +1,72 @@
+/* NAVBAR */
+
+@media (max-width:767px) {
+	.btn-menu {
+		display: none;
+	}
+}
+
+@media (min-width:768px) {
+	.btn-back {
+		display: none;
+	}
+}
+
+/* MENU */
+
+@media (max-width:767px) {
+	.menu { display: none; }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+	.menu { display: none; }
+}
+
+.menu { display: none; }
+
+
+/* PANELS */
+
+
+
+
+/* LISTS */
+
+/*
+.list-group-item {
+	overflow: hidden;
+}
+
+.list-group-item > img {
+	float: left;
+	height: 40px;
+	width: 40px;
+	margin: 0;
+	margin-right: 12px;
+}
+
+.list-group-item > i {
+	float: left;
+	margin-right: 14px;
+	opacity: 0.3;
+}
+*/
+
+.list-group-item > img {
+	height: 40px;
+	width: 40px;
+}
+
+.list-group-item > i {
+	opacity: 0.3;
+}
+
+.list-group-item > img,
+.list-group-item > i {
+	margin-right: 15px;
+}
+
+
+@media (max-width:767px) {
+	.list { display: none; }
+}

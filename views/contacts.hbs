@@ -1,0 +1,120 @@
+{{!< LAYOUT}}
+
+    <div class="container">
+
+		<div class="row">
+
+			<div class="col-md-5 col-sm-5 menu">
+				<div class="list-group">
+
+{{#each menu}}
+	<a class="list-group-item" href="#">
+					
+					  	<i class="fa {{this.icon}}"></i>
+					  	{{this.name}}
+					  </a>	        
+					{{/each}}
+									</div>
+			</div>
+			
+			<div class="col-md-5 col-sm-5 list">
+				<div class="list-group">
+
+					{{#each contacts}}
+				 		<a class="list-group-item" 
+				 			href="/contacts/{{this.id}}"
+				 			data-pjax="#contactCard">
+							<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
+							<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
+							<p class="list-group-item-text">{{this.company}}</p>
+						</a>
+					{{/each}}
+					
+				</div>
+			</div>
+		
+			<div class="col-md-7 col-sm-7 cards">
+			
+				<div class="panel panel-default" id="contactCard">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Contact Details</h3>
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-primary" onclick="window.location.href='/contacts/{{contact.id}}/edit';">
+						  	<i class="fa fa-pencil"></i>
+						  	<span>Edit</span>
+
+						  </button>
+						</div>							
+					</div>
+					<div class="list-group">
+						<div class="list-group-item">
+							<img src="/images/{{contact.profileImage}}" class="img-rounded pull-left"/>
+							<label>Name</label>
+							<h4 class="list-group-item-heading">{{contact.lastName}}, {{contact.firstName}}</h4>
+						</div>
+						<div class="list-group-item">
+							<label>Company</label>
+							<h4 class="list-group-item-heading">{{contact.company}}</h4>
+						</div>
+						<div class="list-group-item">
+							<label>Job Title</label>
+							<h4 class="list-group-item-heading">Finance Director (ZCT)</h4>
+						</div>
+						<div class="list-group-item">
+							<label>Department</label>
+							<h4 class="list-group-item-heading">Finance</h4>
+						</div>
+						<a class="list-group-item" href="tel://1-650-555-0055">
+							<label>Phone</label>
+							<h4 class="list-group-item-heading">{{contact.phone}}</h4>
+						</a>
+						<a class="list-group-item" href="mailto:{{contact.emailAddress}}">
+							<label>Email</label>
+							<h4 class="list-group-item-heading">{{contact.emailAddress}}</h4>
+						</a>
+					</div>
+				</div>
+				
+				<div class="panel panel-default" id="activityList">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Activities</h3>
+						<div class="btn-group pull-right">
+						  <button type="button" class="btn btn-primary">
+						  	<i class="fa fa-plus"></i>
+						  	<span>Add</span>
+						  </button>
+						</div>							
+					</div>					
+					<div class="list-group">
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Contract Upgrade</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Latest Offer</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Contract Upgrade</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+						<a class="list-group-item" href="#">
+							<h4 class="list-group-item-heading">Latest Offer</h4>
+							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    </div> <!-- /container -->
+
+<script>
+$(document).ready(function($){
+
+	console.log(' found ' + $('a[data-pjax]').length );
+	$('a[data-pjax]')
+		.pjax();
+	console.log('d');
+});
+</script>

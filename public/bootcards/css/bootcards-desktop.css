@@ -1,0 +1,67 @@
+body {
+	padding-top: 80px;
+	background: #f5f5f5;
+}
+
+
+/* NAVBAR */
+
+.btn-back,
+.btn-menu {
+	display: none;
+}
+
+.navbar-default .navbar-brand {
+	font-weight: bold;
+	color: #333;
+}
+
+.navbar-nav i {
+	margin-right: 5px;
+}
+
+
+/* MENU */
+
+.menu { display: none; }
+
+
+
+/* LISTS */
+/*
+.list-group-heading h3 {
+	float: left;
+	color: #999;
+	margin: 0;
+	line-height: 34px;
+	font-size: 18px;
+}
+
+.list-group-heading .btn-group {
+	float: right;
+}
+
+.list-group-heading .btn-group i {
+	font-size: 14px;
+	margin-right: 3px;
+}*/
+
+.list-group label {
+	font-weight: normal;
+}
+
+
+/* FORM */
+
+.panel-content form {
+	padding: 15px;
+}
+
+
+
+
+/* FOOTER */
+
+.navbar-fixed-bottom {
+	display: none;
+}
