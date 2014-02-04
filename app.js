@@ -21,11 +21,11 @@ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.engine( 'hbs', hbs.express3({
+app.engine( 'html', hbs.express3({
 	partialsDir : __dirname + '/views'
 //	defaultLayout : __dirname + '/views/layout'
 }));
-app.set('view engine', 'hbs');
+app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(pjax());
