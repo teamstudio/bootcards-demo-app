@@ -8,8 +8,8 @@ var express = require('express');
 //routes
 var routes = require('./routes');
 var company = require('./routes/company')
-///var user = require('./routes/user');
 var contact = require('./routes/contact');
+var activity = require('./routes/activity');
 
 var http = require('http');
 var path = require('path');
@@ -64,6 +64,7 @@ menu = [
 
 //companies
 companies = [];
+activities = [];
 
 // development only
 if ('development' == app.get('env')) {
@@ -74,8 +75,9 @@ if ('development' == app.get('env')) {
 app.get('/', contact.list);
 app.get('/companies', company.list);
 app.get('/contacts', contact.list);
-/*
 app.get('/contacts/:id', contact.contact);
+app.get('/activities', activity.list);
+/*
 app.get('/contacts/:id/edit', contact.contactEdit);
 app.get('/users', user.list);*/
 
