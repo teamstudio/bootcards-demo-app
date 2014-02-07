@@ -37,7 +37,7 @@ exports.contact = function(req, res) {
    
 }
 
-exports.contactEdit = function(req, res) {
+exports.edit = function(req, res) {
 
 	//setActiveMenuOption('Contacts');
 	var contact = null;
@@ -51,10 +51,39 @@ exports.contactEdit = function(req, res) {
 		}
 	}
 	
-	res.renderPjax('contactEdit', {
+	res.renderPjax('contact_edit', {
 	 	contacts:contacts,
 	   	menu:menu,
 	      contact: contact
 	});
    
+}
+
+exports.save = function(req,res) {
+
+	var contact = null;
+
+	if (req.params.id != null ) {
+		for (var i=0; i<contacts.length; i++) {
+			if (contacts[i].id == req.params.id) {
+				contact = contacts[i];
+				break;
+			}
+		}
+	}
+
+	if (contact != null) {
+		//found the contact: update it
+		contact.firstName = req.body.firstName;
+		contact.lastName = req.body.lastName;
+		contact.emailAddress = req.body.email;
+		contact.phone = req.body.phone;
+	}
+
+	res.renderPjax('contacts', {
+	 	contacts:contacts,
+	   	menu:menu,
+	      contact: contact
+	});
+
 }

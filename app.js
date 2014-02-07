@@ -73,12 +73,17 @@ if ('development' == app.get('env')) {
 
 //routes
 app.get('/', contact.list);
+
 app.get('/companies', company.list);
+
 app.get('/contacts', contact.list);
 app.get('/contacts/:id', contact.contact);
+app.put('/contacts/:id', contact.save);
+
+app.get('/contacts/:id/edit', contact.edit);
+
 app.get('/activities', activity.list);
 /*
-app.get('/contacts/:id/edit', contact.contactEdit);
 app.get('/users', user.list);*/
 
 http.createServer(app).listen(app.get('port'), function(){
