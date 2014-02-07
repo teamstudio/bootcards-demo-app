@@ -22,19 +22,19 @@
 		</div>
 		<div class="list-group-item">
 			<label>Job Title</label>
-			<h4 class="list-group-item-heading">Finance Director (ZCT)</h4>
+			<h4 class="list-group-item-heading">{{contact.jobTitle}}</h4>
 		</div>
 		<div class="list-group-item">
 			<label>Department</label>
-			<h4 class="list-group-item-heading">Finance</h4>
+			<h4 class="list-group-item-heading">{{contact.department}}</h4>
 		</div>
-		<a class="list-group-item" href="tel://1-650-555-0055">
+		<a class="list-group-item" href="tel://{{contact.phone}}">
 			<label>Phone</label>
 			<h4 class="list-group-item-heading">{{contact.phone}}</h4>
 		</a>
-		<a class="list-group-item" href="mailto:{{contact.emailAddress}}">
+		<a class="list-group-item" href="mailto:{{contact.email}}">
 			<label>Email</label>
-			<h4 class="list-group-item-heading">{{contact.emailAddress}}</h4>
+			<h4 class="list-group-item-heading">{{contact.email}}</h4>
 		</a>
 	</div>
 </div>

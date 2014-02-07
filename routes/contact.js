@@ -76,7 +76,7 @@ exports.save = function(req,res) {
 		//found the contact: update it
 		contact.firstName = req.body.firstName;
 		contact.lastName = req.body.lastName;
-		contact.emailAddress = req.body.email;
+		contact.email = req.body.email;
 		contact.phone = req.body.phone;
 	}
 

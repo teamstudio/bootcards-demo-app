@@ -6,24 +6,22 @@
 var express = require('express');
 
 //routes
-var routes = require('./routes');
-var company = require('./routes/company')
-var contact = require('./routes/contact');
-var activity = require('./routes/activity');
+var routes 		= require('./routes');
+var company 	= require('./routes/company')
+var contact 	= require('./routes/contact');
+var activity 	= require('./routes/activity');
 
-var http = require('http');
-var path = require('path');
-var fs = require('fs');
-var pjax    = require('express-pjax');
-var hbs = require('express-hbs');
+var http 	= require('http');
+var path 	= require('path');
+var fs 		= require('fs');
+var pjax 	= require('express-pjax');
+var hbs 	= require('express-hbs');
 
-var app = express();
+var app 	= express();
 
-// all environments
 app.set('port', process.env.PORT || 3000);
 app.engine( 'html', hbs.express3({
 	partialsDir : __dirname + '/views'
-//	defaultLayout : __dirname + '/views/layout'
 }));
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
@@ -41,16 +39,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 //public dir for bower components
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
-//data files
+//read sample data
+companies = [];
+activities = [];
+contacts = [];
 
-//read contacts
-var contactsFile = __dirname + '/data/contacts.json';
+var contactsFile = __dirname + '/data/data.json';
 fs.readFile(contactsFile, 'utf8', function (err, data) {
   if (err) {
-    console.log('Error reading contacts file: ' + err);
+    console.log('Error reading data file: ' + err);
     return;
   }
- contacts = JSON.parse(data);
+ contacts = JSON.parse(data).contacts;
+ companies = JSON.parse(data).companies;
 });
 
 //setup menu
@@ -62,9 +63,7 @@ menu = [
 	{ name : "Tests", icon : "fa-gears", active : false, url : '/tests'}
 ];
 
-//companies
-companies = [];
-activities = [];
+
 
 // development only
 if ('development' == app.get('env')) {
