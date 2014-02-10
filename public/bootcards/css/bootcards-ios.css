@@ -88,8 +88,6 @@ a {
 .row > div {
 	overflow-y: auto;
 	height: 100%;
-	border-left: 1px solid rgba(0,0,0,0.2);
-	
 }
 
 .row > div:first-child {
@@ -106,6 +104,10 @@ a {
 
 
 /* MENU */
+
+.menu {
+	display: none;
+}
 
 .menu i {
 	width: 28px;
@@ -187,6 +189,10 @@ a.list-group-item:hover {
 
 
 /* LISTS */
+
+.list {
+	border-right: 1px solid rgba(0,0,0,0.2);
+}
 
 .cards {
 	background: white;
