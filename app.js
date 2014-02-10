@@ -12,11 +12,11 @@ var contact 	= require('./routes/contact');
 var activity 	= require('./routes/activity');
 
 var http 	= require('http');
-var path 	= require('path');
-var fs 		= require('fs');
-var pjax 	= require('express-pjax');
-var hbs 	= require('express-hbs');
-
+var path 	= require('path');			//work with paths
+var fs 		= require('fs');			//work with filesystem
+var pjax 	= require('express-pjax');	//express pjax (partial reloads)
+var hbs 	= require('express-hbs');	//express handlebars
+var moment	= require('moment');		//moment date formatting lib
 var app 	= express();
 
 app.set('port', process.env.PORT || 3000);
@@ -39,6 +39,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 //public dir for bower components
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
+//register a helper for date formatting using handlebars
+hbs.registerHelper("formatDate", function(datetime, format) {
+  if (moment) {
+    f = "ddd DD MMM YYYY HH:mm"
+    return moment(datetime).format(f);
+  }
+  else {
+    return datetime;
+  }
+});
+
 //read sample data
 companies = [];
 activities = [];
@@ -46,12 +57,15 @@ contacts = [];
 
 var contactsFile = __dirname + '/data/data.json';
 fs.readFile(contactsFile, 'utf8', function (err, data) {
-  if (err) {
-    console.log('Error reading data file: ' + err);
-    return;
-  }
- contacts = JSON.parse(data).contacts;
- companies = JSON.parse(data).companies;
+	if (err) {
+		console.log('Error reading data file: ' + err);
+		return;
+	}
+
+  jsonContents = JSON.parse(data);
+
+  contacts = jsonContents.contacts;
+  companies = jsonContents.companies;
 });
 
 //setup menu
@@ -63,8 +77,6 @@ menu = [
 	{ name : "Tests", icon : "fa-gears", active : false, url : '/tests'}
 ];
 
-
-
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -72,19 +84,16 @@ if ('development' == app.get('env')) {
 
 //routes
 app.get('/', contact.list);
-
 app.get('/companies', company.list);
-
 app.get('/contacts', contact.list);
 app.get('/contacts/:id', contact.contact);
 app.put('/contacts/:id', contact.save);
-
 app.get('/contacts/:id/edit', contact.edit);
-
 app.get('/activities', activity.list);
-/*
-app.get('/users', user.list);*/
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server for Bootcards demo listening on port ' + app.get('port'));
-});
+http
+	.createServer(app)
+	.listen(app.get('port'), function(){
+  		console.log('Bootcards demo app listening on port ' + app.get('port'));
+	}
+);

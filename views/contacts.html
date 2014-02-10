@@ -23,7 +23,7 @@
 					{{#each contacts}}
 				 		<a class="list-group-item" 
 				 			href="/contacts/{{this.id}}"
-				 			data-pjax="#contactCard">
+				 			data-pjax="#contactDetails">
 							<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
 							<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
 							<p class="list-group-item-text">{{this.company}}</p>
@@ -33,42 +33,11 @@
 				</div>
 			</div>
 		
-			<div class="col-md-7 col-sm-7 cards">
+			<div class="col-md-7 col-sm-7 cards" id="contactDetails">
 
-				<!--load partial: contact details-->
-				<div id="contactCard">
-					{{> contact}}
-				</div>
-				
-				<div class="panel panel-default" id="activityList">
-					<div class="panel-heading clearfix">
-						<h3 class="panel-title pull-left">Activities</h3>
-						<div class="btn-group pull-right">
-						  <button type="button" class="btn btn-primary">
-						  	<i class="fa fa-plus"></i>
-						  	<span>Add</span>
-						  </button>
-						</div>							
-					</div>					
-					<div class="list-group">
-						<a class="list-group-item" href="#">
-							<h4 class="list-group-item-heading">Contract Upgrade</h4>
-							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
-						</a>
-						<a class="list-group-item" href="#">
-							<h4 class="list-group-item-heading">Latest Offer</h4>
-							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
-						</a>
-						<a class="list-group-item" href="#">
-							<h4 class="list-group-item-heading">Contract Upgrade</h4>
-							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
-						</a>
-						<a class="list-group-item" href="#">
-							<h4 class="list-group-item-heading">Latest Offer</h4>
-							<p class="list-group-item-text">Mon Dec 02 2013 22:26:12 GMT+0000 (BST)</p>
-						</a>
-					</div>
-				</div>
+				<!--contact details & activities-->
+				{{> contact}}
+
 			</div>
 		</div>
 
