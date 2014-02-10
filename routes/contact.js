@@ -8,10 +8,13 @@ function setActiveMenuOption(name) {
 
 exports.list = function(req, res){
 
+	var firstContact = contacts[0];
+	firstContact.activities[0].date = new Date();
+
 	//setActiveMenuOption('Contacts');
   res.renderPjax('contacts', {
   	contacts:contacts,
-  	contact : contacts[0],
+  	contact : firstContact,
    	menu:menu
    });
 };
