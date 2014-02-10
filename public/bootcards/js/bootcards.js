@@ -25,16 +25,17 @@ $(document)
 	.on('submit', 'form[data-pjax]', function(event) {
   		$.pjax.submit(event);
 	})
-	.on('pjax:start', function() {
+	.on('pjax:start', function(event) {
 		//called before initiating  a pjax content update
+
+		$(event.relatedTarget)
+			.addClass('active')
+			.siblings('.active')
+				.removeClass('active');
 
 	})
 	.on('pjax:end', function() {
 		//called after a pjax content update
-
-		//enable all links for pjax again (including those that were just inserted)
-		//var $a = $('a[data-pjax]');
-		//$a.pjax();
 
 	});
 
