@@ -19,6 +19,44 @@ $(document).ready(function() {
 
 var bootcards = bootcards || {};
 
+function findBootstrapEnvironment() {
+    var envs = ["ExtraSmall", "Small", "Medium", "Large"];
+    var envValues = ["xs", "sm", "md", "lg"];
+
+    $el = $('<div>');
+    $el.appendTo($('body'));
+
+    for (var i = envValues.length - 1; i >= 0; i--) {
+        var envVal = envValues[i];
+
+        $el.addClass('hidden-'+envVal);
+        if ($el.is(':hidden')) {
+            $el.remove();
+            return envs[i]
+        }
+    };
+}
+
+function animateLeft($src, $tgt){
+    var $parent = $src.parent();
+    var width = $parent.width();
+    var srcWidth = $src.width();
+    
+    //$src.css({position: 'absolute'});
+    //$tgt.hide().appendTo($parent).css({left: width, position: 'absolute'});
+
+    $src.css({position: 'absolute'});
+    $tgt.hide().appendTo($parent).css({left: width, position: 'absolute'});
+    
+    $src.animate({left : -width}, 500, function(){
+        $src.hide();
+        $src.css({left: null, position: null});
+    });
+    $tgt.show().animate({left: 0}, 500, function(){
+        $tgt.css({left: null, position: null});
+    });
+}
+
 //pjax on all a's that have the data-pjax attribute, the attribute's value is the pjax target container
 $(document)
 	.pjax('a[data-pjax]')
@@ -33,9 +71,54 @@ $(document)
 			.siblings('.active')
 				.removeClass('active');
 
+		
+
+
+
 	})
-	.on('pjax:end', function() {
+	.on('pjax:complete', function(event) {
 		//called after a pjax content update
+
+		console.log(event);
+
+		if ( findBootstrapEnvironment() == "ExtraSmall" ) {
+
+			$slideOut = $(event.relatedTarget)
+				.parent()
+					.parent();
+
+			$slideIn = $("#contactDetails").hide();
+
+			animateLeft($slideOut, $slideIn);
+
+    
+
+
+
+  /*  $("#btnAnimate").click(function(){
+        animateLeft($first, $second);
+        var tmp = $first;
+        $first = $second;
+        $second = tmp;
+    });*/
+
+
+			
+/*
+			var width = $(window).width();
+
+			$container
+				.animate({left : -width}, 500, function(){
+					$container.hide()
+				});
+			$("#contactDetails")
+				.css({left: width}).show().animate({left: 0}, 500);
+*/
+
+		}
+		
+
+
 
 	});
 
