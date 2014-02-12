@@ -16,15 +16,17 @@
 			</div>
 			
 			<div class="col-md-5 col-sm-5 list">
-				<div class="list-group">
-
-					{{#each companies}}
-					<a class="list-group-item" href="#">
-						<i class="fa fa-2x fa-building-o pull-left"></i>
-						<h4 class="list-group-item-heading">{{this.name}}</h4>
-						<p class="list-group-item-text">{{this.city}}, {{this.country}}</p>
-					</a>
-					{{/each}}
+				<div class="panel panel-default">
+					<div class="list-group">
+	
+						{{#each companies}}
+						<a class="list-group-item" href="#">
+							<i class="fa fa-2x fa-building-o pull-left"></i>
+							<h4 class="list-group-item-heading">{{this.name}}</h4>
+							<p class="list-group-item-text">{{this.city}}, {{this.country}}</p>
+						</a>
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		

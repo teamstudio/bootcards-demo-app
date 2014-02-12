@@ -18,18 +18,20 @@
 			</div>
 			
 			<div class="col-md-5 col-sm-5 list">
-				<div class="list-group">
-
-					{{#each contacts}}
-				 		<a class="list-group-item" 
-				 			href="/contacts/{{this.id}}"
-				 			data-pjax="#contactDetails">
-							<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
-							<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
-							<p class="list-group-item-text">{{this.company}}</p>
-						</a>
-					{{/each}}
-					
+				<div class="panel panel-default">
+					<div class="list-group">
+	
+						{{#each contacts}}
+					 		<a class="list-group-item" 
+					 			href="/contacts/{{this.id}}"
+					 			data-pjax="#contactDetails">
+								<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
+								<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
+								<p class="list-group-item-text">{{this.company}}</p>
+							</a>
+						{{/each}}
+						
+					</div>
 				</div>
 			</div>
 		
