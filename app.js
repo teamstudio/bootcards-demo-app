@@ -62,7 +62,7 @@ fs.readFile(contactsFile, 'utf8', function (err, data) {
 		return;
 	}
 
-  jsonContents = JSON.parse(data);
+  var jsonContents = JSON.parse(data);
 
   contacts = jsonContents.contacts;
   companies = jsonContents.companies;
@@ -90,6 +90,7 @@ app.get('/contacts/:id', contact.contact);
 app.put('/contacts/:id', contact.save);
 app.get('/contacts/:id/edit', contact.edit);
 app.get('/activities', activity.list);
+app.get('/activities/add/:contactId', activity.add);
 
 http
 	.createServer(app)

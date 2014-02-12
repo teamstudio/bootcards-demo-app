@@ -13,7 +13,7 @@ exports.add = function(req, res) {
 
 	if (req.params.contactId != null ) {
 		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == req.params.id) {
+			if (contacts[i].id == req.params.contactId) {
 				contact = contacts[i];
 				break;
 			}
