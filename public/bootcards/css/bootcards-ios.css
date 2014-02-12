@@ -156,6 +156,13 @@ a.list-group-item:hover {
 	box-shadow: none;
 	border-radius: 0;
 	border: 0;
+	margin-left: 15px;
+}
+
+@media (min-width:768px) {
+	.panel {
+		margin-left: 30px;
+	}
 }
 
 .panel-default > .panel-heading {
@@ -169,6 +176,10 @@ a.list-group-item:hover {
 	color: #999;
 	font-weight: normal;
 	margin: 0;
+}
+
+.panel-heading {
+	padding-left: 0;
 }
 
 .panel-heading .btn-group .btn {
@@ -196,10 +207,6 @@ a.list-group-item:hover {
 
 .cards {
 	background: white;
-}
-
-.list-group {
-	margin-left: 15px;
 }
 
 .list-group-item {
@@ -268,7 +275,7 @@ a.list-group-item.active:focus .list-group-item-text {
 .form-horizontal .control-label {
 	color: #007aff;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 13px;
 	margin-top: 3px;
 }
 
