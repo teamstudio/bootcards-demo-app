@@ -16,7 +16,7 @@ var path 	= require('path');			//work with paths
 var fs 		= require('fs');			//work with filesystem
 var pjax 	= require('express-pjax');	//express pjax (partial reloads)
 var hbs 	= require('express-hbs');	//express handlebars
-var moment	= require('moment');		//moment date formatting lib
+moment	= require('moment');		//moment date formatting lib
 var app 	= express();
 
 app.set('port', process.env.PORT || 3000);
@@ -91,6 +91,7 @@ app.put('/contacts/:id', contact.save);
 app.get('/contacts/:id/edit', contact.edit);
 app.get('/activities', activity.list);
 app.get('/activities/add/:contactId', activity.add);
+app.put('/activities', activity.save);
 
 http
 	.createServer(app)
