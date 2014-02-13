@@ -28,23 +28,6 @@ body {
 
 
 /* LISTS */
-/*
-.list-group-heading h3 {
-	float: left;
-	color: #999;
-	margin: 0;
-	line-height: 34px;
-	font-size: 18px;
-}
-
-.list-group-heading .btn-group {
-	float: right;
-}
-
-.list-group-heading .btn-group i {
-	font-size: 14px;
-	margin-right: 3px;
-}*/
 
 .list-group label {
 	font-weight: normal;
@@ -52,6 +35,10 @@ body {
 
 
 /* FORM */
+
+.panel-title {
+	margin: 7px 0;
+}
 
 .panel-content form {
 	padding: 15px;
