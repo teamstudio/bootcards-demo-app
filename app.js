@@ -10,6 +10,7 @@ var routes 		= require('./routes');
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
 var activity 	= require('./routes/activity');
+bc = require('./bootcards-functions');
 
 var http 	= require('http');
 var path 	= require('path');			//work with paths
@@ -70,11 +71,11 @@ fs.readFile(contactsFile, 'utf8', function (err, data) {
 
 //setup menu
 menu = [
-	{ name : "Companies", icon : "fa-building-o", active : false, url : '/companies'},
-	{ name : "Contacts", icon : "fa-users", active : true, url : '/contacts'},
-	{ name : "Activities", icon : "fa-calendar", active : false, url : '/activities'},
-	{ name : "Media", icon : "fa-film", active : false, url : '/media'},
-	{ name : "Tests", icon : "fa-gears", active : false, url : '/tests'}
+	{ id : 'companies', name : "Companies", icon : "fa-building-o", active : false, url : '/companies'},
+	{ id : 'contacts', name : "Contacts", icon : "fa-users", active : true, url : '/contacts'},
+	{ id : 'activities', name : "Activities", icon : "fa-calendar", active : false, url : '/activities'},
+	{ id : 'media', name : "Media", icon : "fa-film", active : false, url : '/media'},
+	{ id : 'tests', name : "Tests", icon : "fa-gears", active : false, url : '/tests'}
 ];
 
 // development only

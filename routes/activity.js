@@ -2,7 +2,7 @@
 exports.list = function(req, res) {
 	res.renderPjax('activities', {
   		activities: activities,
-   		menu:menu
+   		menu: bc.getActiveMenu(menu, 'activities')
   	});
 };
 
@@ -26,7 +26,7 @@ exports.add = function(req, res) {
   			date : new Date()
   		},
   		contact: contact,
-   		menu:menu
+   		menu: bc.getActiveMenu(menu, 'activities')
   	});
 };
 
@@ -57,7 +57,7 @@ exports.save = function(req, res) {
 
 		res.renderPjax('contact', {
 		 	contacts:contacts,
-		   	menu:menu,
+		   	menu: bc.getActiveMenu(menu, 'activities'),
 		    contact: contact
 		});
 	}

@@ -1,11 +1,3 @@
-function setActiveMenuOption(name) {
-
-	for (var i=0; i<menu.length; i++) {
-		menu[i].active = (name == menu[i].name ? true : false);
-	}
-
-}
-
 exports.list = function(req, res){
 
 	var firstContact = contacts[0];
@@ -15,7 +7,7 @@ exports.list = function(req, res){
   res.renderPjax('contacts', {
   	contacts:contacts,
   	contact : firstContact,
-   	menu:menu
+   	menu: bc.getActiveMenu(menu, 'contacts')
    });
 };
 
@@ -35,7 +27,8 @@ exports.contact = function(req, res) {
 	res.renderPjax('contact', {
 	 	contacts:contacts,
 	   	menu:menu,
-	      contact: contact
+	      contact: contact,
+	    menu: bc.getActiveMenu(menu, 'contacts')
 	});
    
 }
@@ -56,7 +49,7 @@ exports.edit = function(req, res) {
 	
 	res.renderPjax('contact_edit', {
 	 	contacts:contacts,
-	   	menu:menu,
+	   	menu: bc.getActiveMenu(menu, 'contacts'),
 	      contact: contact
 	});
    
@@ -85,7 +78,7 @@ exports.save = function(req,res) {
 
 	res.renderPjax('contacts', {
 	 	contacts:contacts,
-	   	menu:menu,
+	   	menu: bc.getActiveMenu(menu, 'contacts'),
 	      contact: contact
 	});
 

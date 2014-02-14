@@ -57,7 +57,11 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
         {{#each menu}}
-           <li>
+          {{#if this.active }}
+            <li class="active">
+          {{else}}
+            <li>
+          {{/if}}
             <a href="{{this.url}}">
               <i class="fa {{this.icon}}"></i>
               {{this.name}}
