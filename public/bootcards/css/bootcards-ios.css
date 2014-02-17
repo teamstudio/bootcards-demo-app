@@ -148,6 +148,11 @@ a.list-group-item:hover {
 	display: none;
 }
 
+.panel-body,
+.panel-rich-text .panel-body {
+	padding-left: 0;
+}
+
 
 
 /* LISTS */
@@ -191,6 +196,10 @@ a.list-group-item.active .list-group-item-text,
 a.list-group-item.active:hover .list-group-item-text, 
 a.list-group-item.active:focus .list-group-item-text {
 	color: #999;
+	font-size: 14px;
+	margin: 0;
+	margin-top: 5px;
+	font-weight: normal;	
 } 
 
 
@@ -199,7 +208,6 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .form-horizontal .form-group {
 	margin: 0;
-	margin-left: 15px;
 	padding-right: 15px;
 	border-bottom: 1px solid #ddd;
 	padding-top: 5px;
@@ -218,6 +226,30 @@ a.list-group-item.active:focus .list-group-item-text {
 	box-shadow: none;
 }
 
+.form-group div {
+	padding: 0 3px;
+}
+
+.form-group div:first-child {
+	padding-left: 0;
+}
+
+.form-group div:last-child {
+	padding-right: 0;
+}
+
+
+
+/* TABLES */
+
+.table > thead > tr > th:first-child, 
+.table > tbody > tr > th:first-child, 
+.table > tfoot > tr > th:first-child, 
+.table > thead > tr > td:first-child, 
+.table > tbody > tr > td:first-child, 
+.table > tfoot > tr > td:first-child {
+	padding-left: 0;
+}
 
 
 
