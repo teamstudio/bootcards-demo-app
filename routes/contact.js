@@ -2,12 +2,12 @@ var bc = require('../bootcards-functions.js');
 
 exports.list = function(req, res){
 
-	var firstContact = contacts[0];
-	firstContact.activities[0].date = new Date();
+	var contact = contacts[0];
+	contact.activities = bc.getActivitiesForParent(contact.id);
 
 	res.renderPjax('contacts', {
-  		contacts:contacts,
-  		contact : firstContact,
+  		contacts : contacts,
+  		contact : contact,
    		menu: bc.getActiveMenu(menu, 'contacts')
 	});
 };
@@ -16,7 +16,6 @@ exports.read = function(req, res) {
 
 	res.renderPjax('contact', {
 	 	contacts:contacts,
-	   	menu:menu,
 	   	contact: bc.getContactById(req.params.id),
 	    menu: bc.getActiveMenu(menu, 'contacts')
 	});
@@ -40,8 +39,8 @@ exports.add = function(req, res) {
 	res.renderPjax('contact_edit', {
   		contacts:contacts,
   		contact : {
+  			isNew : true,
   			companyId : company.id
-
   		},
    		menu: bc.getActiveMenu(menu, 'activities')
   	});
@@ -57,6 +56,9 @@ exports.save = function(req,res) {
 		contact.lastName = req.body.lastName;
 		contact.email = req.body.email;
 		contact.phone = req.body.phone;
+		contact.jobTitle = req.body.jobTitle;
+		contact.department = req.body.department;
+		contact.salutation = req.body.salutation;
 	}
 
 	res.renderPjax('contacts', {

@@ -18,32 +18,42 @@
 				<label>Name</label>
 				<h4 class="list-group-item-heading">{{contact.lastName}}, {{contact.firstName}}</h4>
 			</div>
+			{{#if contact.company}}
 			<div class="list-group-item">
 				<label>Company</label>
 				<h4 class="list-group-item-heading">{{contact.company}}</h4>
 			</div>
+			{{/if}}
+			{{#if contact.jobTitle}}
 			<div class="list-group-item">
 				<label>Job Title</label>
 				<h4 class="list-group-item-heading">{{contact.jobTitle}}</h4>
 			</div>
+			{{/if}}
+			{{#if contact.department}}
 			<div class="list-group-item">
 				<label>Department</label>
 				<h4 class="list-group-item-heading">{{contact.department}}</h4>
 			</div>
+			{{/if}}
+			{{#if contact.phone}}
 			<a class="list-group-item" href="tel://{{contact.phone}}">
 				<label>Phone</label>
 				<h4 class="list-group-item-heading">{{contact.phone}}</h4>
 			</a>
+			{{/if}}
+			{{#if contact.email}}
 			<a class="list-group-item" href="mailto:{{contact.email}}">
 				<label>Email</label>
 				<h4 class="list-group-item-heading">{{contact.email}}</h4>
 			</a>
+			{{/if}}
 		</div>
 	</div>
 
 </div>
 
 <!--list of activities-->
-{{> contact_activities}}
+{{>activities_for_parent contact}}
 
 

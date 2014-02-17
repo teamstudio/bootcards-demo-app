@@ -18,26 +18,37 @@
 				<label>Name</label>
 				<h4 class="list-group-item-heading">{{company.name}}</h4>
 			</div>
+			{{#if company.phone}}
 			<a class="list-group-item" href="tel://{{company.phone}}">
 				<label>Phone</label>
 				<h4 class="list-group-item-heading">{{company.phone}}</h4>
 			</a>
+			{{/if}}
+			{{#if company.email}}
 			<a class="list-group-item" href="mailto:{{company.email}}">
 				<label>Email</label>
 				<h4 class="list-group-item-heading">{{company.email}}</h4>
 			</a>
+			{{/if}}
+			{{#if company.city}}
 			<div class="list-group-item">
 				<label>City</label>
 				<h4 class="list-group-item-heading">{{company.city}}</h4>
 			</div>
+			{{/if}}
+			{{#if company.country}}
 			<div class="list-group-item">
 				<label>Country</label>
 				<h4 class="list-group-item-heading">{{company.country}}</h4>
 			</div>
+			{{/if}}
 		</div>
 	</div>
 
 </div>
 
 <!--list of contacts-->
-{{> company_contacts}}
+{{>contacts_for_parent company}}
+
+<!--list of activities-->
+{{>activities_for_parent company}}

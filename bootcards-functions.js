@@ -1,4 +1,3 @@
-console.log("loading");
 
 exports.getActiveMenu = function(menu, id) {
 
@@ -43,29 +42,59 @@ exports.getIconForType = function(type) {
 }
 
 exports.getContactById = function(id) {
-
-	if (id != null ) {
-		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == id) {
-				return contacts[i];
-			}
-		}
+	var contact = getById(contacts, id);
+	if (contact != null) {
+		contact.activities = getForParent(activities, contact.id);
 	}
-
-	return null;
-
+	return contact;
+}
+exports.getCompanyById = function(id) {
+	var company = getById(companies, id);
+	if (company != null) {
+		company.activities = getForParent(activities, company.id);
+		company.contacts = getForParent(contacts, company.id);
+	}
+	return company;
+}
+exports.getActivityById = function(id) {
+	return getById(activities, id);
 }
 
-exports.getCompanyById = function(id) {
-	
+exports.getContactsForCompany = function(parentId) {
+	return getForParent(contacts, parentId);
+}
+exports.getActivitiesForParent = function(parentId) {
+	return getForParent(activities, parentId);
+}
+
+var getForParent = function( from, id) {
+
+	var results = [];
+
+	for (var i=0; i<from.length; i++) {
+		var fromEl = from[i];
+		for (var j=0; j<fromEl.parentIds.length; j++) {
+			if (fromEl.parentIds[j] == id) {
+				results.push(fromEl);
+				break;
+			}
+		}
+	}
+	return results;
+}
+
+var getById = function(from, id) {
+	if (from == null || from.length==0) {
+		return null;
+	}
+
 	if (id != null ) {
-		for (var i=0; i<companies.length; i++) {
-			if (companies[i].id == id) {
-				return companies[i];
+		for (var i=0; i<from.length; i++) {
+			if (from[i].id == id) {
+				return from[i];
 			}
 		}
 	}
 
 	return null;
-
 }

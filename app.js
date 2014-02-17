@@ -51,7 +51,6 @@ hbs.registerHelper("formatDate", function(datetime, format) {
 });
 hbs.registerHelper("getIconForType", function(type) {
 	return bc.getIconForType(type);
-
 });
 
 //read sample data
@@ -59,8 +58,11 @@ companies = [];
 activities = [];
 contacts = [];
 
-var contactsFile = __dirname + '/data/data.json';
-fs.readFile(contactsFile, 'utf8', function (err, data) {
+var dataFile = __dirname + '/data/data.json';
+fs.readFile(dataFile, 'utf8', function (err, data) {
+
+	console.log("Reading data from " + dataFile);
+
 	if (err) {
 		console.log('Error reading data file: ' + err);
 		return;
@@ -70,6 +72,10 @@ fs.readFile(contactsFile, 'utf8', function (err, data) {
 
   contacts = jsonContents.contacts;
   companies = jsonContents.companies;
+  activities = jsonContents.activities;
+
+  console.log("Parsed " + contacts.length + " contacts, " + companies.length + " companies, " + activities.length + " activities");
+
 });
 
 //setup menu
@@ -101,6 +107,7 @@ app.get('/contacts/:id/edit', contact.edit);
 app.get('/contacts/add/:companyId', contact.add);
 
 app.get('/activities', activity.list);
+app.get('/activities/:id', activity.read);
 app.get('/activities/add/:contactId', activity.add);
 app.put('/activities', activity.save);
 

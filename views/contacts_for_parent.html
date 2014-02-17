@@ -1,0 +1,30 @@
+<div id="contactList">
+	<div class="panel panel-default">
+		<div class="panel-heading clearfix">
+			<h3 class="panel-title pull-left">Contacts</h3>
+			<div class="btn-group pull-right">
+				<a class="btn btn-primary" href="/contacts/add/{{this.id}}" data-pjax="#contactList">
+						<i class="fa fa-plus"></i>
+						<span>Add</span>
+				</a>
+			</div>							
+		</div>					
+		<div class="list-group">
+			{{#each this.contacts}}
+
+				<a class="list-group-item" 
+					href="/contacts/{{this.id}}"
+					data-pjax="#contactList">
+					<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
+					<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
+					<p class="list-group-item-text">{{this.company}}</p>
+				</a>
+
+			{{else}}
+
+				<div class="list-group-item">No activities found</div>
+				
+			{{/each}}
+		</div>
+	</div>
+</div>

@@ -2,7 +2,13 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title">Edit Company</h3>
+		<h3 class="panel-title">ll
+			{{#if company.isNew}}
+				New Company
+			{{else}}
+				Edit Company
+			{{/if}}
+		</h3>
 	</div>
 	<div class="panel-content">
 		<form class="form-horizontal" method="POST" action="/companies/{{company.id}}" data-pjax="#main">
