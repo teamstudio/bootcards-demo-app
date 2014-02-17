@@ -45,6 +45,7 @@ body {
 
 .row > div {
 	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 	height: 100%;
 	padding-top: 0;
 }
