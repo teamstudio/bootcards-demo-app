@@ -1,3 +1,4 @@
+var bc = require('../bootcards-functions.js');
 
 exports.list = function(req, res) {
 	res.renderPjax('activities', {
@@ -8,17 +9,7 @@ exports.list = function(req, res) {
 
 exports.add = function(req, res) {
 
-//setActiveMenuOption('Contacts');
-	var contact = null;
-
-	if (req.params.contactId != null ) {
-		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == req.params.contactId) {
-				contact = contacts[i];
-				break;
-			}
-		}
-	}
+	var contact = bc.getContactById(req.params.contactId);
 
 	res.renderPjax('activity_edit', {
   		activities: activities,
@@ -33,16 +24,7 @@ exports.add = function(req, res) {
 exports.save = function(req, res) {
 
 	//retrieve the parent contact
-	var contact = null;
-
-	if (req.body.contactId != null ) {
-		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == req.body.contactId) {
-				contact = contacts[i];
-				break;
-			}
-		}
-	}
+	var contact = bc.getContactById(req.params.contactId);
 
 	if (contact != null) {
 		//found the contact: add new activity

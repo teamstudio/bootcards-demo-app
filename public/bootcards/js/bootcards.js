@@ -79,8 +79,6 @@ $(document)
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 
-		console.log(event);
-
 		if ( findBootstrapEnvironment() == "ExtraSmall" ) {
 
 			$slideOut = $(event.relatedTarget)

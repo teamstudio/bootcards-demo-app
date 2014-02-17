@@ -1,33 +1,23 @@
+var bc = require('../bootcards-functions.js');
+
 exports.list = function(req, res){
 
 	var firstContact = contacts[0];
 	firstContact.activities[0].date = new Date();
 
-	//setActiveMenuOption('Contacts');
-  res.renderPjax('contacts', {
-  	contacts:contacts,
-  	contact : firstContact,
-   	menu: bc.getActiveMenu(menu, 'contacts')
-   });
+	res.renderPjax('contacts', {
+  		contacts:contacts,
+  		contact : firstContact,
+   		menu: bc.getActiveMenu(menu, 'contacts')
+	});
 };
 
-exports.contact = function(req, res) {
-	//setActiveMenuOption('Contacts');
-	var contact = null;
+exports.read = function(req, res) {
 
-	if (req.params.id != null ) {
-		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == req.params.id) {
-				contact = contacts[i];
-				break;
-			}
-		}
-	}
-	
 	res.renderPjax('contact', {
 	 	contacts:contacts,
 	   	menu:menu,
-	      contact: contact,
+	   	contact: bc.getContactById(req.params.id),
 	    menu: bc.getActiveMenu(menu, 'contacts')
 	});
    
@@ -35,38 +25,31 @@ exports.contact = function(req, res) {
 
 exports.edit = function(req, res) {
 
-	//setActiveMenuOption('Contacts');
-	var contact = null;
-
-	if (req.params.id != null ) {
-		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == req.params.id) {
-				contact = contacts[i];
-				break;
-			}
-		}
-	}
-	
 	res.renderPjax('contact_edit', {
 	 	contacts:contacts,
 	   	menu: bc.getActiveMenu(menu, 'contacts'),
-	      contact: contact
+		contact: bc.getContactById(req.params.id)
 	});
    
 }
 
+exports.add = function(req, res) {
+
+	var company = bc.getCompanyById(req.params.companyId);
+
+	res.renderPjax('contact_edit', {
+  		contacts:contacts,
+  		contact : {
+  			companyId : company.id
+
+  		},
+   		menu: bc.getActiveMenu(menu, 'activities')
+  	});
+};
+
 exports.save = function(req,res) {
 
-	var contact = null;
-
-	if (req.params.id != null ) {
-		for (var i=0; i<contacts.length; i++) {
-			if (contacts[i].id == req.params.id) {
-				contact = contacts[i];
-				break;
-			}
-		}
-	}
+	var contact = bc.getContactById(req.params.id);
 
 	if (contact != null) {
 		//found the contact: update it
@@ -79,7 +62,7 @@ exports.save = function(req,res) {
 	res.renderPjax('contacts', {
 	 	contacts:contacts,
 	   	menu: bc.getActiveMenu(menu, 'contacts'),
-	      contact: contact
+	    contact: contact
 	});
 
 }
