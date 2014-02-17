@@ -10,7 +10,7 @@ var routes 		= require('./routes');
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
 var activity 	= require('./routes/activity');
-bc = require('./bootcards-functions');
+var bc = require('./bootcards-functions');
 
 var http 	= require('http');
 var path 	= require('path');			//work with paths
@@ -50,6 +50,10 @@ hbs.registerHelper("formatDate", function(datetime, format) {
     return datetime;
   }
 });
+hbs.registerHelper("getIconForType", function(type) {
+	return bc.getIconForType(type);
+
+});
 
 //read sample data
 companies = [];
@@ -85,11 +89,18 @@ if ('development' == app.get('env')) {
 
 //routes
 app.get('/', contact.list);
+
 app.get('/companies', company.list);
+app.get('/companies/:id', company.read);
+app.put('/companies/:id', company.save);
+app.get('/companies/:id/edit', company.edit);
+
 app.get('/contacts', contact.list);
-app.get('/contacts/:id', contact.contact);
+app.get('/contacts/:id', contact.read);
 app.put('/contacts/:id', contact.save);
 app.get('/contacts/:id/edit', contact.edit);
+app.get('/contacts/add/:companyId', contact.add);
+
 app.get('/activities', activity.list);
 app.get('/activities/add/:contactId', activity.add);
 app.put('/activities', activity.save);
