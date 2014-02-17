@@ -1,8 +1,4 @@
 
-/**
- * Module dependencies.
- */
-
 var express = require('express');
 
 //routes
@@ -10,6 +6,7 @@ var routes 		= require('./routes');
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
 var activity 	= require('./routes/activity');
+var tests = require('./routes/tests');
 var bc = require('./bootcards-functions');
 
 var http 	= require('http');
@@ -17,7 +14,7 @@ var path 	= require('path');			//work with paths
 var fs 		= require('fs');			//work with filesystem
 var pjax 	= require('express-pjax');	//express pjax (partial reloads)
 var hbs 	= require('express-hbs');	//express handlebars
-moment	= require('moment');		//moment date formatting lib
+var moment	= require('moment');		//moment date formatting lib
 var app 	= express();
 
 app.set('port', process.env.PORT || 3000);
@@ -104,6 +101,8 @@ app.get('/contacts/add/:companyId', contact.add);
 app.get('/activities', activity.list);
 app.get('/activities/add/:contactId', activity.add);
 app.put('/activities', activity.save);
+
+app.get('/tests', tests.list);
 
 http
 	.createServer(app)
