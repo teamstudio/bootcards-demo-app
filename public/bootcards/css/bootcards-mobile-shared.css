@@ -47,15 +47,14 @@ body {
 	overflow-y: auto;
 	height: 100%;
 	padding-top: 0;
+}
+
+.row > div:last-child {
 	border-left: 1px solid rgba(0,0,0,0.3);
 }
 
-.row > div:first-child {
-	border-left: 0;
-}
-
 @media (max-width:767px) {
-	.row > div {
+	.row > div:last-child {
 		border-left: 0;
 	}
 }
@@ -133,4 +132,8 @@ a.list-group-item.active:focus .list-group-item-text {
 	font-size: 11px;
 	padding-top: 7px;
 	color: #929292;
+}
+
+.navbar-fixed-bottom .btn-group .btn:nth-child(3) {
+	display: none; /* Hide Media temporarily */
 }
