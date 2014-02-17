@@ -6,8 +6,10 @@ var routes 		= require('./routes');
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
 var activity 	= require('./routes/activity');
-var tests = require('./routes/tests');
-var bc = require('./bootcards-functions');
+var media 		= require('./routes/media');
+var tests 		= require('./routes/tests');
+
+var bc 			= require('./bootcards-functions');
 
 var http 	= require('http');
 var path 	= require('path');			//work with paths
@@ -101,6 +103,8 @@ app.get('/contacts/add/:companyId', contact.add);
 app.get('/activities', activity.list);
 app.get('/activities/add/:contactId', activity.add);
 app.put('/activities', activity.save);
+
+app.get('/media', media.list);
 
 app.get('/tests', tests.list);
 
