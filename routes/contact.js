@@ -2,12 +2,11 @@ var bc = require('../bootcards-functions.js');
 
 exports.list = function(req, res){
 
-	var contact = contacts[0];
-	contact.activities = bc.getActivitiesForParent(contact.id);
+	var firstId = contacts[0].id;
 
 	res.renderPjax('contacts', {
   		contacts : contacts,
-  		contact : contact,
+  		contact : bc.getContactById(firstId),
    		menu: bc.getActiveMenu(menu, 'contacts')
 	});
 };

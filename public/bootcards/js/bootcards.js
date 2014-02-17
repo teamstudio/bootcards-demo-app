@@ -1,25 +1,6 @@
-$(document).ready(function() {
-	
-			 loadCSS = function(href) {
-			     var cssLink = $("<link rel='stylesheet' type='text/css' href='/bootcards/css/"+href+"'>");
-			     $("head").append(cssLink); 
-			 };		
-			 
-			 if (navigator.userAgent.match(/Android/i)) {
-				 loadCSS('bootcards-android.css');
-			 }
-			 else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {		
-				 loadCSS('bootcards-ios.css');
-			 }
-			 else {
-				 loadCSS('bootcards-desktop.css');
-			 }
-		});	
-
-
 var bootcards = bootcards || {};
 
-function findBootstrapEnvironment() {
+bootcards.findBootstrapEnvironment = function() {
     var envs = ["ExtraSmall", "Small", "Medium", "Large"];
     var envValues = ["xs", "sm", "md", "lg"];
 
@@ -37,7 +18,7 @@ function findBootstrapEnvironment() {
     };
 }
 
-function animateLeft($src, $tgt){
+bootcards.bootcardsanimateLeft = function($src, $tgt){
     var $parent = $src.parent();
     var width = $parent.width();
     var srcWidth = $src.width();
@@ -71,9 +52,6 @@ $(document)
 			.siblings('.active')
 				.removeClass('active');
 
-		
-
-
 
 	})
 	.on('pjax:complete', function(event) {
@@ -84,7 +62,7 @@ $(document)
 		var cards = $(".cards");
 		cards.animate({scrollTop:0}, '500', 'easeOutExpo'); 
 		
-		if ( findBootstrapEnvironment() == "ExtraSmall" ) {
+		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
 
 			$slideOut = $(event.relatedTarget)
 				.parent()

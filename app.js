@@ -19,6 +19,9 @@ var hbs 	= require('express-hbs');	//express handlebars
 var moment	= require('moment');		//moment date formatting lib
 var app 	= express();
 
+app.use( express.cookieParser() );
+app.use( express.session({secret : 'QWERTY'}));
+
 app.set('port', process.env.PORT || 3000);
 app.engine( 'html', hbs.express3({
 	partialsDir : __dirname + '/views'
@@ -26,14 +29,27 @@ app.engine( 'html', hbs.express3({
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
+//pjax middleware for partials
 app.use(pjax());
 
+//send session info to handlebars, check OS used to send correct stylesheet
+app.use(function(req, res, next){
+	if (!req.session.init) {
+		var ua = req.headers['user-agent'];
+		req.session.init = true;
+		req.session.isAndroid = (ua.match(/Android/i) != null);
+		req.session.isIos = (ua.match(/iPhone|iPad|iPod/i) != null);
+	}
+	res.locals.session = req.session;
+	next();
+});
+
 app.use(express.favicon());
-//app.use(express.logger('dev'));
-//app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 //public dir for bower components
@@ -52,6 +68,15 @@ hbs.registerHelper("formatDate", function(datetime, format) {
 hbs.registerHelper("getIconForType", function(type) {
 	return bc.getIconForType(type);
 });
+hbs.registerHelper("getCSSforOS", function(session) {
+	if (session.isAndroid) {
+		return '<link href="/bootcards/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
+	} else if (session.isIos) {
+		return '<link href="/bootcards/css/bootcards-ios.css" rel="stylesheet" type="text/css" />';
+	} else {
+		return '<link href="/bootcards/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
+	}
+});
 
 //read sample data
 companies = [];
@@ -60,8 +85,6 @@ contacts = [];
 
 var dataFile = __dirname + '/data/data.json';
 fs.readFile(dataFile, 'utf8', function (err, data) {
-
-	console.log("Reading data from " + dataFile);
 
 	if (err) {
 		console.log('Error reading data file: ' + err);
@@ -74,7 +97,7 @@ fs.readFile(dataFile, 'utf8', function (err, data) {
   companies = jsonContents.companies;
   activities = jsonContents.activities;
 
-  console.log("Parsed " + contacts.length + " contacts, " + companies.length + " companies, " + activities.length + " activities");
+  console.log("Sample data read. Found " + contacts.length + " contacts, " + companies.length + " companies, " + activities.length + " activities");
 
 });
 

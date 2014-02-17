@@ -39,8 +39,6 @@ exports.save = function(req, res) {
 	//retrieve the parent contact
 	var contact = bc.getContactById(req.body.contactId);
 
-console.log(contact);
-
 	if (contact != null) {
 		//found the contact: add new activity
 
@@ -51,10 +49,8 @@ console.log(contact);
 			parentIds : [contact.id]
 		}
 
-
-console.log(' s' );
 		activities.push(activity);
-console.log(' saved' );
+
 		res.renderPjax('contact', {
 		 	contacts:contacts,
 		   	menu: bc.getActiveMenu(menu, 'activities'),

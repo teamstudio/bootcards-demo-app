@@ -2,9 +2,11 @@ var bc = require('../bootcards-functions.js');
 
 exports.list = function(req, res) {
 
+	var firstId = companies[0].id;
+
 	res.renderPjax('companies', {
 		companies : companies,
-		company : companies[0],
+		company : bc.getCompanyById(firstId),
    		menu: bc.getActiveMenu(menu, 'companies')
 	});
 };
