@@ -1,4 +1,5 @@
 var bc = require('../bootcards-functions.js');
+var moment	= require('moment');
 
 exports.list = function(req, res) {
 	res.renderPjax('activities', {
@@ -25,6 +26,9 @@ exports.save = function(req, res) {
 
 	//retrieve the parent contact
 	var contact = bc.getContactById(req.params.contactId);
+
+	console.log('save');
+	console.log(contact);
 
 	if (contact != null) {
 		//found the contact: add new activity
