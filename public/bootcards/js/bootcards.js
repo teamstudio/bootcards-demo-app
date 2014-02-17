@@ -79,6 +79,11 @@ $(document)
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 
+		//check the position of the 'cards' column:
+		//scroll to the top if needed
+		var cards = $(".cards");
+		cards.animate({scrollTop:0}, '500', 'easeOutExpo'); 
+		
 		if ( findBootstrapEnvironment() == "ExtraSmall" ) {
 
 			$slideOut = $(event.relatedTarget)
