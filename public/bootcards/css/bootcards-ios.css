@@ -18,10 +18,14 @@ a {
 /* NAVBAR */
 
 .navbar-fixed-top {
+
+}
+
+.navbar-default {
 	background: white;
 	box-shadow: none;
 	box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-	border: 0;
+	border: 0;	
 }
 
 .navbar-header {
@@ -57,7 +61,7 @@ a {
 /* GRID */
 
 .row > div {
-	border-left: 1px solid rgba(0,0,0,0.2);
+	border-color: rgba(0,0,0,0.2);
 }
 
 @media (max-width:767px) {
@@ -148,14 +152,6 @@ a.list-group-item:hover {
 
 /* LISTS */
 
-.list {
-	
-}
-
-.cards {
-	background: white;
-}
-
 .list-group-item {
 	padding-left: 0;
 }
@@ -163,7 +159,6 @@ a.list-group-item:hover {
 .list-group-item:first-child {
 	border-top: 0;
 }
-
 
 .list-group {
 	box-shadow: none;
@@ -195,17 +190,9 @@ a.list-group-item:hover {
 a.list-group-item.active .list-group-item-text, 
 a.list-group-item.active:hover .list-group-item-text, 
 a.list-group-item.active:focus .list-group-item-text {
-	font-size: 14px;
-	margin: 0;
-	margin-top: 5px;
 	color: #999;
-	font-weight: normal;
 } 
 
-.list-group-item:first-child,
-.list-group-item:last-child {
-	border-radius: 0;
-}
 
 
 /* FORMS */
@@ -236,10 +223,6 @@ a.list-group-item.active:focus .list-group-item-text {
 
 /* FOOTER */
 
-.no-footer .navbar-fixed-bottom {
-	display: none;
-}
-
 .navbar-fixed-bottom {
 	box-shadow: 0 -1px rgba(0,0,0,0.2);
 	height: 49px;
@@ -247,23 +230,7 @@ a.list-group-item.active:focus .list-group-item-text {
 	border: 0;
 }
 
-.navbar-fixed-bottom .container {
-	padding: 0;
-	margin: 0;
-}
-
-.navbar-fixed-bottom .btn-group {
-	list-style: none;
-}
-
 .navbar-fixed-bottom .btn-group .btn {
-	width: 100px;
-	padding: 0;
-	border: 0;
-	background: transparent;
-	box-shadow: none;
-	display: inline-block;
-	text-align: center;
 	font-size: 11px;
 	padding-top: 7px;
 	color: #929292;

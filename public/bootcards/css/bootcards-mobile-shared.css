@@ -21,6 +21,8 @@ body {
 	display: none;
 }
 
+
+
 /* GRID */
 
 .container {
@@ -46,9 +48,89 @@ body {
 	height: 100%;
 	padding-top: 0;
 	border-left: 1px solid rgba(0,0,0,0.3);
-	
 }
 
 .row > div:first-child {
 	border-left: 0;
+}
+
+@media (max-width:767px) {
+	.row > div {
+		border-left: 0;
+	}
+}
+
+
+/* MENU */
+
+.menu {
+	display: none;
+}
+
+.menu i {
+	width: 28px;
+	text-align: center;
+}
+
+a.list-group-item:before {
+	font-family: 'FontAwesome';
+	content: '';
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	font-size: 14px;
+	line-height: 14px;
+	margin-top: -7px;
+	color: #ccc;
+}
+
+
+/* LISTS */
+
+.list-group-item .list-group-item-text,
+a.list-group-item.active .list-group-item-text, 
+a.list-group-item.active:hover .list-group-item-text, 
+a.list-group-item.active:focus .list-group-item-text {
+	font-size: 14px;
+	margin: 0;
+	margin-top: 5px;
+	font-weight: normal;
+} 
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+	border-radius: 0;
+}
+
+
+
+/* FOOTER */
+
+.no-footer .navbar-fixed-bottom {
+	display: none;
+}
+
+.navbar-fixed-bottom .container {
+	padding: 0;
+	margin: 0;
+}
+
+.navbar-fixed-bottom .btn-group {
+	list-style: none;
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.navbar-fixed-bottom .btn-group .btn {
+	width: 25%;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	box-shadow: none;
+	display: inline-block;
+	text-align: center;
+	font-size: 11px;
+	padding-top: 7px;
+	color: #929292;
 }
