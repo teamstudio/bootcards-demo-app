@@ -141,9 +141,9 @@ a.list-group-item:hover {
 
 /* LISTS */
 
-.cards .list-group {
-	margin: 15px;
-	margin-bottom: 0;
+.list .panel {
+	margin: 0;
+	border: 0;
 }
 
 .list-group {
@@ -189,6 +189,10 @@ a.list-group-item.active .list-group-item-text,
 a.list-group-item.active:hover .list-group-item-text, 
 a.list-group-item.active:focus .list-group-item-text {
 	color: #777;
+	font-size: 14px;
+	margin: 0;
+	margin-top: 5px;
+	font-weight: normal;	
 } 
 
 
