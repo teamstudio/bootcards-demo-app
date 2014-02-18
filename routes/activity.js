@@ -13,13 +13,23 @@ exports.read = function(req, res) {
 
 	res.renderPjax('activity', {
 	 	activities : activities,
-	   	menu:menu,
 	   	activity: bc.getActivityById(req.params.id),
 	    menu: bc.getActiveMenu(menu, 'activities')
 	});
    
 }
 
+exports.edit = function(req, res) {
+
+	res.renderPjax('activity_edit', {
+	 	activities : activities,
+	   	activity: bc.getActivityById(req.params.id),
+	    menu: bc.getActiveMenu(menu, 'activities')
+	});
+   
+}
+
+/*an activity can be added to a contact or company*/
 exports.add = function(req, res) {
 
 	var contact = bc.getContactById(req.params.contactId);
@@ -27,7 +37,8 @@ exports.add = function(req, res) {
 	res.renderPjax('activity_edit', {
   		activities: activities,
   		activity : {
-  			date : new Date()
+  			date : new Date(),
+  			isNew : true
   		},
   		contact: contact,
    		menu: bc.getActiveMenu(menu, 'activities')
@@ -36,6 +47,7 @@ exports.add = function(req, res) {
 
 exports.save = function(req, res) {
 
+	console.log(' save activ' + req.params.id);
 	//retrieve the parent contact
 	var contact = bc.getContactById(req.body.contactId);
 

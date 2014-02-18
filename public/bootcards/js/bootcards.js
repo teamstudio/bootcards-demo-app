@@ -57,11 +57,20 @@ $(document)
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 
-		//check the position of the 'cards' column:
-		//scroll to the top if needed
-		var cards = $(".cards");
-		cards.animate({scrollTop:0}, '500', 'easeOutExpo'); 
-		
+		//scroll to the target element (so it doesn't render outside the viewport
+		var column = $(event.target).closest(".cards");
+
+		if (column) {
+
+			var top = $(event.target).position().top;
+
+			if (top <= 60) {
+				top = 0;	//scroll to the top if the target is a few pixels below the top
+			}
+
+			column.animate({scrollTop:top}, '500', 'easeOutExpo'); 
+		}
+
 		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
 
 			$slideOut = $(event.relatedTarget)
@@ -72,9 +81,7 @@ $(document)
 
 			animateLeft($slideOut, $slideIn);
 
-    
-
-
+   
 
   /*  $("#btnAnimate").click(function(){
         animateLeft($first, $second);

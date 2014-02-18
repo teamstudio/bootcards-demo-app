@@ -2,12 +2,18 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title">New activity</h3>
+		<h3 class="panel-title">
+			{{#if contact.isNew}}
+				New Activity
+			{{else}}
+				Edit Activity
+			{{/if}}
+		</h3>
 	</div>
 	<div class="panel-content">
-		<form class="form-horizontal" method="POST" action="/activities" data-pjax="#contactDetails">
+		<form class="form-horizontal" method="POST" action="/activities" data-pjax="#activityDetails">
 			<input type="hidden" name="_method" value="put">
-			<input type="hidden" name="contactId" value="{{activity.id}}">
+			<input type="hidden" name="contactId" value="{{activity.parentId}}">
 			<div class="form-group">
 				<label class="col-xs-3 control-label">Type</label>
 				<div class="col-xs-9">
@@ -37,7 +43,7 @@
 					<button type="submit" class="btn btn-success btn-block">Save</button>
 				</div>
 				<div class="col-sm-3 col-xs-6">
-					<a class="btn btn-danger btn-block" data-pjax="#contactDetails" href="/contacts/{{contact.id}}">Cancel</a>
+					<a class="btn btn-danger btn-block" data-pjax="#activityDetails" href="/activities/{{activity.id}}">Cancel</a>
 				</div>
 			</div>
 		</form>					

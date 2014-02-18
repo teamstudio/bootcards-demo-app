@@ -1,4 +1,8 @@
 
+/*
+ * Bootcards demo application
+ */
+
 var express = require('express');
 
 //routes
@@ -9,7 +13,9 @@ var activity 	= require('./routes/activity');
 var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
 
-var bc 			= require('./bootcards-functions');
+var pjson = require('./package.json');		//read the package.json file to get the current version
+
+var bc 			= require('./bootcards-functions');		//bootcards functions
 
 var http 	= require('http');
 var path 	= require('path');			//work with paths
@@ -19,6 +25,7 @@ var hbs 	= require('express-hbs');	//express handlebars
 var moment	= require('moment');		//moment date formatting lib
 var app 	= express();
 
+//enable Express session support
 app.use( express.cookieParser() );
 app.use( express.session({secret : 'QWERTY'}));
 
@@ -49,7 +56,6 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 //public dir for bower components
@@ -65,9 +71,13 @@ hbs.registerHelper("formatDate", function(datetime, format) {
     return datetime;
   }
 });
+
+//helper to get the icon for a item type
 hbs.registerHelper("getIconForType", function(type) {
 	return bc.getIconForType(type);
 });
+
+//helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
 	if (session.isAndroid) {
 		return '<link href="/bootcards/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
@@ -77,6 +87,11 @@ hbs.registerHelper("getCSSforOS", function(session) {
 		return '<link href="/bootcards/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
 	}
 });
+
+//helper to get the app version
+hbs.registerHelper("getAppVersion", function() {
+	return pjson.version;
+})
 
 //read sample data
 companies = [];
@@ -131,6 +146,7 @@ app.get('/contacts/add/:companyId', contact.add);
 
 app.get('/activities', activity.list);
 app.get('/activities/:id', activity.read);
+app.get('/activities/:id/edit', activity.edit);
 app.get('/activities/add/:contactId', activity.add);
 app.put('/activities', activity.save);
 

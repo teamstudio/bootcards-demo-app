@@ -1956,7 +1956,7 @@
   ],
   "activities": [
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Gave him the tracking number for their order.</span></span></p>",
+      "details": "<p>Gave him the tracking number for their order.</p>",
       "type": "info",
       "id": "ucw9gtbjq7ls",
       "subject": "Tracking Number",
@@ -1967,7 +1967,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called today happy with the improved load time from Project SMSTP.</span></span></p>",
+      "details": "<p>Called today happy with the improved load time from Project SMSTP.</p>",
       "type": "phone",
       "id": "1rhen4xigta0w",
       "subject": "Improved Load Time",
@@ -1978,7 +1978,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Left a message asking if they&rsquo;re interested in upgrading.</span></span></p>",
+      "details": "<p>Left a message asking if they&rsquo;re interested in upgrading.</p>",
       "type": "phone",
       "id": "uywr1g2fnvuo",
       "subject": "Contract Upgrade",
@@ -1989,7 +1989,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Attended a meeting today and gave them version 5 product demos. I will follow-up next week.</span></span></p>",
+      "details": "<p>Attended a meeting today and gave them version 5 product demos. I will follow-up next week.</p>",
       "type": "visit",
       "id": "iru6qw5g660w",
       "subject": "Product Demos",
@@ -2000,7 +2000,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">H</span></span><span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">e dropped by to discuss improvements they have made using our product.</span></span></p>",
+      "details": "<p>He dropped by to discuss improvements they have made using our product.</p>",
       "type": "visit",
       "id": "m543xqq73mkg",
       "subject": "Product Compliment",
@@ -2011,7 +2011,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled a round of golf for next week.</span></span></p>",
+      "details": "<p>Scheduled a round of golf for next week.</p>",
       "type": "opportunity",
       "id": "nlrxvfge0ao0",
       "subject": "Golf",
@@ -2022,7 +2022,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called and left a message about scheduling a demo.</span></span></p>",
+      "details": "<p>Called and left a message about scheduling a demo.</p>",
       "type": "phone",
       "id": "1n1ws6am6ox6o",
       "subject": "Demo",
@@ -2033,7 +2033,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called requesting a seven-day extension on their invoice. I approved.</span></span></p>",
+      "details": "<p>Called requesting a seven-day extension on their invoice. I approved.</p>",
       "type": "phone",
       "id": "hg3kdwd6vb40",
       "subject": "Invoice Extension",
@@ -2044,7 +2044,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Invited me for drinks with his developers tonight at Hanks Tavern.</span></span></p>",
+      "details": "<p>Invited me for drinks with his developers tonight at Hanks Tavern.</p>",
       "type": "opportunity",
       "id": "10xgsxu78kni8",
       "subject": "Social Op",
@@ -2055,7 +2055,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Had a conference call about utilizing our new model in their upcoming smartphone.</span></span></p>",
+      "details": "<p>Had a conference call about utilizing our new model in their upcoming smartphone.</p>",
       "type": "phone",
       "id": "t7b395ps5j4",
       "subject": "Conference Call",
@@ -2066,7 +2066,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made follow-up call about our new model.</span></span></p>",
+      "details": "<p>Made follow-up call about our new model.</p>",
       "type": "phone",
       "id": "ecdzjo895eyo",
       "subject": "New Model",
@@ -2077,7 +2077,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met about our new unit and will follow-up with a phone call on Tuesday.</span></span></p>",
+      "details": "<p>Met about our new unit and will follow-up with a phone call on Tuesday.</p>",
       "type": "visit",
       "id": "14p6x4ipsvfgg",
       "subject": "New Unit Visit",
@@ -2088,7 +2088,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made a call and talked to him about using our new model in their upcoming smartphone release.</span></span></p>",
+      "details": "<p>Made a call and talked to him about using our new model in their upcoming smartphone release.</p>",
       "type": "phone",
       "id": "1eqjcx4js9la8",
       "subject": "Smartphone Release",
@@ -2099,7 +2099,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">RMA&#39;ed two units and ordered replacements.</span></span></p>",
+      "details": "<p>RMA&#39;ed two units and ordered replacements.</p>",
       "type": "ticket",
       "id": "10ukkltuoikg0",
       "subject": "RMA's",
@@ -2110,7 +2110,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled delivery of new units for next Tuesday.</span></span></p>",
+      "details": "<p>Scheduled delivery of new units for next Tuesday.</p>",
       "type": "info",
       "id": "v208y6xswsg0",
       "subject": "Delivery Scheduled",
@@ -2121,7 +2121,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">He approved order for 300 units.</span></span></p>",
+      "details": "<p>He approved order for 300 units.</p>",
       "type": "info",
       "id": "1td2ke5yv8rgg",
       "subject": "Order Approved",
@@ -2132,7 +2132,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Closed the deal at 18% over cost.</span></span></p>",
+      "details": "<p>Closed the deal at 18% over cost.</p>",
       "type": "info",
       "id": "u9jjywxvh62o",
       "subject": "Deal Closed",
@@ -2143,7 +2143,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled chip presentation for Jan. 18th at 9:30 a.m.</span></span></p>",
+      "details": "<p>Scheduled chip presentation for Jan. 18th at 9:30 a.m.</p>",
       "type": "opportunity",
       "id": "1i9wzyz6po45c",
       "subject": "Chip Presentation",
@@ -2154,7 +2154,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Went to their office today and chatted about upgrading their contract.</span></span></p>",
+      "details": "<p>Went to their office today and chatted about upgrading their contract.</p>",
       "type": "visit",
       "id": "1f30c639s1534",
       "subject": "Contract Upgrade",
@@ -2165,7 +2165,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called reminding me to bring the demo units to the conference on Monday.</span></span></p>",
+      "details": "<p>Called reminding me to bring the demo units to the conference on Monday.</p>",
       "type": "phone",
       "id": "aeeyzx6j73eo",
       "subject": "Demo Units",
@@ -2176,7 +2176,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I called to thank them for their recent order and offer a free services session.</span></span></p>",
+      "details": "<p>I called to thank them for their recent order and offer a free services session.</p>",
       "type": "phone",
       "id": "oowjlontmc5c",
       "subject": "Thank You Call",
@@ -2187,7 +2187,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I received a phone call asking that we add 10,000 more units to their order.</span></span></p>",
+      "details": "<p>I received a phone call asking that we add 10,000 more units to their order.</p>",
       "type": "phone",
       "id": "vy049qq81r7k",
       "subject": "Add 10,000 Units",
@@ -2198,7 +2198,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">He dropped by to discuss improvements they have made using our product.</span></span></p>",
+      "details": "<p>He dropped by to discuss improvements they have made using our product.</p>",
       "type": "visit",
       "id": "1pv2ant5sxv5s",
       "subject": "Improvements",
@@ -2209,7 +2209,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled a round of golf for next week.</span></span></p>",
+      "details": "<p>Scheduled a round of golf for next week.</p>",
       "type": "opportunity",
       "id": "brj1yzmrojk0",
       "subject": "Golf Next Week",
@@ -2220,7 +2220,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called and left a message about scheduling a demo.</span></span></p>",
+      "details": "<p>Called and left a message about scheduling a demo.</p>",
       "type": "phone",
       "id": "72xkyj4shybk",
       "subject": "Demo Schedule",
@@ -2231,7 +2231,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Had a discussion about the phone demos. He wants the head of development to sit in next time.</span></span></p>",
+      "details": "<p>Had a discussion about the phone demos. He wants the head of development to sit in next time.</p>",
       "type": "mail",
       "id": "5h8z37qrevwg",
       "subject": "Phone Demos",
@@ -2242,7 +2242,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Attended a meeting today and gave them version 5 product demos. I will follow-up next week.</span></span></p>",
+      "details": "<p>Attended a meeting today and gave them version 5 product demos. I will follow-up next week.</p>",
       "type": "visit",
       "id": "rau62q45uoe8",
       "subject": "V5 Product Demos",
@@ -2253,7 +2253,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I called to let her know their last order would be four days late, and she was ok with that.</span></span></p>",
+      "details": "<p>I called to let her know their last order would be four days late, and she was ok with that.</p>",
       "type": "phone",
       "id": "101ptu9v52l1c",
       "subject": "Four Days Late",
@@ -2264,7 +2264,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Wants to have dinner at the Japanese restaurant next week to discuss a new opportunity.</span></span></p>",
+      "details": "<p>Wants to have dinner at the Japanese restaurant next week to discuss a new opportunity.</p>",
       "type": "info",
       "id": "ey92hkjp8n40",
       "subject": "Dinner Next Week",
@@ -2275,7 +2275,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I received a formal request to discontinue their services contract.</span></span></p>",
+      "details": "<p>I received a formal request to discontinue their services contract.</p>",
       "type": "phone",
       "id": "2l3sywfu31fk",
       "subject": "Discontinue Services",
@@ -2286,7 +2286,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">She called and asked how much it would cost for them to continue using our NFC technology. I worked up a contract with production prices.</span></span></p>",
+      "details": "<p>She called and asked how much it would cost for them to continue using our NFC technology. I worked up a contract with production prices.</p>",
       "type": "offer",
       "id": "1xcj2kcnszc3k",
       "subject": "Contract for Production",
@@ -2297,7 +2297,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Left a message asking if they&rsquo;re interested in upgrading.</span></span></p>",
+      "details": "<p>Left a message asking if they&rsquo;re interested in upgrading.</p>",
       "type": "phone",
       "id": "xd0nximynhts",
       "subject": "Voicemail",
@@ -2308,7 +2308,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met with his system engineers today to find out if we could supply them with a docking device.</span></span></p>",
+      "details": "<p>Met with his system engineers today to find out if we could supply them with a docking device.</p>",
       "type": "visit",
       "id": "ibw5h3dh0xs",
       "subject": "Docking Device",
@@ -2319,7 +2319,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Gave him our Manager of Communications&#39; details to arrange a sponsorship.</span></span></p>",
+      "details": "<p>Gave him our Manager of Communications&#39; details to arrange a sponsorship.</p>",
       "type": "mail",
       "id": "1kkkqjoo5ex34",
       "subject": "Sponsorship",
@@ -2330,7 +2330,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called today happy with the improved load time from Project SMSTP.</span></span></p>",
+      "details": "<p>Called today happy with the improved load time from Project SMSTP.</p>",
       "type": "phone",
       "id": "1ltf194o0xz40",
       "subject": "Improved Load Time",
@@ -2341,7 +2341,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I explained that we would begin rolling out updates next week, and to look for an email at that time.</span></span></p>",
+      "details": "<p>I explained that we would begin rolling out updates next week, and to look for an email at that time.</p>",
       "type": "phone",
       "id": "xgl6buczpfy8",
       "subject": "Updates",
@@ -2352,7 +2352,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met in the office to talk to her about their development department&rsquo;s needs.</span></span></p>",
+      "details": "<p>Met in the office to talk to her about their development department&rsquo;s needs.</p>",
       "type": "visit",
       "id": "1a6w81pemf4sg",
       "subject": "Development Needs",
@@ -2363,7 +2363,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Said he wasn&rsquo;t interested in updating their units.</span></span></p>",
+      "details": "<p>Said he wasn&rsquo;t interested in updating their units.</p>",
       "type": "info",
       "id": "1nllo9m3mwsu8",
       "subject": "Uninterested in Updates",
@@ -2374,7 +2374,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I called and left a voicemail message about the new systems.</span></span></p>",
+      "details": "<p>I called and left a voicemail message about the new systems.</p>",
       "type": "phone",
       "id": "yubh4cs2x2bk",
       "subject": "Left Voicemail",
@@ -2385,7 +2385,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Gave him the tracking number for their order.</span></span></p>",
+      "details": "<p>Gave him the tracking number for their order.</p>",
       "type": "mail",
       "id": "1vpi3xx6su4u8",
       "subject": "Tracking Number",
@@ -2396,7 +2396,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Dropped by the office and took him out to lunch to learn more about what they need next year.</span></span></p>",
+      "details": "<p>Dropped by the office and took him out to lunch to learn more about what they need next year.</p>",
       "type": "visit",
       "id": "1xuirmcp6jlz4",
       "subject": "Next Year's Needs",
@@ -2407,7 +2407,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Gave us a compliment for our customer service.</span></span></p>",
+      "details": "<p>Gave us a compliment for our customer service.</p>",
       "type": "mail",
       "id": "blzi3m0aq8lc",
       "subject": "Compliment",
@@ -2418,7 +2418,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">His company is rolling out updates this week and wants to know if our units will be affected.</span></span></p>",
+      "details": "<p>His company is rolling out updates this week and wants to know if our units will be affected.</p>",
       "type": "mail",
       "id": "r52qinmdfbb4",
       "subject": "Updates",
@@ -2429,7 +2429,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Finalized the order of version 5 chips today and payment should arrive within 30 days.</span></span></p>",
+      "details": "<p>Finalized the order of version 5 chips today and payment should arrive within 30 days.</p>",
       "type": "info",
       "id": "119x9mcplqj28",
       "subject": "Order Finalized",
@@ -2440,7 +2440,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met with Oscar&#39;s Lead App Manager to sort out details concerning use of our logo.</span></span></p>",
+      "details": "<p>Met with Oscar&#39;s Lead App Manager to sort out details concerning use of our logo.</p>",
       "type": "visit",
       "id": "1mkkzup0f0u80",
       "subject": "Logo Usage",
@@ -2451,7 +2451,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I called him to learn why payment for our last delivery has not been taken care of yet.</span></span></p>",
+      "details": "<p>I called him to learn why payment for our last delivery has not been taken care of yet.</p>",
       "type": "phone",
       "id": "1nxgy3r932m80",
       "subject": "Late Payment",
@@ -2462,7 +2462,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Held a conference call with Harvey&#39;s developers about using refurbished models to cut cost.</span></span></p>",
+      "details": "<p>Held a conference call with Harvey&#39;s developers about using refurbished models to cut cost.</p>",
       "type": "phone",
       "id": "1nvnkoadk5xc",
       "subject": "Refurbished Models",
@@ -2473,7 +2473,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made follow-up call about new networking apparatus.</span></span></p>",
+      "details": "<p>Made follow-up call about new networking apparatus.</p>",
       "type": "phone",
       "id": "18d0u8bhmhwcg",
       "subject": "Networking",
@@ -2484,7 +2484,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met over lunch to talk about Christmas delivery deadlines.</span></span></p>",
+      "details": "<p>Met over lunch to talk about Christmas delivery deadlines.</p>",
       "type": "visit",
       "id": "1w6potqrt20hs",
       "subject": "Christmas Deliveries",
@@ -2495,7 +2495,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made a call to him concerning intellectual property rights.</span></span></p>",
+      "details": "<p>Made a call to him concerning intellectual property rights.</p>",
       "type": "phone",
       "id": "1gj4y4jkqh340",
       "subject": "Property Rights",
@@ -2506,7 +2506,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Closed the deal for the order of version 5 units.</span></span></p>",
+      "details": "<p>Closed the deal for the order of version 5 units.</p>",
       "type": "info",
       "id": "18vhtp4esvk74",
       "subject": "Closed Deal",
@@ -2517,7 +2517,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled delivery of the new units for Dec. 10th.</span></span></p>",
+      "details": "<p>Scheduled delivery of the new units for Dec. 10th.</p>",
       "type": "activity",
       "id": "6nnu4i3x0a2o",
       "subject": "Unit Delivery",
@@ -2528,7 +2528,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Went to his office today and chatted with him and their IT Executive about the installation process.</span></span></p>",
+      "details": "<p>Went to his office today and chatted with him and their IT Executive about the installation process.</p>",
       "type": "visit",
       "id": "9terbxctfc3k",
       "subject": "Installation Process",
@@ -2539,7 +2539,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called reminding me about the meeting next Friday.</span></span></p>",
+      "details": "<p>Called reminding me about the meeting next Friday.</p>",
       "type": "phone",
       "id": "1fwzkc8rjh0jk",
       "subject": "Friday Meeting",
@@ -2550,7 +2550,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Went to his development department today to check out the new product demos.</span></span></p>",
+      "details": "<p>Went to his development department today to check out the new product demos.</p>",
       "type": "visit",
       "id": "53lpqrx4w8ow",
       "subject": "New Product Demos",
@@ -2561,7 +2561,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met for lunch and talked about the renewed contract details.</span></span></p>",
+      "details": "<p>Met for lunch and talked about the renewed contract details.</p>",
       "type": "visit",
       "id": "ese6kvqn9xc",
       "subject": "Contract Renewal",
@@ -2572,7 +2572,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Our Executive Manufacturing Assistant hand delivered their contract for 1,000,000 chips.</span></span></p>",
+      "details": "<p>Our Executive Manufacturing Assistant hand delivered their contract for 1,000,000 chips.</p>",
       "type": "info",
       "id": "1dtgj20y87nr4",
       "subject": "Contract Delivery",
@@ -2583,7 +2583,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I went over to Stacy&#39;s office today to present our project business proposal.</span></span></p>",
+      "details": "<p>I went over to Stacy&#39;s office today to present our project business proposal.</p>",
       "type": "visit",
       "id": "333jmk9m18n4",
       "subject": "Proposal",
@@ -2594,7 +2594,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Invited me to be the keynote speaker at her upcoming tech conference.</span></span></p>",
+      "details": "<p>Invited me to be the keynote speaker at her upcoming tech conference.</p>",
       "type": "phone",
       "id": "p2a61lcuof0g",
       "subject": "Keynote Speaker",
@@ -2605,7 +2605,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Received a voicemail that he would call me next week about the version 5 orders.</span></span></p>",
+      "details": "<p>Received a voicemail that he would call me next week about the version 5 orders.</p>",
       "type": "phone",
       "id": "13oiez9992xog",
       "subject": "V5 Orders",
@@ -2616,7 +2616,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Faxed over our proposal for 1,000,000 chips to Mike.</span></span></p>",
+      "details": "<p>Faxed over our proposal for 1,000,000 chips to Mike.</p>",
       "type": "info",
       "id": "b0f5f29qnw1s",
       "subject": "New Chip Order Faxed",
@@ -2627,7 +2627,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called me today and asked to submit a bid proposal to manufacture 1,000,000 new chips.</span></span></p>",
+      "details": "<p>Called me today and asked to submit a bid proposal to manufacture 1,000,000 new chips.</p>",
       "type": "phone",
       "id": "ae20x19zuz28",
       "subject": "New Chip Order",
@@ -2638,7 +2638,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Told me their Administrative Specialist of Sales wants to have lunch.</span></span></p>",
+      "details": "<p>Told me their Administrative Specialist of Sales wants to have lunch.</p>",
       "type": "phone",
       "id": "1mwha0ecpslc0",
       "subject": "Schedule a Meeting",
@@ -2649,7 +2649,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">We had lunch today. Her daughter is getting married. Need to send a wedding gift.</span></span></p>",
+      "details": "<p>We had lunch today. Her daughter is getting married. Need to send a wedding gift.</p>",
       "type": "visit",
       "id": "1nijwwhveyz28",
       "subject": "Lunch Notes",
@@ -2660,7 +2660,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">The delivery department delivered his late order, so I made a call to smooth the situation.</span></span></p>",
+      "details": "<p>The delivery department delivered his late order, so I made a call to smooth the situation.</p>",
       "type": "phone",
       "id": "bw054rwt9s74",
       "subject": "Delivery Explanation",
@@ -2671,7 +2671,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called me today and expressed his dissatisfaction that we are late on delivery.</span></span></p>",
+      "details": "<p>Called me today and expressed his dissatisfaction that we are late on delivery.</p>",
       "type": "phone",
       "id": "1eti2ccfgh1xc",
       "subject": "Late Delivery",
@@ -2682,7 +2682,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called to follow-up on the recent orders.</span></span></p>",
+      "details": "<p>Called to follow-up on the recent orders.</p>",
       "type": "phone",
       "id": "hq0n2jx21zi8",
       "subject": "Recent Orders",
@@ -2693,7 +2693,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Had lunch with him and their Director of Operations. Set up product demos.</span></span></p>",
+      "details": "<p>Had lunch with him and their Director of Operations. Set up product demos.</p>",
       "type": "visit",
       "id": "knvc72a4ge80",
       "subject": "Product Demos",
@@ -2704,7 +2704,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called to introduce myself and ask if he would like to see a demo.</span></span></p>",
+      "details": "<p>Called to introduce myself and ask if he would like to see a demo.</p>",
       "type": "phone",
       "id": "gvi0mv54zy8",
       "subject": "Demo Invite",
@@ -2715,7 +2715,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Facebooked today and he gave me some nice leads.</span></span></p>",
+      "details": "<p>Facebooked today and he gave me some nice leads.</p>",
       "type": "opportunity",
       "id": "gyfqnhuihzi8",
       "subject": "Facebook Leads",
@@ -2726,7 +2726,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">We spoke today about Project SMSTP. Looking forward to more information about this.</span></span></p>",
+      "details": "<p>We spoke today about Project SMSTP. Looking forward to more information about this.</p>",
       "type": "visit",
       "id": "6ra6rczlhaf4",
       "subject": "Project Status",
@@ -2737,7 +2737,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Sent flowers from the Sales department for her birthday.</span></span></p>",
+      "details": "<p>Sent flowers from the Sales department for her birthday.</p>",
       "type": "info",
       "id": "6ygppz57p43k",
       "subject": "Birthday",
@@ -2748,7 +2748,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Was notified this afternoon that there is an issue with the installation.</span></span></p>",
+      "details": "<p>Was notified this afternoon that there is an issue with the installation.</p>",
       "type": "mail",
       "id": "1x86ojdjmf01s",
       "subject": "Installation Issue",
@@ -2759,7 +2759,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled installation and notified him it would begin Dec. 19th.</span></span></p>",
+      "details": "<p>Scheduled installation and notified him it would begin Dec. 19th.</p>",
       "type": "info",
       "id": "x12zv0ww8hs0",
       "subject": "Installation",
@@ -2770,7 +2770,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">He faxed a counter offer, and I replied back.</span></span></p>",
+      "details": "<p>He faxed a counter offer, and I replied back.</p>",
       "type": "info",
       "id": "1hr0i6cwwq48w",
       "subject": "Counter Offer",
@@ -2781,7 +2781,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I sent him our offer of payment.</span></span></p>",
+      "details": "<p>I sent him our offer of payment.</p>",
       "type": "document",
       "id": "wqrbx84kkt1c",
       "subject": "Payment Offer",
@@ -2792,7 +2792,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Sh</span></span><span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">e called today and asked for a wireless support fee schedule.</span></span></p>",
+      "details": "<p>She called today and asked for a wireless support fee schedule.</p>",
       "type": "phone",
       "id": "9elvvt1hiozk",
       "subject": "Fee Schedule",
@@ -2803,7 +2803,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">We spoke today about negotiating a partnership for the new product release.</span></span></p>",
+      "details": "<p>We spoke today about negotiating a partnership for the new product release.</p>",
       "type": "mail",
       "id": "zjcv1p6dnzeo",
       "subject": "Partnership",
@@ -2814,7 +2814,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I called to ask if he would like to submit a quote about their experience with our product. He agreed and will email it over.</span></span></p>",
+      "details": "<p>I called to ask if he would like to submit a quote about their experience with our product. He agreed and will email it over.</p>",
       "type": "phone",
       "id": "bhwt9i7hzuv4",
       "subject": "Experience Quote",
@@ -2825,7 +2825,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Had questions about our new model. Scheduled a lunch meeting for Jan 12<sup>th</sup>.</span></span></p>",
+      "details": "<p>Had questions about our new model. Scheduled a lunch meeting for Jan 12<sup>th</sup>.</p>",
       "type": "phone",
       "id": "1vruds5b3rqww",
       "subject": "Questions About New Model",
@@ -2836,7 +2836,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Finalized the Bluetooth package today.</span></span></p>",
+      "details": "<p>Finalized the Bluetooth package today.</p>",
       "type": "info",
       "id": "1gkg7j6xcjk00",
       "subject": "Bluetooth Package",
@@ -2847,7 +2847,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met with Keith and his lead sales manager to sort out details concerning use of our Bluetooth technology.</span></span></p>",
+      "details": "<p>Met with Keith and his lead sales manager to sort out details concerning use of our Bluetooth technology.</p>",
       "type": "visit",
       "id": "jcuodvocr30g",
       "subject": "Bluetooth Use",
@@ -2858,7 +2858,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled meeting with our Bluetooth team and his development team for Jan. 19th to discuss integration.</span></span></p>",
+      "details": "<p>Scheduled meeting with our Bluetooth team and his development team for Jan. 19th to discuss integration.</p>",
       "type": "opportunity",
       "id": "4ez06bjr3eo0",
       "subject": "Meeting Scheduled",
@@ -2869,7 +2869,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met for lunch today to answer any lingering questions he had.</span></span></p>",
+      "details": "<p>Met for lunch today to answer any lingering questions he had.</p>",
       "type": "visit",
       "id": "1w8zpnjangef4",
       "subject": "Lunch",
@@ -2880,7 +2880,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called today to follow-up about the developers using our new model.</span></span></p>",
+      "details": "<p>Called today to follow-up about the developers using our new model.</p>",
       "type": "phone",
       "id": "ieeiw17po3cw",
       "subject": "New Model Feature",
@@ -2891,7 +2891,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Received full payment today and called to thank him.</span></span></p>",
+      "details": "<p>Received full payment today and called to thank him.</p>",
       "type": "phone",
       "id": "1qhm3aqtt4d1c",
       "subject": "Payment Received",
@@ -2902,7 +2902,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made follow-up call to check on their new units, and mentioned their past due invoice.</span></span></p>",
+      "details": "<p>Made follow-up call to check on their new units, and mentioned their past due invoice.</p>",
       "type": "phone",
       "id": "jnv3z90b0v0g",
       "subject": "Past-Due Invoice",
@@ -2913,7 +2913,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">I called and spoke to her about their late payment. She will follow-up with me.</span></span></p>",
+      "details": "<p>I called and spoke to her about their late payment. She will follow-up with me.</p>",
       "type": "phone",
       "id": "rrkarm0ysa2o",
       "subject": "Late Payment",
@@ -2924,7 +2924,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Called requesting a seven-day extension on their invoice. I approved.</span></span></p>",
+      "details": "<p>Called requesting a seven-day extension on their invoice. I approved.</p>",
       "type": "phone",
       "id": "1ol91ho86onpc",
       "subject": "Invoice Extension",
@@ -2935,7 +2935,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Invited me for drinks with his developers tonight at Hanks Tavern.</span></span></p>",
+      "details": "<p>Invited me for drinks with his developers tonight at Hanks Tavern.</p>",
       "type": "opportunity",
       "id": "zx67a3e3mp6o",
       "subject": "Invitation",
@@ -2946,7 +2946,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Had a conference call about utilizing our new model in their upcoming smartphone.</span></span></p>",
+      "details": "<p>Had a conference call about utilizing our new model in their upcoming smartphone.</p>",
       "type": "phone",
       "id": "1882w3m0hio74",
       "subject": "Conference Call",
@@ -2957,7 +2957,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made follow-up call about our new model.</span></span></p>",
+      "details": "<p>Made follow-up call about our new model.</p>",
       "type": "phone",
       "id": "13isxtrvemvpc",
       "subject": "Phone Call",
@@ -2968,7 +2968,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Met about our new unit and will follow-up with a phone call on Tuesday.</span></span></p>",
+      "details": "<p>Met about our new unit and will follow-up with a phone call on Tuesday.</p>",
       "type": "visit",
       "id": "wtxwzmgdrh1c",
       "subject": "Meeting Note",
@@ -2979,7 +2979,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Made a call and talked to him about using our new model in their upcoming smartphone release.</span></span></p>",
+      "details": "<p>Made a call and talked to him about using our new model in their upcoming smartphone release.</p>",
       "type": "phone",
       "id": "1am2zurc7aqkg",
       "subject": "Feature in New Model",
@@ -2990,7 +2990,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Trent RMA&#39;ed two units and ordered replacements.</span></span></p>",
+      "details": "<p>Trent RMA&#39;ed two units and ordered replacements.</p>",
       "type": "ticket",
       "id": "1oc8ml41mg54w",
       "subject": "RMA's",
@@ -3001,7 +3001,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled delivery of new units for next Tuesday with Marcie.</span></span></p>",
+      "details": "<p>Scheduled delivery of new units for next Tuesday with Marcie.</p>",
       "type": "info",
       "id": "lahwec0kp728",
       "subject": "Delivery Scheduled",
@@ -3012,7 +3012,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Ed approved an order for 300 units.</span></span></p>",
+      "details": "<p>Ed approved an order for 300 units.</p>",
       "type": "phone",
       "id": "9z0ribcr9vr4",
       "subject": "Order Approved",
@@ -3023,7 +3023,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Closed the deal with Mark today at 18% over cost.</span></span></p>",
+      "details": "<p>Closed the deal with Mark today at 18% over cost.</p>",
       "type": "activity",
       "id": "gwo2olyx0lxc",
       "subject": "Closed Deal",
@@ -3034,7 +3034,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Scheduled chip presentation for March 18th at 9:30 a.m.</span></span></p>",
+      "details": "<p>Scheduled chip presentation for March 18th at 9:30 a.m.</p>",
       "type": "opportunity",
       "id": "azuho51o2ayo",
       "subject": "Chip Presentation",
@@ -3045,7 +3045,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"color:#535353;\"><span style=\"font-size:11.0pt;\">Went to Jamie&#39;s office today and chatted about upgrading their contract.</span></span></p>",
+      "details": "<p>Went to Jamie&#39;s office today and chatted about upgrading their contract.</p>",
       "type": "visit",
       "id": "15zu2b1tljuv4",
       "subject": "Contract Upgrade",
@@ -3056,7 +3056,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\" style=\"text-indent:-.25in;\">\r\n\t<span style=\"font-size:12px;\"><span style=\"font-family:arial,helvetica,sans-serif;\"><span style=\"color:#535353;\">Called reminding me to bring the demo units to the conference on Monday.</span></span></span></p>",
+      "details": "<p>Called reminding me to bring the demo units to the conference on Monday.</p>",
       "type": "phone",
       "id": "p0grazr9sohs",
       "subject": "Demo Units at Conference",
@@ -3067,7 +3067,7 @@
       ]
     },
     {
-      "details": "<p dir=\"ltr\">\r\n\tSofia called today to discuss the latest <strong>offer </strong>we sent her.</p>",
+      "details": "<p>Sofia called today to discuss the latest <strong>offer </strong>we sent her.</p>",
       "type": "phone",
       "id": "1lak8fekgcoow",
       "subject": "Latest Offer",
