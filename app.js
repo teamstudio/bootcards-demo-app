@@ -41,9 +41,11 @@ app.use(pjax());
 
 //send session info to handlebars, check OS used to send correct stylesheet
 app.use(function(req, res, next){
+
 	var ua = req.headers['user-agent'];
 	req.session.isAndroid = (ua.match(/Android/i) != null);
 	req.session.isIos = (ua.match(/iPhone|iPad|iPod/i) != null);
+
 	res.locals.session = req.session;
 
 	next();
