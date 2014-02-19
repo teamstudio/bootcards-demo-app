@@ -22,6 +22,8 @@
   <!--<link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />-->
   <!-- FontAwesome -->	
   <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Jasny Bootstrap for slide in menu -->
+  <link href="/bower_components/bootstrap-jasny/dist/css/jasny-bootstrap.min.css" rel="stylesheet" />
   <!-- Custom styles -->
   <link href="/bootcards/css/bootcards.css" rel="stylesheet" />
   {{{getCSSforOS session}}}
@@ -36,8 +38,26 @@
 
     <body>
 
+      <!-- slide in menu (mobile) -->
+      <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+        <ul class="nav navmenu-nav">
+          {{#each menu}}
+            {{#if this.active }}
+              <li class="active">
+            {{else}}
+              <li>
+            {{/if}}
+            <a href="{{this.url}}">
+              <i class="fa {{this.icon}}"></i>
+              {{this.name}}
+            </a>          
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
       <!-- Fixed navbar -->
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,11 +66,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+    
             <button type="button" class="btn btn-default btn-back">
               <i class="fa fa-lg fa-chevron-left"></i>
               <span>Back</span>
             </button>
-            <button type="button" class="btn btn-default btn-menu">
+            <button type="button" class="btn btn-default btn-menu"
+              class="navbar-toggle" 
+              data-toggle="offcanvas" 
+              data-target=".navmenu" 
+              data-canvas="body">
               <i class="fa fa-lg fa-bars"></i>
               <span>Menu</span>
             </button>
@@ -103,6 +128,7 @@
     <script src="/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>   
     <script src="/bower_components/jquery-pjax/jquery.pjax.js"></script>
+    <script src="/bower_components/bootstrap-jasny/dist/js/jasny-bootstrap.min.js"></script>
     <script src="/bootcards/js/bootcards.js"></script> 
 
   </body>
