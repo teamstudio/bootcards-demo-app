@@ -96,8 +96,8 @@ a.list-group-item.active:focus {
 	border-color: #DDD;	
 	text-shadow: none;
 	color: black;
-	margin-left: -20px;
-	padding-left: 20px;
+	margin-left: -25px;
+	padding-left: 25px;
 }
 
 a.list-group-item:hover {
