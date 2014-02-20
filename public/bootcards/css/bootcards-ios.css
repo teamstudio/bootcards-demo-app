@@ -107,31 +107,6 @@ a {
 
 
 
-/* MENU */
-
-a.list-group-item {
-	font-size: 17px;
-	font-weight: normal;
-	color: black;
-	line-height: 24px;
-	padding-right: 25px;
-}
-
-a.list-group-item.active, 
-a.list-group-item.active:hover, 
-a.list-group-item.active:focus {
-	background: #e5e5e5;
-	border-color: #DDD;	
-	text-shadow: none;
-	color: black;
-	margin-left: -25px;
-	padding-left: 25px;
-}
-
-a.list-group-item:hover {
-	background: white;
-}
-
 
 
 /* PANELS */
@@ -163,7 +138,7 @@ a.list-group-item:hover {
 }
 
 .panel-heading {
-	padding-left: 0;
+	//padding-left: 0;
 }
 
 .panel-heading .btn-group .btn {
@@ -180,9 +155,26 @@ a.list-group-item:hover {
 
 
 
+/* CARDS */
+
+.cards {
+	background: #f5f5f5;
+}
+
+.cards .panel {
+	margin: 20px;
+}
+
+.cards .list-group-item {
+	
+}
+
+
+
+
 /* LISTS */
 
-.list-group-item {
+.list .list-group-item {
 	padding-left: 0;
 }
 
@@ -215,6 +207,34 @@ a.list-group-item:hover {
 	color: black;
 	margin: 0;
 } 
+
+a.list-group-item {
+	font-size: 17px;
+	font-weight: normal;
+	color: black;
+	line-height: 24px;
+	padding-right: 25px;
+}
+
+a.list-group-item.active, 
+a.list-group-item.active:hover, 
+a.list-group-item.active:focus {
+	background: #e5e5e5;
+	border-color: #DDD;	
+	text-shadow: none;
+	color: black;
+}
+
+.list a.list-group-item.active, 
+.list a.list-group-item.active:hover, 
+.list a.list-group-item.active:focus {
+	margin-left: -25px;
+	padding-left: 25px;
+}
+
+a.list-group-item:hover {
+	background: white;
+}
 
 .list-group-item .list-group-item-text,
 a.list-group-item.active .list-group-item-text, 
