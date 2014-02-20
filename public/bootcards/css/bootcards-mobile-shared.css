@@ -64,14 +64,32 @@ body {
 
 /* MENU */
 
-.menu {
+.navmenu {
 	display: none;
 	padding: 0;
 }
 
-.menu i {
-	width: 28px;
+.navmenu li {
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.navmenu i {
+	width: 24px;
+	margin-right: 5px;
 	text-align: center;
+}
+
+
+/* LISTS */
+
+.list {
+	padding: 0;
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+	border-radius: 0;
 }
 
 a.list-group-item:before {
@@ -86,17 +104,6 @@ a.list-group-item:before {
 	color: #ccc;
 }
 
-
-/* LISTS */
-
-.list {
-	padding: 0;
-}
-
-.list-group-item:first-child,
-.list-group-item:last-child {
-	border-radius: 0;
-}
 
 
 /* CARDS */

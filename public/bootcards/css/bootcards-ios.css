@@ -42,20 +42,25 @@ a {
 	color: black;
 }
 
-.btn-back,
-.btn-back:hover,
-.btn-menu,
-.btn-menu:hover {
-	position: absolute;
-	left: 0px;
-	top: 8px;
+.navbar-fixed-top .btn,
+.navbar-fixed-top .btn:hover {
 	background: none;
 	border: 0;
 	box-shadow: none;
 	font-size: 15px;
 	color: #007aff;
+	padding: 6px 0;
+	position: absolute;
+	top: 8px;
 }
 
+.navbar-fixed-top .btn.pull-left {
+	left: 15px;
+}
+
+.navbar-fixed-top .btn.pull-right {
+	right: 15px;
+}
 
 
 /* GRID */

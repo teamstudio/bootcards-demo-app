@@ -48,7 +48,7 @@
               <li>
             {{/if}}
             <a href="{{this.url}}">
-              <i class="fa {{this.icon}}"></i>
+              <i class="fa fa-lg {{this.icon}}"></i>
               {{this.name}}
             </a>          
           </li>
@@ -67,11 +67,11 @@
               <span class="icon-bar"></span>
             </button>
     
-            <button type="button" class="btn btn-default btn-back">
+            <button type="button" class="btn btn-default btn-back pull-left">
               <i class="fa fa-lg fa-chevron-left"></i>
               <span>Back</span>
             </button>
-            <button type="button" class="btn btn-default btn-menu"
+            <button type="button" class="btn btn-default btn-menu pull-left"
               class="navbar-toggle" 
               data-toggle="offcanvas" 
               data-target=".navmenu" 
@@ -80,6 +80,10 @@
               <span>Menu</span>
             </button>
             <a class="navbar-brand" title="CustomerView v{{getAppVersion}}" href="/">CustomerView</a>
+            <button type="button" class="btn btn-default pull-right">
+              <i class="fa fa-lg fa-plus"></i>
+              <span>Add</span>
+            </button>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
