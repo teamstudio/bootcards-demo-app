@@ -138,11 +138,26 @@ app.get('/companies/:id', company.read);
 app.put('/companies/:id', company.save);
 app.get('/companies/:id/edit', company.edit);
 
-app.get('/contacts', contact.list);
-app.get('/contacts/:id', contact.read);
-app.put('/contacts/:id', contact.save);
+app.get('/companies/:id/activities', company.listActivities);	
+app.get('/companies/:id/activities/add', company.addActivity);	
+app.get('/companies/:id/activities/:activityId', company.readActivity);	
+app.get('/companies/:id/activities/:activityId/edit', company.editActivity);	
+app.put('/companies/:id/activities', company.saveActivity);		//save new activity 
+app.put('/companies/:id/activities/:activityId', company.saveActivity);		
+
+app.get('/contacts', contact.list);			//list
+app.put('/contacts', contact.save);			//save new contact
+app.get('/contacts/:id', contact.read);		//read a contact
+app.put('/contacts/:id', contact.save);		//save a specific contact
 app.get('/contacts/:id/edit', contact.edit);
 app.get('/contacts/add/:companyId', contact.add);
+
+app.get('/contacts/:id/activities', contact.listActivities);	
+app.get('/contacts/:id/activities/add', contact.addActivity);	
+app.get('/contacts/:id/activities/:activityId', contact.readActivity);	
+app.get('/contacts/:id/activities/:activityId/edit', contact.editActivity);	
+app.put('/contacts/:id/activities', contact.saveActivity);		//save new activity in contact
+app.put('/contacts/:id/activities/:activityId', contact.saveActivity);	
 
 app.get('/activities', activity.list);
 app.get('/activities/:id', activity.read);

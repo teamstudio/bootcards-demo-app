@@ -3,7 +3,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<h3 class="panel-title">
-			{{#if contact.isNew}}
+			{{#if activity.isNew}}
 				New Activity
 			{{else}}
 				Edit Activity
@@ -11,33 +11,15 @@
 		</h3>
 	</div>
 	<div class="panel-content">
-		<form class="form-horizontal" method="POST" action="/activities" data-pjax="#activityDetails">
+		{{#if activity.isNew}}
+			<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/activities" data-pjax="#contactDetails">
+		{{else}}
+			<form class="form-horizontal" method="POST" action="/activities" data-pjax="#activityDetails">
+		{{/if}}
 			<input type="hidden" name="_method" value="put">
 			<input type="hidden" name="contactId" value="{{activity.parentId}}">
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Type</label>
-				<div class="col-xs-9">
-					<select name="type" class="form-control" value="{{activity.type}}">
-						<option value="phone" selected>Phone note</option>
-						<option value="visit">Visit report</option>
-						<option value="info">Note</option>
-					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Subject</label>
-				<div class="col-xs-9">
-					<input type="text" name="subject" class="form-control" placeholder="Subject"
-					value="{{activity.subject}}">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Date</label>
-				<div class="col-xs-9">
-					<input type="datetime" name="date" class="form-control" placeholder="Date"
-					value="{{activity.date}}">
-				</div>
-			</div>
+			{{>activity_form activity}}
+
 			<div class="form-group">
 				<div class="col-sm-6 col-sm-offset-3 col-xs-6">
 					<button type="submit" class="btn btn-success btn-block">Save</button>

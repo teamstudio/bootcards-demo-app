@@ -1,4 +1,5 @@
 var bc = require('../bootcards-functions.js');
+var moment	= require('moment');
 
 exports.list = function(req, res){
 
@@ -65,5 +66,86 @@ exports.save = function(req,res) {
 	   	menu: bc.getActiveMenu(menu, 'contacts'),
 	    contact: contact
 	});
+
+}
+
+/* ACTIVITIES */
+
+exports.listActivities = function(req, res) {
+
+	res.renderPjax('activities_for_contact', {
+  		contact : bc.getContactById(req.params.id)
+	});
+
+}
+
+exports.readActivity = function(req, res) {
+
+	var contact = bc.getContactById( req.params.id);
+	contact.isContact = true;
+
+	res.renderPjax('contact_activity', {
+		contact : contact,
+  		activity : bc.getActivityById( req.params.activityId)
+	});
+}
+exports.editActivity = function(req, res) {
+
+	var contact = bc.getContactById( req.params.id);
+	contact.isContact = true;
+
+	var activity = bc.getActivityById( req.params.activityId);
+
+	res.renderPjax('contact_activity_edit', {
+		contact : contact,
+		activity : activity
+	});
+}
+exports.addActivity = function(req, res) {
+	
+	var contact = bc.getContactById(req.params.id);
+
+	res.renderPjax('contact_activity_edit', {
+  		contact: contact,
+  		activity : {
+  			date : moment().format("DD/MM/YYYY HH:mm"),
+  			isNew : true
+  		}
+	});
+}
+
+exports.saveActivity = function(req, res) {
+
+	var activity;
+	var contact = bc.getContactById(req.params.id);
+
+	if (req.params.activityId) {
+
+		activity = bc.getActivityById(req.params.activityId);
+		activity.type = req.body.type;
+		activity.subject = req.body.subject;
+		activity.date = moment(req.body.date, "DD/MM/YYYY HH:mm");
+
+	} else {
+
+		activity = {
+			id: bc.getUniqueId(),
+			parentIds : [req.params.id],
+			type: req.body.type,
+			subject: req.body.subject,
+			date: moment(req.body.date, "DD/MM/YYYY HH:mm")
+		}
+
+		activities.push(activity);
+		contact.activities.push(activity);
+
+	}
+
+	if (contact != null) {
+
+		res.renderPjax('activities_for_contact', {
+	  		contact : contact
+		});
+	}
 
 }

@@ -1,19 +1,21 @@
+{{!< layout}}
+
 <div id="activityDetails">
 
 	<div class="panel panel-default">
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Activities</h3>
 			<div class="btn-group pull-right">
-				<a class="btn btn-primary" href="/activities/add/{{this.id}}" data-pjax="#activityDetails">
+				<a class="btn btn-primary" href="/contacts/{{contact.id}}/activities/add" data-pjax="#activityDetails">
 						<i class="fa fa-plus"></i>
 						<span>Add</span>
 				</a>
 			</div>							
 		</div>					
 		<div class="list-group">
-			{{#each this.activities}}
+			{{#each contact.activities}}
 				<a class="list-group-item" 
-						href="/activities/{{this.id}}"
+						href="/contacts/{{../contact.id}}/activities/{{this.id}}"
 						data-pjax="#activityDetails">
 					<i class="fa fa-2x pull-left {{getIconForType this.type}}"></i>
 					<h4 class="list-group-item-heading">{{this.subject}}</h4>
