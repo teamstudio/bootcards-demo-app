@@ -1,4 +1,19 @@
 
+
+//sort an object by a property 
+exports.sortByField = function(data, field) {
+
+	return data.sort(
+
+		function(a,b) {
+			return ( (a[field] > b[field]) ? 1 : ((a[field] < b[field]) ? -1 : 0));
+		}
+
+	);
+
+}
+
+//set the active menu
 exports.getActiveMenu = function(menu, id) {
 
 	for (var i=0; i<menu.length; i++) {
@@ -9,6 +24,7 @@ exports.getActiveMenu = function(menu, id) {
 
 }
 
+//return an icon name for an item type
 exports.getIconForType = function(type) {
 
 	switch (type) {

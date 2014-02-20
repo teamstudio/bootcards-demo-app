@@ -109,7 +109,7 @@ fs.readFile(dataFile, 'utf8', function (err, data) {
   var jsonContents = JSON.parse(data);
 
   contacts = jsonContents.contacts;
-  companies = jsonContents.companies;
+  companies = bc.sortByField( jsonContents.companies, 'name');
   activities = jsonContents.activities;
 
   console.log("Sample data read. Found " + contacts.length + " contacts, " + companies.length + " companies, " + activities.length + " activities");
