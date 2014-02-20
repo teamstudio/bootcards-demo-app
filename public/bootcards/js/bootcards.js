@@ -56,31 +56,32 @@ $(document)
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 
-		$(".offcanvas").hide();
-		$(".navbar-collapse").collapse('hide');
+		$(".offcanvas").offcanvas('hide');
+		$(".navbar-collapse.in").collapse('hide');
+
+		var $tgt = $(event.target);
+		var cards_column = $tgt.closest('.cards');
 
 		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
 
 			var list = $(event.relatedTarget).closest('.list');
 
 			if ( list.length ) {
-				bootcards.fade( list, $(event.target).closest('.cards') );
+				bootcards.fade( list, cards_column );
 			}
 			
 		}
 
 		//scroll to the target element (so it doesn't render outside the viewport
-		var column = $(event.target).closest(".cards");
+		if (cards_column) {
 
-		if (column) {
-
-			var top = $(event.target).position().top;
+			var top = $tgt.position().top;
 
 			if (top <= 60) {
 				top = 0;	//scroll to the top if the target is a few pixels below the top
 			}
 
-			column.animate({scrollTop:top}, '500', 'easeOutExpo'); 
+			cards_column.animate({scrollTop:top}, '500', 'easeOutExpo'); 
 		}
 
 	});

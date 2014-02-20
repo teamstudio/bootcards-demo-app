@@ -47,7 +47,6 @@ exports.add = function(req, res) {
 
 exports.save = function(req, res) {
 
-	console.log(' save activ' + req.params.id);
 	//retrieve the parent contact
 	var contact = bc.getContactById(req.body.contactId);
 
@@ -58,7 +57,8 @@ exports.save = function(req, res) {
 			type: req.body.type,
 			subject: req.body.subject,
 			date: moment(req.body.date),
-			parentIds : [contact.id]
+			parentIds : [contact.id],
+			details: req.body.details
 		}
 
 		activities.push(activity);
