@@ -1,14 +1,28 @@
 {{!< layout}}
 
 <div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">
+	<div class="panel-heading clearfix">
+		<h3 class="panel-title pull-left">
 			{{#if contact.isNew}}
 				New Contact
 			{{else}}
 				Edit Contact
 			{{/if}}
-		</h3>
+		</h3>	
+		<div class="pull-right">
+			<div class="btn-group">
+				<button type="submit" class="btn btn-success">
+					<i class="fa fa-check"></i>
+					Save
+				</button>
+			</div>
+			<div class="btn-group">
+				<a class="btn btn-danger" data-pjax="#contactDetails" href="/contacts/{{contact.id}}">
+					<i class="fa fa-times"></i>
+					Cancel
+				</a>
+			</div>
+		</div>		
 	</div>
 	<div class="panel-content">
 		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}" data-pjax="#main">
@@ -63,14 +77,12 @@
 					value="{{contact.email}}">
 				</div>
 			</div>
-			<div class="form-group">
-				<div class="col-xs-6 col-sm-6 col-sm-offset-3">
-					<button type="submit" class="btn btn-success btn-block">Save</button>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-					<a class="btn btn-danger btn-block" data-pjax="#contactDetails" href="/contacts/{{contact.id}}">Cancel</a>
-				</div>
-			</div>
 		</form>					
+	</div>
+	<div class="panel-footer">
+		<a class="btn btn-danger btn-block">
+			<i class="fa fa-trash-o"></i>
+			Delete Contact
+		</a>		
 	</div>
 </div>

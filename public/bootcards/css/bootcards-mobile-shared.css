@@ -44,14 +44,14 @@ body {
 	padding-bottom: 0;
 }
 
-.row > div {
+.container > .row > div {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	height: 100%;
 	padding-top: 0;
 }
 
-.row > div:last-child {
+.container > .row > div:last-child {
 	border-left: 1px solid rgba(0,0,0,0.3);
 }
 
@@ -60,6 +60,8 @@ body {
 		border-left: 0;
 	}
 }
+
+
 
 
 /* MENU */
@@ -115,9 +117,19 @@ a.list-group-item:before {
 	padding: 8px;
 }
 
-.list form input[type=text] {
-	box-shadow: none;
+
+
+/* FORMS */
+
+.form-group input[type=text],
+.form-group input[type=datetime],
+.form-group input[type=email],
+.form-group input[type=phone],
+.form-group textarea,
+.form-group select {
 	border: 0;
+	box-shadow: none;
+	-webkit-appearance:none;
 }
 
 
@@ -128,6 +140,12 @@ a.list-group-item:before {
 .cards {
 	padding: 0;
 }
+
+.panel-footer {
+	background: 0;
+	border: 0;
+}
+
 
 
 

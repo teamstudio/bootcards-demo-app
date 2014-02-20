@@ -15,6 +15,34 @@ a {
 }
 
 
+/* BUTTONS */
+
+.btn,
+.btn:hover,
+.btn:active {
+	background: transparent;
+	border-color: transparent;
+	box-shadow: none;
+	font-size: 15px;	
+	color: #007aff;
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active {
+	color: #d43f3a;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:active {
+	color: #4cae4c;
+}
+
+
+
+
+
 /* NAVBAR */
 
 .navbar-fixed-top {
@@ -127,7 +155,7 @@ a.list-group-item:hover {
 
 .panel-title {
 	font-size: 15px;
-	line-height: 29px;
+	line-height: 36px;
 	text-transform: uppercase;
 	color: #999;
 	font-weight: normal;
@@ -139,18 +167,10 @@ a.list-group-item:hover {
 }
 
 .panel-heading .btn-group .btn {
-	background: transparent;
-	border: 0;
-	box-shadow: none;
-	padding: 0;
-	color: #007aff;
+	
 	height: 29px;
 	font-size: 15px;
 	text-shadow: none;
-}
-
-.panel-heading .btn-group .btn i {
-	display: none;
 }
 
 .panel-body,
@@ -235,12 +255,7 @@ a.list-group-item.active:focus .list-group-item-text {
 	color: #007aff;
 	font-weight: normal;
 	font-size: 13px;
-	margin-top: 3px;
-}
-
-.form-group input {
-	border: 0;
-	box-shadow: none;
+	margin-top: 1px;
 }
 
 .form-group div {

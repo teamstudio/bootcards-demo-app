@@ -15,6 +15,32 @@ a {
 }
 
 
+
+/* BUTTONS */
+
+.btn,
+.btn:hover,
+.btn:active {
+	background: transparent;
+	border-color: transparent;
+	box-shadow: none;
+	color: #999;
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:active {
+	color: #d43f3a;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:active {
+	color: #4cae4c;
+}
+
+
+
 /* NAVBAR */
 
 @media (min-width:767px) {
@@ -102,26 +128,17 @@ a {
 	border-radius: 0;
 }
 
-.panel-heading .panel-heading-title {
+.panel-default > .panel-heading {
+	background: transparent;
+}
+
+.panel-heading .panel-title {
 	font-size: 15px;
-	line-height: 29px;
+	line-height: 36px;
 	text-transform: uppercase;
 	color: #33b5e5;
 	font-weight: bold;
 	margin: 0;
-	float: left;
-}
-
-.panel-heading .btn {
-	background: transparent;
-	border: 0;
-	box-shadow: none;
-	padding: 0;
-	color: #999;
-}
-
-.panel-heading .btn span {
-	display: none;
 }
 
 
@@ -218,9 +235,12 @@ a.list-group-item:hover {
 	padding-right: 12px;	
 }
 
-.form-control {
-	border: 0;
-	box-shadow: none;
+.form-group input[type=text],
+.form-group input[type=datetime],
+.form-group input[type=email],
+.form-group input[type=phone],
+.form-group textarea,
+.form-group select {
 	border-radius: 0;
 	border-bottom: 1px solid #ccc;
 	margin: 0;
