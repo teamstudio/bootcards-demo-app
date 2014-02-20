@@ -1,6 +1,11 @@
 {{!< layout}}
 
 <div class="panel panel-default">
+	{{#if activity.isNew}}
+			<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/activities" data-pjax="#contactDetails">
+		{{else}}
+			<form class="form-horizontal" method="POST" action="/activities" data-pjax="#activityDetails">
+		{{/if}}
 	<div class="panel-heading clearfix">
 		<h3 class="panel-title pull-left">
 			{{#if activity.isNew}}
@@ -25,14 +30,8 @@
 		</div>			
 	</div>
 	<div class="panel-content">
-		{{#if activity.isNew}}
-			<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/activities" data-pjax="#contactDetails">
-		{{else}}
-			<form class="form-horizontal" method="POST" action="/activities" data-pjax="#activityDetails">
-		{{/if}}
 			<input type="hidden" name="_method" value="put">
 			<input type="hidden" name="contactId" value="{{activity.parentId}}">
-			{{>activity_form activity}}
 		</form>					
 	</div>
 	<div class="panel-footer">
@@ -41,4 +40,5 @@
 			Delete Activity
 		</a>		
 	</div>	
+</form>
 </div>

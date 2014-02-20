@@ -1,6 +1,7 @@
 {{!< layout}}
 
 <div class="panel panel-default">
+	<form class="form-horizontal" method="POST" action="/companies/{{company.id}}" data-pjax="#main">
 	<div class="panel-heading clearfix">
 		<h3 class="panel-title pull-left">
 			{{#if company.isNew}}
@@ -25,7 +26,6 @@
 		</div>			
 	</div>
 	<div class="panel-content">
-		<form class="form-horizontal" method="POST" action="/companies/{{company.id}}" data-pjax="#main">
 			<input type="hidden" name="_method" value="put">
 			<div class="form-group">
 				<label class="col-xs-3 control-label">Name</label>
@@ -63,8 +63,7 @@
 					<input type="text" name="country" class="form-control" placeholder="Country"
 						value="{{company.country}}">
 				</div>
-			</div>
-		</form>					
+			</div>				
 	</div>
 	<div class="panel-footer">
 		<a class="btn btn-danger btn-block">
@@ -72,4 +71,5 @@
 			Delete Company
 		</a>		
 	</div>	
+	</form>	
 </div>

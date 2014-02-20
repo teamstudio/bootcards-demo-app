@@ -1,6 +1,11 @@
 {{!< layout}}
 
 <div class="panel panel-default">
+	{{#if activity.isNew}}
+		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities" data-pjax="#activityDetails">
+		{{else}}
+		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities/{{activity.id}}" data-pjax="#activityDetails">
+		{{/if}}
 	<div class="panel-heading">
 		<h3 class="panel-title">
 		{{#if activity.isNew}}
@@ -12,11 +17,6 @@
 	</div>
 	<div class="panel-content">
 
-		{{#if activity.isNew}}
-		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities" data-pjax="#activityDetails">
-		{{else}}
-		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities/{{activity.id}}" data-pjax="#activityDetails">
-		{{/if}}
 
 			<input type="hidden" name="_method" value="put">
 
@@ -33,7 +33,7 @@
 						<a class="btn btn-danger btn-block" data-pjax="#activityDetails" href="/contacts/{{contact.id}}/activities/{{activity.id}}">Cancel</a>
 					{{/if}}
 				</div>
-			</div>
-		</form>					
+			</div>				
 	</div>
+</form>
 </div>
