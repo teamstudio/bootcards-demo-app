@@ -104,6 +104,23 @@ a.list-group-item:before {
 	color: #ccc;
 }
 
+/* List - Search Form */
+
+.list .panel-body {
+	padding: 0;
+}
+
+.list form {
+	background: #BBB;
+	padding: 8px;
+}
+
+.list form input[type=text] {
+	box-shadow: none;
+	border: 0;
+}
+
+
 
 
 /* CARDS */

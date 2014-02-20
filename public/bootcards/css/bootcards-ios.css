@@ -207,6 +207,18 @@ a.list-group-item.active:focus .list-group-item-text {
 	font-weight: normal;	
 } 
 
+/* List - Search Form */
+
+.list form {
+	margin-left: -15px;
+}
+
+@media (min-width:768px) {
+	.list form {
+		margin-left: -25px;
+	}
+}
+
 
 
 /* FORMS */
