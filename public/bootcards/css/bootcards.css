@@ -1,13 +1,11 @@
 /* NAVBAR */
 
-@media (max-width:767px) {
-	.btn-menu {
-		display: none;
-	}
+.btn-menu {
+	display: none;
 }
 
 @media (min-width:768px) {
-	.btn-back {
+	.btn-menu {
 		display: none;
 	}
 }

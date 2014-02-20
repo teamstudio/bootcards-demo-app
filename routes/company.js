@@ -1,4 +1,5 @@
 var bc = require('../bootcards-functions.js');
+var moment	= require('moment');
 
 exports.list = function(req, res) {
 
@@ -50,5 +51,86 @@ exports.save = function(req,res) {
 	   	menu: bc.getActiveMenu(menu, 'companies'),
 	    company: company
 	});
+
+}
+
+/* ACTIVITIES */
+
+exports.listActivities = function(req, res) {
+
+	res.renderPjax('activities_for_company', {
+  		company : bc.getCompanyById(req.params.id)
+	});
+
+}
+
+exports.readActivity = function(req, res) {
+
+	var company = bc.getCompanyById( req.params.id);
+	company.isCompany = true;
+
+	res.renderPjax('company_activity', {
+		company : company,
+  		activity : bc.getActivityById( req.params.activityId)
+	});
+}
+exports.editActivity = function(req, res) {
+
+	var company = bc.getCompanyById( req.params.id);
+	company.isCompany = true;
+
+	var activity = bc.getActivityById( req.params.activityId);
+
+	res.renderPjax('company_activity_edit', {
+		company : company,
+		activity : activity
+	});
+}
+exports.addActivity = function(req, res) {
+	
+	var company = bc.getCompanyById(req.params.id);
+
+	res.renderPjax('company_activity_edit', {
+  		company: company,
+  		activity : {
+  			date : moment().format("DD/MM/YYYY HH:mm"),
+  			isNew : true
+  		}
+	});
+}
+
+exports.saveActivity = function(req, res) {
+
+	var activity;
+	var company = bc.getCompanyById(req.params.id);
+
+	if (req.params.activityId) {
+
+		activity = bc.getActivityById(req.params.activityId);
+		activity.type = req.body.type;
+		activity.subject = req.body.subject;
+		activity.date = moment(req.body.date, "DD/MM/YYYY HH:mm");
+
+	} else {
+
+		activity = {
+			id: bc.getUniqueId(),
+			parentIds : [req.params.id],
+			type: req.body.type,
+			subject: req.body.subject,
+			date: moment(req.body.date, "DD/MM/YYYY HH:mm")
+		}
+
+		activities.push(activity);
+		company.activities.push(activity);
+
+	}
+
+	if (company != null) {
+
+		res.renderPjax('activities_for_company', {
+	  		company : company
+		});
+	}
 
 }

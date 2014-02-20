@@ -57,6 +57,10 @@ exports.getIconForType = function(type) {
 
 }
 
+exports.getUniqueId = function() {
+	return (+new Date()).toString(36);
+}
+
 exports.getContactById = function(id) {
 	var contact = getById(contacts, id);
 	if (contact != null) {

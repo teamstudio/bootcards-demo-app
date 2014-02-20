@@ -6,17 +6,12 @@
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Activity Details</h3>
 			<div class="btn-group pull-right">
-				{{#if parent}}
-					{{#if parent.isContact}}
-						<a class="btn btn-primary" href="/contacts/{{parent.id}}/activities/{{activity.id}}/edit" data-pjax="#activityCard">
-					{{else}}
-						<a class="btn btn-primary" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">
-					{{/if}}
-				{{else}}
-					<a class="btn btn-primary" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">	
-				{{/if}}
-				<i class="fa fa-pencil"></i>
-				<span>Edit</span>
+				<a class="btn btn-default" href="/contacts/{{contact.id}}/activities" data-pjax="#activityCard">
+					<span>Close</span>
+				</a>
+				<a class="btn btn-primary" href="/contacts/{{contact.id}}/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+					<i class="fa fa-pencil"></i>
+					<span>Edit</span>
 				</a>
 			</div>							
 		</div>
