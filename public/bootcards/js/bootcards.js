@@ -18,24 +18,23 @@ bootcards.findBootstrapEnvironment = function() {
     };
 }
 
-bootcards.bootcardsanimateLeft = function($src, $tgt){
-    var $parent = $src.parent();
-    var width = $parent.width();
-    var srcWidth = $src.width();
-    
-    //$src.css({position: 'absolute'});
-    //$tgt.hide().appendTo($parent).css({left: width, position: 'absolute'});
+//replace one element with another with a fade effect
+bootcards.fade = function(fadeOut, fadeIn) {
+	fadeOut.fadeOut(250, function() {
+		fadeOut.hide();
+		fadeIn
+			.hide()
+			.removeClass("hidden-xs")
+			.fadeIn(250)
+	});
+}
 
-    $src.css({position: 'absolute'});
-    $tgt.hide().appendTo($parent).css({left: width, position: 'absolute'});
-    
-    $src.animate({left : -width}, 500, function(){
-        $src.hide();
-        $src.css({left: null, position: null});
-    });
-    $tgt.show().animate({left: 0}, 500, function(){
-        $tgt.css({left: null, position: null});
-    });
+//back to the list of cards
+bootcards.backToList = function() {
+	this.fade(
+		$(".cards"),
+		$(".list")
+	)
 }
 
 //pjax on all a's that have the data-pjax attribute, the attribute's value is the pjax target container
@@ -57,6 +56,19 @@ $(document)
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 
+		$(".offcanvas").hide();
+		$(".navbar-collapse").collapse('hide');
+
+		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
+
+			var list = $(event.relatedTarget).closest('.list');
+
+			if ( list.length ) {
+				bootcards.fade( list, $(event.target).closest('.cards') );
+			}
+			
+		}
+
 		//scroll to the target element (so it doesn't render outside the viewport
 		var column = $(event.target).closest(".cards");
 
@@ -71,42 +83,10 @@ $(document)
 			column.animate({scrollTop:top}, '500', 'easeOutExpo'); 
 		}
 
-		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
-
-			$slideOut = $(event.relatedTarget)
-				.parent()
-					.parent();
-
-			$slideIn = $("#contactDetails").hide();
-
-			animateLeft($slideOut, $slideIn);
-
-   
-
-  /*  $("#btnAnimate").click(function(){
-        animateLeft($first, $second);
-        var tmp = $first;
-        $first = $second;
-        $second = tmp;
-    });*/
-
-
-			
-/*
-			var width = $(window).width();
-
-			$container
-				.animate({left : -width}, 500, function(){
-					$container.hide()
-				});
-			$("#contactDetails")
-				.css({left: width}).show().animate({left: 0}, 500);
-*/
-
-		}
-		
-
-
-
 	});
+
+//enable fastclick
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
 

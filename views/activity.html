@@ -6,6 +6,9 @@
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Activity Details</h3>
 			<div class="btn-group pull-right">
+				<a class="btn btn-default visible-xs" onClick="bootcards.backToList()">
+					Back
+				</a>
 				{{#if parent}}
 					{{#if parent.isContact}}
 						<a class="btn btn-primary" href="/contacts/{{parent.id}}/activities/{{activity.id}}/edit" data-pjax="#activityCard">

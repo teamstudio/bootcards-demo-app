@@ -24,6 +24,8 @@
   <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
   <!-- Jasny Bootstrap for slide in menu -->
   <link href="/bower_components/bootstrap-jasny/dist/css/jasny-bootstrap.min.css" rel="stylesheet" />
+  <!--morris charts-->
+  <link rel="stylesheet" href="/bower_components/morris.js/morris.css">
   <!-- Custom styles -->
   <link href="/bootcards/css/bootcards.css" rel="stylesheet" />
   {{{getCSSforOS session}}}
@@ -47,7 +49,7 @@
             {{else}}
               <li>
             {{/if}}
-            <a href="{{this.url}}">
+            <a href="{{this.url}}" data-pjax="#main">
               <i class="fa fa-lg {{this.icon}}"></i>
               {{this.name}}
             </a>          
@@ -105,7 +107,9 @@
           </div>    
         </div>
 
-        {{{body}}}
+        <div id="main" class="container">
+          {{{body}}}
+        </div>
 
         <!-- Fixed footer -->
         <div class="navbar navbar-default navbar-fixed-bottom">
@@ -114,9 +118,9 @@
             <div class="btn-group">
               {{#each menu}}
                 {{#if this.active }}
-                  <a href="{{this.url}}" class="btn btn-default active">
+                  <a href="{{this.url}}" class="btn btn-default active" data-pjax="#main">
                 {{else}}
-                  <a href="{{this.url}}" class="btn btn-default">
+                  <a href="{{this.url}}" class="btn btn-default" data-pjax="#main">
                 {{/if}}
                     <i class="fa fa-2x {{this.icon}}"></i>
                     {{this.name}}
@@ -132,6 +136,9 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>   
     <script src="/bower_components/jquery-pjax/jquery.pjax.js"></script>
     <script src="/bower_components/bootstrap-jasny/dist/js/jasny-bootstrap.min.js"></script>
+    <script src="/bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/bower_components/raphael/raphael-min.js"></script>
+    <script src="/bower_components/morris.js/morris.min.js"></script>
     <script src="/bootcards/js/bootcards.js"></script> 
 
   </body>
