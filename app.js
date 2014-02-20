@@ -143,14 +143,17 @@ app.get('/companies/:id/activities/add', company.addActivity);
 app.get('/companies/:id/activities/:activityId', company.readActivity);	
 app.get('/companies/:id/activities/:activityId/edit', company.editActivity);	
 app.put('/companies/:id/activities', company.saveActivity);		//save new activity 
-app.put('/companies/:id/activities/:activityId', company.saveActivity);		
+app.put('/companies/:id/activities/:activityId', company.saveActivity);
+
+app.get('/companies/:id/contacts/add', company.addContact);
 
 app.get('/contacts', contact.list);			//list
 app.put('/contacts', contact.save);			//save new contact
+app.get('/contacts/add', contact.add);
 app.get('/contacts/:id', contact.read);		//read a contact
 app.put('/contacts/:id', contact.save);		//save a specific contact
 app.get('/contacts/:id/edit', contact.edit);
-app.get('/contacts/add/:companyId', contact.add);
+
 
 app.get('/contacts/:id/activities', contact.listActivities);	
 app.get('/contacts/:id/activities/add', contact.addActivity);	

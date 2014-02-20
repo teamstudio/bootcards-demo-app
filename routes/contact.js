@@ -34,15 +34,15 @@ exports.edit = function(req, res) {
 
 exports.add = function(req, res) {
 
-	var company = bc.getCompanyById(req.params.companyId);
+	var company = (req.params.companyId ? bc.getCompanyById(req.params.companyId) : null);
 
 	res.renderPjax('contact_edit', {
   		contacts:contacts,
   		contact : {
   			isNew : true,
-  			companyId : company.id
+  			companyId : (company ? company.id : null)
   		},
-   		menu: bc.getActiveMenu(menu, 'activities')
+   		menu: bc.getActiveMenu(menu, 'contacts')
   	});
 };
 
@@ -125,6 +125,7 @@ exports.saveActivity = function(req, res) {
 		activity.type = req.body.type;
 		activity.subject = req.body.subject;
 		activity.date = moment(req.body.date, "DD/MM/YYYY HH:mm");
+		activity.details = req.body.details;
 
 	} else {
 
@@ -133,7 +134,8 @@ exports.saveActivity = function(req, res) {
 			parentIds : [req.params.id],
 			type: req.body.type,
 			subject: req.body.subject,
-			date: moment(req.body.date, "DD/MM/YYYY HH:mm")
+			date: moment(req.body.date, "DD/MM/YYYY HH:mm"),
+			details: req.body.details
 		}
 
 		activities.push(activity);

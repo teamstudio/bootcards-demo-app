@@ -3,14 +3,14 @@
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Contacts</h3>
 			<div class="btn-group pull-right">
-				<a class="btn btn-primary" href="/contacts/add/{{this.id}}" data-pjax="#contactList">
+				<a class="btn btn-primary" href="/companies/{{company.id}}/contacts/add" data-pjax="#contactList">
 						<i class="fa fa-plus"></i>
 						<span>Add</span>
 				</a>
 			</div>							
 		</div>					
 		<div class="list-group">
-			{{#each this.contacts}}
+			{{#each company.contacts}}
 
 				<a class="list-group-item" 
 					href="/contacts/{{this.id}}"

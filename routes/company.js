@@ -134,3 +134,17 @@ exports.saveActivity = function(req, res) {
 	}
 
 }
+
+
+exports.addContact = function(req, res) {
+	
+	var company = bc.getCompanyById(req.params.id);
+
+	res.renderPjax('contact_edit', {
+  		company: company,
+  		contact : {
+  			isNew : true
+
+  		}
+	});
+}
