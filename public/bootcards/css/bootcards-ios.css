@@ -80,13 +80,14 @@ a {
 	padding: 6px 0;
 	position: absolute;
 	top: 8px;
+	margin: 0;
 }
 
-.navbar-fixed-top .btn.pull-left {
+.navbar-fixed-top .btn.navbar-left {
 	left: 15px;
 }
 
-.navbar-fixed-top .btn.pull-right {
+.navbar-fixed-top .btn.navbar-right {
 	right: 15px;
 }
 

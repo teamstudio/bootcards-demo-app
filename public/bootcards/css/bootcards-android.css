@@ -91,11 +91,11 @@ a {
 	margin-top: 8px;
 }
 
-.navbar-fixed-top .btn.pull-left {
+.navbar-fixed-top .btn.navbar-left {
 	border-right: 1px solid #ccc;	
 }
 
-.navbar-fixed-top .btn.pull-right {
+.navbar-fixed-top .btn.navbar-right {
 	border-left: 1px solid #ccc;
 }
 
@@ -213,6 +213,10 @@ a.list-group-item:hover {
 	margin-top: 5px;
 	font-weight: normal;	
 } 
+
+.list form input[type=text] {
+	border: 0;
+}
 
 
 
