@@ -56,12 +56,30 @@
 
 
 
+/* MEDIAFILE CARD */
 
-/* DOCUMENTATION */
+.bootcards-mediafile .panel-body h4 {
+	margin-top: 0;
+}
 
-.panel-rich-text .panel-body {
+.bootcards-mediafile .panel-body p {
+	margin-bottom: 0;
+}
+
+.bootcards-mediafile .panel-body i {
+	margin-top: -2px;
+	margin-right: 14px;
+}
+
+
+
+/* RICH TEXT CARD */
+
+.bootcards-richtext .panel-body {
 	padding: 15px 25px;
 }
+
+/* Documentation */
 
 .bs-example {
 	position: relative;
