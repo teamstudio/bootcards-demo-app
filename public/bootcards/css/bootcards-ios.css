@@ -19,7 +19,8 @@ a {
 
 .btn,
 .btn:hover,
-.btn:active {
+.btn:active,
+.btn-group.open .dropdown-toggle {
 	background: transparent;
 	border-color: transparent;
 	box-shadow: none;
@@ -139,7 +140,6 @@ a {
 }
 
 .panel-heading {
-	//padding-left: 0;
 }
 
 .panel-heading .btn-group .btn {
@@ -151,7 +151,6 @@ a {
 
 .panel-body,
 .panel-rich-text .panel-body {
-	padding-left: 0;
 }
 
 
@@ -176,7 +175,6 @@ a {
 /* LISTS */
 
 .list .list-group-item {
-	padding-left: 0;
 }
 
 .list-group-item:first-child {
@@ -301,7 +299,7 @@ a.list-group-item.active:focus .list-group-item-text {
 .table > thead > tr > td:first-child, 
 .table > tbody > tr > td:first-child, 
 .table > tfoot > tr > td:first-child {
-	padding-left: 0;
+	padding-left: 15px;
 }
 
 
