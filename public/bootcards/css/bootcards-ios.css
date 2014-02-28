@@ -131,6 +131,8 @@ a {
 
 .panel-default > .panel-heading {
 	background: transparent;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
 .panel-title {
@@ -209,8 +211,8 @@ a.list-group-item.active:focus {
 .list a.list-group-item.active, 
 .list a.list-group-item.active:hover, 
 .list a.list-group-item.active:focus {
-	margin-left: -25px;
-	padding-left: 25px;
+	margin-left: 0;
+	padding-left: 15px;
 }
 
 a.list-group-item:hover {
@@ -231,13 +233,7 @@ a.list-group-item.active:focus .list-group-item-text {
 /* List - Search Form */
 
 .list form {
-	margin-left: -15px;
-}
-
-@media (min-width:768px) {
-	.list form {
-		margin-left: -25px;
-	}
+	margin-left: 0;
 }
 
 

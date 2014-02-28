@@ -22,6 +22,11 @@
 
 /* LISTS */
 
+.list-group-item {
+	margin-left: 15px;
+	padding-left: 0;
+}
+
 .list-group-item > img {
 	height: 40px;
 	width: 40px;
@@ -56,7 +61,7 @@
 
 
 
-/* MEDIAFILE CARD */
+/* FILE CARD */
 
 @font-face {
 	font-family: 'icomoon';
@@ -99,15 +104,15 @@
 	content: "\e08d";
 }
 
-.bootcards-mediafile .panel-body h4 {
+.bootcards-file .panel-body h4 {
 	margin-top: 0;
 }
 
-.bootcards-mediafile .panel-body p {
+.bootcards-file .panel-body p {
 	margin-bottom: 0;
 }
 
-.bootcards-mediafile .panel-body i {
+.bootcards-file .panel-body i {
 	margin-top: -2px;
 	margin-right: 12px;
 	font-size: 48px;

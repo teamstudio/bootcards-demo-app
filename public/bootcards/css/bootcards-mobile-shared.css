@@ -178,7 +178,3 @@ a.list-group-item:before {
 	padding-top: 7px;
 	color: #929292;
 }
-
-.navbar-fixed-bottom .btn-group .btn:nth-child(3) {
-	display: none; /* Hide Media temporarily */
-}

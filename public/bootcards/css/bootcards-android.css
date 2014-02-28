@@ -95,15 +95,30 @@ a {
 }
 
 .navbar-fixed-top .btn.navbar-left {
-	border-right: 1px solid #ccc;	
+	border-right: 1px solid #ccc;
+	float: left;	
+	
 }
 
 .navbar-fixed-top .btn.navbar-right {
 	border-left: 1px solid #ccc;
+	float: right;
+	
+	
+}
+
+@media (max-width:767px) {
+	.navbar-fixed-top .btn.navbar-left {
+		margin-left: -10px;
+	}
+	.navbar-fixed-top .btn.navbar-right {
+		margin-right: -10px;
+	}
 }
 
 .navbar-fixed-top .btn span {
 	display: none;
+	
 }
 
 
@@ -133,6 +148,8 @@ a {
 
 .panel-default > .panel-heading {
 	background: transparent;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
 .panel-heading .panel-title {
