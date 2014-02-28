@@ -206,7 +206,6 @@ a {
 	font-weight: 200;
 	display: block;
 	color: #333;
-	margin: 0;
 } 
 
 a.list-group-item {
@@ -230,8 +229,6 @@ a.list-group-item:hover {
 
 .list-group-item .list-group-item-text {
 	font-size: 14px;
-	margin: 0;
-	margin-top: 5px;
 	font-weight: normal;	
 } 
 

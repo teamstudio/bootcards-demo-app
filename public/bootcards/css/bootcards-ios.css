@@ -188,7 +188,6 @@ a {
 	font-weight: normal;
 	display: block;
 	color: black;
-	margin: 0;
 } 
 
 a.list-group-item {
@@ -208,13 +207,6 @@ a.list-group-item.active:focus {
 	color: black;
 }
 
-.list a.list-group-item.active, 
-.list a.list-group-item.active:hover, 
-.list a.list-group-item.active:focus {
-	margin-left: 0;
-	padding-left: 15px;
-}
-
 a.list-group-item:hover {
 	background: white;
 }
@@ -225,8 +217,6 @@ a.list-group-item.active:hover .list-group-item-text,
 a.list-group-item.active:focus .list-group-item-text {
 	color: #999;
 	font-size: 14px;
-	margin: 0;
-	margin-top: 5px;
 	font-weight: normal;	
 } 
 
