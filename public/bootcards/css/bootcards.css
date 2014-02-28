@@ -60,6 +60,15 @@
 }
 
 
+/* CARDS */
+
+.panel-footer small {
+	color: #aaa;
+	display: block;
+	text-align: center;
+}
+
+
 
 /* FILE CARD */
 
