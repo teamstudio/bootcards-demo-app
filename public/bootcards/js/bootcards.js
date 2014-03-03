@@ -1,5 +1,6 @@
 var bootcards = bootcards || {};
 
+//check the screen size
 bootcards.findBootstrapEnvironment = function() {
     var envs = ["ExtraSmall", "Small", "Medium", "Large"];
     var envValues = ["xs", "sm", "md", "lg"];
@@ -18,7 +19,7 @@ bootcards.findBootstrapEnvironment = function() {
     };
 }
 
-//replace one element with another with a fade effect
+//replace one element with another using a fade effect
 bootcards.fade = function(fadeOut, fadeIn) {
 	fadeOut.fadeOut(250, function() {
 		fadeOut.hide();
@@ -37,14 +38,15 @@ bootcards.backToList = function() {
 	)
 }
 
-//pjax on all a's that have the data-pjax attribute, the attribute's value is the pjax target container
+//pjax on all a's that have the data-pjax attribute (the attribute's value is the pjax target container)
 $(document)
 	.pjax('a[data-pjax]')
 	.on('submit', 'form[data-pjax]', function(event) {
+		//use pjax to submit forms
   		$.pjax.submit(event);
 	})
 	.on('pjax:start', function(event) {
-		//called before initiating  a pjax content update
+		//called before initiating  a pjax content update: add an active class
 
 		$(event.relatedTarget)
 			.addClass('active')
@@ -54,7 +56,7 @@ $(document)
 
 	})
 	.on('pjax:complete', function(event) {
-		//called after a pjax content update
+		//called after a pjax content update: hide the offcanvas slider
 
 		$(".offcanvas").offcanvas('hide');
 		$(".navbar-collapse.in").collapse('hide');
@@ -63,6 +65,7 @@ $(document)
 		var cards_column = $tgt.closest('.cards');
 
 		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
+			//for small screens: replace the list by the details
 
 			var list = $(event.relatedTarget).closest('.list');
 
@@ -85,6 +88,16 @@ $(document)
 		}
 
 	});
+
+$(document).ready( function() {
+	//enable the slide in menu
+    $('.offcanvas').offcanvas({
+    	toggle : false
+    });
+    $('.offcanvas-toggle').on('click', function() {
+    	$('.offcanvas').offcanvas('toggle');
+    })
+});
 
 //enable fastclick
 window.addEventListener('load', function() {
