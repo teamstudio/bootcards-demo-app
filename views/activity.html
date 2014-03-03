@@ -5,8 +5,10 @@
 	<div class="panel panel-default">
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Activity Details</h3>
-			<div class="btn-group pull-right">
-				<a class="btn btn-default visible-xs" onClick="bootcards.backToList()">
+
+			<!--small screen component-->
+			<div class="btn-group pull-right visible-xs">
+				<a class="btn btn-default" onClick="bootcards.backToList()">
 					Back
 				</a>
 				{{#if parent}}
@@ -18,10 +20,25 @@
 				{{else}}
 					<a class="btn btn-primary" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">	
 				{{/if}}
+					<i class="fa fa-pencil"></i>
+					<span>Edit</span>
+				</a>
+			</div>	
+
+			<!--big screen component-->
+			{{#if parent}}
+				{{#if parent.isContact}}
+					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+				{{else}}
+					<a class="btn btn-primary pull-right hidden-xs" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+				{{/if}}
+			{{else}}
+				<a class="btn btn-primary pull-right hidden-xs" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">	
+			{{/if}}
 				<i class="fa fa-pencil"></i>
 				<span>Edit</span>
-				</a>
-			</div>							
+			</a>
+
 		</div>
 		<div class="list-group">
 			{{#if activity.subject}}

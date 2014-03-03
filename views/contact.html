@@ -5,15 +5,19 @@
 	<div class="panel panel-default">
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Contact Details</h3>
-			<div class="btn-group pull-right">
-				<a class="btn btn-default visible-xs" onClick="bootcards.backToList()">
+			<div class="btn-group pull-right visible-xs">
+				<a class="btn btn-default" onClick="bootcards.backToList()">
 					Back
 				</a>
 				<a class="btn btn-primary" href="/contacts/{{contact.id}}/edit" data-pjax="#contactCard">
 					<i class="fa fa-pencil"></i>
 					<span>Edit</span>
 				</a>
-			</div>							
+			</div>	
+			<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{contact.id}}/edit" data-pjax="#contactCard">
+				<i class="fa fa-pencil"></i>
+				<span>Edit</span>
+			</a>						
 		</div>
 		<div class="list-group">
 			<div class="list-group-item">
