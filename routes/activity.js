@@ -5,7 +5,7 @@ exports.list = function(req, res) {
 	res.renderPjax('activities', {
   		activities: activities,
   		activity : activities[0],
-   		menu: bc.getActiveMenu(menu, 'activities')
+   		menu: bc.getActiveMenu(menu, 'notes')
   	});
 };
 
@@ -14,7 +14,7 @@ exports.read = function(req, res) {
 	res.renderPjax('activity', {
 	 	activities : activities,
 	   	activity: bc.getActivityById(req.params.id),
-	    menu: bc.getActiveMenu(menu, 'activities')
+	    menu: bc.getActiveMenu(menu, 'notes')
 	});
    
 }
@@ -24,7 +24,7 @@ exports.edit = function(req, res) {
 	res.renderPjax('activity_edit', {
 	 	activities : activities,
 	   	activity: bc.getActivityById(req.params.id),
-	    menu: bc.getActiveMenu(menu, 'activities')
+	    menu: bc.getActiveMenu(menu, 'notes')
 	});
    
 }
@@ -41,7 +41,7 @@ exports.add = function(req, res) {
   			isNew : true
   		},
   		contact: contact,
-   		menu: bc.getActiveMenu(menu, 'activities')
+   		menu: bc.getActiveMenu(menu, 'notes')
   	});
 };
 
@@ -65,7 +65,7 @@ exports.save = function(req, res) {
 
 		res.renderPjax('contact', {
 		 	contacts:contacts,
-		   	menu: bc.getActiveMenu(menu, 'activities'),
+		   	menu: bc.getActiveMenu(menu, 'notes'),
 		    contact: contact,
 		    activities : bc.getActivitiesForParent(contact.id),
 		});

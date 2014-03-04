@@ -6,12 +6,13 @@
 var express = require('express');
 
 //routes
-var routes 		= require('./routes');
+//var routes 		= require('./routes');
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
 var activity 	= require('./routes/activity');
 var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
+var dashboard 	= require('./routes/dashboard');
 
 var pjson = require('./package.json');		//read the package.json file to get the current version
 
@@ -118,11 +119,12 @@ fs.readFile(dataFile, 'utf8', function (err, data) {
 
 //setup menu
 menu = [
+	{ id : 'dashboard', name : 'Dashboard', icon : "fa-dashboard", active : false, url : '/dashboard'},
 	{ id : 'companies', name : "Companies", icon : "fa-building-o", active : false, url : '/companies'},
 	{ id : 'contacts', name : "Contacts", icon : "fa-users", active : true, url : '/contacts'},
-	{ id : 'activities', name : "Activities", icon : "fa-calendar", active : false, url : '/activities'},
-	{ id : 'media', name : "Media", icon : "fa-film", active : false, url : '/media'},
-	{ id : 'tests', name : "Tests", icon : "fa-gears", active : false, url : '/tests'}
+	{ id : 'notes', name : "Notes", icon : "fa-clipboard", active : false, url : '/notes'},
+	{ id : 'charts', name : "Charts", icon : "fa-bar-chart-o", active : false, url : '/charts'},
+	{ id : 'more', name : "More", icon : "fa-gear", active : false, url : '/more'}
 ];
 
 // development only
@@ -132,6 +134,8 @@ if ('development' == app.get('env')) {
 
 //routes
 app.get('/', contact.list);
+
+app.get('/dashboard', dashboard.list);
 
 app.get('/companies', company.list);
 app.get('/companies/:id', company.read);
@@ -162,15 +166,15 @@ app.get('/contacts/:id/activities/:activityId/edit', contact.editActivity);
 app.put('/contacts/:id/activities', contact.saveActivity);		//save new activity in contact
 app.put('/contacts/:id/activities/:activityId', contact.saveActivity);	
 
-app.get('/activities', activity.list);
-app.get('/activities/:id', activity.read);
-app.get('/activities/:id/edit', activity.edit);
-app.get('/activities/add/:contactId', activity.add);
-app.put('/activities', activity.save);
+app.get('/notes', activity.list);
+app.get('/notes/:id', activity.read);
+app.get('/notes/:id/edit', activity.edit);
+app.get('/notes/add/:contactId', activity.add);
+app.put('/notes', activity.save);
 
-app.get('/media', media.list);
+app.get('/charts', media.list);
 
-app.get('/tests', tests.list);
+app.get('/more', tests.list);
 
 http
 	.createServer(app)
