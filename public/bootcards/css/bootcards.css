@@ -95,6 +95,16 @@ a.list-group-item.active:focus {
 
 /* CARDS */
 
+/* 
+	Workaround now <form> surrounds .panel-heading
+	Replicates .panel-default>.panel-heading styles in bootstrap.css
+*/
+.panel-default .panel-heading { 
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;	
+}
+
 .panel-footer {
 	//margin-top: -1px; /* Overlap uneccesary extra borders above */
 }
