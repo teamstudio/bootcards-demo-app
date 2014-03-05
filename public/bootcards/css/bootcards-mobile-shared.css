@@ -117,6 +117,14 @@ a.list-group-item:before {
 	padding: 8px;
 }
 
+.list form .row > div:first-child {
+	padding-right: 4px;
+}
+
+.list form .row > div:last-child {
+	padding-left: 4px;
+}
+
 
 
 /* FORMS */

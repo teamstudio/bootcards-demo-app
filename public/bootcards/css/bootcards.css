@@ -78,11 +78,15 @@ a.list-group-item.active:focus {
 	padding-left: 32px;
 }
 
-.list form i {
+.list form i.fa-search {
 	position: absolute;
 	left: 12px;
 	top: 10px;
 	color: #999;
+}
+
+.list form .btn {
+	color: white;
 }
 
 
@@ -94,6 +98,16 @@ a.list-group-item.active:focus {
 
 
 /* CARDS */
+
+/* 
+	Workaround now <form> surrounds .panel-heading
+	Replicates .panel-default>.panel-heading styles in bootstrap.css
+*/
+.panel-default .panel-heading { 
+	color: #333;
+	background-color: #f5f5f5;
+	border-color: #ddd;	
+}
 
 .panel-footer {
 	//margin-top: -1px; /* Overlap uneccesary extra borders above */
@@ -150,19 +164,45 @@ a.list-group-item.active:focus {
 	content: "\e08d";
 }
 
-.bootcards-file .panel-body h4 {
-	margin-top: 0;
-}
-
-.bootcards-file .panel-body p {
-	margin-bottom: 0;
-}
-
-.bootcards-file .panel-body i {
-	margin-top: -2px;
+.bootcards-file .bootcards-file-icon {
 	margin-right: 12px;
-	font-size: 48px;
+	font-size: 80px;
+	float: left;
 }
+
+
+/* SUMMARY CARD */
+
+.bootcards-summary .panel-body {
+	padding-bottom: 0;
+}
+
+.bootcards-summary .panel-body a:hover {
+	text-decoration: none;
+}
+
+.bootcards-summary .panel-body i {
+	color: #bbb;
+	width: 36px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+.bootcards-summary .panel-body h1 {
+	margin: 0;
+	font-weight: bold;
+	margin-bottom: 20px;
+	white-space: nowrap;
+	font-size: 26px;
+}
+
+.bootcards-summary .panel-body h1 span {
+	font-weight: normal;
+	font-size: 12px;
+	display: block;
+	color: #333;
+}
+
 
 
 

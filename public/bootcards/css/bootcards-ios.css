@@ -28,6 +28,8 @@ a {
 	color: #007aff;
 	padding-left: 0;
 	padding-right: 0;
+	opacity: 1;
+	-webkit-transition: opacity 1s;
 }
 
 .btn-danger,
@@ -42,6 +44,10 @@ a {
 	color: #4cae4c;
 }
 
+.btn:active {
+	opacity: 0.5;
+	-webkit-transition: opacity 0.3s;
+}
 
 
 
@@ -129,7 +135,8 @@ a {
 	border: 0;
 }
 
-.panel-default > .panel-heading {
+.panel-default > .panel-heading,
+.panel-default .panel-heading {
 	background: transparent;
 	padding-top: 3px;
 	padding-bottom: 3px;

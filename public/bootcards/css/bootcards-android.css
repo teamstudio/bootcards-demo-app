@@ -26,8 +26,6 @@ a {
 	border-color: transparent;
 	box-shadow: none;
 	color: #999;
-	padding-left: 0;
-	padding-right: 0;
 }
 
 .btn-danger,
@@ -40,6 +38,10 @@ a {
 .btn-success:hover,
 .btn-success:active {
 	color: #4cae4c;
+}
+
+.btn:active {
+	background: #eee;
 }
 
 
@@ -146,7 +148,8 @@ a {
 	border-radius: 0;
 }
 
-.panel-default > .panel-heading {
+.panel-default > .panel-heading,
+.panel-default .panel-heading {
 	background: transparent;
 	padding-top: 3px;
 	padding-bottom: 3px;
@@ -216,13 +219,6 @@ a.list-group-item {
 	padding-right: 25px;
 }
 
-/*a.list-group-item.active {
-	background: #e5e5e5;
-	border-color: #DDD;	
-	text-shadow: none;
-	color: #505050;
-}*/
-
 a.list-group-item:hover {
 	background: white;
 }
@@ -234,6 +230,12 @@ a.list-group-item:hover {
 
 .list form input[type=text] {
 	border: 0;
+}
+
+/* List - Search Form */
+
+.list form .btn:active {
+	color: #999;
 }
 
 
