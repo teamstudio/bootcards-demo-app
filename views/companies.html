@@ -2,7 +2,7 @@
   
 		<div class="row">
 			
-			<div class="col-sm-7 list">		
+			<div class="col-sm-6 list">		
 				<div class="panel panel-default">
 					<div class="panel-heading clearfix">
 						<h3 class="panel-title pull-left">Companies</h3>
@@ -28,16 +28,12 @@
 					 			data-pjax="#companyDetails">
 					 			
 							<div class="row">
-								<div class="col-sm-5">
+								<div class="col-sm-7">
 									<i class="fa fa-3x fa-building-o pull-left"></i>
 									<h4 class="list-group-item-heading">{{this.name}}</h4>
-									<p class="list-group-item-text">www.urlgoeshere.com</p>
+									<p class="list-group-item-text">{{this.city}}, {{this.country}}</p>
 								</div>
-								<div class="col-sm-3">
-									<p class="list-group-item-text">{{this.city}}</p>
-									<p class="list-group-item-text">{{this.country}}</p>
-								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-4">
 									<p class="list-group-item-text">Customer Type</p>
 								</div>
 							</div>
@@ -51,7 +47,7 @@
 				</div>
 			</div>
 		
-			<div class="col-sm-5 cards" id="companyDetails">
+			<div class="col-sm-6 cards" id="companyDetails">
 
 				<!--contact details & activities-->
 				{{> company}}

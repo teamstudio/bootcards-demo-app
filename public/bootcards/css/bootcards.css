@@ -160,18 +160,10 @@ a.list-group-item.active:focus {
 	content: "\e08d";
 }
 
-.bootcards-file .panel-body h4 {
-	margin-top: 0;
-}
-
-.bootcards-file .panel-body p {
-	margin-bottom: 0;
-}
-
-.bootcards-file .panel-body i {
-	margin-top: -2px;
+.bootcards-file .bootcards-file-icon {
 	margin-right: 12px;
-	font-size: 48px;
+	font-size: 80px;
+	float: left;
 }
 
 
