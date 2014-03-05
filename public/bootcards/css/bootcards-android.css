@@ -40,7 +40,6 @@ a {
 	color: #4cae4c;
 }
 
-.btn:hover,
 .btn:active {
 	background: #eee;
 }
@@ -220,13 +219,6 @@ a.list-group-item {
 	padding-right: 25px;
 }
 
-/*a.list-group-item.active {
-	background: #e5e5e5;
-	border-color: #DDD;	
-	text-shadow: none;
-	color: #505050;
-}*/
-
 a.list-group-item:hover {
 	background: white;
 }
@@ -238,6 +230,12 @@ a.list-group-item:hover {
 
 .list form input[type=text] {
 	border: 0;
+}
+
+/* List - Search Form */
+
+.list form .btn:active {
+	color: #999;
 }
 
 
