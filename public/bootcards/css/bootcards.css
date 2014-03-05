@@ -171,6 +171,40 @@ a.list-group-item.active:focus {
 }
 
 
+/* SUMMARY CARD */
+
+.bootcards-summary .panel-body {
+	padding-bottom: 0;
+}
+
+.bootcards-summary .panel-body a:hover {
+	text-decoration: none;
+}
+
+.bootcards-summary .panel-body i {
+	color: #bbb;
+	width: 36px;
+	text-align: center;
+	margin-top: 8px;
+}
+
+.bootcards-summary .panel-body h1 {
+	margin: 0;
+	font-weight: bold;
+	margin-bottom: 20px;
+	white-space: nowrap;
+	font-size: 26px;
+}
+
+.bootcards-summary .panel-body h1 span {
+	font-weight: normal;
+	font-size: 12px;
+	display: block;
+	color: #333;
+}
+
+
+
 
 /* RICH TEXT CARD */
 
