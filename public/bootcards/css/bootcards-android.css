@@ -26,8 +26,6 @@ a {
 	border-color: transparent;
 	box-shadow: none;
 	color: #999;
-	padding-left: 0;
-	padding-right: 0;
 }
 
 .btn-danger,
@@ -40,6 +38,11 @@ a {
 .btn-success:hover,
 .btn-success:active {
 	color: #4cae4c;
+}
+
+.btn:hover,
+.btn:active {
+	background: #eee;
 }
 
 
