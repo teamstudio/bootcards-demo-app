@@ -4,7 +4,7 @@
 	
 	<div class="panel panel-default">
 		<div class="panel-heading clearfix">
-			<h3 class="panel-title pull-left">Activity Details</h3>
+			<h3 class="panel-title pull-left">Note</h3>
 
 			<!--small screen component-->
 			<div class="btn-group pull-right visible-xs">
@@ -13,12 +13,12 @@
 				</a>
 				{{#if parent}}
 					{{#if parent.isContact}}
-						<a class="btn btn-primary" href="/contacts/{{parent.id}}/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+						<a class="btn btn-primary" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit" data-pjax="#activityCard">
 					{{else}}
-						<a class="btn btn-primary" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+						<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">
 					{{/if}}
 				{{else}}
-					<a class="btn btn-primary" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">	
+					<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">	
 				{{/if}}
 					<i class="fa fa-pencil"></i>
 					<span>Edit</span>
@@ -28,12 +28,12 @@
 			<!--big screen component-->
 			{{#if parent}}
 				{{#if parent.isContact}}
-					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit" data-pjax="#activityCard">
 				{{else}}
-					<a class="btn btn-primary pull-right hidden-xs" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">
+					<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">
 				{{/if}}
 			{{else}}
-				<a class="btn btn-primary pull-right hidden-xs" href="/activities/{{activity.id}}/edit" data-pjax="#activityCard">	
+				<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">	
 			{{/if}}
 				<i class="fa fa-pencil"></i>
 				<span>Edit</span>

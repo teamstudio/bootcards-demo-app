@@ -1503,6 +1503,9 @@
   ],
   "companies": [
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Washington, D.C.",
       "name": "ZetaComm",
@@ -1514,6 +1517,9 @@
       "phone": "202-555-5555"
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Japan",
       "city": "Tokyo",
       "name": "Masung Corp.",
@@ -1525,6 +1531,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Seattle",
       "name": "Materella Inc.",
@@ -1536,6 +1545,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Portland",
       "name": "Trantion Systems",
@@ -1547,6 +1559,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Miami",
       "name": "Peranos Inc.",
@@ -1558,6 +1573,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Austin",
       "name": "GVSB Corp.",
@@ -1569,6 +1587,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Los Angeles",
       "name": "Silver Rocket Inc.",
@@ -1580,6 +1601,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "UAE",
       "city": "Abu Dhabi",
       "name": "Sayad Mobile",
@@ -1591,6 +1615,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "China",
       "city": "Hong Kong",
       "name": "Yunalesca",
@@ -1602,6 +1629,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Japan",
       "city": "Tokyo",
       "name": "NoHi Corp.",
@@ -1613,6 +1643,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "New York",
       "name": "Tidus International",
@@ -1624,6 +1657,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Boston",
       "name": "Ferakon",
@@ -1635,6 +1671,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Sacramento",
       "name": "Terrestria Inc.",
@@ -1646,6 +1685,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "England",
       "city": "London",
       "name": "Ganonite Corp.",
@@ -1657,6 +1699,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "China",
       "city": "Hong Kong",
       "name": "Yoracle Inc.",
@@ -1668,6 +1713,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Japan",
       "city": "Tokyo",
       "name": "Elparvis",
@@ -1679,6 +1727,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "New York",
       "name": "Haven Inc.",
@@ -1690,6 +1741,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Boston",
       "name": "Incantata",
@@ -1701,6 +1755,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Sacramento",
       "name": "Travanus",
@@ -1712,6 +1769,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Japan",
       "city": "Tokyo",
       "name": "Orlitz Corp.",
@@ -1723,6 +1783,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "England",
       "city": "London",
       "name": "Enmaris Mobile",
@@ -1734,6 +1797,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Boston",
       "name": "Telkon Corp.",
@@ -1745,6 +1811,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "England",
       "city": "London",
       "name": "Shearven Inc.",
@@ -1756,6 +1825,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Albuquerque",
       "name": "Derenden Systems",
@@ -1767,6 +1839,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Boston",
       "name": "House & Hawk",
@@ -1778,6 +1853,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "China",
       "city": "Hong Kong",
       "name": "Fyre Corp.",
@@ -1789,6 +1867,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "South Korea",
       "city": "Seoul",
       "name": "Soul Inc.",
@@ -1800,6 +1881,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Germany",
       "city": "Frankfurt",
       "name": "Luke Ltd.",
@@ -1811,6 +1895,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "New York",
       "name": "Zing International",
@@ -1822,6 +1909,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "India",
       "city": "New Delhi",
       "name": "Entekra Inc.",
@@ -1833,6 +1923,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Spain",
       "city": "Madrid",
       "name": "Techyon",
@@ -1844,6 +1937,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "China",
       "city": "Beijing",
       "name": "Lossless Systems",
@@ -1855,6 +1951,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Netherlands",
       "city": "Amsterdam",
       "name": "Seventh Level",
@@ -1866,6 +1965,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Boston",
       "name": "Expressway Mobile",
@@ -1877,6 +1979,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "England",
       "city": "city",
       "name": "Burning Core",
@@ -1888,6 +1993,9 @@
       "phone": "5551234"
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Kenya",
       "city": "Nairobi",
       "name": "Techtractus Inc.",
@@ -1899,6 +2007,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Seattle",
       "name": "Northern Sting",
@@ -1910,6 +2021,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "Boston",
       "name": "Mecharta Corp.",
@@ -1921,6 +2035,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "England",
       "city": "Manchester",
       "name": "KXROSS Inc.",
@@ -1932,6 +2049,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "Japan",
       "city": "Tokyo",
       "name": "Camion Corp.",
@@ -1943,6 +2063,9 @@
       "phone": ""
     },
     {
+      "type":"",
+      "website": "",
+      "location": "",
       "country": "USA",
       "city": "New York",
       "name": "Lariatta Inc.",

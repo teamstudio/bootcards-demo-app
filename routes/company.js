@@ -44,6 +44,25 @@ exports.save = function(req,res) {
 		company.country = req.body.country;
 		company.email = req.body.email;
 		company.phone = req.body.phone;
+		company.type = req.body.type;
+		company.website = req.body.website;
+		company.location = req.body.location;
+	}
+
+	res.renderPjax('companies', {
+	 	companies : companies,
+	   	menu: bc.getActiveMenu(menu, 'companies'),
+	    company: company
+	});
+
+}
+
+exports.delete = function(req,res) {
+
+	var company = bc.getCompanyById(req.params.id);
+
+	if (company != null) {
+		companies.splice( companies.indexOf(company), 1);
 	}
 
 	res.renderPjax('companies', {

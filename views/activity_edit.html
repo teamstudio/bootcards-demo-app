@@ -2,16 +2,16 @@
 
 <div class="panel panel-default">
 	{{#if activity.isNew}}
-			<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/activities" data-pjax="#contactDetails">
+			<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/notes" data-pjax="#contactDetails">
 		{{else}}
-			<form class="form-horizontal" method="POST" action="/activities" data-pjax="#activityDetails">
+			<form class="form-horizontal" method="POST" action="/notes" data-pjax="#activityDetails">
 		{{/if}}
 	<div class="panel-heading clearfix">
 		<h3 class="panel-title pull-left">
 			{{#if activity.isNew}}
-				New Activity
+				New Note
 			{{else}}
-				Edit Activity
+				Edit Note
 			{{/if}}
 		</h3>
 		<div class="pull-right">
@@ -22,7 +22,7 @@
 				</button>
 			</div>
 			<div class="btn-group">
-				<a class="btn btn-danger" data-pjax="#activityDetails" href="/activities/{{activity.id}}">
+				<a class="btn btn-danger" data-pjax="#activityDetails" href="/notes/{{activity.id}}">
 					<i class="fa fa-times"></i>
 					Cancel
 				</a>
@@ -37,7 +37,7 @@
 	<div class="panel-footer">
 		<a class="btn btn-danger btn-block">
 			<i class="fa fa-trash-o"></i>
-			Delete Activity
+			Delete Note
 		</a>		
 	</div>	
 	<div class="panel-footer">

@@ -9,7 +9,7 @@
 							<div class="row">
 							    <div class="col-xs-9 col-sm-10">
 							      <div class="form-group">
-								      <input type="text" class="form-control" placeholder="Search Activities...">
+								      <input type="text" class="form-control" placeholder="Search Notes...">
 								      <i class="fa fa-search"></i>
 							      </div>
 							    </div>
@@ -25,7 +25,7 @@
 					<div class="list-group">
 						{{#each activities}}
 						<a class="list-group-item" 
-					 			href="/activities/{{this.id}}"
+					 			href="/notes/{{this.id}}"
 					 			data-pjax="#activityDetails">
 							<i class="fa fa-2x pull-left {{getIconForType this.type}}"></i>
 							<h4 class="list-group-item-heading">{{this.subject}}</h4>
@@ -33,7 +33,7 @@
 							</p>
 						</a>
 						{{else}}
-							<div class="list-group-item">No activities found</div>
+							<div class="list-group-item">No notes found</div>
 						{{/each}}
 					</div>
 					<div class="panel-footer">
