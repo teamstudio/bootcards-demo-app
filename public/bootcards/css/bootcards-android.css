@@ -1,4 +1,5 @@
 @import "bootcards-mobile-shared.css";
+@import "../../ratchet-2.0.0/dist/ratchet-theme-android.css";
 
 body {
 	background-color: #eee;
@@ -26,6 +27,11 @@ a {
 	border-color: transparent;
 	box-shadow: none;
 	color: #999;
+	padding: 0 10px;
+	font-size: 14px;
+	margin-bottom: 0;
+	height: 40px;
+	line-height: 40px;
 }
 
 .btn-danger,
@@ -40,6 +46,7 @@ a {
 	color: #4cae4c;
 }
 
+.btn:hover,
 .btn:active {
 	background: #eee;
 }
@@ -52,10 +59,6 @@ a {
 	.navbar .container {
 		padding: 0;
 	}
-}
-
-.navbar-fixed-top {
-
 }
 
 .navbar-default {
@@ -93,7 +96,7 @@ a {
 	border-radius: 0;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-top: 8px;
+	margin-top: 5px;
 }
 
 .navbar-fixed-top .btn.navbar-left {
@@ -162,7 +165,7 @@ a {
 	font-weight: bold;
 	margin: 0;
 	padding: 7px 0;
-	line-height: 22px;	
+	line-height: 26px;	
 }
 
 
@@ -228,14 +231,27 @@ a.list-group-item:hover {
 	font-weight: normal;	
 } 
 
-.list form input[type=text] {
+/* List - Search Form */
+
+.list form input {
 	border: 0;
 }
 
-/* List - Search Form */
+.list form i.fa-search {
+	top: 12px;
+}
 
+.list form .btn {
+	color: #fff;
+	border: 0;
+	background-color: #33b5e5;	
+}
+
+.list form .btn:hover,
 .list form .btn:active {
-	color: #999;
+	color: #fff;
+	border: 1px solid #428bca;
+	background-color: #428bca;
 }
 
 
@@ -259,15 +275,21 @@ a.list-group-item:hover {
 	padding-right: 12px;	
 }
 
-.form-group input[type=text],
-.form-group input[type=datetime],
-.form-group input[type=email],
-.form-group input[type=phone],
+.form-group input,
 .form-group textarea,
 .form-group select {
 	border-radius: 0;
+	border-color: transparent;
+	box-shadow: none;
 	border-bottom: 1px solid #ccc;
 	margin: 0;
+	padding: 10px 15px;
+	height: 40px;
+}
+
+.form-group select {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 
@@ -303,6 +325,8 @@ a.list-group-item:hover {
 	border-top: 5px solid transparent;
 	border-radius: 0;
 	height: 42px;
+	line-height: 42px;
+	padding: 0;
 	text-shadow: none;
 }
 

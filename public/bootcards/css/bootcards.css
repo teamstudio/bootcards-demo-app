@@ -74,7 +74,7 @@ a.list-group-item.active:focus {
 	margin-bottom: 0;
 }
 
-.list form input[type=text] {
+.list form input {
 	padding-left: 32px;
 }
 
@@ -83,6 +83,7 @@ a.list-group-item.active:focus {
 	left: 12px;
 	top: 10px;
 	color: #999;
+	font-size: 14px;
 }
 
 .list form .btn {
@@ -185,7 +186,7 @@ a.list-group-item.active:focus {
 	color: #bbb;
 	width: 36px;
 	text-align: center;
-	margin-top: 8px;
+	margin-top: 3px;
 }
 
 .bootcards-summary .panel-body h1 {
