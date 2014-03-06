@@ -292,6 +292,14 @@ a.list-group-item:hover {
 	padding-bottom: 0;
 }
 
+.form-horizontal .form-group label:first-child {
+	padding-left: 0;
+}
+
+.form-horizontal .form-group div:last-child {
+	padding-right: 0;
+}
+
 
 
 /* TABLES */
