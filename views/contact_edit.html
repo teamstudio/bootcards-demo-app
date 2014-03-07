@@ -80,6 +80,7 @@
 			</div>
 						
 	</div>
+	{{#unless contact.isNew}}
 	<div class="panel-footer">
 		<button type="submit" class="btn btn-danger btn-block"
 			onclick="bootcards.confirm('contact', '/contacts');">
@@ -87,6 +88,7 @@
 			Delete Contact
 		</button>		
 	</div>
+	{{/unless}}
 	<div class="panel-footer">
 		<small>Built with Bootcards - Form Card</small>
 	</div>		

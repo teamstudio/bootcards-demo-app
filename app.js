@@ -120,6 +120,7 @@ app.get('/', contact.list);
 app.get('/dashboard', dashboard.list);
 
 app.get('/companies', company.list);
+app.get('/companies/add', company.add);
 app.get('/companies/:id', company.read);
 app.put('/companies/:id', company.save);
 app.get('/companies/:id/edit', company.edit);
@@ -148,9 +149,10 @@ app.put('/contacts/:id/notes', contact.saveActivity);		//save new activity in co
 app.put('/contacts/:id/notes/:activityId', contact.saveActivity);	
 
 app.get('/notes', activity.list);
+app.get('/notes/add/:contactId', activity.add);
+app.get('/notes/add', activity.add);
 app.get('/notes/:id', activity.read);
 app.get('/notes/:id/edit', activity.edit);
-app.get('/notes/add/:contactId', activity.add);
 app.put('/notes', activity.save);
 
 app.get('/charts', media.list);

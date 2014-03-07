@@ -86,6 +86,7 @@
 		</div>
 	</form>	
 
+	{{#unless company.isNew}}
 	<div class="panel-footer">
 		<button type="submit" class="btn btn-danger btn-block"
 			onclick="bootcards.confirm('company', '/companies');">
@@ -93,6 +94,7 @@
 			Delete Company
 		</button>
 	</div>	
+	{{/unless}}
 	<div class="panel-footer">
 		<small>Built with Bootcards - Form Card</small>
 	</div>
