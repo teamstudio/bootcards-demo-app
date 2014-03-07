@@ -89,6 +89,16 @@ $(document)
 
 	});
 
+bootcards.confirm = function(type, to) {
+
+	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
+		window.location.href=to; 
+	} else {
+		return false;
+	}
+
+}
+
 $(document).ready( function() {
 	//enable the slide in menu
     $('.offcanvas').offcanvas({
