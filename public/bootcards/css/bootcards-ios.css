@@ -4,6 +4,7 @@
 body {
 	background-color: white;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding-top: 44px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,15 +84,23 @@ input[type="color"],
 
 /* NAVBAR */
 
-.navbar-fixed-top {
-
+.navbar-fixed-top .container {
+	padding: 0;
 }
 
 .navbar-default {
-	background: white;
 	box-shadow: none;
-	box-shadow: 0 1px 0 rgba(0,0,0,0.2);
-	border: 0;	
+	right: 0;
+	left: 0;
+	z-index: 10;
+	height: 44px;
+	min-height: 44px;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-bottom: 0;
+	background-color: rgba(247,247,247,.98);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,.85);
+	box-shadow: 0 0 1px rgba(0,0,0,.85);
 }
 
 .navbar-header {
@@ -100,25 +109,26 @@ input[type="color"],
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover {
-	text-align: center;
-	width: auto;
-	float: none;
+	position: absolute;
 	display: block;
-	font-weight: bold;
-	color: black;
+	width: 100%;
+	padding: 0;
+	margin: 0 -10px;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 44px;
+	color: #000;
+	text-align: center;
+	white-space: nowrap;
 }
 
 .navbar-fixed-top .btn,
 .navbar-fixed-top .btn:hover {
-	background: none;
-	border: 0;
-	box-shadow: none;
-	font-size: 15px;
-	color: #007aff;
-	padding: 6px 0;
-	position: absolute;
-	top: 0;
-	margin: 0;
+	font-size: 16px;
+	position: relative;
+	z-index: 20;
+	padding: 0;
+	line-height: 44px;
 }
 
 .navbar-fixed-top .btn.navbar-left {
@@ -151,7 +161,7 @@ input[type="color"],
 /* CARDS */
 
 .cards {
-	background: #f5f5f5;
+	background: #efeff4;
 }
 
 .cards .panel {
@@ -330,25 +340,36 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .navbar-fixed-bottom {
 	box-shadow: 0 -1px rgba(0,0,0,0.2);
-	height: 49px;
+	height: 50px;
 	text-align: center;
 	border: 0;
+	background-color: rgba(247,247,247,.98);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,.85);
+	box-shadow: 0 0 1px rgba(0,0,0,.85);	
+	padding: 0;
+}
+
+.navbar-fixed-bottom .btn-group {
+	width: 320px;
+	max-width: 320px;
 }
 
 .navbar-fixed-bottom .btn-group .btn {
-	font-size: 11px;
-	padding-top: 7px;
-	padding-bottom: 5px;
+	float: left;
+	width: 25%;
+	height: 50px;
+	color: #929292;
+	text-align: center;	
 	color: #929292;
 	line-height: 1;
-	margin-bottom: 5px;
-	-webkit-transition: none;
+	font-size: 11px;
+	font-weight: 300;
 }
 
 .navbar-fixed-bottom .btn-group .btn i {
 	display: block;
 	margin-bottom: 2px;
-	font-size: 25px;
+	font-size: 24px;
 }
 
 .navbar-fixed-bottom .btn-group .btn.active,
