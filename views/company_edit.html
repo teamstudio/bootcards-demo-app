@@ -87,13 +87,11 @@
 	</form>	
 
 	<div class="panel-footer">
-		<form method="POST" action="/companies/{{company.id}}" data-pjax="#main">
-			<input type="hidden" name="_method" value="put">
-			<button type="submit" class="btn btn-danger btn-block">
-				<i class="fa fa-trash-o"></i>
-				Delete Company
-			</button>
-		</form>
+		<button type="submit" class="btn btn-danger btn-block"
+			onclick="bootcards.confirm('company', '/companies');">
+			<i class="fa fa-trash-o"></i>
+			Delete Company
+		</button>
 	</div>	
 	<div class="panel-footer">
 		<small>Built with Bootcards - Form Card</small>

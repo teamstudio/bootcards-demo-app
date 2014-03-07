@@ -122,7 +122,6 @@ app.get('/dashboard', dashboard.list);
 app.get('/companies', company.list);
 app.get('/companies/:id', company.read);
 app.put('/companies/:id', company.save);
-app.delete('/companies/:id', company.delete);
 app.get('/companies/:id/edit', company.edit);
 
 app.get('/companies/:id/notes', company.listActivities);	
@@ -140,7 +139,6 @@ app.get('/contacts/add', contact.add);
 app.get('/contacts/:id', contact.read);		//read a contact
 app.put('/contacts/:id', contact.save);		//save a specific contact
 app.get('/contacts/:id/edit', contact.edit);
-
 
 app.get('/contacts/:id/notes', contact.listActivities);	
 app.get('/contacts/:id/notes/add', contact.addActivity);	

@@ -1,5 +1,5 @@
 @import "bootcards-mobile-shared.css";
-@import "../../ratchet-2.0.0/dist/ratchet-theme-android.css";
+@import "/bower_components/ratchet/dist/css/ratchet-theme-android.css";
 
 body {
 	background-color: #eee;

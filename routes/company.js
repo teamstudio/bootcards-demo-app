@@ -57,22 +57,6 @@ exports.save = function(req,res) {
 
 }
 
-exports.delete = function(req,res) {
-
-	var company = bc.getCompanyById(req.params.id);
-
-	if (company != null) {
-		companies.splice( companies.indexOf(company), 1);
-	}
-
-	res.renderPjax('companies', {
-	 	companies : companies,
-	   	menu: bc.getActiveMenu(menu, 'companies'),
-	    company: company
-	});
-
-}
-
 /* ACTIVITIES */
 
 exports.listActivities = function(req, res) {
