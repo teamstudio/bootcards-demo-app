@@ -56,10 +56,18 @@ $(document)
 
 	})
 	.on('pjax:complete', function(event) {
-		//called after a pjax content update: hide the offcanvas slider
+		//called after a pjax content update
 
+		//hide the offcanvas slider
 		$(".offcanvas").offcanvas('hide');
 		$(".navbar-collapse.in").collapse('hide');
+
+		//check for a modal to close
+		var modal = $(event.relatedTarget).closest('.modal');
+		if (modal.length) {
+			modal.modal('hide');
+		}
+
 
 		var $tgt = $(event.target);
 		var cards_column = $tgt.closest('.cards');
@@ -92,9 +100,21 @@ $(document)
 bootcards.confirm = function(type, to) {
 
 	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
-		window.location.href=to; 
-	} else {
-		return false;
+		var modal = $(event.relatedTarget).closest('.modal');
+		if (modal.length) {
+			modal.modal('hide');
+		}
+	}
+
+}
+
+bootcards.confirmDelete = function(type) {
+
+	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
+		var modal = $(event.target).closest('.modal');
+		if (modal.length) {
+			modal.modal('hide');
+		}
 	}
 
 }
@@ -107,6 +127,12 @@ $(document).ready( function() {
     $('.offcanvas-toggle').on('click', function() {
     	$('.offcanvas').offcanvas('toggle');
     })
+
+    //destroy modals on close (to reload the contents when using the remote property)
+    $('body').on('hidden.bs.modal', '.modal', function () {  	
+  		$(this).removeData('bs.modal');
+	});
+   
 });
 
 //enable fastclick
