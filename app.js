@@ -115,8 +115,7 @@ if ('development' == app.get('env')) {
 }
 
 //routes
-app.get('/', contact.list);
-
+app.get('/', dashboard.list);
 app.get('/dashboard', dashboard.list);
 
 app.get('/companies', company.list);
