@@ -159,6 +159,7 @@ input[type="color"],
 
 @media (max-width:767px) {
 	.row > div { border-left: 0; }
+	.container > .row > div:last-child { border-left: 0; }
 }
 
 @media (min-width:768px) and (max-width:992px) {
