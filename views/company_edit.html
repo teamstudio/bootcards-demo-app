@@ -1,107 +1,95 @@
-{{!< layout}}
+<form class="form-horizontal" method="POST" action="/companies/{{company.id}}" data-pjax="#main">
+<div class="modal-header">
 
-<div class="panel panel-default">
-	<form class="form-horizontal" method="POST" action="/companies/{{company.id}}" data-pjax="#main">
-		<div class="panel-heading clearfix">
-			<h3 class="panel-title pull-left">
-				{{#if company.isNew}}
-					New Company
-				{{else}}
-					Edit Company
-				{{/if}}
-			</h3>
-			<div class="pull-right">
-				<div class="btn-group">
-					<button type="submit" class="btn btn-success">
-						<i class="fa fa-check"></i>
-						Save
-					</button>
-				</div>
-				<div class="btn-group">
-					<a class="btn btn-danger" data-pjax="#companyDetails" href="/companies/{{company.id}}">
-						<i class="fa fa-times"></i>
-						Cancel
-					</a>
-				</div>
-			</div>			
-		</div>
-		<div class="panel-body">
-			<input type="hidden" name="_method" value="put">
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Name</label>
-				<div class="col-xs-9">
-					<input type="text" name="name" class="form-control" placeholder="Company name"
-					value="{{company.name}}">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Type</label>
-				<div class="col-xs-9">
-					<select name="type" class="form-control" value="{{company.type}}">
-						<option value="" selected>Select a type</option>
-						<option value="Prospect">Prospect</option>
-						<option value="Customer">Customer</option>
-						<option value="Inactive">Inactive</option>
-					</select>
-				</div>
-			</div>	
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Website</label>
-				<div class="col-xs-9">
-					<input type="url" name="website" class="form-control" 
-					placeholder="Website"
-					value="{{company.website}}">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-xs-3 control-label">City</label>
-				<div class="col-xs-9">
-					<input type="text" name="city" class="form-control" placeholder="City"
-						value="{{company.city}}">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Country</label>
-				<div class="col-xs-9">
-					<input type="text" name="country" class="form-control" placeholder="Country"
-						value="{{company.country}}">
-				</div>
-			</div>	
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Location</label>
-				<div class="col-xs-9">
-					<input type="text" name="location" class="form-control" 
-					placeholder="Location"
-					value="{{company.location}}">
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-xs-3 control-label">Logo</label>
-				<div class="col-xs-9">
-					<input type="file" name="logo" id="logo" class="hide" placeholder="Logo"
-					value="{{company.logo}}">
-					<button class="btn btn-default" type="button">
-						<label for="logo">
-							<i class="fa fa-plus"></i>
-							Add Logo
-						</label>
-					</button>
-				</div>
-			</div>
-						
-		</div>
-	</form>	
-	{{#unless company.isNew}}
-	<div class="panel-footer">
-		<button type="submit" class="btn btn-danger btn-block"
-			onclick="bootcards.confirm('company', '/companies');">
-			<i class="fa fa-trash-o"></i>
-			Delete Company
-		</button>
-	</div>	
-	{{/unless}}
-	<div class="panel-footer">
-		<small class="pull-left">Built with Bootcards - Form Card</small>
-		<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
-	</div>
+	{{>dialog_buttons}}
+
+	<h3 class="panel-title">
+		{{#if company.isNew}}
+			New Company
+		{{else}}
+			Edit Company
+		{{/if}}
+	</h3>
+
 </div>
+<div class="modal-body">
+	<input type="hidden" name="_method" value="put">
+	<div class="form-group">
+		<label class="col-xs-3 control-label">Name</label>
+		<div class="col-xs-9">
+			<input type="text" name="name" class="form-control" placeholder="Company name"
+			value="{{company.name}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label">Type</label>
+		<div class="col-xs-9">
+			<select name="type" class="form-control" value="{{company.type}}">
+				<option value="" selected>Select a type</option>
+				<option value="Prospect">Prospect</option>
+				<option value="Customer">Customer</option>
+				<option value="Inactive">Inactive</option>
+			</select>
+		</div>
+	</div>	
+	<div class="form-group">
+		<label class="col-xs-3 control-label">Website</label>
+		<div class="col-xs-9">
+			<input type="url" name="website" class="form-control" 
+			placeholder="Website"
+			value="{{company.website}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label">City</label>
+		<div class="col-xs-9">
+			<input type="text" name="city" class="form-control" placeholder="City"
+				value="{{company.city}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label">Country</label>
+		<div class="col-xs-9">
+			<input type="text" name="country" class="form-control" placeholder="Country"
+				value="{{company.country}}">
+		</div>
+	</div>	
+	<div class="form-group">
+		<label class="col-xs-3 control-label">Location</label>
+		<div class="col-xs-9">
+			<input type="text" name="location" class="form-control" 
+			placeholder="Location"
+			value="{{company.location}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-xs-3 control-label">Logo</label>
+		<div class="col-xs-9">
+			<input type="file" name="logo" id="logo" class="hide" placeholder="Logo"
+			value="{{company.logo}}">
+			<button class="btn btn-default" type="button">
+				<label for="logo">
+					<i class="fa fa-plus"></i>
+					Add Logo
+				</label>
+			</button>
+		</div>
+	</div>
+				
+</div>
+</form>	
+
+{{#unless company.isNew}}
+<div class="panel-footer">
+	<button type="submit" class="btn btn-danger btn-block"
+		onclick="bootcards.confirm('company', '/companies');">
+		<i class="fa fa-trash-o"></i>
+		Delete Company
+	</button>
+</div>	
+{{/unless}}
+
+<div class="modal-footer">
+	<small class="pull-left">Built with Bootcards - Form Card</small>
+	<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+</div>	
