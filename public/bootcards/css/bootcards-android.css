@@ -242,6 +242,7 @@ a.list-group-item:hover {
 
 .list form input {
 	border: 0;
+	height: 49px;
 }
 
 .list form i.fa-search {
@@ -252,6 +253,8 @@ a.list-group-item:hover {
 	color: #fff;
 	border: 0;
 	background-color: #33b5e5;	
+	height: 49px;
+	line-height: 49px;
 }
 
 .list form .btn:hover,
@@ -259,6 +262,19 @@ a.list-group-item:hover {
 	color: #fff;
 	border: 1px solid #428bca;
 	background-color: #428bca;
+}
+
+@media (min-width:768px) {
+	.list form input {
+		height: 49px;
+	}
+	.list form i.fa-search {
+		top: 17px;
+	}	
+	.list form .btn {	
+		height: 49px;
+		line-height: 49px;
+	}
 }
 
 

@@ -292,6 +292,18 @@ a.list-group-item.active:focus .list-group-item-text {
 	top: 12px;
 }
 
+@media (min-width:768px) {
+	.list form input {
+		height: 46px;
+	}
+	.list form i.fa-search {
+		top: 16px;
+	}
+	.list form .btn {	
+		line-height: 32px;
+	}
+}
+
 
 
 /* FORMS */
