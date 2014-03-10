@@ -69,6 +69,21 @@ small {
 	}
 }
 
+@media (min-width:768px) {
+	.cards > .row > div:not(:first-child) {
+		padding-left: 0;
+	}
+	.cards > .row > div:not(:first-child) .panel {
+		margin-left: 8px;
+	}	
+	.cards > .row > div:not(:last-child) {
+		padding-right: 0;
+	}	
+	.cards > .row > div:not(:last-child) .panel {
+		margin-right: 8px;
+	}
+}
+
 
 
 
