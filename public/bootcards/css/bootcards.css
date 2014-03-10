@@ -226,9 +226,16 @@ a.list-group-item.active:focus {
 	background: #f5f5f5;
 	display: block;
 	border-radius: 4px;
-	padding: 30px 10px;
+	padding: 25px 10px;
 	text-align: center;
 }
+
+@media (max-width:400px) {
+	.bootcards-summary .panel-body .bootcards-summary-item {
+		padding: 15px 5px;
+	}	
+}
+
 
 .bootcards-summary .panel-body .bootcards-summary-item:hover {
 	text-decoration: none;

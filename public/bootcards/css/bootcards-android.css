@@ -10,10 +10,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family:"Roboto",sans-serif;
 }
 
-a {
-	color: #258aaf;
-}
-
 
 
 /* BUTTONS */
@@ -26,11 +22,8 @@ a {
 	border-color: transparent;
 	box-shadow: none;
 	color: #999;
-	padding: 0 10px;
 	font-size: 14px;
 	margin-bottom: 0;
-	height: auto;
-	line-height: 40px;
 	text-decoration: none;
 }
 
@@ -56,6 +49,12 @@ a {
 .btn-xs:active {
 	font-size: 10px;
 	line-height: 20px;
+}
+
+a,
+.btn-link,
+.btn-link:hover {
+	color: #258aaf;
 }
 
 
@@ -172,7 +171,7 @@ a {
 	font-weight: bold;
 	margin: 0;
 	padding: 7px 0;
-	line-height: 26px;	
+	line-height: 20px;	
 }
 
 
@@ -242,7 +241,6 @@ a.list-group-item:hover {
 
 .list form input {
 	border: 0;
-	height: 49px;
 }
 
 .list form i.fa-search {
@@ -251,10 +249,9 @@ a.list-group-item:hover {
 
 .list form .btn {
 	color: #fff;
-	border: 0;
+	border-color: transparent;
 	background-color: #33b5e5;	
-	height: 49px;
-	line-height: 49px;
+	line-height: 26px;
 }
 
 .list form .btn:hover,
@@ -266,14 +263,13 @@ a.list-group-item:hover {
 
 @media (min-width:768px) {
 	.list form input {
-		height: 49px;
+		height: 41px;
 	}
 	.list form i.fa-search {
-		top: 17px;
+		top: 14px;
 	}	
 	.list form .btn {	
-		height: 49px;
-		line-height: 49px;
+		line-height: 27px;
 	}
 }
 

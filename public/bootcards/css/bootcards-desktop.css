@@ -46,6 +46,14 @@ a.list-group-item:before {
 	color: #ccc;
 }
 
+/* List Search */
+
+.list .panel-body > form > .row > div:first-child {
+	padding-right: 0;
+}
+
+
+
 
 /* FORM */
 

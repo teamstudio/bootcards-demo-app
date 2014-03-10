@@ -203,12 +203,11 @@ input[type="color"],
 	font-weight: 400;
 	margin: 0;
 	padding: 8px 0;
-	line-height: 24px;
+	line-height: 20px;
 }
 
 
 .panel-heading .btn-group .btn {
-	
 	height: 29px;
 	font-size: 15px;
 	text-shadow: none;
@@ -292,18 +291,18 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .list form i.fa-search {
-	top: 12px;
+	top: 10px;
 }
 
 @media (min-width:768px) {
 	.list form input {
-		height: 46px;
+		height: 42px;
 	}
 	.list form i.fa-search {
-		top: 16px;
+		top: 14px;
 	}
 	.list form .btn {	
-		line-height: 32px;
+		line-height: 28px;
 	}
 }
 
