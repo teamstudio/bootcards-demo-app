@@ -124,13 +124,16 @@ input[type="color"],
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin: 0 -10px;
 	font-size: 17px;
 	font-weight: 500;
 	line-height: 44px;
 	color: #000;
 	text-align: center;
 	white-space: nowrap;
+}
+
+.navbar > .container .navbar-brand {
+	margin: 0 -10px;
 }
 
 .navbar-fixed-top .btn,
@@ -343,19 +346,6 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .form-horizontal .form-group div:last-child {
 	padding-right: 0;
-}
-
-
-
-/* TABLES */
-
-.table > thead > tr > th:first-child, 
-.table > tbody > tr > th:first-child, 
-.table > tfoot > tr > th:first-child, 
-.table > thead > tr > td:first-child, 
-.table > tbody > tr > td:first-child, 
-.table > tfoot > tr > td:first-child {
-	padding-left: 15px;
 }
 
 

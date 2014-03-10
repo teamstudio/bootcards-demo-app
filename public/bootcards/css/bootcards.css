@@ -118,7 +118,7 @@ a.list-group-item.active:focus {
 	color: #aaa;
 	display: block;
 	text-align: center;
-	line-height: 22px; /* Line up vertically with .btn
+	line-height: 22px; /* Line up vertically with .btn */
 }
 
 
@@ -129,6 +129,29 @@ a.list-group-item.active:focus {
 	font-weight: inherit;
 	cursor: pointer;
 }
+
+
+
+/* TABLE CARD */
+
+.table > thead > tr > th:first-child, 
+.table > tbody > tr > th:first-child, 
+.table > tfoot > tr > th:first-child, 
+.table > thead > tr > td:first-child, 
+.table > tbody > tr > td:first-child, 
+.table > tfoot > tr > td:first-child {
+	padding-left: 15px;
+}
+
+.table > thead > tr > th:last-child, 
+.table > tbody > tr > th:last-child, 
+.table > tfoot > tr > th:last-child, 
+.table > thead > tr > td:last-child, 
+.table > tbody > tr > td:last-child, 
+.table > tfoot > tr > td:last-child {
+	padding-right: 15px;
+}
+
 
 
 
@@ -175,10 +198,17 @@ a.list-group-item.active:focus {
 	content: "\e08d";
 }
 
-.bootcards-file .bootcards-file-icon {
-	margin-right: 12px;
-	font-size: 80px;
-	float: left;
+.bootcards-file .list-group-item:first-child {
+	position: relative;
+	padding-left: 74px;
+}
+
+.bootcards-file .list-group-item:first-child i {
+	font-size: 64px;
+	width: 64px;
+	position: absolute;
+	left: 0;
+	top: 10px;
 }
 
 
