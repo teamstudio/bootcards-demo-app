@@ -1,8 +1,4 @@
 @import "bootcards-mobile-shared.css";
-<<<<<<< HEAD
-/*@import "/bower_components/ratchet/dist/css/ratchet-theme-android.css";*/
-=======
->>>>>>> 5ff0d046d79c02edb525dfd8cd85613539a4d456
 
 body {
 	background-color: #eee;
@@ -33,8 +29,9 @@ a {
 	padding: 0 10px;
 	font-size: 14px;
 	margin-bottom: 0;
-	height: 40px;
+	height: auto;
 	line-height: 40px;
+	text-decoration: none;
 }
 
 .btn-danger,
@@ -52,6 +49,13 @@ a {
 .btn:hover,
 .btn:active {
 	background: #eee;
+}
+
+.btn-xs,
+.btn-xs:hover,
+.btn-xs:active {
+	font-size: 10px;
+	line-height: 20px;
 }
 
 

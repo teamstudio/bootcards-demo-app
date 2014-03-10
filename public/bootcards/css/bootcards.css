@@ -111,13 +111,14 @@ a.list-group-item.active:focus {
 }
 
 .panel-footer {
-	//margin-top: -1px; /* Overlap uneccesary extra borders above */
+	overflow: hidden;
 }
 
 .panel-footer small {
 	color: #aaa;
 	display: block;
 	text-align: center;
+	line-height: 22px; /* Line up vertically with .btn
 }
 
 

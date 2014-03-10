@@ -58,6 +58,7 @@ input[type="color"],
 	opacity: 1;
 	-webkit-transition: opacity 1s;
 	margin: 0;
+	text-decoration: none;
 }
 
 .btn-danger,
@@ -80,6 +81,13 @@ input[type="color"],
 
 .btn label {
 	font-weight: normal;
+}
+
+.btn-xs,
+.btn-xs:hover,
+.btn-xs:active {
+	font-size: 10px;
+	line-height: 20px;
 }
 
 

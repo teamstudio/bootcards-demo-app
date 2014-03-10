@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-/*@import "/bower_components/ratchet/dist/css/ratchet.css";*/
-
-=======
->>>>>>> 5ff0d046d79c02edb525dfd8cd85613539a4d456
 html, 
 body {
 	height: 100%;
@@ -94,6 +89,8 @@ small {
 	margin-right: 5px;
 	text-align: center;
 }
+
+
 
 
 /* LISTS */
