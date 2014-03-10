@@ -18,7 +18,9 @@
 						<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">
 					{{/if}}
 				{{else}}
-					<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">	
+					<a class="btn btn-primary" href="/notes/{{activity.id}}/edit"
+						data-toggle="modal"
+						data-target="#editModal">	
 				{{/if}}
 					<i class="fa fa-pencil"></i>
 					<span>Edit</span>
@@ -33,7 +35,9 @@
 					<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">
 				{{/if}}
 			{{else}}
-				<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">	
+				<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit"
+					data-toggle="modal"
+					data-target="#editModal">	
 			{{/if}}
 				<i class="fa fa-pencil"></i>
 				<span>Edit</span>
