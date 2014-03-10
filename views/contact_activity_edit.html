@@ -1,44 +1,34 @@
-{{!< layout}}
+{{#if activity.isNew}}
+<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities" data-pjax="#activityDetails">
+{{else}}
+<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities/{{activity.id}}" data-pjax="#activityDetails">
+{{/if}}
 
-<div class="panel panel-default">
+<div class="modal-header">
+
+	{{>dialog_buttons}}
+	
+	<h3 class="panel-title">
 	{{#if activity.isNew}}
-		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities" data-pjax="#activityDetails">
-		{{else}}
-		<form class="form-horizontal" method="POST" action="/contacts/{{contact.id}}/activities/{{activity.id}}" data-pjax="#activityDetails">
-		{{/if}}
-	<div class="panel-heading">
-		<h3 class="panel-title">
-		{{#if activity.isNew}}
-			New Activity
-		{{else}}
-			Edit Activity
-		{{/if}}
-		</h3>
-	</div>
-	<div class="panel-body">
-
-		<input type="hidden" name="_method" value="put">
-
-		{{>activity_form activity}}
-
-		<div class="form-group">
-			<div class="col-sm-6 col-sm-offset-3 col-xs-6">
-				<button type="submit" class="btn btn-success btn-block">Save</button>
-			</div>
-			<div class="col-sm-3 col-xs-6">
-				{{#if activity.isNew}}
-					<a class="btn btn-danger btn-block" data-pjax="#activityDetails" href="/contacts/{{contact.id}}/activities">Cancel</a>
-				{{else}}
-					<a class="btn btn-danger btn-block" data-pjax="#activityDetails" href="/contacts/{{contact.id}}/activities/{{activity.id}}">Cancel</a>
-				{{/if}}
-			</div>
-		</div>	
-					
-	</div>
-</form>
-	<div class="panel-footer">
-		<small class="pull-left">Built with Bootcards - Form Card</small>
-		<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
-	</div>		
+		New Activity
+	{{else}}
+		Edit Activity
+	{{/if}}
+	</h3>
 
 </div>
+
+<div class="panel-body">
+
+	<input type="hidden" name="_method" value="put">
+
+	{{>activity_form activity}}
+				
+</div>
+
+</form>
+	
+<div class="modal-footer">
+	<small class="pull-left">Built with Bootcards - Form Card</small>
+	<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+</div>		
