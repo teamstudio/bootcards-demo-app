@@ -1,8 +1,4 @@
 @import "bootcards-mobile-shared.css";
-<<<<<<< HEAD
-/*@import "/bower_components/ratchet/dist/css/ratchet-theme-ios.css";*/
-=======
->>>>>>> 5ff0d046d79c02edb525dfd8cd85613539a4d456
 
 body {
 	background-color: white;
@@ -357,12 +353,15 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .navbar-fixed-bottom .btn-group {
-	width: 320px;
 	max-width: 320px;
+	width: 320px;
+	text-align: center;
+	font-size: 0;
 }
 
 .navbar-fixed-bottom .btn-group .btn {
-	float: left;
+	display: inline-block;
+	float: none;
 	width: 25%;
 	height: 50px;
 	color: #929292;
@@ -371,6 +370,16 @@ a.list-group-item.active:focus .list-group-item-text {
 	line-height: 1;
 	font-size: 11px;
 	font-weight: 300;
+}
+
+@media (min-width:768px) {
+	.navbar-fixed-bottom .btn-group {
+		max-width: 640px;
+		width: 640px;
+	}
+	.navbar-fixed-bottom .btn-group .btn {
+		width: 12.5%;
+	}
 }
 
 .navbar-fixed-bottom .btn-group .btn i {
