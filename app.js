@@ -24,6 +24,7 @@ var hbs 	= require('express-hbs');	//express handlebars
 var moment	= require('moment');		//moment date formatting lib
 var app 	= express();
 
+app.use(express.compress());
 //enable Express session support
 app.use( express.cookieParser() );
 app.use( express.session({secret : 'QWERTY'}));
@@ -55,10 +56,14 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
-app.use(express.static(path.join(__dirname, 'public')));
+var oneDay = 86400000;
+
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay } ) );
+app.use(express.static(path.join(__dirname, 'bower_components'), { maxAge: oneDay } ) );
 
 //public dir for bower components
-app.use('/bower_components', express.static(__dirname + '/bower_components'));
+app.use('/bower_components', 
+	express.static(__dirname + '/bower_components'), { maxAge: oneDay } );
 
 //register a helper for date formatting using handlebars
 hbs.registerHelper("formatDate", function(datetime, format) {
