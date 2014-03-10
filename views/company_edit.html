@@ -78,14 +78,19 @@
 			<div class="form-group">
 				<label class="col-xs-3 control-label">Logo</label>
 				<div class="col-xs-9">
-					<input type="file" name="logo" class="form-control" placeholder="Logo"
+					<input type="file" name="logo" id="logo" class="hide" placeholder="Logo"
 					value="{{company.logo}}">
+					<button class="btn btn-default" type="button">
+						<label for="logo">
+							<i class="fa fa-plus"></i>
+							Add Logo
+						</label>
+					</button>
 				</div>
 			</div>
 						
 		</div>
 	</form>	
-
 	<div class="panel-footer">
 		<button type="submit" class="btn btn-danger btn-block"
 			onclick="bootcards.confirm('company', '/companies');">

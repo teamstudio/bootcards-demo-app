@@ -121,6 +121,15 @@ a.list-group-item.active:focus {
 }
 
 
+/* FORM CARD */
+
+.btn label {
+	margin: 0;
+	font-weight: inherit;
+	cursor: pointer;
+}
+
+
 
 /* FILE CARD */
 
