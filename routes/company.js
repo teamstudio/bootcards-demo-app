@@ -23,6 +23,18 @@ exports.read = function(req, res) {
    
 }
 
+exports.add = function(req, res) {
+
+	res.renderPjax('company_edit', {
+  		companies:companies,
+  		company : {
+  			isNew : true
+  		},
+   		menu: bc.getActiveMenu(menu, 'companies')
+  	});
+
+};
+
 exports.edit = function(req, res) {
 
 	res.renderPjax('company_edit', {

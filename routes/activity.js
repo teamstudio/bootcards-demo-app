@@ -32,17 +32,31 @@ exports.edit = function(req, res) {
 /*an activity can be added to a contact or company*/
 exports.add = function(req, res) {
 
-	var contact = bc.getContactById(req.params.contactId);
+	if (req.params.contactId) {
 
-	res.renderPjax('activity_edit', {
-  		activities: activities,
-  		activity : {
-  			date : new Date(),
-  			isNew : true
-  		},
-  		contact: contact,
-   		menu: bc.getActiveMenu(menu, 'notes')
-  	});
+		var contact = bc.getContactById(req.params.contactId);
+
+		res.renderPjax('activity_edit', {
+	  		activities: activities,
+	  		activity : {
+	  			date : new Date(),
+	  			isNew : true
+	  		},
+	  		contact: contact,
+	   		menu: bc.getActiveMenu(menu, 'notes')
+	  	});
+	} else {
+
+		res.renderPjax('activity_edit', {
+	  		activities: activities,
+	  		activity : {
+	  			date : new Date(),
+	  			isNew : true
+	  		},
+	   		menu: bc.getActiveMenu(menu, 'notes')
+	  	});
+
+	}
 };
 
 exports.save = function(req, res) {

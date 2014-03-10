@@ -6,17 +6,21 @@
 			<div class="col-sm-5 list">
 				<div class="panel panel-default">				
 					<div class="panel-body">
-						<form>
+					
 							<div class="row">
 							    <div class="col-xs-9">
 							      <div class="form-group">
+							      	<form>
 								      <input type="text" class="form-control" placeholder="Search Contacts...">
 								      <i class="fa fa-search"></i>
+								    </form>
 							      </div>
 							    </div>
 							    <div class="col-xs-3">
-									<a class="btn btn-primary btn-block">
-										<i class="fa fa-plus"></i> 
+									<a class="btn btn-primary btn-block" href="/contacts/add"
+										data-toggle="modal"
+										data-target="#editModal">
+										<i class="fa fa-plus"></i>
 										<span>Add</span>
 									</a>
 							    </div>
@@ -49,3 +53,4 @@
 
 			</div>
 		</div>
+

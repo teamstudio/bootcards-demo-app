@@ -65,6 +65,7 @@ exports.getContactById = function(id) {
 	var contact = getById(contacts, id);
 	if (contact != null) {
 		contact.activities = getForParent(activities, contact.id);
+		contact.isNew = false;
 	}
 	return contact;
 }

@@ -3,17 +3,17 @@
 <div class="row">
 
 	<div class="cards col-sm-12">
-	
+
 		<div class="row">
-		
+
 			<div class="col-sm-6">
 
 				<div class="panel panel-default bootcards-summary">
-		
+
 					<div class="panel-heading">
 						<h3 class="panel-title">Summary Card Heading</h3>
 					</div>
-		
+
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-xs-6 col-sm-4">
@@ -54,26 +54,26 @@
 							</div>
 						</div>
 					</div>
-		
+
 					<div class="panel-footer">
 						<small>Built with Bootcards - Summary Card</small>
 					</div>	
-		
+
 				</div>
-			
+
 			</div>
 
 			<div class="col-sm-6">
 
 				<div class="panel panel-default bootcards-chart">
-		
+
 					<div class="panel-heading">
 						<h3 class="panel-title">Chart heading goes here</h3>					
 					</div>
-		
+
 					<!--bar chart-->
 					<div id="barChart" style="height: 250px;"></div>
-		
+
 					<div class="panel-footer">
 						<button class="btn btn-default btn-block">
 							<i class="fa fa-table"></i>
@@ -84,61 +84,55 @@
 					<div class="panel-footer">
 						<small>Built with Bootcards - Chart Card</small>
 					</div>					
-		
+
 				</div>
-		
+
+			</div>
 		</div>
-
-
-
 	</div>
-
-
-
-
 </div>
 
 <script src="/jquery/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 
-/*
- * Clear the target DOM element and draw the sample charts
- * Samples come from the morris.js site at http://www.oesmith.co.uk/morris.js/
- */
-var drawCharts = function() {
+	/*
+	 * Clear the target DOM element and draw the sample charts
+	 * Samples come from the morris.js site at http://www.oesmith.co.uk/morris.js/
+	 */
+	var drawCharts = function() {
 
-	$("#barChart").empty();
+		$("#barChart").empty();
 
 
-	Morris.Bar({
-		element: 'barChart',
-		data: [
-			{device: 'iPhone', geekbench: 136},
-			{device: 'iPhone 3G', geekbench: 137},
-			{device: 'iPhone 3GS', geekbench: 275},
-			{device: 'iPhone 4', geekbench: 380},
-			{device: 'iPhone 4S', geekbench: 655},
-			{device: 'iPhone 5', geekbench: 1571}
-		],
-		xkey: 'device',
-		ykeys: ['geekbench'],
-		labels: ['Geekbench'],
-		barRatio: 0.4,
-		xLabelAngle: 35,
-		hideHover: 'auto'
-	});
+		Morris.Bar({
+			element: 'barChart',
+			data: [
+				{device: 'iPhone', geekbench: 136},
+				{device: 'iPhone 3G', geekbench: 137},
+				{device: 'iPhone 3GS', geekbench: 275},
+				{device: 'iPhone 4', geekbench: 380},
+				{device: 'iPhone 4S', geekbench: 655},
+				{device: 'iPhone 5', geekbench: 1571}
+			],
+			xkey: 'device',
+			ykeys: ['geekbench'],
+			labels: ['Geekbench'],
+			barRatio: 0.4,
+			xLabelAngle: 35,
+			hideHover: 'auto'
+		});
 
-}
+	}
 
-//draw the charts when the DOM is ready
-$(document).ready( function() {
-	drawCharts();
-});
-
-//on resize of the page: redraw the charts
-$(window)
-	.on('resize', function() {
+	//draw the charts when the DOM is ready
+	$(document).ready( function() {
 		drawCharts();
 	});
+
+	//on resize of the page: redraw the charts
+	$(window)
+		.on('resize', function() {
+			drawCharts();
+		});
 
 </script>

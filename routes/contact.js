@@ -34,16 +34,27 @@ exports.edit = function(req, res) {
 
 exports.add = function(req, res) {
 
-	var company = (req.params.companyId ? bc.getCompanyById(req.params.companyId) : null);
+	if (req.params.companyId) {
 
-	res.renderPjax('contact_edit', {
-  		contacts:contacts,
-  		contact : {
-  			isNew : true,
-  			companyId : (company ? company.id : null)
-  		},
-   		menu: bc.getActiveMenu(menu, 'contacts')
-  	});
+		var company = (req.params.companyId ? bc.getCompanyById(req.params.companyId) : null);
+
+		res.renderPjax('contact_edit', {
+	  		contacts:contacts,
+	  		contact : {
+	  			isNew : true,
+	  			companyId : (company ? company.id : null)
+	  		},
+	   		menu: bc.getActiveMenu(menu, 'contacts')
+	  	});
+	} else {
+		res.renderPjax('contact_edit', {
+	  		contacts:contacts,
+	  		contact : {
+	  			isNew : true
+	  		},
+	   		menu: bc.getActiveMenu(menu, 'contacts')
+	  	});
+	}
 };
 
 exports.save = function(req,res) {
