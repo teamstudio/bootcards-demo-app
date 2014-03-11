@@ -13,12 +13,16 @@
 				</a>
 				{{#if parent}}
 					{{#if parent.isContact}}
-						<a class="btn btn-primary" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit" data-pjax="#activityCard">
+						<a class="btn btn-primary" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit" 
+							data-toggle="modal"
+							data-target="#editModal">
 					{{else}}
-						<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">
+						<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" 
+							data-toggle="modal"
+						data-target="#editModal">
 					{{/if}}
 				{{else}}
-					<a class="btn btn-primary" href="/notes/{{activity.id}}/edit"
+					<a class="btn btn-primary" href="/notes/{{activity.id}}/edit"	
 						data-toggle="modal"
 						data-target="#editModal">	
 				{{/if}}
@@ -30,9 +34,13 @@
 			<!--big screen component-->
 			{{#if parent}}
 				{{#if parent.isContact}}
-					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit" data-pjax="#activityCard">
+					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit"
+						data-toggle="modal"
+						data-target="#editModal">
 				{{else}}
-					<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit" data-pjax="#activityCard">
+					<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit"
+						data-toggle="modal"
+						data-target="#editModal">
 				{{/if}}
 			{{else}}
 				<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit"
