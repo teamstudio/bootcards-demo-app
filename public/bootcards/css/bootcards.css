@@ -1,6 +1,6 @@
 /* NAVBAR */
 
-.btn-back {
+/*.btn-back {
 	display: none;
 }
 
@@ -8,7 +8,7 @@
 	.btn-menu {
 		display: none;
 	}
-}
+}*/
 
 /* force hardware accelerationon slide in menu */
 .offcanvas {
@@ -41,10 +41,10 @@ a.list-group-item.active:focus {
 	margin-bottom: 5px;
 }
 
-.list-group-item-heading:last-child,
+/*.list-group-item-heading:last-child,
 .list-group-item-text:last-child {
 	margin-bottom: 0;
-}
+}*/
 
 .list-group-item > img {
 	height: 40px;

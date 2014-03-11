@@ -143,6 +143,7 @@ input[type="color"],
 	z-index: 20;
 	padding: 0;
 	line-height: 44px;
+	border: 0;
 }
 
 .navbar-fixed-top .btn.navbar-left {
@@ -152,6 +153,8 @@ input[type="color"],
 .navbar-fixed-top .btn.navbar-right {
 	right: 15px;
 }
+
+
 
 
 /* GRID */
@@ -169,6 +172,13 @@ input[type="color"],
 	.row > div:nth-child(2) { border-left: 0; }
 }
 
+
+
+/* SIDE MENU */
+
+.offcanvas {
+  margin-top:45px;
+}
 
 
 
