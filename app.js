@@ -7,7 +7,7 @@ var express = require('express');
 //routes
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
-var activity 	= require('./routes/activity');
+var note 		= require('./routes/activity');
 var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
 var dashboard 	= require('./routes/dashboard');
@@ -81,6 +81,22 @@ hbs.registerHelper("getIconForType", function(type) {
 	return bc.getIconForType(type);
 });
 
+//helper to get the number of data elements
+hbs.registerHelper('count', function(type) {
+	switch (type) {
+		case 'companies':
+			return companies.length;
+		case 'contacts':
+			return contacts.length;
+		case 'notes':
+			return notes.length;
+		case 'charts':
+			return 3;
+	}
+
+	return 0;
+});
+
 //helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
 	if (session.isAndroid) {
@@ -95,11 +111,11 @@ hbs.registerHelper("getCSSforOS", function(session) {
 //helper to get the app version
 hbs.registerHelper("getAppVersion", function() {
 	return pjson.version;
-})
+});
 
 //read sample data
 companies = [];
-activities = [];
+notes = [];
 contacts = [];
 
 sampleData.read();
@@ -129,12 +145,12 @@ app.get('/companies/:id', company.read);
 app.put('/companies/:id', company.save);
 app.get('/companies/:id/edit', company.edit);
 
-app.get('/companies/:id/notes', company.listActivities);	
-app.get('/companies/:id/notes/add', company.addActivity);	
-app.get('/companies/:id/notes/:activityId', company.readActivity);	
-app.get('/companies/:id/notes/:activityId/edit', company.editActivity);	
-app.put('/companies/:id/notes', company.saveActivity);		//save new activity 
-app.put('/companies/:id/notes/:activityId', company.saveActivity);
+app.get('/companies/:id/notes', company.listNotes);	
+app.get('/companies/:id/notes/add', company.addNote);	
+app.get('/companies/:id/notes/:noteId', company.readNote);	
+app.get('/companies/:id/notes/:noteId/edit', company.editNote);	
+app.put('/companies/:id/notes', company.saveNote);		//save new note 
+app.put('/companies/:id/notes/:noteId', company.saveNote);
 
 app.get('/companies/:id/contacts/add', company.addContact);
 
@@ -145,19 +161,19 @@ app.get('/contacts/:id', contact.read);		//read a contact
 app.put('/contacts/:id', contact.save);		//save a specific contact
 app.get('/contacts/:id/edit', contact.edit);
 
-app.get('/contacts/:id/notes', contact.listActivities);	
-app.get('/contacts/:id/notes/add', contact.addActivity);	
-app.get('/contacts/:id/notes/:activityId', contact.readActivity);	
-app.get('/contacts/:id/notes/:activityId/edit', contact.editActivity);	
-app.put('/contacts/:id/notes', contact.saveActivity);		//save new activity in contact
-app.put('/contacts/:id/notes/:activityId', contact.saveActivity);	
+app.get('/contacts/:id/notes', contact.listNotes);	
+app.get('/contacts/:id/notes/add', contact.addNote);	
+app.get('/contacts/:id/notes/:noteId', contact.readNote);	
+app.get('/contacts/:id/notes/:noteId/edit', contact.editNote);	
+app.put('/contacts/:id/notes', contact.saveNote);		//save new note in contact
+app.put('/contacts/:id/notes/:noteId', contact.saveNote);	
 
-app.get('/notes', activity.list);
-app.get('/notes/add/:contactId', activity.add);
-app.get('/notes/add', activity.add);
-app.get('/notes/:id', activity.read);
-app.get('/notes/:id/edit', activity.edit);
-app.put('/notes', activity.save);
+app.get('/notes', note.list);
+app.get('/notes/add/:contactId', note.add);
+app.get('/notes/add', note.add);
+app.get('/notes/:id', note.read);
+app.get('/notes/:id/edit', note.edit);
+app.put('/notes', note.save);
 
 app.get('/charts', media.list);
 

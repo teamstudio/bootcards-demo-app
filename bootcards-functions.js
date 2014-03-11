@@ -64,7 +64,7 @@ exports.getUniqueId = function() {
 exports.getContactById = function(id) {
 	var contact = getById(contacts, id);
 	if (contact != null) {
-		contact.activities = getForParent(activities, contact.id);
+		contact.notes = getForParent(notes, contact.id);
 		contact.isNew = false;
 	}
 	return contact;
@@ -72,20 +72,20 @@ exports.getContactById = function(id) {
 exports.getCompanyById = function(id) {
 	var company = getById(companies, id);
 	if (company != null) {
-		company.activities = getForParent(activities, company.id);
+		company.notes = getForParent(notes, company.id);
 		company.contacts = getForParent(contacts, company.id);
 	}
 	return company;
 }
 exports.getActivityById = function(id) {
-	return getById(activities, id);
+	return getById(notes, id);
 }
 
 exports.getContactsForCompany = function(parentId) {
 	return getForParent(contacts, parentId);
 }
 exports.getActivitiesForParent = function(parentId) {
-	return getForParent(activities, parentId);
+	return getForParent(notes, parentId);
 }
 
 var getForParent = function( from, id) {

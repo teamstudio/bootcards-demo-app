@@ -69,9 +69,9 @@ exports.save = function(req,res) {
 
 }
 
-/* ACTIVITIES */
+/* NOTES */
 
-exports.listActivities = function(req, res) {
+exports.listNotes = function(req, res) {
 
 	res.renderPjax('activities_for_company', {
   		company : bc.getCompanyById(req.params.id)
@@ -79,29 +79,29 @@ exports.listActivities = function(req, res) {
 
 }
 
-exports.readActivity = function(req, res) {
+exports.readNote = function(req, res) {
 
 	var company = bc.getCompanyById( req.params.id);
 	company.isCompany = true;
 
 	res.renderPjax('company_activity', {
 		company : company,
-  		activity : bc.getActivityById( req.params.activityId)
+  		activity : bc.getActivityById( req.params.noteId)
 	});
 }
-exports.editActivity = function(req, res) {
+exports.editNote = function(req, res) {
 
 	var company = bc.getCompanyById( req.params.id);
 	company.isCompany = true;
 
-	var activity = bc.getActivityById( req.params.activityId);
+	var note = bc.getActivityById( req.params.noteId);
 
 	res.renderPjax('company_activity_edit', {
 		company : company,
-		activity : activity
+		activity : note
 	});
 }
-exports.addActivity = function(req, res) {
+exports.addNote = function(req, res) {
 	
 	var company = bc.getCompanyById(req.params.id);
 
@@ -114,21 +114,21 @@ exports.addActivity = function(req, res) {
 	});
 }
 
-exports.saveActivity = function(req, res) {
+exports.saveNote = function(req, res) {
 
-	var activity;
+	var note;
 	var company = bc.getCompanyById(req.params.id);
 
-	if (req.params.activityId) {
+	if (req.params.noteId) {
 
-		activity = bc.getActivityById(req.params.activityId);
-		activity.type = req.body.type;
-		activity.subject = req.body.subject;
-		activity.date = moment(req.body.date, "DD/MM/YYYY HH:mm");
+		note = bc.getActivityById(req.params.noteId);
+		note.type = req.body.type;
+		note.subject = req.body.subject;
+		note.date = moment(req.body.date, "DD/MM/YYYY HH:mm");
 
 	} else {
 
-		activity = {
+		note = {
 			id: bc.getUniqueId(),
 			parentIds : [req.params.id],
 			type: req.body.type,
@@ -136,8 +136,8 @@ exports.saveActivity = function(req, res) {
 			date: moment(req.body.date, "DD/MM/YYYY HH:mm")
 		}
 
-		activities.push(activity);
-		company.activities.push(activity);
+		notes.push(note);
+		company.notes.push(note);
 
 	}
 

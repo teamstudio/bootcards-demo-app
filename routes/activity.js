@@ -3,8 +3,8 @@ var moment	= require('moment');
 
 exports.list = function(req, res) {
 	res.renderPjax('activities', {
-  		activities: activities,
-  		activity : activities[0],
+  		activities: notes,
+  		activity : notes[0],
    		menu: bc.getActiveMenu(menu, 'notes')
   	});
 };
@@ -12,7 +12,7 @@ exports.list = function(req, res) {
 exports.read = function(req, res) {
 
 	res.renderPjax('activity', {
-	 	activities : activities,
+	 	activities : notes,
 	   	activity: bc.getActivityById(req.params.id),
 	    menu: bc.getActiveMenu(menu, 'notes')
 	});
@@ -22,14 +22,14 @@ exports.read = function(req, res) {
 exports.edit = function(req, res) {
 
 	res.renderPjax('activity_edit', {
-	 	activities : activities,
+	 	activities : notes,
 	   	activity: bc.getActivityById(req.params.id),
 	    menu: bc.getActiveMenu(menu, 'notes')
 	});
    
 }
 
-/*an activity can be added to a contact or company*/
+/*a note can be added to a contact or company*/
 exports.add = function(req, res) {
 
 	if (req.params.contactId) {
@@ -37,7 +37,7 @@ exports.add = function(req, res) {
 		var contact = bc.getContactById(req.params.contactId);
 
 		res.renderPjax('activity_edit', {
-	  		activities: activities,
+	  		activities: notes,
 	  		activity : {
 	  			date : new Date(),
 	  			isNew : true
@@ -48,7 +48,7 @@ exports.add = function(req, res) {
 	} else {
 
 		res.renderPjax('activity_edit', {
-	  		activities: activities,
+	  		activities: notes,
 	  		activity : {
 	  			date : new Date(),
 	  			isNew : true
@@ -65,9 +65,9 @@ exports.save = function(req, res) {
 	var contact = bc.getContactById(req.body.contactId);
 
 	if (contact != null) {
-		//found the contact: add new activity
+		//found the contact: add new note
 
-		var activity = {
+		var note = {
 			type: req.body.type,
 			subject: req.body.subject,
 			date: moment(req.body.date),
@@ -75,7 +75,7 @@ exports.save = function(req, res) {
 			details: req.body.details
 		}
 
-		activities.push(activity);
+		notes.push(note);
 
 		res.renderPjax('contact', {
 		 	contacts:contacts,

@@ -15,10 +15,9 @@ exports.read = function() {
 
 		contacts = jsonContents.contacts;
 		companies = bc.sortByField( jsonContents.companies, 'name');
+		notes = jsonContents.notes;
 
-		activities = jsonContents.activities;
-
-		console.log("Sample data read. Found " + contacts.length + " contacts, " + companies.length + " companies, " + activities.length + " activities");
+		console.log("Sample data read. Found " + contacts.length + " contacts, " + companies.length + " companies, " + notes.length + " notes");
 	});
 
 }
