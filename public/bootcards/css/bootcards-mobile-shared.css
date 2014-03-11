@@ -5,7 +5,17 @@ body {
 
 body {
 	padding-top: 50px;
+	overflow-x:hidden;
 }
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
 
 small {
 	font-size: 70%;
@@ -147,12 +157,18 @@ a.list-group-item:before {
 	padding: 8px;
 }
 
+.list form .row {
+	margin: 0;
+}
+
 .list form .row > div:first-child {
 	padding-right: 4px;
+	padding-left: 0;
 }
 
 .list form .row > div:last-child {
 	padding-left: 4px;
+	padding-right: 0;
 }
 
 
