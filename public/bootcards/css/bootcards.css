@@ -100,10 +100,6 @@ a.list-group-item.active:focus {
 
 /* CARDS */
 
-/* 
-	Workaround now <form> surrounds .panel-heading
-	Replicates .panel-default>.panel-heading styles in bootstrap.css
-*/
 .panel-default .panel-heading { 
 	color: #333;
 	background-color: #f5f5f5;
@@ -114,11 +110,12 @@ a.list-group-item.active:focus {
 	overflow: hidden;
 }
 
-.panel-footer small {
+.panel-footer small,
+.modal-footer small {
 	color: #aaa;
 	display: block;
 	text-align: center;
-	line-height: 24px; /* Line up vertically with .btn */
+	line-height: 22px; /* Line up vertically with .btn */
 }
 
 
