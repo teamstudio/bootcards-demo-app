@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 a,
 .btn-link,
 .btn-link:hover {
-	color: #258aaf;
+	color: #33b5e5;
 }
 
 
@@ -68,10 +68,11 @@ a,
 }
 
 .navbar-default {
-	background: #f5f5f5;
-	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-	box-shadow: 0 0 1px rgba(0,0,0,0.2);
-	border-bottom: 1px solid rgba(0,0,0,0.2);
+	height: 50px;
+	background-color: #ddd;
+	border-bottom: 1px solid #b1b1b1;
+	-webkit-box-shadow: inset 0 -2px 0 #d2d2d2,0 3px 3px rgba(0,0,0,.07);
+	box-shadow: inset 0 -2px 0 #d2d2d2,0 3px 3px rgba(0,0,0,.07);
 }
 
 .navbar-header {
@@ -80,21 +81,29 @@ a,
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover {
-	font-weight: bold;
-	color: #555;
-	padding-left: 10px;
-	display: inline-block;
-	float: left;
-	font-weight: bold;
+	display: block;
+	padding: 0;
+	margin: 0 -10px;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 44px;
+	color: #000;
+	white-space: nowrap;
+	padding-left: 15px;
+	font-size: 18px;
+	line-height: 49px;
+	text-align: left;
+	
 }
 
 .navbar > .container .navbar-brand {
 	margin-left: 0;
+	padding-left: 0;
 }
 
 .navbar-fixed-top .btn,
 .navbar-fixed-top .btn:hover {
-	background: none;
+	/*background: none;
 	border: 0;
 	box-shadow: none;
 	font-size: 15px;
@@ -102,20 +111,29 @@ a,
 	border-radius: 0;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-top: 5px;
+	margin-top: 5px;*/
+
+	position: relative;
+	z-index: 20;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;
+	background: transparent;
+	color: #33b5e5;
+	border: 0;
+}
+
+.navbar-fixed-top .btn i {
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .navbar-fixed-top .btn.navbar-left {
-	border-right: 1px solid #ccc;
 	float: left;	
-	
 }
 
 .navbar-fixed-top .btn.navbar-right {
-	border-left: 1px solid #ccc;
 	float: right;
-	
-	
 }
 
 @media (max-width:767px) {
