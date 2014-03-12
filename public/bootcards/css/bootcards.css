@@ -69,16 +69,16 @@ a.list-group-item.active:focus {
 
 /* List - Search Form */
 
-.list .form-group {
+.bootcards-list .form-group {
 	position: relative;
 	margin-bottom: 0;
 }
 
-.list form input {
+.bootcards-list form input {
 	padding-left: 32px;
 }
 
-.list form i.fa-search {
+.bootcards-list form i.fa-search {
 	position: absolute;
 	left: 12px;
 	top: 10px;
@@ -86,7 +86,7 @@ a.list-group-item.active:focus {
 	font-size: 14px;
 }
 
-.list form .btn {
+.bootcards-list form .btn {
 	color: white;
 }
 

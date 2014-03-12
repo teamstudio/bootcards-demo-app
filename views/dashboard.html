@@ -2,90 +2,89 @@
 
 <div class="row">
 
-	<div class="cards col-sm-12">
-
-		<div class="row">
-
-			<div class="col-sm-6">
-
-				<div class="panel panel-default bootcards-summary">
-
-					<div class="panel-heading">
-						<h3 class="panel-title">Summary Card Heading</h3>
-					</div>
-
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-xs-6 col-sm-4">
-								<a class="bootcards-summary-item" href="/contacts">
-									<i class="fa fa-3x fa-users"></i>
-									<h1>{{{count 'contacts'}}} <span>Contacts</span></h1>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-4">
-								<a class="bootcards-summary-item" href="/companies">
-									<i class="fa fa-3x fa-building-o"></i>
-									<h1>{{{count 'companies'}}} <span>Companies</span></h1>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-4">
-								<a class="bootcards-summary-item" href="/notes">
-									<i class="fa fa-3x fa-clipboard"></i>
-									<h1>{{{count 'notes'}}} <span>Notes</span></h1>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-4">
-								<a class="bootcards-summary-item" href="/charts">
-									<i class="fa fa-3x fa-bar-chart-o"></i>
-									<h1>{{{count 'charts'}}} <span>Charts</span></h1>
-								</a>
-							</div>
-							<div class="col-xs-6 col-sm-4">
-								<a class="bootcards-summary-item" href="#">
-									<i class="fa fa-3x fa-files-o"></i>
-									<h1>54 <span>Files</span></h1>
-								</a>
-							</div>
+	<div class="bootcards-cards">
+	
+		<div class="col-sm-6">
+	
+			<div class="panel panel-default bootcards-summary">
+	
+				<div class="panel-heading">
+					<h3 class="panel-title">Summary Card Heading</h3>
+				</div>
+	
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-xs-6 col-sm-4">
+							<a class="bootcards-summary-item" href="/contacts">
+								<i class="fa fa-3x fa-users"></i>
+								<h1>{{{count 'contacts'}}} <span>Contacts</span></h1>
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-4">
+							<a class="bootcards-summary-item" href="/companies">
+								<i class="fa fa-3x fa-building-o"></i>
+								<h1>{{{count 'companies'}}} <span>Companies</span></h1>
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-4">
+							<a class="bootcards-summary-item" href="/notes">
+								<i class="fa fa-3x fa-clipboard"></i>
+								<h1>{{{count 'notes'}}} <span>Notes</span></h1>
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-4">
+							<a class="bootcards-summary-item" href="/charts">
+								<i class="fa fa-3x fa-bar-chart-o"></i>
+								<h1>{{{count 'charts'}}} <span>Charts</span></h1>
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-4">
+							<a class="bootcards-summary-item" href="#">
+								<i class="fa fa-3x fa-files-o"></i>
+								<h1>54 <span>Files</span></h1>
+							</a>
 						</div>
 					</div>
-
-					<div class="panel-footer">
-						<small class="pull-left">Built with Bootcards - Summary Card</small>
-						<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
-					</div>	
-
 				</div>
-
+	
+				<div class="panel-footer">
+					<small class="pull-left">Built with Bootcards - Summary Card</small>
+					<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+				</div>	
+	
 			</div>
-
-			<div class="col-sm-6">
-
-				<div class="panel panel-default bootcards-chart">
-
-					<div class="panel-heading">
-						<h3 class="panel-title">Chart heading goes here</h3>					
-					</div>
-
-					<!--bar chart-->
-					<div id="barChart" style="height: 250px;"></div>
-
-					<div class="panel-footer">
-						<button class="btn btn-default btn-block">
-							<i class="fa fa-table"></i>
-							Show Data
-						</button>				
-					</div>
-					
-					<div class="panel-footer">
-						<small class="pull-left">Built with Bootcards - Chart Card</small>
-						<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
-					</div>					
-
-				</div>
-
-			</div>
+	
 		</div>
+	
+		<div class="col-sm-6">
+	
+			<div class="panel panel-default bootcards-chart">
+	
+				<div class="panel-heading">
+					<h3 class="panel-title">Chart heading goes here</h3>					
+				</div>
+	
+				<!--bar chart-->
+				<div id="barChart" style="height: 250px;"></div>
+	
+				<div class="panel-footer">
+					<button class="btn btn-default btn-block">
+						<i class="fa fa-table"></i>
+						Show Data
+					</button>				
+				</div>
+				
+				<div class="panel-footer">
+					<small class="pull-left">Built with Bootcards - Chart Card</small>
+					<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+				</div>					
+	
+			</div>
+	
+		</div>
+		
 	</div>
+
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>

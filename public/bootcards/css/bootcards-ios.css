@@ -5,6 +5,7 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	padding-top: 44px;
 	color: black;
+	background: #efeff4;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,24 +139,6 @@ a {
 
 
 
-
-/* GRID */
-
-.row > div {
-	border-color: rgba(0,0,0,0.2);
-}
-
-@media (max-width:767px) {
-	.row > div { border-left: 0; }
-	.container > .row > div:last-child { border-left: 0; }
-}
-
-@media (min-width:768px) and (max-width:992px) {
-	.row > div:nth-child(2) { border-left: 0; }
-}
-
-
-
 /* SIDE MENU */
 
 .offcanvas {
@@ -167,18 +150,14 @@ a {
 
 /* CARDS */
 
-.cards {
-	background: #efeff4;
-}
-
-.cards .panel {
-	margin: 15px;
-}
-
 .panel {
 	box-shadow: none;
 	border-radius: 0;
 	border: 0;
+}
+
+.bootcards-cards .panel {
+	margin-bottom: 15px;
 }
 
 .panel-default > .panel-heading,
@@ -278,7 +257,7 @@ a {
 
 /* LISTS */
 
-.list .list-group-item {
+.bootcards-list .list-group-item {
 }
 
 .list-group-item:first-child {
@@ -342,26 +321,26 @@ a.list-group-item.active:focus .list-group-item-text {
 
 /* List - Search Form */
 
-.list form {
+.bootcards-list form {
 	margin-left: 0;
 }
 
-.list form input {
+.bootcards-list form input {
 	border: 0;
 }
 
-.list form i.fa-search {
+.bootcards-list form i.fa-search {
 	top: 10px;
 }
 
 @media (min-width:768px) {
-	.list form input {
+	.bootcards-list form input {
 		height: 42px;
 	}
-	.list form i.fa-search {
+	.bootcards-list form i.fa-search {
 		top: 14px;
 	}
-	.list form .btn {	
+	.bootcards-list form .btn {	
 		line-height: 28px;
 	}
 }

@@ -48,7 +48,7 @@ a.list-group-item:before {
 
 /* List Search */
 
-.list .panel-body > form > .row > div:first-child {
+.bootcards-list .panel-body > form > .row > div:first-child {
 	padding-right: 0;
 }
 
@@ -86,6 +86,7 @@ a.list-group-item:before {
 	position: static;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background: transparent;
 }
 
 .navbar-fixed-bottom .btn-group {

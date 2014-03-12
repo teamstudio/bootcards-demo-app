@@ -135,21 +135,11 @@ a,
 
 
 
-/* GRID */
-
-.row > div {
-	padding-top: 0;
-	border-color: rgba(0,0,0,0.3);
-}
-
-
-
 /* CARDS */
 
 .panel {
-	margin: 15px;
-	margin-bottom: 0;
 	border-radius: 0;
+	margin-bottom: 15px;
 }
 
 .panel-default > .panel-heading,
@@ -245,7 +235,7 @@ a,
 
 /* LISTS */
 
-.list .panel {
+.bootcards-list .panel {
 	margin: 0;
 	border: 0;
 }
@@ -306,36 +296,36 @@ a.list-group-item:hover {
 
 /* List - Search Form */
 
-.list form input {
+.bootcards-list form input {
 	border: 0;
 }
 
-.list form i.fa-search {
+.bootcards-list form i.fa-search {
 	top: 12px;
 }
 
-.list form .btn {
+.bootcards-list form .btn {
 	color: #fff;
 	border-color: transparent;
 	background-color: #33b5e5;	
 	line-height: 26px;
 }
 
-.list form .btn:hover,
-.list form .btn:active {
+.bootcards-list form .btn:hover,
+.bootcards-list form .btn:active {
 	color: #fff;
 	border: 1px solid #428bca;
 	background-color: #428bca;
 }
 
 @media (min-width:768px) {
-	.list form input {
+	.bootcards-list form input {
 		height: 41px;
 	}
-	.list form i.fa-search {
+	.bootcards-list form i.fa-search {
 		top: 14px;
 	}	
-	.list form .btn {	
+	.bootcards-list form .btn {	
 		line-height: 27px;
 	}
 }
