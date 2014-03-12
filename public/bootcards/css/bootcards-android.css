@@ -93,7 +93,6 @@ a,
 	font-size: 18px;
 	line-height: 49px;
 	text-align: left;
-	
 }
 
 .navbar > .container .navbar-brand {
@@ -103,16 +102,6 @@ a,
 
 .navbar-fixed-top .btn,
 .navbar-fixed-top .btn:hover {
-	/*background: none;
-	border: 0;
-	box-shadow: none;
-	font-size: 15px;
-	color: #999;
-	border-radius: 0;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 5px;*/
-
 	position: relative;
 	z-index: 20;
 	padding-top: 10px;
@@ -128,20 +117,13 @@ a,
 	line-height: 30px;
 }
 
-.navbar-fixed-top .btn.navbar-left {
-	float: left;	
-}
-
-.navbar-fixed-top .btn.navbar-right {
-	float: right;
-}
 
 @media (max-width:767px) {
-	.navbar-fixed-top .btn.navbar-left {
-		margin-left: -10px;
+	.navbar-fixed-top .btn.pull-left {
+		margin-left: -15px;
 	}
-	.navbar-fixed-top .btn.navbar-right {
-		margin-right: -10px;
+	.navbar-fixed-top .btn.pull-right {
+		margin-right: -15px;
 	}
 }
 
@@ -355,12 +337,13 @@ a.list-group-item:hover {
 /* FOOTER */
 
 .navbar-fixed-bottom {
-	box-shadow: 0 -1px rgba(0,0,0,0.1);
-	height: 49px;
 	text-align: center;
 	border: 0;
-	background: #e5e5e5;
 	font-size: 0;	
+	height: 49px;
+	background-color: #e5e5e5;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .navbar-fixed-bottom .btn-group .btn {
@@ -370,14 +353,32 @@ a.list-group-item:hover {
 	padding-top: 7px;
 	font-weight: bold;
 	text-transform: uppercase;
-	border-top: 5px solid transparent;
+	border-top: 4px solid transparent;
 	border-radius: 0;
-	height: 45px;
-	line-height: 42px;
+	height: 49px;
+	line-height: 43px;
 	padding: 0;
 	text-shadow: none;
 	font-family: 'Roboto';
+	color: #777;
+	position: relative;
 }
+
+.navbar-fixed-bottom .btn-group .btn:before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 1px;
+	height: 24px;
+	background: #ccc;
+}
+
+.navbar-fixed-bottom .btn-group .btn:first-child:before {
+	display: none;
+}
+
 
 @media (min-width:768px) {
 	.navbar-fixed-bottom .btn-group {
@@ -394,5 +395,5 @@ a.list-group-item:hover {
 }
 
 .navbar-fixed-bottom .btn-group .btn.active {
-	border-top-color: rgb(51, 181, 229);
+	border-top-color: #35b3e4;
 }
