@@ -28,7 +28,7 @@
 						{{#each activities}}
 						<a class="list-group-item" 
 					 			href="/notes/{{this.id}}"
-					 			data-pjax="#activityDetails">
+					 			data-pjax="#listDetails">
 							<i class="fa fa-2x pull-left {{getIconForType this.type}}"></i>
 							<h4 class="list-group-item-heading">{{this.subject}}</h4>
 							<p class="list-group-item-text">{{formatDate this.date "long"}}
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 		
-			<div class="col-md-7 col-sm-7 cards" id="activityDetails">
+			<div class="col-md-7 col-sm-7 cards" id="listDetails">
 
 				{{>activity}}
 

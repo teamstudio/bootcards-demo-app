@@ -48,10 +48,21 @@ $(document)
 	.on('pjax:start', function(event) {
 		//called before initiating  a pjax content update: add an active class
 
-		$(event.relatedTarget)
+		var $tgt = $(event.relatedTarget);
+
+		$tgt
 			.addClass('active')
 			.siblings('.active')
 				.removeClass('active');
+
+		//$(event.target).fadeOut(200);
+
+		/*
+		$(document)
+  .on('pjax:start', function() { $('#main').fadeOut(200); })
+  .on('pjax:end',   function() { $('#main').fadeIn(200); })
+
+  */
 
 
 	})
@@ -72,6 +83,8 @@ $(document)
 		var $tgt = $(event.target);
 		var cards_column = $tgt.closest('.cards');
 
+		//$tgt.fadeIn(200);
+
 		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
 			//for small screens: replace the list by the details
 
@@ -84,15 +97,8 @@ $(document)
 		}
 
 		//scroll to the target element (so it doesn't render outside the viewport
-		if (cards_column) {
-
-			var top = $tgt.position().top;
-
-			if (top <= 60) {
-				top = 0;	//scroll to the top if the target is a few pixels below the top
-			}
-
-			cards_column.animate({scrollTop:top}, '500', 'easeOutExpo'); 
+		if (cards_column.length>0) {
+			cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
 		}
 
 	});
