@@ -83,95 +83,91 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
       <![endif]-->
 
-    </head>
+</head>
+</body>
 
-    <body>
+<!-- slide in menu (mobile) -->
+<div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+  <ul class="nav navmenu-nav">
+    {{#each menu}}
+    {{#if this.active }}
+    <li class="active">
+    {{else}}
+    <li>
+    {{/if}}
+      <a href="{{this.url}}" data-pjax="#main">
+        <i class="fa fa-lg {{this.icon}}"></i>
+        {{this.name}}
+      </a>          
+    </li>
+    {{/each}}
+  </ul>
+</div>
 
-	<div class="wrapper">
-
-      <!-- slide in menu (mobile) -->
-      <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-        <ul class="nav navmenu-nav">
-          {{#each menu}}
-            {{#if this.active }}
-              <li class="active">
-            {{else}}
-              <li>
-            {{/if}}
-            <a href="{{this.url}}" data-pjax="#main">
-              <i class="fa fa-lg {{this.icon}}"></i>
-              {{this.name}}
-            </a>          
-          </li>
-          {{/each}}
-        </ul>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
+      <button type="button" class="btn btn-default btn-back pull-left hidden" onclick="history.back()">
+        <i class="fa fa-lg fa-chevron-left"></i>
+        <span>Back</span>
+      </button>
+      <!-- menu button to show/ hide the slider -->
+      <button type="button" class="btn btn-default btn-menu pull-left offcanvas-toggle">
+        <i class="fa fa-lg fa-bars"></i>
+        <span>Menu</span>
+      </button>
+      <a class="navbar-brand" title="Customers v{{getAppVersion}}" href="/">Customers</a>         
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          {{#each menu}}
+          {{#if this.active }}
+          <li class="active">
+            {{else}}
+            <li>
+              {{/if}}
+              <a href="{{this.url}}">
+                <i class="fa {{this.icon}}"></i>
+                {{this.name}}
+              </a>          
+            </li>
+            {{/each}}
+          </ul>
+        </div>          
+      </div>
+  </div>    
 
-      <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-            <button type="button" class="btn btn-default btn-back pull-left" onclick="history.back()">
-              <i class="fa fa-lg fa-chevron-left"></i>
-              <span>Back</span>
-            </button>
-            <!-- menu button to show/ hide the slider -->
-            <button type="button" class="btn btn-default btn-menu pull-left offcanvas-toggle">
-              <i class="fa fa-lg fa-bars"></i>
-              <span>Menu</span>
-            </button>
-            <a class="navbar-brand" title="Customers v{{getAppVersion}}" href="/">Customers</a>         
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              {{#each menu}}
-              {{#if this.active }}
-              <li class="active">
-                {{else}}
-                <li>
-                  {{/if}}
-                  <a href="{{this.url}}">
-                    <i class="fa {{this.icon}}"></i>
-                    {{this.name}}
-                  </a>          
-                </li>
-                {{/each}}
-              </ul>
-            </div>          
-          </div>    
-        </div>
+      <div class="container" id="main">
+       {{{body}}}
+     </div>
 
-        <div id="main" class="container">
-          {{{body}}}
-        </div>
-
-        <!-- Fixed footer -->
-        <div class="navbar navbar-default navbar-fixed-bottom">
-          <div class="container">
+	<!-- Fixed footer -->
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
 			<div class="bootcards-desktop-footer clearfix">
 				<p class="pull-left">Bootcards version 0.1</p>
 			</div>
-            <div class="btn-group">
-              {{#each menu}}
-                {{#if this.active }}
-                  <a href="{{this.url}}" class="btn btn-default active" data-pjax="#main">
-                {{else}}
-                  <a href="{{this.url}}" class="btn btn-default" data-pjax="#main">
-                {{/if}}
-                    <i class="fa fa-2x {{this.icon}}"></i>
-                    {{this.name}}
-                  </a>          
-                {{/each}}
-              </div>
-
-            </div>
-          </div>
+			<div class="btn-group">
+				{{#each menu}}
+				{{#if this.active }}
+				<a href="{{this.url}}" class="btn btn-default active" data-pjax="#main">
+				{{else}}
+				<a href="{{this.url}}" class="btn btn-default" data-pjax="#main">
+				{{/if}}
+					<i class="fa fa-2x {{this.icon}}"></i>
+					{{this.name}}
+				</a>          
+				{{/each}}
+			</div>
+		</div>
+	</div> 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
@@ -183,14 +179,12 @@
     <script src="/morris.js/morris.min.js"></script>
     <script src="/bootcards/js/bootcards.js"></script> 
 
-    <!--modals-->
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content"></div>
-      </div>
-    </div>
-
+	<!--modals-->
+	<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content"></div>
+		</div>
 	</div>
 
-  </body>
+</body>
 </html>

@@ -48,14 +48,13 @@ a.list-group-item:before {
 
 /* List Search */
 
-.list .panel-body > form > .row > div:first-child {
+.bootcards-list .panel-body > form > .row > div:first-child {
 	padding-right: 0;
 }
 
 
 
-
-/* FORM */
+/* CARDS */
 
 .panel-title {
 	margin: 7px 0;
@@ -67,6 +66,19 @@ a.list-group-item:before {
 
 
 
+/* MODAL */
+
+.modal-header {
+	overflow: hidden;
+	line-height: 32px;
+}
+
+.modal-title {
+	text-align: center;
+}
+
+
+
 
 /* FOOTER */
 
@@ -74,6 +86,7 @@ a.list-group-item:before {
 	position: static;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	background: transparent;
 }
 
 .navbar-fixed-bottom .btn-group {

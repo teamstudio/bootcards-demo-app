@@ -47,56 +47,40 @@ small {
 .container {
 	width: auto;
 	height: 100%;
+	margin: 0;
 }
 
-.container > .row {
+body > .container > .row {
 	height: 100%;
 	padding-bottom: 50px;
+	
 }
 
-.no-footer .row {
-	padding-bottom: 0;
-}
-
-.container > .row > div {
+.container .bootcards-cards,
+.container .bootcards-list {
 	overflow-y: auto;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
-	height: 100%;
-	padding-top: 0;
-}
-
-.container > .row > div.cards {
-	padding-bottom: 16px;
-}
-
-.container > .row > div:last-child {
-	border-left: 1px solid rgba(0,0,0,0.3);
-}
-
-.container > .row > div:first-child {
-	border-left: 0;
-}
-
-@media (max-width:767px) {
-	.row > div:last-child {
-		border-left: 0;
-	}
+	height: 100%;	
 }
 
 @media (min-width:768px) {
-	.cards > .row > div:not(:first-child) {
-		padding-left: 0;
-	}
-	.cards > .row > div:not(:first-child) .panel {
-		margin-left: 8px;
+	.container .bootcards-list {
+		border-right: 1px solid rgba(0,0,0,0.2);
 	}	
-	.cards > .row > div:not(:last-child) {
-		padding-right: 0;
+}
+
+.container .bootcards-cards {
+	padding-top: 15px;
+}
+
+@media (min-width:768px) {
+	.bootcards-cards > div[class*='col-']:not(:first-child) {
+		padding-left:8px;
 	}	
-	.cards > .row > div:not(:last-child) .panel {
-		margin-right: 8px;
-	}
+	.bootcards-cards > div[class*='col-']:not(:last-child) {
+		padding-right:8px;
+	}		
 }
 
 
@@ -125,8 +109,12 @@ small {
 
 /* LISTS */
 
-.list {
+.bootcards-list {
 	padding: 0;
+}
+
+.bootcards-list .panel {
+	margin-bottom: 0;
 }
 
 .list-group-item:first-child,
@@ -148,25 +136,25 @@ a.list-group-item:before {
 
 /* List - Search Form */
 
-.list .panel-body {
+.bootcards-list .panel-body {
 	padding: 0;
 }
 
-.list form {
+.bootcards-list form {
 	background: #BBB;
 	padding: 8px;
 }
 
-.list form .row {
+.bootcards-list form .row {
 	margin: 0;
 }
 
-.list form .row > div:first-child {
+.bootcards-list form .row > div:first-child {
 	padding-right: 4px;
 	padding-left: 0;
 }
 
-.list form .row > div:last-child {
+.bootcards-list form .row > div:last-child {
 	padding-left: 4px;
 	padding-right: 0;
 }
@@ -175,10 +163,6 @@ a.list-group-item:before {
 
 
 /* CARDS */
-
-.cards {
-	padding: 0;
-}
 
 .panel-footer {
 	background: 0;
