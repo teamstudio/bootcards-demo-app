@@ -20,7 +20,8 @@ bootcards.findBootstrapEnvironment = function() {
 }
 
 //replace one element with another using a fade effect
-bootcards.fade = function(fadeOut, fadeIn) {
+bootcards.crossFade = function(fadeOut, fadeIn) {
+
 	fadeOut.fadeOut(250, function() {
 		fadeOut.hide();
 		fadeIn
@@ -28,32 +29,63 @@ bootcards.fade = function(fadeOut, fadeIn) {
 			.removeClass("hidden-xs")
 			.fadeIn(250)
 	});
+
+
 }
 
 //back to the list of cards
 bootcards.backToList = function() {
-	this.fade(
-		$(".cards"),
-		$(".list")
+	this.crossFade(
+		$(".bootcards-cards"),
+		$(".bootcards-list")
 	)
 }
 
 //pjax on all a's that have the data-pjax attribute (the attribute's value is the pjax target container)
-$(document)
+$(document).ready( function() {
+
+	var isXS = bootcards.findBootstrapEnvironment() == "ExtraSmall";
+	
+	$(document)
 	.pjax('a[data-pjax]')
 	.on('submit', 'form[data-pjax]', function(event) {
 		//use pjax to submit forms
   		$.pjax.submit(event);
 	})
+	.on('pjax:beforeSend', function(event) {
+
+		//console.log('beforeSend');
+
+	})
 	.on('pjax:start', function(event) {
 		//called before initiating  a pjax content update: add an active class
 
-		$(event.relatedTarget)
+		var $tgt = $(event.relatedTarget);
+
+		$tgt
 			.addClass('active')
 			.siblings('.active')
 				.removeClass('active');
 
+	})
+	.on('pjax:popstate', function(event) {
+		//code triggered when using the back button to navigate to a cached page
 
+		if (isXS) {
+		
+			var $tgt = $(event.target);
+			var tgtId = $tgt.attr('id');
+
+			
+
+			if (tgtId == 'main') {
+
+				//var cards = $(".bootcards-cards");
+				//var list = $(".bootcards-list");
+				//bootcards.crossFade( cards, list);
+
+			}
+		}
 	})
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
@@ -68,34 +100,52 @@ $(document)
 			modal.modal('hide');
 		}
 
-
 		var $tgt = $(event.target);
-		var cards_column = $tgt.closest('.cards');
+		var cards_column = $tgt.closest('.bootcards-cards');
 
-		if ( bootcards.findBootstrapEnvironment() == "ExtraSmall" ) {
+		//update app title to reflect current menu option
+		var $rel = $(event.relatedTarget);
+		var $title = $rel.attr('data-title');
+
+		if ($title) {
+			$('.navbar-brand').text($title);
+		}
+
+		if ( isXS ) {
 			//for small screens: replace the list by the details
 
-			var list = $(event.relatedTarget).closest('.list');
+			var tgtId = $tgt.attr('id');
 
-			if ( list.length ) {
-				bootcards.fade( list, cards_column );
+			//get the list
+			var list = $(event.relatedTarget).closest('.bootcards-list');
+
+			if ( list.length>0 ) {
+				bootcards.crossFade( list, cards_column );
+			}
+
+			
+
+			if ( tgtId == 'main') {
+				
+				$('.btn-menu').removeClass('hidden');
+				$('.btn-back').addClass('hidden');
+
+			} else if (tgtId == 'listDetails') {
+				
+				$('.btn-menu').addClass('hidden');
+				$('.btn-back').removeClass('hidden');
+
 			}
 			
 		}
 
 		//scroll to the target element (so it doesn't render outside the viewport
-		if (cards_column) {
-
-			var top = $tgt.position().top;
-
-			if (top <= 60) {
-				top = 0;	//scroll to the top if the target is a few pixels below the top
-			}
-
-			cards_column.animate({scrollTop:top}, '500', 'easeOutExpo'); 
+		if (cards_column.length>0) {
+			cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
 		}
 
 	});
+});
 
 bootcards.confirm = function(type, to) {
 

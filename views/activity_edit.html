@@ -1,7 +1,7 @@
 {{#if activity.isNew}}
-	<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/notes" data-pjax="#contactDetails">
+	<form class="form-horizontal" method="POST" action="/contact/{{activity.parentId}}/notes" data-pjax="#listDetails">
 {{else}}
-	<form class="form-horizontal" method="POST" action="/notes" data-pjax="#activityDetails">
+	<form class="form-horizontal" method="POST" action="/notes" data-pjax="#listDetails">
 {{/if}}
 
 <div class="modal-header">

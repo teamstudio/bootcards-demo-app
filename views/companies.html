@@ -28,7 +28,7 @@
 						{{#each companies}}
 						<a class="list-group-item" 
 					 			href="/companies/{{this.id}}"
-					 			data-pjax="#companyDetails">
+					 			data-pjax="#listDetails">
 					 			
 							<div class="row">
 								<div class="col-sm-6">
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 		
-			<div class="col-sm-6 bootcards-cards" id="companyDetails">
+			<div class="col-sm-6 bootcards-cards" id="listDetails">
 
 				<!--contact details & notes-->
 				{{> company}}
