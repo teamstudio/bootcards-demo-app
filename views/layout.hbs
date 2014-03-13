@@ -61,7 +61,6 @@
           rel="apple-touch-startup-image">	
 
 
-
   <title>Customers</title>
   <!-- version: {{getAppVersion}} -->
 
@@ -132,18 +131,18 @@
           {{#each menu}}
           {{#if this.active }}
           <li class="active">
-            {{else}}
-            <li>
-              {{/if}}
-              <a href="{{this.url}}">
-                <i class="fa {{this.icon}}"></i>
-                {{this.name}}
-              </a>          
-            </li>
-            {{/each}}
-          </ul>
-        </div>          
-      </div>
+          {{else}}
+          <li>
+          {{/if}}
+            <a href="{{this.url}}">
+              <i class="fa {{this.icon}}"></i>
+              {{this.name}}
+            </a>          
+          </li>
+          {{/each}}
+        </ul>
+      </div>          
+    </div>
   </div>    
 
       <div class="container" id="main">

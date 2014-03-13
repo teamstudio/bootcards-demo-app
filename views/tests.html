@@ -13,10 +13,25 @@
 						<h4 class="list-group-item-heading">Grid System</h4>
 					</a>
 					<a class="list-group-item" href="#">
+						<h4 class="list-group-item-heading">Navigation</h4>
+					</a>
+					<a class="list-group-item" href="#">
+						<p class="list-group-item-text">Navbar</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<p class="list-group-item-text">Footer Bar</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<p class="list-group-item-text">Sliding Sidebar</p>
+					</a>
+					<a class="list-group-item" href="#">
 						<h4 class="list-group-item-heading">Lists</h4>
 					</a>
 					<a class="list-group-item" href="#">
 						<p class="list-group-item-text">Detailed Lists</p>
+					</a>
+					<a class="list-group-item" href="#">
+						<p class="list-group-item-text">List Search &amp; List Actions</p>
 					</a>					
 					<a class="list-group-item" href="#">
 						<h4 class="list-group-item-heading">Cards</h4>
@@ -88,6 +103,133 @@
 &lt;/body&gt;</code></pre></div>
 					</div>						
 						
+
+
+					<div class="bs-docs-section">
+						<h2>Navigation</h2>
+						<p class="lead">Bootcards offers 3 navigation methods: the Navbar, Footer Bar, or Sliding Sidebar.</p>
+						<p>What you use will depend on the needs of your app, and the number of top-level navigation items. Apps with fewer items would suit using footer navigation on mobile, as they're always accessible, but footer navigation may be impractical for apps with many top level navigation items as it can only fit 4 on phones.</p>
+					</div>
+					
+
+
+					<div class="bs-docs-section">
+						<h3>Navbar</h3>
+						<p class="lead">The Bootcards Navbar is the main navigation system for desktop browsers.</p>
+						<p>On desktop, it uses Bootstrap's default <code>.navbar-fixed-top</code> styles and shows all the top level navigation items.</p>
+						<p>On mobile devices, there isn't enough space for these items, so the Bootstrap Navbar is replaced with a simpler, more native version with only a Title and limited space for other functions (e.g. a Back button or Menu button). These buttons are hidden from desktop browsers, which don't need them.</p>
+						<p><strong>In addition to the Navbar, you'll also need to implement one of the other navigation structures below (Footer Bar or Sliding Sidebar) to allow mobile users to navigate your app.</strong></p>
+						
+<div class="highlight"><pre><code class="html">&lt;div class=&quot;navbar navbar-default navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;navbar-header&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-back pull-left hidden&quot; onclick=&quot;history.back()&quot;&gt;
+      &lt;i class=&quot;fa fa-lg fa-chevron-left&quot;&gt;&lt;/i&gt;
+      &lt;span&gt;Back&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn btn-default btn-menu pull-left offcanvas-toggle&quot;&gt;
+      &lt;i class=&quot;fa fa-lg fa-bars&quot;&gt;&lt;/i&gt;
+      &lt;span&gt;Menu&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;a class=&quot;navbar-brand&quot; title=&quot;Customers v{{getAppVersion}}&quot; href=&quot;/&quot;&gt;Customers&lt;/a&gt;
+    &lt;div class=&quot;navbar-collapse collapse&quot;&gt;
+      &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt; 
+            Contacts
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-building-o&quot;&gt;&lt;/i&gt; 
+            Companies
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot;&gt;
+            &lt;i class=&quot;fa fa-gears&quot;&gt;&lt;/i&gt; 
+            Settings
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>					
+					</div>
+					
+					
+
+					<div class="bs-docs-section">
+						<h3>Footer Bar</h3>
+						<p class="lead">The Footer Bar offers usable mobile navigation for simpler apps with a few important navigation items.</p>
+						<p>This uses Bootstrap's <code>.navbar-fixed-footer</code> markup, with a <code>.btn-group</code> to contain the navigation elements. These are styled to look like native footer tabs on iOS and Android devices.</p>
+						<p>On desktop, the footer reverts to a simple, website-style footer to hold items like copyright information, version numbers, etc. These are contained in <code>.bootcards-desktop-footer</code>, and hidden from mobile devices.</p>
+						
+<div class="highlight"><pre><code class="html">&lt;div class=&quot;navbar navbar-default navbar-fixed-bottom&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;btn-group&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-default active&quot;&gt;
+        &lt;i class=&quot;fa fa-2x fa-users&quot;&gt;&lt;/i&gt;
+        Contacts
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;
+        &lt;i class=&quot;fa fa-2x fa-building-o&quot;&gt;&lt;/i&gt;
+        Companies
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-default&quot;&gt;
+        &lt;i class=&quot;fa fa-2x fa-gears&quot;&gt;&lt;/i&gt;
+        Settings
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;bootcards-desktop-footer clearfix&quot;&gt;
+      &lt;p class=&quot;pull-left&quot;&gt;Text for desktop footer goes here&lt;/p&gt;
+      &lt;p class=&quot;pull-left&quot;&gt;More text for desktop footer goes here&lt;/p&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>						
+						
+					</div>	
+					
+					
+					<div class="bs-docs-section">
+						<h3>Sliding Sidebar</h3>
+						<p class="lead">The Sliding Sidebar offers complex apps more space for a lot of important navigation items.</p>
+						<p>This is hidden by default, and accessed when required via a Menu button on the left-hand side of the Navbar.</p>
+						<p>On desktop browsers, the Sliding Sidebar is inactive, as it's unnecessary.</p>
+
+<div class="highlight"><pre><code class="html">&lt;div class=&quot;navmenu navmenu-default navmenu-fixed-left offcanvas&quot;&gt;
+  &lt;ul class=&quot;nav navmenu-nav&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;i class=&quot;fa fa-lg fa-users&quot;&gt;&lt;/i&gt;
+        Contacts
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;i class=&quot;fa fa-lg fa-building-o&quot;&gt;&lt;/i&gt;
+        Companies
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#&quot;&gt;
+        &lt;i class=&quot;fa fa-lg fa-gears&quot;&gt;&lt;/i&gt;
+        Settings
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div>						
+						
+					</div>															
+
 
 
 					<div class="bs-docs-section">
@@ -245,7 +387,87 @@
 					</div>					
 
 				
-				
+
+
+					<div class="bs-docs-section">
+						<h2>List Search &amp; List Actions</h2>
+						<p class="lead">A search form for when you want the user to be able to filter or search your list, and buttons for any other list functions you need.</p>
+						<p>This goes at the top of your list, inside the <code>.modal-body</code>. You can add or remove functions by adding/removing columns in the containing <code>.row</code> and making sure the widths add up.</p>
+						<div class="bs-example bs-example-type">
+						
+							<div class="bootcards-list">
+								<div class="panel panel-default">
+
+									<div class="panel-body">
+										<form>
+											<div class="row">
+											    <div class="col-xs-9">
+											      <div class="form-group">
+												      <input type="text" class="form-control" placeholder="Search Contacts...">
+												      <i class="fa fa-search"></i>
+											      </div>
+											    </div>
+											    <div class="col-xs-3">
+													<a class="btn btn-primary btn-block" href="#">
+														<i class="fa fa-plus"></i> 
+														Add
+													</a>
+											    </div>
+											</div>						    
+										</form>					
+									</div>								
+												
+									<div class="list-group">
+										<a class="list-group-item" href="#">
+								 			<img src="/images/Sofia Acey.jpg" class="img-rounded pull-left"/>
+											<h4 class="list-group-item-heading">Acey, Sofia</h4>
+											<p class="list-group-item-text">Masung Corp.</p>
+										</a>
+										<a class="list-group-item" href="#">
+								 			<img src="/images/Joseph Barish.jpg" class="img-rounded pull-left"/>
+											<h4 class="list-group-item-heading">Barish, Joseph</h4>
+											<p class="list-group-item-text">Masung Corp.</p>
+										</a>
+										<a class="list-group-item" href="#">
+								 			<img src="/images/Sarah Benson.jpg" class="img-rounded pull-left"/>
+											<h4 class="list-group-item-heading">Benson, Sarah</h4>
+											<p class="list-group-item-text">ZetaComm</p>
+										</a>
+									</div>
+								</div>
+							</div>
+												
+						</div>
+<div class="highlight"><pre><code class="html">&lt;div class=&quot;bootcards-list&quot;&gt;
+  &lt;div class=&quot;panel panel-default&quot;&gt;
+    &lt;div class=&quot;panel-body&quot;&gt;
+      &lt;form&gt;
+        &lt;div class=&quot;row&quot;&gt;
+          &lt;div class=&quot;col-xs-9&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search Contacts...&quot;&gt;
+              &lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;col-xs-3&quot;&gt;
+            &lt;a class=&quot;btn btn-primary btn-block&quot; href=&quot;#&quot;&gt;
+              &lt;i class=&quot;fa fa-plus&quot;&gt;&lt;/i&gt;
+              Add
+            &lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+
+    ...list markup goes here...
+
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+					</div>
+
+
+
+
 					<div class="bs-docs-section">
 						<h2>Cards</h2>
 						<p class="lead">Cards are the core of Bootcards, and contain your app's content. Different Cards are available for different types of content (text, tables, forms, charts, media, files, etc).</p>
