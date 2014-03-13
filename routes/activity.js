@@ -4,19 +4,30 @@ var moment	= require('moment');
 exports.list = function(req, res) {
 	res.renderPjax('activities', {
   		activities: notes,
-  		activity : notes[0],
+  		note : notes[0],
    		menu: bc.getActiveMenu(menu, 'notes')
   	});
 };
 
 exports.read = function(req, res) {
 
-	res.renderPjax('activity', {
-	 	activities : notes,
-	   	activity: bc.getActivityById(req.params.id),
-	    menu: bc.getActiveMenu(menu, 'notes')
-	});
-   
+	var note = bc.getActivityById(req.params.id);
+
+	if (note != null) {
+
+		var renderWith = 'activity';
+
+		if (note.type == 'file') {
+			renderWith = 'note_file';
+		}
+
+		res.renderPjax(renderWith, {
+		 	activities : notes,
+		   	note: note,
+		    menu: bc.getActiveMenu(menu, 'notes')
+		});
+	}
+	   
 }
 
 exports.edit = function(req, res) {

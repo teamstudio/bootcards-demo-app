@@ -12,6 +12,7 @@ var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
 var settings 	= require('./routes/settings');
 var dashboard 	= require('./routes/dashboard');
+var docs 		= require('./routes/docs');
 var sampleData	= require('./data');
 
 var pjson = require('./package.json');		//read the package.json file to get the current version
@@ -181,6 +182,8 @@ app.get('/charts', media.list);
 app.get('/more', tests.list);
 
 app.get('/settings', settings.list);
+
+app.get('/docs/:id', docs.show);
 
 http
 	.createServer(app)

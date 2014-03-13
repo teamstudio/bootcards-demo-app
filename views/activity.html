@@ -8,21 +8,18 @@
 
 			<!--small screen component-->
 			<div class="btn-group pull-right visible-xs">
-				<a class="btn btn-default" onClick="bootcards.backToList()">
-					Back
-				</a>
 				{{#if parent}}
 					{{#if parent.isContact}}
-						<a class="btn btn-primary" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit" 
+						<a class="btn btn-primary" href="/contacts/{{parent.id}}/notes/{{note.id}}/edit" 
 							data-toggle="modal"
 							data-target="#editModal">
 					{{else}}
-						<a class="btn btn-primary" href="/notes/{{activity.id}}/edit" 
+						<a class="btn btn-primary" href="/notes/{{note.id}}/edit" 
 							data-toggle="modal"
 						data-target="#editModal">
 					{{/if}}
 				{{else}}
-					<a class="btn btn-primary" href="/notes/{{activity.id}}/edit"	
+					<a class="btn btn-primary" href="/notes/{{note.id}}/edit"	
 						data-toggle="modal"
 						data-target="#editModal">	
 				{{/if}}
@@ -34,16 +31,16 @@
 			<!--big screen component-->
 			{{#if parent}}
 				{{#if parent.isContact}}
-					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/notes/{{activity.id}}/edit"
+					<a class="btn btn-primary pull-right hidden-xs" href="/contacts/{{parent.id}}/notes/{{note.id}}/edit"
 						data-toggle="modal"
 						data-target="#editModal">
 				{{else}}
-					<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit"
+					<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{note.id}}/edit"
 						data-toggle="modal"
 						data-target="#editModal">
 				{{/if}}
 			{{else}}
-				<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{activity.id}}/edit"
+				<a class="btn btn-primary pull-right hidden-xs" href="/notes/{{note.id}}/edit"
 					data-toggle="modal"
 					data-target="#editModal">	
 			{{/if}}
@@ -53,22 +50,22 @@
 
 		</div>
 		<div class="list-group">
-			{{#if activity.subject}}
+			{{#if note.subject}}
 			<div class="list-group-item">
 				<label>Subject</label>
-				<h4 class="list-group-item-heading">{{activity.subject}}</h4>
+				<h4 class="list-group-item-heading">{{note.subject}}</h4>
 			</div>
 			{{/if}}
-			{{#if activity.date}}
+			{{#if note.date}}
 			<div class="list-group-item">
 				<label>Date</label>
-				<h4 class="list-group-item-heading">{{activity.date}}</h4>
+				<h4 class="list-group-item-heading">{{note.date}}</h4>
 			</div>
 			{{/if}}
-			{{#if activity.details}}
+			{{#if note.details}}
 			<div class="list-group-item">
 				<label>Details</label>
-				<h4 class="list-group-item-heading">{{{activity.details}}}</h4>
+				<h4 class="list-group-item-heading">{{{note.details}}}</h4>
 			</div>
 			{{/if}}
 		</div>
