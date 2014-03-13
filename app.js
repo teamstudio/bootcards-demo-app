@@ -10,6 +10,7 @@ var contact 	= require('./routes/contact');
 var note 		= require('./routes/activity');
 var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
+var settings 	= require('./routes/settings');
 var dashboard 	= require('./routes/dashboard');
 var sampleData	= require('./data');
 
@@ -122,12 +123,12 @@ sampleData.read();
 
 //setup menu
 menu = [
-	{ id : 'dashboard', name : 'Dashboard', icon : "fa-dashboard", active : false, url : '/dashboard'},
-	{ id : 'companies', name : "Companies", icon : "fa-building-o", active : false, url : '/companies'},
-	{ id : 'contacts', name : "Contacts", icon : "fa-users", active : true, url : '/contacts'},
-	{ id : 'notes', name : "Notes", icon : "fa-clipboard", active : false, url : '/notes'},
-	{ id : 'charts', name : "Charts", icon : "fa-bar-chart-o", active : false, url : '/charts'},
-	{ id : 'more', name : "More", icon : "fa-gear", active : false, url : '/more'}
+	{ id : 'dashboard', name : 'Dashboard', title : 'Customers', icon : "fa-dashboard", active : false, url : '/dashboard'},
+	{ id : 'companies', name : "Companies", title : 'Companies', icon : "fa-building-o", active : false, url : '/companies'},
+	{ id : 'contacts', name : "Contacts", title : 'Contacts', icon : "fa-users", active : true, url : '/contacts'},
+	{ id : 'notes', name : "Notes", title : 'Notes', icon : "fa-clipboard", active : false, url : '/notes'},
+	{ id : 'charts', name : "Charts", title : 'Charts', icon : "fa-bar-chart-o", active : false, url : '/charts'},
+	{ id : 'settings', name : "Settings", title : 'Settings', icon : "fa-gears", active : false, url : '/settings'}
 ];
 
 // development only
@@ -178,6 +179,8 @@ app.put('/notes', note.save);
 app.get('/charts', media.list);
 
 app.get('/more', tests.list);
+
+app.get('/settings', settings.list);
 
 http
 	.createServer(app)

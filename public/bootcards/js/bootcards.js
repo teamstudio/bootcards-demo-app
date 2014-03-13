@@ -103,8 +103,13 @@ $(document).ready( function() {
 		var $tgt = $(event.target);
 		var cards_column = $tgt.closest('.bootcards-cards');
 
-		//$tgt.fadeIn(200);
+		//update app title to reflect current menu option
+		var $rel = $(event.relatedTarget);
+		var $title = $rel.attr('data-title');
 
+		if ($title) {
+			$('.navbar-brand').text($title);
+		}
 
 		if ( isXS ) {
 			//for small screens: replace the list by the details

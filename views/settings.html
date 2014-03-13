@@ -1,0 +1,56 @@
+{{!< layout}}
+
+<div class="row">
+
+	<div class="col-sm-12 bootcards-cards">
+
+		<form class="form-horizontal" method="POST" action="/companies/{{company.id}}" data-pjax="#main">
+		<div class="panel">
+			<div class="panel-header">
+
+				{{>dialog_buttons}}
+
+				<h3 class="panel-title">Settings</h3>
+
+			</div>
+
+			<div class="panel-body">
+				<input type="hidden" name="_method" value="put">
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Username</label>
+					<div class="col-xs-9">
+						<input type="text" name="name" class="form-control" placeholder="Username"
+						value="{{settings.userName}}">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Password</label>
+					<div class="col-xs-9">
+						<input type="text" name="name" class="form-control" placeholder="Password"
+						value="{{settings.password}}">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-xs-3 control-label">Type</label>
+					<div class="col-xs-9">
+						<select name="type" class="form-control" value="{{company.type}}">
+							<option value="" selected>Select a Type...</option>
+							<option value="Prospect">Prospect</option>
+							<option value="Customer">Customer</option>
+							<option value="Inactive">Inactive</option>
+						</select>
+					</div>
+				</div>	
+							
+			</div>
+			</form>	
+
+			<div class="modal-footer">
+				<small class="pull-left">Built with Bootcards - Form Card</small>
+				<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+			</div>	
+
+
+	</div>
+
+</div>
