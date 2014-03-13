@@ -285,6 +285,10 @@ a.list-group-item {
 	padding-right: 25px;
 }
 
+a.list-group-item.active:before {
+	color: #e1edf7;
+}
+
 a.list-group-item:hover {
 	background: white;
 }

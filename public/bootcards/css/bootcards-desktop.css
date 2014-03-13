@@ -46,6 +46,10 @@ a.list-group-item:before {
 	color: #ccc;
 }
 
+a.list-group-item.active:before {
+	color: #e1edf7;
+}
+
 /* List Search */
 
 .bootcards-list .panel-body > form > .row > div:first-child {
@@ -97,4 +101,30 @@ a.list-group-item:before {
 	display: block;
 	text-align: center;
 	color: #999;
+}
+
+
+
+/* DOCUMENTATION */
+
+.bootcards-documentation-list > .panel {
+	position: fixed;
+}
+
+@media (min-width:768px) {
+	.bootcards-documentation-list > .panel {
+		width: 163px;
+	}
+}
+
+@media (min-width: 992px) {
+	.bootcards-documentation-list > .panel {
+		width: 213px;
+	}	
+}
+
+@media (min-width: 1200px) {
+	.bootcards-documentation-list > .panel {
+		width: 263px;
+	}	
 }
