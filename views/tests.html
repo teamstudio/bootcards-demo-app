@@ -5,11 +5,11 @@
 		<div class="col-sm-3 hidden-xs bootcards-list bootcards-documentation-list">
 			<div class="panel panel-default">
 				<div class="list-group">
-					<a class="list-group-item" href="#">
+					<a class="list-group-item active" href="#">
 						<h4 class="list-group-item-heading">Overview</h4>
 					</a>
 					<a class="list-group-item" href="#">
-						<h4 class="list-group-item-heading">Grid</h4>
+						<h4 class="list-group-item-heading">Grid System</h4>
 					</a>
 					<a class="list-group-item" href="#">
 						<h4 class="list-group-item-heading">Lists</h4>
@@ -20,7 +20,7 @@
 					<a class="list-group-item" href="#">
 						<h4 class="list-group-item-heading">Cards</h4>
 					</a>
-					<a class="list-group-item active" href="#">
+					<a class="list-group-item" href="#">
 						<p class="list-group-item-text">Base Cards</p>
 					</a>
 					<a class="list-group-item" href="#">
@@ -53,12 +53,46 @@
 
 			<div class="panel panel-default bootcards-richtext">
 				<div class="panel-body">
+					
+					
+					<div class="bs-docs-section">
+						<h2>Overview</h2>
+						<p class="lead">Overview blurb goes here lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum fermentum lorem ut condimentum.</p>
+						<p>Quisque consequat vestibulum ante, vitae sagittis ligula tempus at. Morbi elementum ultrices magna, vel molestie nulla ullamcorper vitae. Suspendisse metus ipsum, lacinia ut lacinia eget, ultricies ut velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+						<p>Fusce porttitor urna metus, sit amet aliquam justo varius vel. Vestibulum dapibus felis quis turpis ornare, id luctus augue luctus. Fusce non tristique nisl. Morbi commodo diam eu ultrices rutrum. Aliquam sit amet magna porttitor, fermentum neque in, egestas erat. Praesent tellus ligula, vestibulum a nulla tristique, consectetur pellentesque dolor. Mauris sed nulla nec mauris lacinia rhoncus. Quisque vestibulum lacus sit amet enim ornare auctor. Ut dui nunc, convallis non pretium at, malesuada id sapien. Nulla ac ligula et massa vehicula scelerisque non ut neque. Sed odio neque, molestie ac elementum vitae, consectetur ut ligula.</p>
+						
+					</div>
+
+					<div class="bs-docs-section">
+						<h2>Grid System</h2>
+						<p class="lead">Bootcards builds on Twitter Bootstrap's grid system to allow separate column scrolling in touchscreen devices.</p>
+						<p>The 2 main top-level columns are <code>.bootcards-list</code> (which is used to navigate your app) and <code>.bootcards-cards</code> (which contains your app's content). In desktop browsers, these will behave like regular bootstrap columns, but on touchscreen devices the user will be able to scroll them separately.</p>
+
+
+<div class="highlight"><pre><code class="html">&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-sm-5 bootcards-list&quot;&gt;
+      
+        ...your Bootcards List goes here...
+        
+      &lt;/div&gt;
+      &lt;div class=&quot;col-sm-7 bootcards-cards&quot;&gt;
+      
+        ...your Bootcards Cards go here...
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;</code></pre></div>
+					</div>						
+						
 
 
 					<div class="bs-docs-section">
 						<h2>Lists</h2>
-						<p>Lists are used to navigate the entities in your app (e.g. Contacts, Files, or any other entity).</p>
-						<p>They're wrapped in the <code>.bootcards-list</code> class.
+						<p class="lead">Bootcards Lists are used to navigate the entities in your app (e.g. Contacts, Files, Messages, etc).</p>
+						<p>Lists are wrapped in the <code>.bootcards-list</code> class</p>
 						<div class="bs-example bs-example-type">
 						
 							<div class="bootcards-list">
@@ -110,8 +144,9 @@
 
 
 					<div class="bs-docs-section">
-						<h2>Detailed Lists</h2>
-						<p>For more detailed lists, you can use Bootstrap columns within each <code>.list-group-item</code> to show more pieces of information.</p>
+						<h3>Detailed Lists</h3>
+						<p class="lead">Detailed Lists can be used when you need to show more information for each entry.</p>
+						<p>You can use Bootstrap <code>.col-*</code> <code>&lt;div&gt;</code>s within each <code>.list-group-item</code> to show more pieces of information in whatever format you like, and respond to different device widths.</p>
 						<div class="bs-example bs-example-type">
 						
 							<div class="bootcards-list">
@@ -212,8 +247,8 @@
 				
 					<div class="bs-docs-section">
 						<h2>Cards</h2>
-						<p>Cards contain your app's content, and are based on the same markup as Bootstrap's <code>.panel</code>.</p>
-						<p>Each card can have a <code>.panel-heading</code>, <code>.panel-body</code> and a <code>.panel-footer</code>. All of these are optional, so just use whichever parts your app needs. You can even use multiple headers or footers, e.g. if you needed separate footer areas separated by a divider</p>
+						<p class="lead">Cards are the core of Bootcards, and contain your app's content. Different Cards are available for different types of content (text, tables, forms, charts, media, files, etc).</p>
+						<p>Cards are based on the same markup as Bootstrap's <code>.panel</code>. Each card can have a <code>.panel-heading</code>, <code>.panel-body</code> and a <code>.panel-footer</code>. All of these are optional, so just use whichever parts your app needs. You can even use multiple headers or footers (e.g. if you needed separate footer areas separated by a divider).</p>
 						<div class="bs-example bs-example-type">
 							<div class="panel panel-default">
 								<div class="panel-heading clearfix">
@@ -250,7 +285,8 @@
 	
 					<div class="bs-docs-section">
 						<h3>Base Cards</h3>
-						<p>Base Cards replace the default <code>.panel-body</code> with a <code>.list-group</code> to display a list of information.</p>						
+						<p class="lead">Base Cards display a list of information separated by dividers.</p>
+						<p>Replace the default <code>.panel-body</code> with a <code>.list-group</code>.</p>						
 						<div class="bs-example bs-example-type">
 	
 							<div class="panel panel-default">
@@ -308,7 +344,8 @@
 	
 					<div class="bs-docs-section">
 						<h3>Form Cards</h3>
-						<p>Form Cards replace the default <code>.panel-body</code> with a <code>&lt;form&gt;</code>.</p>
+						<p class="lead">Form Cards are used for user input in your app.</p>
+						<p>Replace the default <code>.panel-body</code> with a <code>&lt;form&gt;</code>.</p>
 						<div class="bs-example bs-example-type">
 	
 							<div class="panel panel-default">
@@ -406,7 +443,7 @@
 	
 					<div class="bs-docs-section">
 						<h3>Table Cards</h3>
-						<p>Table Cards replace the default <code>.panel-body</code> with a <code>&lt;table&gt;</code>.</p>
+						<p class="lead">Table Cards display tabular data.</p>
 						<p>You can use the same table classes as Bootstrap, e.g. the <code>.table-hover</code> and <code>.active</code> classes used in this example.</p>
 						<p>Wrap wider tables in a <code>&lt;div class="table-responsive"&gt;</code> so they'll be able to scroll horizontally in narrower browsers such as mobiles, and not be cut off.</p>
 						<div class="bs-example bs-example-type">
@@ -460,7 +497,7 @@
 	
 					<div class="bs-docs-section">
 						<h3>Chart Cards</h3>
-						<p>Chart cards contain charts powered by Morris.js.</p>
+						<p class="lead">Chart cards contain charts powered by Morris.js.</p>
 						<p>These can be used with Table cards in order to toggle between a chart view and the raw data.</p>
 						<div class="bs-example bs-example-type">
 	
@@ -542,7 +579,7 @@
 	
 					<div class="bs-docs-section">
 						<h3>Summary Cards</h3>
-						<p>Summary cards can be used on dashboards, etc to highlight important pieces of data in your app.</p>
+						<p class="lead">Summary cards can be used on dashboards, etc to highlight important pieces of data in your app.</p>
 						<div class="bs-example bs-example-type">
 	
 							<div class="panel panel-default bootcards-summary">
@@ -649,7 +686,7 @@
 	
 					<div class="bs-docs-section">
 						<h3>Media Cards</h3>
-						<p>Media Cards are intended to hold larger images or videos</p>
+						<p class="lead">Media Cards hold larger images or videos.</p>
 						<div class="bs-example bs-example-type">
 	
 							<div class="panel panel-default bootcards-media">
@@ -721,7 +758,7 @@
 	
 					<div class="bs-docs-section">
 						<h3>File Cards</h3>
-						<p>File Cards are intended to show information and functions for non-media file formats (PDFs, Word documents, spreadsheets, etc).</p>
+						<p class="lead">File Cards are intended to show information and functions for non-media file formats (PDFs, Word documents, spreadsheets, etc).</p>
 						<div class="bs-example bs-example-type">
 	
 							<div class="panel panel-default bootcards-file">
@@ -827,7 +864,8 @@
 
 					<div class="bs-docs-section">
 						<h3>Rich Text Cards</h3>
-						<p>Rich Text Cards are designed for longer passages of text, which may include various heading levels, paragraphs and lists. These cards have more padding around the <code>.panel-content</code> to help readability.</p>
+						<p class="lead">Rich Text Cards are designed for longer passages of text, which may include various heading levels, paragraphs and lists.</p>
+						<p>They have more padding around the <code>.panel-content</code> to help readability.</p>
 						<div class="bs-example bs-example-type">
 	
 							<div class="panel panel-default bootcards-richtext">

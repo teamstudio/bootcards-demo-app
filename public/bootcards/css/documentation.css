@@ -22,6 +22,10 @@
 	margin-top: 0;
 }
 
+.bs-docs-section p.lead {
+	margin-bottom: 10px;
+}
+
 /* Bootstrap Documentation styles */
 
 .bs-example {

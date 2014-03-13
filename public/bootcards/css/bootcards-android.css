@@ -295,7 +295,7 @@ a.list-group-item:hover {
 
 .list-group-item .list-group-item-text {
 	font-size: 14px;
-	font-weight: normal;	
+	font-weight: 200;	
 } 
 
 /* List - Search Form */
