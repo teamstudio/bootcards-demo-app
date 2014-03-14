@@ -14,10 +14,7 @@ exports.show = function(req, res){
 		}
 
 		data = data.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-		console.log('read: ' + data);
-
-
-
+		
 		res.renderPjax('docs', {
   			content: '<pre><code class="html">' + data + '</code></pre>'
 		});
