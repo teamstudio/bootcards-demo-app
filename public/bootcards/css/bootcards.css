@@ -41,24 +41,27 @@ a.list-group-item.active:focus {
 	margin-bottom: 5px;
 }
 
-@media (min-width:768px) {
-	.list-group-item-heading:last-child,
-	.list-group-item-text:last-child {
-		margin-bottom: 0;
-	}	
+
+.list-group-item-heading:last-child,
+.list-group-item-text:last-child {
+	margin-bottom: 0;
+}	
+
+.list-group-item .row div > .list-group-item-heading:last-child,
+.list-group-item .row div > .list-group-item-text:last-child {
+	margin-bottom: 5px;
+}
+
+.list-group-item .row div:last-child > .list-group-item-heading:last-child,
+.list-group-item .row div:last-child > .list-group-item-text:last-child {
+	margin-bottom: 0;
 }
 
 @media (max-width:768px) {
-	.list-group-item-heading,
-	.list-group-item-text {
+	.bootcards-list .list-group-item-heading,
+	.bootcards-list .list-group-item-text {
 		padding-left: 55px;
 	}
-
-	.list-group-item .row div:last-child > .list-group-item-heading:last-child,
-	.list-group-item .row div:last-child > .list-group-item-text:last-child {
-		margin-bottom: 0;
-	}	
-
 }
 
 .list-group-item > img {
@@ -86,6 +89,7 @@ a.list-group-item.active:focus {
 
 .bootcards-list .form-group {
 	position: relative;
+	margin-bottom: 0;
 }
 
 @media (min-width:768px) {
