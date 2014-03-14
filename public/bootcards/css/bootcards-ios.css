@@ -42,7 +42,8 @@ a {
 	text-decoration: none;
 }
 
-.btn:hover {
+.btn:hover,
+.btn.active {
 	opacity: 0.5;
 }
 
