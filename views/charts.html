@@ -5,6 +5,8 @@
 	<div class="bootcards-cards">	
 	
 		<div class="col-sm-6">
+
+			{{>charts/closed_sales}}
 		
 			<div class="panel panel-default bootcards-chart">
 	
@@ -50,64 +52,10 @@
 					<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
 				</div>	
 	
-			</div>
-			
-			<div class="panel panel-default bootcards-chart">
-	
-				<div class="panel-heading">
-					<h3 class="panel-title">iPhone CPU benchmarks</h3>					
-				</div>
-	
-				<!--bar chart-->
-				<div class="bootcards-chart-canvas" id="barChart"></div>
-	
-				<div class="panel-footer">
-					<button class="btn btn-default btn-block">
-						<i class="fa fa-table"></i>
-						Show Data
-					</button>				
-				</div>
-				
-				<div class="panel-footer">
-					<small class="pull-left">Built with Bootcards - Chart Card</small>
-					<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
-				</div>					
-	
-			</div>					
+			</div>			
 		
 		</div>
 		<div class="col-sm-6">
-	
-			<!-- Table Card -->
-			<div class="panel panel-default bootcards-table">
-				<div class="panel-heading">
-					<h3 class="panel-title">Closed sales by team member - $000s (December)</h3>							
-				</div>	
-				<table class="table table-hover">
-					<thead>				
-						<tr class="active"><th>Name</th><th>Sales value</th></tr>
-					</thead>
-					<tbody>
-						<tr><td>Guy Bardsley</td><td>550</td></tr>
-						<tr><td>Adam Callahan</td><td>1500</td></tr>
-						<tr><td>Arlo Geist</td><td>3750</td></tr>
-						<tr><td>Sheila Hutchins</td><td>3500</td></tr>
-						<tr><td>Jeanette Quijano</td><td>1250</td></tr>
-						<tr><td>Simon Sweet</td><td>5250</td></tr>
-						<tr><td><strong>Total</strong></td><td><strong>15800</strong></td></tr>
-					</tbody>
-				</table>
-				<div class="panel-footer">
-					<button class="btn btn-default btn-block">
-						<i class="fa fa-bar-chart-o"></i>
-						Show Chart
-					</button>				
-				</div>
-				<div class="panel-footer">
-					<small class="pull-left">Built with Bootcards - Table Card</small>
-					<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
-				</div>													
-			</div>
 	
 			<!-- Table Card -->
 			<div class="panel panel-default bootcards-table">
@@ -217,7 +165,7 @@
 var drawCharts = function() {
 
 	$("#areaChart").empty();
-	$("#barChart").empty();
+	$("#barChartClosedSales").empty();
 	$("#donutChart").empty();
 
 	Morris.Area({
@@ -242,20 +190,20 @@ var drawCharts = function() {
 	});
 
 	Morris.Bar({
-		element: 'barChart',
+		element: 'barChartClosedSales',
 		data: [
-			{device: 'iPhone', geekbench: 136},
-			{device: 'iPhone 3G', geekbench: 137},
-			{device: 'iPhone 3GS', geekbench: 275},
-			{device: 'iPhone 4', geekbench: 380},
-			{device: 'iPhone 4S', geekbench: 655},
-			{device: 'iPhone 5', geekbench: 1571}
+			{name: 'Guy Bardsley', sales: 550},
+			{name: 'Adam Callahan', sales: 1500},
+			{name: 'Arlo Geist', sales: 3750},
+			{name: 'Sheila Hutchins', sales: 3500},
+			{name: 'Jeanette Quijano', sales: 1250},
+			{name: 'Simon Sweet', sales: 5250}
 		],
-		xkey: 'device',
-		ykeys: ['geekbench'],
-		labels: ['Geekbench'],
+		xkey: 'name',
+		ykeys: ['sales'],
+		labels: ['Sales value'],
 		barRatio: 0.4,
-		xLabelAngle: 35,
+		xLabelAngle: 20,
 		hideHover: 'auto'
 	});
 
