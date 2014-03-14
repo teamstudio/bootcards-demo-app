@@ -181,7 +181,8 @@ app.get('/charts', media.list);
 
 app.get('/more', tests.list);
 
-app.get('/settings', settings.list);
+app.get('/settings', settings.read);
+app.get('/settings/edit', settings.edit);
 
 app.get('/docs/:id', docs.show);
 

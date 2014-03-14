@@ -6,7 +6,8 @@
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
 				<h3 class="panel-title pull-left">Settings</h3>
-				<a href="#" class="btn btn-primary pull-right">
+				<a href="/settings/edit" class="btn btn-primary pull-right" data-pjax="#main">
+					<i class="fa fa-pencil"></i>
 					Edit
 				</a>
 			</div>
@@ -14,7 +15,7 @@
 			<div class="list-group">
 				<div class="list-group-item">
 					<p class="list-group-item-text">Username</p>
-					<h4 class="list-group-item-heading">usernamegoeshere</h4>
+					<h4 class="list-group-item-heading">username</h4>
 				</div>
 				<div class="list-group-item">
 					<p class="list-group-item-text">Password</p>
@@ -25,36 +26,6 @@
 					<h4 class="list-group-item-heading">Customer</h4>
 				</div>
 			</div>
-
-			<!--<div class="panel-body">
-				<input type="hidden" name="_method" value="put">
-				<div class="form-group">
-					<label class="col-xs-3 control-label">Username</label>
-					<div class="col-xs-9">
-						<input type="text" name="name" class="form-control" placeholder="Username"
-						value="{{settings.userName}}">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-xs-3 control-label">Password</label>
-					<div class="col-xs-9">
-						<input type="text" name="name" class="form-control" placeholder="Password"
-						value="{{settings.password}}">
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-xs-3 control-label">Type</label>
-					<div class="col-xs-9">
-						<select name="type" class="form-control" value="{{company.type}}">
-							<option value="" selected>Select a Type...</option>
-							<option value="Prospect">Prospect</option>
-							<option value="Customer">Customer</option>
-							<option value="Inactive">Inactive</option>
-						</select>
-					</div>
-				</div>	
-							
-			</div>-->
 
 			<div class="panel-footer">
 				<small class="pull-left">Built with Bootcards - Base Card</small>
