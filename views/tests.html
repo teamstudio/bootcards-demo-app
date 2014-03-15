@@ -60,6 +60,9 @@
 					<a class="list-group-item" href="#">
 						<p class="list-group-item-text">Rich Text Cards</p>
 					</a>
+					<a class="list-group-item" href="#">
+						<h4 class="list-group-item-heading">Modals</h4>
+					</a>
 
 				</div>
 			</div>
@@ -661,6 +664,13 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre></div>
 					</div>
+
+
+
+
+
+
+
 	
 	
 	
@@ -1151,11 +1161,69 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 						</div>
+
+
+
+
+
+					<div class="bs-docs-section">
+						<h2>Modals</h2>
+						<p class="lead">Sometimes, you'll want to put something like a form or an important message in a modal, obscuring the other content completely.</p>
+						<p>The markup is quite similar to Cards, with a header, body, and footer.</p>
+
+<div class="highlight"><pre><code class="html">&lt;div class=&quot;modal fade in&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;form class=&quot;form-horizontal&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+          &lt;button class=&quot;btn btn-danger pull-left&quot; data-dismiss=&quot;modal&quot;&gt;
+            Cancel
+          &lt;/button&gt;
+          &lt;button type=&quot;submit pull-right&quot; class=&quot;btn btn-success&quot;&gt;
+            Save
+          &lt;/button&gt;
+          &lt;h3 class=&quot;modal-title&quot;&gt;New Company&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-xs-3 control-label&quot;&gt;Name&lt;/label&gt;
+            &lt;div class=&quot;col-xs-9&quot;&gt;
+              &lt;input type=&quot;text&quot; name=&quot;name&quot; class=&quot;form-control&quot; placeholder=&quot;Company Name&quot; value=&quot;&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;col-xs-3 control-label&quot;&gt;Type&lt;/label&gt;
+            &lt;div class=&quot;col-xs-9&quot;&gt;
+              &lt;select name=&quot;type&quot; class=&quot;form-control&quot; value=&quot;&quot;&gt;
+                &lt;option value=&quot;&quot; selected=&quot;&quot;&gt;Select a Type...&lt;/option&gt;
+                &lt;option value=&quot;Prospect&quot;&gt;Prospect&lt;/option&gt;
+                &lt;option value=&quot;Customer&quot;&gt;Customer&lt;/option&gt;
+                &lt;option value=&quot;Inactive&quot;&gt;Inactive&lt;/option&gt;
+             &lt;/select&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label class=&quot;col-xs-3 control-label&quot;&gt;Location&lt;/label&gt;
+          &lt;div class=&quot;col-xs-9&quot;&gt;
+             &lt;input type=&quot;text&quot; name=&quot;location&quot; class=&quot;form-control&quot; placeholder=&quot;Location&quot; value=&quot;&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;modal-footer&quot;&gt;
+    &lt;small class=&quot;pull-left&quot;&gt;Built with Bootcards - Form Card&lt;/small&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-link btn-xs pull-right&quot;&gt;View Source&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
 					</div>
+
+
 
 
 				</div>
 			</div>
+
 
 
 		</div>
