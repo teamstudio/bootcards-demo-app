@@ -28,8 +28,6 @@ function toggleChartData() {
 			
 }
 
-
-
 //pjax on all a's that have the data-pjax attribute (the attribute's value is the pjax target container)
 $(document).ready( function() {
 
