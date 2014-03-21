@@ -7,7 +7,7 @@ var express = require('express');
 //routes
 var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
-var note 		= require('./routes/activity');
+var note 		= require('./routes/note');
 var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
 var settings 	= require('./routes/settings');

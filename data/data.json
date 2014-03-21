@@ -1540,10 +1540,10 @@
   ],
   "notes": [
     {
-      "details": "Gave him the tracking number for their order.",
-      "type": "info",
+      "details": "Send him the tracking number for their order.",
+      "type": "todo",
       "id": "ucw9gtbjq7ls",
-      "subject": "Tracking Number",
+      "subject": "Send tracking Number",
       "date": "2013-12-02T22:27+0000",
       "parentIds": [
         "o8v9urr7vchs",
@@ -1552,7 +1552,7 @@
     },
     {
       "details": "Called today happy with the improved load time from Project SMSTP.",
-      "type": "phone",
+      "type": "text",
       "id": "1rhen4xigta0w",
       "subject": "Improved Load Time",
       "date": "2013-12-02T22:26+0000",
@@ -1576,10 +1576,10 @@
       "createdBy": "Jack Herbert"
     },
     {
-      "details": "Left a message asking if they&rsquo;re interested in upgrading.",
-      "type": "phone",
+      "details": "Standard product image.",
+      "type": "media",
       "id": "uywr1g2fnvuo",
-      "subject": "Contract Upgrade",
+      "subject": "Product image",
       "date": "2013-12-02T22:26+0000",
       "parentIds": [
         "bxo811h6xclc",
@@ -1588,7 +1588,7 @@
     },
     {
       "details": "Attended a meeting today and gave them version 5 product demos. I will follow-up next week.",
-      "type": "visit",
+      "type": "text",
       "id": "iru6qw5g660w",
       "subject": "Product Demos",
       "date": "2013-12-02T22:25+0000",
@@ -1598,10 +1598,10 @@
       ]
     },
     {
-      "details": "He dropped by to discuss improvements they have made using our product.",
-      "type": "visit",
+      "details": "Discuss improvements they made using our product.",
+      "type": "dodo",
       "id": "m543xqq73mkg",
-      "subject": "Product Compliment",
+      "subject": "Discuss product improvements",
       "date": "2013-12-02T22:25+0000",
       "parentIds": [
         "glhmx077n1ts",
@@ -1621,7 +1621,7 @@
     },
     {
       "details": "Called and left a message about scheduling a demo.",
-      "type": "phone",
+      "type": "text",
       "id": "1n1ws6am6ox6o",
       "subject": "Demo",
       "date": "2013-12-02T22:23+0000",
@@ -1632,7 +1632,7 @@
     },
     {
       "details": "Called requesting a seven-day extension on their invoice. I approved.",
-      "type": "phone",
+      "type": "text",
       "id": "hg3kdwd6vb40",
       "subject": "Invoice Extension",
       "date": "2013-12-02T22:22+0000",
@@ -1654,7 +1654,7 @@
     },
     {
       "details": "Had a conference call about utilizing our new model in their upcoming smartphone.",
-      "type": "phone",
+      "type": "text",
       "id": "t7b395ps5j4",
       "subject": "Conference Call",
       "date": "2013-12-02T22:21+0000",
@@ -1665,7 +1665,7 @@
     },
     {
       "details": "Made follow-up call about our new model.",
-      "type": "phone",
+      "type": "text",
       "id": "ecdzjo895eyo",
       "subject": "New Model",
       "date": "2013-12-02T22:21+0000",
@@ -1676,7 +1676,7 @@
     },
     {
       "details": "Met about our new unit and will follow-up with a phone call on Tuesday.",
-      "type": "visit",
+      "type": "text",
       "id": "14p6x4ipsvfgg",
       "subject": "New Unit Visit",
       "date": "2013-12-02T22:20+0000",
@@ -1687,7 +1687,7 @@
     },
     {
       "details": "Made a call and talked to him about using our new model in their upcoming smartphone release.",
-      "type": "phone",
+      "type": "text",
       "id": "1eqjcx4js9la8",
       "subject": "Smartphone Release",
       "date": "2013-12-02T22:20+0000",
@@ -1753,7 +1753,7 @@
     },
     {
       "details": "Went to their office today and chatted about upgrading their contract.",
-      "type": "visit",
+      "type": "text",
       "id": "1f30c639s1534",
       "subject": "Contract Upgrade",
       "date": "2013-12-02T22:15+0000",
@@ -1764,7 +1764,7 @@
     },
     {
       "details": "Called reminding me to bring the demo units to the conference on Monday.",
-      "type": "phone",
+      "type": "text",
       "id": "aeeyzx6j73eo",
       "subject": "Demo Units",
       "date": "2013-12-02T22:15+0000",
@@ -1775,7 +1775,7 @@
     },
     {
       "details": "I called to thank them for their recent order and offer a free services session.",
-      "type": "phone",
+      "type": "text",
       "id": "oowjlontmc5c",
       "subject": "Thank You Call",
       "date": "2013-12-02T22:14+0000",
@@ -1786,7 +1786,7 @@
     },
     {
       "details": "I received a phone call asking that we add 10,000 more units to their order.",
-      "type": "phone",
+      "type": "text",
       "id": "vy049qq81r7k",
       "subject": "Add 10,000 Units",
       "date": "2013-12-02T22:13+0000",
@@ -1797,7 +1797,7 @@
     },
     {
       "details": "He dropped by to discuss improvements they have made using our product.",
-      "type": "visit",
+      "type": "text",
       "id": "1pv2ant5sxv5s",
       "subject": "Improvements",
       "date": "2013-12-02T22:12+0000",
@@ -1819,7 +1819,7 @@
     },
     {
       "details": "Called and left a message about scheduling a demo.",
-      "type": "phone",
+      "type": "text",
       "id": "72xkyj4shybk",
       "subject": "Demo Schedule",
       "date": "2013-12-02T22:11+0000",
@@ -1841,7 +1841,7 @@
     },
     {
       "details": "Attended a meeting today and gave them version 5 product demos. I will follow-up next week.",
-      "type": "visit",
+      "type": "text",
       "id": "rau62q45uoe8",
       "subject": "V5 Product Demos",
       "date": "2013-12-02T22:08+0000",
@@ -1852,7 +1852,7 @@
     },
     {
       "details": "I called to let her know their last order would be four days late, and she was ok with that.",
-      "type": "phone",
+      "type": "text",
       "id": "101ptu9v52l1c",
       "subject": "Four Days Late",
       "date": "2013-12-02T22:07+0000",
@@ -1874,7 +1874,7 @@
     },
     {
       "details": "I received a formal request to discontinue their services contract.",
-      "type": "phone",
+      "type": "text",
       "id": "2l3sywfu31fk",
       "subject": "Discontinue Services",
       "date": "2013-12-02T22:05+0000",
@@ -1896,7 +1896,7 @@
     },
     {
       "details": "Left a message asking if they&rsquo;re interested in upgrading.",
-      "type": "phone",
+      "type": "text",
       "id": "xd0nximynhts",
       "subject": "Voicemail",
       "date": "2013-12-02T22:04+0000",
@@ -1907,7 +1907,7 @@
     },
     {
       "details": "Met with his system engineers today to find out if we could supply them with a docking device.",
-      "type": "visit",
+      "type": "text",
       "id": "ibw5h3dh0xs",
       "subject": "Docking Device",
       "date": "2013-12-02T22:03+0000",
@@ -1929,7 +1929,7 @@
     },
     {
       "details": "Called today happy with the improved load time from Project SMSTP.",
-      "type": "phone",
+      "type": "text",
       "id": "1ltf194o0xz40",
       "subject": "Improved Load Time",
       "date": "2013-12-02T22:01+0000",
@@ -1940,7 +1940,7 @@
     },
     {
       "details": "I explained that we would begin rolling out updates next week, and to look for an email at that time.",
-      "type": "phone",
+      "type": "text",
       "id": "xgl6buczpfy8",
       "subject": "Updates",
       "date": "2013-12-02T22:01+0000",
@@ -1951,7 +1951,7 @@
     },
     {
       "details": "Met in the office to talk to her about their development department&rsquo;s needs.",
-      "type": "visit",
+      "type": "text",
       "id": "1a6w81pemf4sg",
       "subject": "Development Needs",
       "date": "2013-12-02T22:00+0000",
@@ -1973,706 +1973,13 @@
     },
     {
       "details": "I called and left a voicemail message about the new systems.",
-      "type": "phone",
+      "type": "text",
       "id": "yubh4cs2x2bk",
       "subject": "Left Voicemail",
       "date": "2013-12-02T21:58+0000",
       "parentIds": [
         "1x4u7i4g1gcg0",
         "t7Z2ZCDdzs9D"
-      ]
-    },
-    {
-      "details": "Gave him the tracking number for their order.",
-      "type": "mail",
-      "id": "1vpi3xx6su4u8",
-      "subject": "Tracking Number",
-      "date": "2013-12-02T21:57+0000",
-      "parentIds": [
-        "1n96y8qiuton4",
-        "ZPqwTuGDgzWa"
-      ]
-    },
-    {
-      "details": "Dropped by the office and took him out to lunch to learn more about what they need next year.",
-      "type": "visit",
-      "id": "1xuirmcp6jlz4",
-      "subject": "Next Year's Needs",
-      "date": "2013-12-02T21:57+0000",
-      "parentIds": [
-        "1n96y8qiuton4",
-        "17ExkxAHyA78"
-      ]
-    },
-    {
-      "details": "Gave us a compliment for our customer service.",
-      "type": "mail",
-      "id": "blzi3m0aq8lc",
-      "subject": "Compliment",
-      "date": "2013-12-02T21:56+0000",
-      "parentIds": [
-        "1f98tdka89tz4",
-        "KZ1JfDBmGM7k"
-      ]
-    },
-    {
-      "details": "His company is rolling out updates this week and wants to know if our units will be affected.",
-      "type": "mail",
-      "id": "r52qinmdfbb4",
-      "subject": "Updates",
-      "date": "2013-12-02T21:55+0000",
-      "parentIds": [
-        "1f98tdka89tz4",
-        "Jdacn3J62x73"
-      ]
-    },
-    {
-      "details": "Finalized the order of version 5 chips today and payment should arrive within 30 days.",
-      "type": "info",
-      "id": "119x9mcplqj28",
-      "subject": "Order Finalized",
-      "date": "2013-12-02T21:55+0000",
-      "parentIds": [
-        "jnpn87e459mo",
-        "HXn15meTcvW3"
-      ]
-    },
-    {
-      "details": "Met with Oscar&#39;s Lead App Manager to sort out details concerning use of our logo.",
-      "type": "visit",
-      "id": "1mkkzup0f0u80",
-      "subject": "Logo Usage",
-      "date": "2013-12-02T21:54+0000",
-      "parentIds": [
-        "jnpn87e459mo",
-        "HfPw5Zhckvmk"
-      ]
-    },
-    {
-      "details": "I called him to learn why payment for our last delivery has not been taken care of yet.",
-      "type": "phone",
-      "id": "1nxgy3r932m80",
-      "subject": "Late Payment",
-      "date": "2013-12-02T21:53+0000",
-      "parentIds": [
-        "yvtlvb2hog00",
-        "QkdqW1RFZv83"
-      ]
-    },
-    {
-      "details": "Held a conference call with Harvey&#39;s developers about using refurbished models to cut cost.",
-      "type": "phone",
-      "id": "1nvnkoadk5xc",
-      "subject": "Refurbished Models",
-      "date": "2013-12-02T21:53+0000",
-      "parentIds": [
-        "yvtlvb2hog00",
-        "V2sUKL8RPQZC"
-      ]
-    },
-    {
-      "details": "Made follow-up call about new networking apparatus.",
-      "type": "phone",
-      "id": "18d0u8bhmhwcg",
-      "subject": "Networking",
-      "date": "2013-12-02T21:52+0000",
-      "parentIds": [
-        "1k5oekr8m2akg",
-        "yV6ZbrhAGpfZ"
-      ]
-    },
-    {
-      "details": "Met over lunch to talk about Christmas delivery deadlines.",
-      "type": "visit",
-      "id": "1w6potqrt20hs",
-      "subject": "Christmas Deliveries",
-      "date": "2013-12-02T21:51+0000",
-      "parentIds": [
-        "1k5oekr8m2akg",
-        "37NDaa4kBDZT"
-      ]
-    },
-    {
-      "details": "Made a call to him concerning intellectual property rights.",
-      "type": "phone",
-      "id": "1gj4y4jkqh340",
-      "subject": "Property Rights",
-      "date": "2013-12-02T21:50+0000",
-      "parentIds": [
-        "sf2xn0pqeccg",
-        "Geb3NXXe7GWd"
-      ]
-    },
-    {
-      "details": "Closed the deal for the order of version 5 units.",
-      "type": "info",
-      "id": "18vhtp4esvk74",
-      "subject": "Closed Deal",
-      "date": "2013-12-02T21:50+0000",
-      "parentIds": [
-        "sf2xn0pqeccg",
-        "fAZM3gmKtw9T"
-      ]
-    },
-    {
-      "details": "Scheduled delivery of the new units for Dec. 10th.",
-      "type": "activity",
-      "id": "6nnu4i3x0a2o",
-      "subject": "Unit Delivery",
-      "date": "2013-12-02T21:49+0000",
-      "parentIds": [
-        "1b69hxm8bxxq8",
-        "Jn9wtX8Dbvez"
-      ]
-    },
-    {
-      "details": "Went to his office today and chatted with him and their IT Executive about the installation process.",
-      "type": "visit",
-      "id": "9terbxctfc3k",
-      "subject": "Installation Process",
-      "date": "2013-12-02T21:48+0000",
-      "parentIds": [
-        "1b69hxm8bxxq8",
-        "QJxUh4yTNUeJ"
-      ]
-    },
-    {
-      "details": "Called reminding me about the meeting next Friday.",
-      "type": "phone",
-      "id": "1fwzkc8rjh0jk",
-      "subject": "Friday Meeting",
-      "date": "2013-12-02T21:47+0000",
-      "parentIds": [
-        "1oodcnkjc5xc",
-        "yByWz6DRa2k2"
-      ]
-    },
-    {
-      "details": "Went to his development department today to check out the new product demos.",
-      "type": "visit",
-      "id": "53lpqrx4w8ow",
-      "subject": "New Product Demos",
-      "date": "2013-12-02T21:47+0000",
-      "parentIds": [
-        "1oodcnkjc5xc",
-        "x6JHXRUWgNwc"
-      ]
-    },
-    {
-      "details": "Met for lunch and talked about the renewed contract details.",
-      "type": "visit",
-      "id": "ese6kvqn9xc",
-      "subject": "Contract Renewal",
-      "date": "2013-12-02T21:46+0000",
-      "parentIds": [
-        "chi34a7vmmtc",
-        "C7eztra8Hb5x"
-      ]
-    },
-    {
-      "details": "Our Executive Manufacturing Assistant hand delivered their contract for 1,000,000 chips.",
-      "type": "info",
-      "id": "1dtgj20y87nr4",
-      "subject": "Contract Delivery",
-      "date": "2013-12-02T21:46+0000",
-      "parentIds": [
-        "chi34a7vmmtc",
-        "h2SCcBge4J73"
-      ]
-    },
-    {
-      "details": "I went over to Stacy&#39;s office today to present our project business proposal.",
-      "type": "visit",
-      "id": "333jmk9m18n4",
-      "subject": "Proposal",
-      "date": "2013-12-02T21:45+0000",
-      "parentIds": [
-        "whaadxwp8g00",
-        "zBeGXPFzns4a"
-      ]
-    },
-    {
-      "details": "Invited me to be the keynote speaker at her upcoming tech conference.",
-      "type": "phone",
-      "id": "p2a61lcuof0g",
-      "subject": "Keynote Speaker",
-      "date": "2013-12-02T21:45+0000",
-      "parentIds": [
-        "whaadxwp8g00",
-        "9f2skNQayLpg"
-      ]
-    },
-    {
-      "details": "Received a voicemail that he would call me next week about the version 5 orders.",
-      "type": "phone",
-      "id": "13oiez9992xog",
-      "subject": "V5 Orders",
-      "date": "2013-12-02T21:44+0000",
-      "parentIds": [
-        "l483t0vx6vwg",
-        "H2JRey9Hvh13"
-      ]
-    },
-    {
-      "details": "Faxed over our proposal for 1,000,000 chips to Mike.",
-      "type": "info",
-      "id": "b0f5f29qnw1s",
-      "subject": "New Chip Order Faxed",
-      "date": "2013-12-02T21:43+0000",
-      "parentIds": [
-        "l483t0vx6vwg",
-        "VeT6DuATkmLM"
-      ]
-    },
-    {
-      "details": "Called me today and asked to submit a bid proposal to manufacture 1,000,000 new chips.",
-      "type": "phone",
-      "id": "ae20x19zuz28",
-      "subject": "New Chip Order",
-      "date": "2013-12-02T21:43+0000",
-      "parentIds": [
-        "hzrmm25z7f9c",
-        "rKVsyadFUWFR"
-      ]
-    },
-    {
-      "details": "Told me their Administrative Specialist of Sales wants to have lunch.",
-      "type": "phone",
-      "id": "1mwha0ecpslc0",
-      "subject": "Schedule a Meeting",
-      "date": "2013-12-02T21:42+0000",
-      "parentIds": [
-        "hzrmm25z7f9c",
-        "ddECftVUUdGX"
-      ]
-    },
-    {
-      "details": "We had lunch today. Her daughter is getting married. Need to send a wedding gift.",
-      "type": "visit",
-      "id": "1nijwwhveyz28",
-      "subject": "Lunch Notes",
-      "date": "2013-12-02T21:41+0000",
-      "parentIds": [
-        "1dsfd8h8k0a9s",
-        "cA2vBwEZmx88"
-      ]
-    },
-    {
-      "details": "The delivery department delivered his late order, so I made a call to smooth the situation.",
-      "type": "phone",
-      "id": "bw054rwt9s74",
-      "subject": "Delivery Explanation",
-      "date": "2013-12-02T21:41+0000",
-      "parentIds": [
-        "1dsfd8h8k0a9s",
-        "cNqW3fUXdrhB"
-      ]
-    },
-    {
-      "details": "Called me today and expressed his dissatisfaction that we are late on delivery.",
-      "type": "phone",
-      "id": "1eti2ccfgh1xc",
-      "subject": "Late Delivery",
-      "date": "2013-12-02T21:40+0000",
-      "parentIds": [
-        "1q99345mcxds0",
-        "hCDG3KqRatHT"
-      ]
-    },
-    {
-      "details": "Called to follow-up on the recent orders.",
-      "type": "phone",
-      "id": "hq0n2jx21zi8",
-      "subject": "Recent Orders",
-      "date": "2013-12-02T21:40+0000",
-      "parentIds": [
-        "1sfuwcfuetr0g",
-        "k3kXLx2V9Ndn"
-      ]
-    },
-    {
-      "details": "Had lunch with him and their Director of Operations. Set up product demos.",
-      "type": "visit",
-      "id": "knvc72a4ge80",
-      "subject": "Product Demos",
-      "date": "2013-12-02T21:39+0000",
-      "parentIds": [
-        "1sfuwcfuetr0g",
-        "ASn2ZRP5tK4b"
-      ]
-    },
-    {
-      "details": "Called to introduce myself and ask if he would like to see a demo.",
-      "type": "phone",
-      "id": "gvi0mv54zy8",
-      "subject": "Demo Invite",
-      "date": "2013-12-02T21:39+0000",
-      "parentIds": [
-        "1f2jqp9rh105c",
-        "tTt3BBFT2S4a"
-      ]
-    },
-    {
-      "details": "Facebooked today and he gave me some nice leads.",
-      "type": "opportunity",
-      "id": "gyfqnhuihzi8",
-      "subject": "Facebook Leads",
-      "date": "2013-12-02T21:38+0000",
-      "parentIds": [
-        "1f2jqp9rh105c",
-        "p24X8UT8uRQp"
-      ]
-    },
-    {
-      "details": "We spoke today about Project SMSTP. Looking forward to more information about this.",
-      "type": "visit",
-      "id": "6ra6rczlhaf4",
-      "subject": "Project Status",
-      "date": "2013-12-02T21:38+0000",
-      "parentIds": [
-        "1qhfv0phqlbls",
-        "Vd3wVK7ZgwkH"
-      ]
-    },
-    {
-      "details": "Sent flowers from the Sales department for her birthday.",
-      "type": "info",
-      "id": "6ygppz57p43k",
-      "subject": "Birthday",
-      "date": "2013-12-02T21:37+0000",
-      "parentIds": [
-        "1dsfd8h8k0a9s",
-        "cA2vBwEZmx88"
-      ]
-    },
-    {
-      "details": "Was notified this afternoon that there is an issue with the installation.",
-      "type": "mail",
-      "id": "1x86ojdjmf01s",
-      "subject": "Installation Issue",
-      "date": "2013-12-02T21:36+0000",
-      "parentIds": [
-        "1qhfv0phqlbls",
-        "Jmasf2y4fzRb"
-      ]
-    },
-    {
-      "details": "Scheduled installation and notified him it would begin Dec. 19th.",
-      "type": "info",
-      "id": "x12zv0ww8hs0",
-      "subject": "Installation",
-      "date": "2013-12-02T21:35+0000",
-      "parentIds": [
-        "i5upi7vvgj5s",
-        "yAy54gQCk4Sd"
-      ]
-    },
-    {
-      "details": "He faxed a counter offer, and I replied back.",
-      "type": "info",
-      "id": "1hr0i6cwwq48w",
-      "subject": "Counter Offer",
-      "date": "2013-12-02T21:34+0000",
-      "parentIds": [
-        "i5upi7vvgj5s",
-        "6BegTWK928p1"
-      ]
-    },
-    {
-      "details": "I sent him our offer of payment.",
-      "type": "document",
-      "id": "wqrbx84kkt1c",
-      "subject": "Payment Offer",
-      "date": "2013-12-02T21:34+0000",
-      "parentIds": [
-        "ee3kc2fsa134",
-        "Gv8h6f4UDL84"
-      ]
-    },
-    {
-      "details": "She called today and asked for a wireless support fee schedule.",
-      "type": "phone",
-      "id": "9elvvt1hiozk",
-      "subject": "Fee Schedule",
-      "date": "2013-12-02T21:33+0000",
-      "parentIds": [
-        "ee3kc2fsa134",
-        "brTCZcFCt1RQ"
-      ]
-    },
-    {
-      "details": "We spoke today about negotiating a partnership for the new product release.",
-      "type": "mail",
-      "id": "zjcv1p6dnzeo",
-      "subject": "Partnership",
-      "date": "2013-12-02T21:33+0000",
-      "parentIds": [
-        "ee3kc2fsa134",
-        "brTCZcFCt1RQ"
-      ]
-    },
-    {
-      "details": "I called to ask if he would like to submit a quote about their experience with our product. He agreed and will email it over.",
-      "type": "phone",
-      "id": "bhwt9i7hzuv4",
-      "subject": "Experience Quote",
-      "date": "2013-12-02T21:32+0000",
-      "parentIds": [
-        "qcrpoxmvwvsw",
-        "CuFGJTxLdD5Q"
-      ]
-    },
-    {
-      "details": "Had questions about our new model. Scheduled a lunch meeting for Jan 12<sup>th</sup>.",
-      "type": "phone",
-      "id": "1vruds5b3rqww",
-      "subject": "Questions About New Model",
-      "date": "2013-12-02T21:31+0000",
-      "parentIds": [
-        "qcrpoxmvwvsw",
-        "RpGBhrAXGP8S"
-      ]
-    },
-    {
-      "details": "Finalized the Bluetooth package today.",
-      "type": "info",
-      "id": "1gkg7j6xcjk00",
-      "subject": "Bluetooth Package",
-      "date": "2013-12-02T21:30+0000",
-      "parentIds": [
-        "17cuf2o37sao0",
-        "pPZGkVXezUhZ"
-      ]
-    },
-    {
-      "details": "Met with Keith and his lead sales manager to sort out details concerning use of our Bluetooth technology.",
-      "type": "visit",
-      "id": "jcuodvocr30g",
-      "subject": "Bluetooth Use",
-      "date": "2013-12-02T21:30+0000",
-      "parentIds": [
-        "17cuf2o37sao0",
-        "rUC11hfHURKp"
-      ]
-    },
-    {
-      "details": "Scheduled meeting with our Bluetooth team and his development team for Jan. 19th to discuss integration.",
-      "type": "opportunity",
-      "id": "4ez06bjr3eo0",
-      "subject": "Meeting Scheduled",
-      "date": "2013-12-02T21:29+0000",
-      "parentIds": [
-        "glhmx077n1ts",
-        "FpTLcabz7TFs"
-      ]
-    },
-    {
-      "details": "Met for lunch today to answer any lingering questions he had.",
-      "type": "visit",
-      "id": "1w8zpnjangef4",
-      "subject": "Lunch",
-      "date": "2013-12-02T21:28+0000",
-      "parentIds": [
-        "glhmx077n1ts",
-        "ckNEPB9J7ZFp"
-      ]
-    },
-    {
-      "details": "Called today to follow-up about the developers using our new model.",
-      "type": "phone",
-      "id": "ieeiw17po3cw",
-      "subject": "New Model Feature",
-      "date": "2013-12-02T21:28+0000",
-      "parentIds": [
-        "4shzy32qcwzk",
-        "BXAbmmeZHUJE"
-      ]
-    },
-    {
-      "details": "Received full payment today and called to thank him.",
-      "type": "phone",
-      "id": "1qhm3aqtt4d1c",
-      "subject": "Payment Received",
-      "date": "2013-12-02T21:27+0000",
-      "parentIds": [
-        "4shzy32qcwzk",
-        "4aRfmgetKkVM"
-      ]
-    },
-    {
-      "details": "Made follow-up call to check on their new units, and mentioned their past due invoice.",
-      "type": "phone",
-      "id": "jnv3z90b0v0g",
-      "subject": "Past-Due Invoice",
-      "date": "2013-12-02T21:27+0000",
-      "parentIds": [
-        "15elgz2vp03r4",
-        "kTUkCsE4f48G"
-      ]
-    },
-    {
-      "details": "I called and spoke to her about their late payment. She will follow-up with me.",
-      "type": "phone",
-      "id": "rrkarm0ysa2o",
-      "subject": "Late Payment",
-      "date": "2013-12-02T21:26+0000",
-      "parentIds": [
-        "15elgz2vp03r4",
-        "K4NWfXGSPPWk"
-      ]
-    },
-    {
-      "details": "Called requesting a seven-day extension on their invoice. I approved.",
-      "type": "phone",
-      "id": "1ol91ho86onpc",
-      "subject": "Invoice Extension",
-      "date": "2013-12-02T21:26+0000",
-      "parentIds": [
-        "c37lx4rahhc0",
-        "rvQv8GcxZFaN"
-      ]
-    },
-    {
-      "details": "Invited me for drinks with his developers tonight at Hanks Tavern.",
-      "type": "opportunity",
-      "id": "zx67a3e3mp6o",
-      "subject": "Invitation",
-      "date": "2013-12-02T21:25+0000",
-      "parentIds": [
-        "c37lx4rahhc0",
-        "e19nyMnxVSTT"
-      ]
-    },
-    {
-      "details": "Had a conference call about utilizing our new model in their upcoming smartphone.",
-      "type": "phone",
-      "id": "1882w3m0hio74",
-      "subject": "Conference Call",
-      "date": "2013-12-02T21:24+0000",
-      "parentIds": [
-        "18hd5uqmx2ark",
-        "3D6vqH8yZrD4"
-      ]
-    },
-    {
-      "details": "Made follow-up call about our new model.",
-      "type": "phone",
-      "id": "13isxtrvemvpc",
-      "subject": "Phone Call",
-      "date": "2013-12-02T21:24+0000",
-      "parentIds": [
-        "18hd5uqmx2ark",
-        "T1dyxXmRmTrp"
-      ]
-    },
-    {
-      "details": "Met about our new unit and will follow-up with a phone call on Tuesday.",
-      "type": "visit",
-      "id": "wtxwzmgdrh1c",
-      "subject": "Meeting Note",
-      "date": "2013-12-02T21:23+0000",
-      "parentIds": [
-        "1btyjc1z2juo0",
-        "HZTBeGFQCzPs"
-      ]
-    },
-    {
-      "details": "Made a call and talked to him about using our new model in their upcoming smartphone release.",
-      "type": "phone",
-      "id": "1am2zurc7aqkg",
-      "subject": "Feature in New Model",
-      "date": "2013-12-02T21:23+0000",
-      "parentIds": [
-        "1btyjc1z2juo0",
-        "yhFem56zHTyU"
-      ]
-    },
-    {
-      "details": "Trent RMA&#39;ed two units and ordered replacements.",
-      "type": "ticket",
-      "id": "1oc8ml41mg54w",
-      "subject": "RMA's",
-      "date": "2013-12-02T21:22+0000",
-      "parentIds": [
-        "189e4u76bqh34",
-        "LdKsLdTTJK1F"
-      ]
-    },
-    {
-      "details": "Scheduled delivery of new units for next Tuesday with Marcie.",
-      "type": "info",
-      "id": "lahwec0kp728",
-      "subject": "Delivery Scheduled",
-      "date": "2013-12-02T21:21+0000",
-      "parentIds": [
-        "189e4u76bqh34",
-        "MN3fZBy9Ms6C"
-      ]
-    },
-    {
-      "details": "Ed approved an order for 300 units.",
-      "type": "phone",
-      "id": "9z0ribcr9vr4",
-      "subject": "Order Approved",
-      "date": "2013-12-02T21:20+0000",
-      "parentIds": [
-        "o8v9urr7vchs",
-        "T3Q7QnCpvE1n"
-      ]
-    },
-    {
-      "details": "Closed the deal with Mark today at 18% over cost.",
-      "type": "activity",
-      "id": "gwo2olyx0lxc",
-      "subject": "Closed Deal",
-      "date": "2013-12-02T21:20+0000",
-      "parentIds": [
-        "o8v9urr7vchs",
-        "kNQv7Urv7AzX"
-      ]
-    },
-    {
-      "details": "Scheduled chip presentation for March 18th at 9:30 a.m.",
-      "type": "opportunity",
-      "id": "azuho51o2ayo",
-      "subject": "Chip Presentation",
-      "date": "2013-12-02T21:19+0000",
-      "parentIds": [
-        "bxo811h6xclc",
-        "1gCGnuMP8kkS"
-      ]
-    },
-    {
-      "details": "Went to Jamie&#39;s office today and chatted about upgrading their contract.",
-      "type": "visit",
-      "id": "15zu2b1tljuv4",
-      "subject": "Contract Upgrade",
-      "date": "2013-12-02T21:18+0000",
-      "parentIds": [
-        "bxo811h6xclc",
-        "eNK2QXWJa8E3"
-      ]
-    },
-    {
-      "details": "Called reminding me to bring the demo units to the conference on Monday.",
-      "type": "phone",
-      "id": "p0grazr9sohs",
-      "subject": "Demo Units at Conference",
-      "date": "2013-12-02T16:53+0000",
-      "parentIds": [
-        "bxo811h6xclc",
-        "sH5PxrdzkZ3T"
-      ]
-    },
-    {
-      "details": "Sofia called today to discuss the latest <strong>offer </strong>we sent her.",
-      "type": "phone",
-      "id": "1lak8fekgcoow",
-      "subject": "Latest Offer",
-      "date": "2013-11-29T09:46+0000",
-      "parentIds": [
-        "bxo811h6xclc",
-        "VBMJHwcLX3Vx"
       ]
     }
   ]

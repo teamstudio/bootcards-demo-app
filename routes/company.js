@@ -86,7 +86,7 @@ exports.readNote = function(req, res) {
 
 	res.renderPjax('company_activity', {
 		company : company,
-  		activity : bc.getActivityById( req.params.noteId)
+  		activity : bc.getNoteById( req.params.noteId)
 	});
 }
 exports.editNote = function(req, res) {
@@ -94,7 +94,7 @@ exports.editNote = function(req, res) {
 	var company = bc.getCompanyById( req.params.id);
 	company.isCompany = true;
 
-	var note = bc.getActivityById( req.params.noteId);
+	var note = bc.getNoteById( req.params.noteId);
 
 	res.renderPjax('company_activity_edit', {
 		company : company,
@@ -121,7 +121,7 @@ exports.saveNote = function(req, res) {
 
 	if (req.params.noteId) {
 
-		note = bc.getActivityById(req.params.noteId);
+		note = bc.getNoteById(req.params.noteId);
 		note.type = req.body.type;
 		note.subject = req.body.subject;
 		note.date = moment(req.body.date, "DD/MM/YYYY HH:mm");

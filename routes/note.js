@@ -2,7 +2,7 @@ var bc = require('../bootcards-functions.js');
 var moment	= require('moment');
 
 exports.list = function(req, res) {
-	res.renderPjax('activities', {
+	res.renderPjax('notes', {
   		activities: notes,
   		note : notes[0],
    		menu: bc.getActiveMenu(menu, 'notes')
@@ -11,14 +11,20 @@ exports.list = function(req, res) {
 
 exports.read = function(req, res) {
 
-	var note = bc.getActivityById(req.params.id);
+	var note = bc.getNoteById(req.params.id);
 
 	if (note != null) {
 
-		var renderWith = 'activity';
+		var renderWith = 'notes/text';		//default template
 
 		if (note.type == 'file') {
-			renderWith = 'note_file';
+			renderWith = 'notes/file';
+		} else if (note.type == 'todo') {
+			renderWith = 'notes/todo';
+		} else if (note.type == 'text') {
+			renderWith = 'notes/text';
+		} else if (note.type == 'media') {
+			renderWith = 'notes/media';
 		}
 
 		res.renderPjax(renderWith, {
@@ -26,6 +32,7 @@ exports.read = function(req, res) {
 		   	note: note,
 		    menu: bc.getActiveMenu(menu, 'notes')
 		});
+
 	}
 	   
 }
@@ -34,7 +41,7 @@ exports.edit = function(req, res) {
 
 	res.renderPjax('activity_edit', {
 	 	activities : notes,
-	   	activity: bc.getActivityById(req.params.id),
+	   	activity: bc.getNoteById(req.params.id),
 	    menu: bc.getActiveMenu(menu, 'notes')
 	});
    
@@ -92,7 +99,7 @@ exports.save = function(req, res) {
 		 	contacts:contacts,
 		   	menu: bc.getActiveMenu(menu, 'notes'),
 		    contact: contact,
-		    activities : bc.getActivitiesForParent(contact.id),
+		    activities : bc.getNotesForParent(contact.id),
 		});
 	}
 

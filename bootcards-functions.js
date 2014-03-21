@@ -49,8 +49,14 @@ exports.getIconForType = function(type) {
 		return "fa-info-circle";
 	case "mail":
 		return "fa-edit";
-	case "offer":
-		return "fa-file-o";
+	case "todo":
+		return "fa-check-square-o";
+	case "text":
+		return "fa-file-text-o";
+	case "media":
+		return "fa-picture-o";
+	case "file":
+		return "fa-paperclip";
 	default:
 		return "fa-file-o";
 	}
@@ -77,14 +83,14 @@ exports.getCompanyById = function(id) {
 	}
 	return company;
 }
-exports.getActivityById = function(id) {
+exports.getNoteById = function(id) {
 	return getById(notes, id);
 }
 
 exports.getContactsForCompany = function(parentId) {
 	return getForParent(contacts, parentId);
 }
-exports.getActivitiesForParent = function(parentId) {
+exports.getNotesForParent = function(parentId) {
 	return getForParent(notes, parentId);
 }
 
