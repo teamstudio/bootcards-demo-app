@@ -18,7 +18,7 @@
     "font-awesome": "~4.0.3",
     "jquery-pjax": "~1.8.0",
     "bootstrap-jasny": "*",
-    "morris.js": "*",
+    "morris.js": "0.5.0",
     "fastclick": "~0.6.11"
   }
 }
