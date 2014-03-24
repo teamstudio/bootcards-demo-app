@@ -14,9 +14,8 @@
 		<div class="list-group">
 			{{#each company.contacts}}
 
-				<a class="list-group-item" 
-					href="/contacts/{{this.id}}"
-					data-pjax="#listDetails">
+				<a class="list-group-item pjax" 
+					href="/contacts/{{this.id}}">
 					<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
 					<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
 					<p class="list-group-item-text">{{this.company}}</p>

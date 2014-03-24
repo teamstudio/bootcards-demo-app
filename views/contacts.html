@@ -3,7 +3,7 @@
    
 		<div class="row">
 			
-			<div class="col-sm-5 bootcards-list">
+			<div class="col-sm-5 bootcards-list" id="list">
 				<div class="panel panel-default">				
 					<div class="panel-body">
 						<form>
@@ -28,9 +28,8 @@
 					<div class="list-group">
 	
 						{{#each contacts}}
-							<a class="list-group-item" 
-					 			href="/contacts/{{this.id}}"
-					 			data-pjax="#listDetails">
+							<a class="list-group-item pjax" 
+					 			href="/contacts/{{this.id}}">
 								<img src="/images/{{this.profileImage}}" class="img-rounded pull-left"/>
 								<h4 class="list-group-item-heading">{{this.lastName}}, {{this.firstName}}</h4>
 								<p class="list-group-item-text">{{this.company}}</p>

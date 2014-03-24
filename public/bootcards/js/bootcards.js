@@ -41,8 +41,6 @@ bootcards.backToList = function() {
 	)
 }
 
-
-
 bootcards.confirm = function(type, to) {
 
 	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
@@ -66,6 +64,8 @@ bootcards.confirmDelete = function(type) {
 }
 
 $(document).ready( function() {
+
+
 	//enable the slide in menu
     $('.offcanvas').offcanvas({
     	toggle : false
@@ -81,8 +81,5 @@ $(document).ready( function() {
    
 });
 
-//enable fastclick
-window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-}, false);
+
 

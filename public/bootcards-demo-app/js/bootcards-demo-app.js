@@ -28,96 +28,87 @@ function toggleChartData() {
 			
 }
 
+bootcards.addPJaxHandlers = function(pjaxTarget) {
+	//add pjax click handler to links
+	$('a.pjax').on('click', function(e) {
+		e.preventDefault();
+		var tgtUrl = $(this).attr('href');
+		$(pjaxTarget).fadeOut(250, function() {
+
+			$.pjax( {
+				container : pjaxTarget,
+				url : tgtUrl
+			})
+
+		})
+	});
+
+}
+
+
 //pjax on all a's that have the data-pjax attribute (the attribute's value is the pjax target container)
 $(document).ready( function() {
 
 	var isXS = bootcards.findBootstrapEnvironment() == "ExtraSmall";
+
+	var pjaxTarget = (isXS ? '#list' : '#listDetails');
+
+	//on smartphones, we only use the list column
+	if (isXS) {
+		$('#listDetails').remove();
+	}
+
 	
+	bootcards.addPJaxHandlers(pjaxTarget);
+
 	$(document)
 	.pjax('a[data-pjax]')
 	.on('submit', 'form[data-pjax]', function(event) {
 		//use pjax to submit forms
   		$.pjax.submit(event);
 	})
-	.on('pjax:beforeSend', function(event) {
-
-		//console.log('beforeSend');
-
-	})
 	.on('pjax:start', function(event) {
+
+		console.log(" start");
 		//called before initiating  a pjax content update: add an active class
 
-		var $tgt = $(event.relatedTarget);
-
-		$tgt
+		$(event.relatedTarget)
 			.addClass('active')
 			.siblings('.active')
 				.removeClass('active');
-
+	
 	})
-	.on('pjax:popstate', function(event) {
-		//code triggered when using the back button to navigate to a cached page
+	.on('pjax:end', function() {
 
-		if (isXS) {
-		
-			var $tgt = $(event.target);
-			var tgtId = $tgt.attr('id');
+		bootcards.addPJaxHandlers(pjaxTarget);
 
-			
-
-			if (tgtId == 'main') {
-
-				//var cards = $(".bootcards-cards");
-				//var list = $(".bootcards-list");
-				//bootcards.crossFade( cards, list);
-
-			}
-		}
 	})
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
-
-		//hide the offcanvas slider
-		$(".offcanvas").offcanvas('hide');
-		$(".navbar-collapse.in").collapse('hide');
-
-		//check for a modal to close
-		var modal = $(event.relatedTarget).closest('.modal');
-		if (modal.length) {
-			modal.modal('hide');
-		}
-
+		
 		var $tgt = $(event.target);
-		var cards_column = $tgt.closest('.bootcards-cards');
-
-		//update app title to reflect current menu option
-		var $rel = $(event.relatedTarget);
-		var $title = $rel.attr('data-title');
-
-		if ($title) {
-			$('.navbar-brand').text($title);
-		}
 
 		if ( isXS ) {
-			//for small screens: replace the list by the details
 
 			var tgtId = $tgt.attr('id');
 
-			//get the list
-			var list = $(event.relatedTarget).closest('.bootcards-list');
-
-			if ( list.length>0 ) {
-				bootcards.crossFade( list, cards_column );
-			}
-
-
 			if ( tgtId == 'main') {
+
+				$('#list')
+					.removeClass('bootcards-cards')
+					.addClass('bootcards-list');
 				
+				//show the back button
 				$('.btn-menu').removeClass('hidden');
 				$('.btn-back').addClass('hidden');
 
-			} else if (tgtId == 'listDetails') {
+			} else if (tgtId == 'list') {
 				
+				$('#list')
+					.addClass('bootcards-cards')
+					.removeClass('bootcards-list');
+
+				//show the menu button
 				$('.btn-menu').addClass('hidden');
 				$('.btn-back').removeClass('hidden');
 
@@ -125,10 +116,42 @@ $(document).ready( function() {
 			
 		}
 
-		//scroll to the target element (so it doesn't render outside the viewport
-		if (cards_column.length>0) {
-			cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
-		}
+		$(pjaxTarget).fadeIn(250, function() {
+
+			//console.log('pjax:complete');
+
+			//hide the offcanvas slider
+			$(".offcanvas").offcanvas('hide');
+			$(".navbar-collapse.in").collapse('hide');
+
+			//check for any modals to close
+			var modal = $(event.relatedTarget).closest('.modal');
+			if (modal.length) {
+				modal.modal('hide');
+			}
+
+			//update app title to reflect current menu option
+			var $rel = $(event.relatedTarget);
+			var $title = $rel.attr('data-title');
+
+			if ($title) {
+				$('.navbar-brand').text($title);
+			}
+
+			var cards_column = $tgt.closest('.bootcards-cards');
+
+			//scroll to the target element (so it doesn't render outside the viewport
+			if (cards_column.length>0) {
+				cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
+			}
+
+		});
+
 
 	});
 });
+
+//enable fastclick
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);

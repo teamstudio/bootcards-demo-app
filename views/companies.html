@@ -2,7 +2,7 @@
   
 		<div class="row">
 			
-			<div class="col-sm-6 bootcards-list">		
+			<div class="col-sm-6 bootcards-list" id="list">		
 				<div class="panel panel-default">					
 					<div class="panel-body">
 						<form>
@@ -26,9 +26,8 @@
 					</div>
 					<div class="list-group">
 						{{#each companies}}
-						<a class="list-group-item" 
-					 			href="/companies/{{this.id}}"
-					 			data-pjax="#listDetails">
+						<a class="list-group-item pjax" 
+					 			href="/companies/{{this.id}}">
 					 			
 							<div class="row">
 								<div class="col-sm-6">

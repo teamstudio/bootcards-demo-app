@@ -16,9 +16,8 @@
 		</div>					
 		<div class="list-group">
 			{{#each company.notes}}
-				<a class="list-group-item" 
-						href="/companies/{{../company.id}}/notes/{{this.id}}"
-						data-pjax="#listDetails">
+				<a class="list-group-item pjax" 
+						href="/companies/{{../company.id}}/notes/{{this.id}}">
 					<i class="fa fa-2x pull-left {{getIconForType this.type}}"></i>
 					<h4 class="list-group-item-heading">{{this.subject}}</h4>
 					<p class="list-group-item-text">{{formatDate this.date "long"}}</p>
