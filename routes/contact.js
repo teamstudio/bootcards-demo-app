@@ -1,5 +1,6 @@
 var bc = require('../bootcards-functions.js');
 var moment	= require('moment');
+var note = require('./note');
 
 exports.list = function(req, res){
 
@@ -95,9 +96,11 @@ exports.readNote = function(req, res) {
 	var contact = bc.getContactById( req.params.id);
 	contact.isContact = true;
 
-	res.renderPjax('contact_activity', {
+	var tgtNote = bc.getNoteById(req.params.noteId);
+
+	res.renderPjax( note.getNotePartialRenderer(tgtNote.type), {
 		contact : contact,
-  		activity : bc.getNoteById( req.params.noteId)
+  		note : tgtNote
 	});
 }
 exports.editNote = function(req, res) {

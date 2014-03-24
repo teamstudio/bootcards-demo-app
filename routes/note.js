@@ -15,19 +15,9 @@ exports.read = function(req, res) {
 
 	if (note != null) {
 
-		var renderWith = 'notes/text';		//default template
+		
 
-		if (note.type == 'file') {
-			renderWith = 'notes/file';
-		} else if (note.type == 'todo') {
-			renderWith = 'notes/todo';
-		} else if (note.type == 'text') {
-			renderWith = 'notes/text';
-		} else if (note.type == 'media') {
-			renderWith = 'notes/media';
-		}
-
-		res.renderPjax(renderWith, {
+		res.renderPjax( exports.getNotePartialRenderer(note.type) , {
 		 	activities : notes,
 		   	note: note,
 		    menu: bc.getActiveMenu(menu, 'notes')
@@ -102,6 +92,24 @@ exports.save = function(req, res) {
 		    activities : bc.getNotesForParent(contact.id),
 		});
 	}
+
+}
+
+//returns the name of a partial used to render a specific note type
+exports.getNotePartialRenderer = function(type) {
+	var renderWith = 'notes/text';		//default template
+
+	if (type == 'file') {
+		renderWith = 'notes/file';
+	} else if (type == 'todo') {
+		renderWith = 'notes/todo';
+	} else if (type == 'text') {
+		renderWith = 'notes/text';
+	} else if (type == 'media') {
+		renderWith = 'notes/media';
+	}
+
+	return renderWith;
 
 }
 
