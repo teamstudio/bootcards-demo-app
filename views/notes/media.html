@@ -2,7 +2,7 @@
 
 <div id="activityCard">
 	
-	<div class="panel panel-default">
+	<div class="panel panel-default bootcards-media">
 		<div class="panel-heading clearfix">
 			<h3 class="panel-title pull-left">Media</h3>
 
@@ -49,29 +49,17 @@
 			</a>
 
 		</div>
-		<div class="list-group">
-			{{#if note.subject}}
-			<div class="list-group-item">
-				<label>Subject</label>
-				<h4 class="list-group-item-heading">{{note.subject}}</h4>
-			</div>
-			{{/if}}
-			{{#if note.date}}
-			<div class="list-group-item">
-				<label>Date</label>
-				<h4 class="list-group-item-heading">{{note.date}}</h4>
-			</div>
-			{{/if}}
-			{{#if note.details}}
-			<div class="list-group-item">
-				<label>Details</label>
-				<h4 class="list-group-item-heading">{{{note.details}}}</h4>
-			</div>
-			{{/if}}
+		<div class="panel-body">
+			{{{note.details}}}
 		</div>
+		<img src="{{{note.src}}}" class="img-responsive"/>
 		<div class="panel-footer">
-			<small class="pull-left">Built with Bootcards - Base Card</small>
-			<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+			<small class="pull-left">Built with Bootcards - Media Card</small>
+			<a class="btn btn-link btn-xs pull-right"
+							href="/docs/media-card"
+							data-toggle="modal"
+							data-target="#editModal">
+							View Source</a>
 		</div>			
 	</div>
 

@@ -15,11 +15,11 @@
 					{{note.subject}}
 				</a>
 			</h4>
-			<p class="list-group-item-text">{{note.fileType}}</p>
-			<p class="list-group-item-text">3.2Mb</p>
+			<p class="list-group-item-text"><strong>{{note.fileType}}</strong></p>
+			<p class="list-group-item-text"><strong>3.2Mb</strong></p>
 		</div>
 		<div class="list-group-item">
-			<p class="list-group-item-text">Added by Jack Herbert on 5 Mar 2014</p>
+			<p class="list-group-item-text"><strong>Added by Jack Herbert on 5 Mar 2014</strong></p>
 		</div>
 		<div class="list-group-item">
 			<p class="list-group-item-text">{{note.details}}</p>
@@ -49,7 +49,11 @@
 	</div>
 	<div class="panel-footer">
 		<small class="pull-left">Built with Bootcards - File Card</small>
-		<a href="#" class="btn btn-link btn-xs pull-right">View Source</a>
+		<a class="btn btn-link btn-xs pull-right"
+							href="/docs/file-card"
+							data-toggle="modal"
+							data-target="#editModal">
+							View Source</a>
 	</div>	
 
 </div>

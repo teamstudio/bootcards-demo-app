@@ -1562,10 +1562,10 @@
       ]
     },
     {
-      "details": "This file contains...",
+      "details": "Productsheet for Stingray describing all the features.",
       "type": "file",
       "id": "1rhen4xigta0z",
-      "subject": "Productsheet.pdf",
+      "subject": "Stingray.pdf",
       "date": "2013-12-02T22:26+0000",
       "parentIds": [
         "o8v9urr7vchs",
@@ -1576,13 +1576,14 @@
       "createdBy": "Jack Herbert"
     },
     {
-      "details": "Standard product image.",
+      "details": "Product image.",
       "type": "media",
+      "src": "http://www.teamstudio.com/Portals/218295/images/istock_000001242290small.jpg",
       "id": "uywr1g2fnvuo",
       "subject": "Product image",
       "date": "2013-12-02T22:26+0000",
       "parentIds": [
-        "bxo811h6xclc",
+        "kNQv7Urv7AzX",
         "VBMJHwcLX3Vx"
       ]
     },
@@ -1610,7 +1611,7 @@
     },
     {
       "details": "Scheduled a round of golf for next week.",
-      "type": "opportunity",
+      "type": "todo",
       "id": "nlrxvfge0ao0",
       "subject": "Golf",
       "date": "2013-12-02T22:24+0000",
@@ -1643,7 +1644,7 @@
     },
     {
       "details": "Invited me for drinks with his developers tonight at Hanks Tavern.",
-      "type": "opportunity",
+      "type": "text",
       "id": "10xgsxu78kni8",
       "subject": "Social Op",
       "date": "2013-12-02T22:22+0000",
@@ -1709,7 +1710,7 @@
     },
     {
       "details": "Scheduled delivery of new units for next Tuesday.",
-      "type": "info",
+      "type": "text",
       "id": "v208y6xswsg0",
       "subject": "Delivery Scheduled",
       "date": "2013-12-02T22:18+0000",
@@ -1720,7 +1721,7 @@
     },
     {
       "details": "He approved order for 300 units.",
-      "type": "info",
+      "type": "text",
       "id": "1td2ke5yv8rgg",
       "subject": "Order Approved",
       "date": "2013-12-02T22:17+0000",
@@ -1731,7 +1732,7 @@
     },
     {
       "details": "Closed the deal at 18% over cost.",
-      "type": "info",
+      "type": "text",
       "id": "u9jjywxvh62o",
       "subject": "Deal Closed",
       "date": "2013-12-02T22:17+0000",
@@ -1742,7 +1743,7 @@
     },
     {
       "details": "Scheduled chip presentation for Jan. 18th at 9:30 a.m.",
-      "type": "opportunity",
+      "type": "text",
       "id": "1i9wzyz6po45c",
       "subject": "Chip Presentation",
       "date": "2013-12-02T22:16+0000",
@@ -1808,7 +1809,7 @@
     },
     {
       "details": "Scheduled a round of golf for next week.",
-      "type": "opportunity",
+      "type": "text",
       "id": "brj1yzmrojk0",
       "subject": "Golf Next Week",
       "date": "2013-12-02T22:12+0000",
@@ -1863,7 +1864,7 @@
     },
     {
       "details": "Wants to have dinner at the Japanese restaurant next week to discuss a new opportunity.",
-      "type": "info",
+      "type": "todo",
       "id": "ey92hkjp8n40",
       "subject": "Dinner Next Week",
       "date": "2013-12-02T22:06+0000",
