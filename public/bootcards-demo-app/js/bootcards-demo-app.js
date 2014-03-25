@@ -49,7 +49,12 @@ bootcards.addPJaxHandlers = function(pjaxTarget) {
 //pjax on all a's that have the data-pjax attribute (the attribute's value is the pjax target container)
 $(document).ready( function() {
 
-	var isXS = bootcards.findBootstrapEnvironment() == "ExtraSmall";
+    //destroy modals on close (to reload the contents when using the remote property)
+    $('body').on('hidden.bs.modal', '.modal', function () {  	
+  		$(this).removeData('bs.modal');
+	});
+
+	var isXS = (bootcards.findBootstrapEnvironment() == "ExtraSmall");
 
 	var pjaxTarget = (isXS ? '#list' : '#listDetails');
 
@@ -129,37 +134,52 @@ $(document).ready( function() {
 			
 		}
 
-		
+		//hide the offcanvas slider
+		$(".offcanvas").offcanvas('hide');
+		$(".navbar-collapse.in").collapse('hide');
 
-			//console.log('pjax:complete');
+		//check for any modals to close
+		var modal = $(event.relatedTarget).closest('.modal');
+		if (modal.length) {
+			modal.modal('hide');
+		}
 
-			//hide the offcanvas slider
-			$(".offcanvas").offcanvas('hide');
-			$(".navbar-collapse.in").collapse('hide');
+		//update app title to reflect current menu option
+		var $rel = $(event.relatedTarget);
+		var $title = $rel.attr('data-title');
 
-			//check for any modals to close
-			var modal = $(event.relatedTarget).closest('.modal');
-			if (modal.length) {
-				modal.modal('hide');
-			}
+		if ($title) {
+			$('.navbar-brand').text($title);
+		}
 
-			//update app title to reflect current menu option
-			var $rel = $(event.relatedTarget);
-			var $title = $rel.attr('data-title');
+		var cards_column = $tgt.closest('.bootcards-cards');
 
-			if ($title) {
-				$('.navbar-brand').text($title);
-			}
-
-			var cards_column = $tgt.closest('.bootcards-cards');
-
-			//scroll to the target element (so it doesn't render outside the viewport
-			if (cards_column.length>0) {
-				cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
-			}
-
-		//});
-
+		//scroll to the target element (so it doesn't render outside the viewport
+		if (cards_column.length>0) {
+			cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
+		}
 
 	});
 });
+
+bootcards.confirm = function(type, to) {
+
+	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
+		var modal = $(event.relatedTarget).closest('.modal');
+		if (modal.length) {
+			modal.modal('hide');
+		}
+	}
+
+}
+
+bootcards.confirmDelete = function(type) {
+
+	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
+		var modal = $(event.target).closest('.modal');
+		if (modal.length) {
+			modal.modal('hide');
+		}
+	}
+
+}

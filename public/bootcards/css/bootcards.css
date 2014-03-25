@@ -1,15 +1,5 @@
 /* NAVBAR */
 
-/*.btn-back {
-	display: none;
-}
-
-@media (min-width:768px) {
-	.btn-menu {
-		display: none;
-	}
-}*/
-
 /* force hardware accelerationon slide in menu */
 .offcanvas {
  -webkit-transform: translate3d(0,0,0);

@@ -1,6 +1,11 @@
 var bootcards = bootcards || {};
 
-//check the screen size
+/*
+ * Get the Bootstrap enviroment we're in.
+
+ * Found at http://stackoverflow.com/questions/14441456/how-to-detect-which-device-view-youre-on-using-twitter-bootstrap-api/15150381#15150381
+ * Function writen by Raphael_ (http://stackoverflow.com/users/1661358/raphael)
+ */
 bootcards.findBootstrapEnvironment = function() {
     var envs = ["ExtraSmall", "Small", "Medium", "Large"];
     var envValues = ["xs", "sm", "md", "lg"];
@@ -14,57 +19,12 @@ bootcards.findBootstrapEnvironment = function() {
         $el.addClass('hidden-'+envVal);
         if ($el.is(':hidden')) {
             $el.remove();
-            return envs[i]
+            return envs[i];
         }
     };
 }
 
-//replace one element with another using a fade effect
-bootcards.crossFade = function(fadeOut, fadeIn) {
-
-	fadeOut.fadeOut(250, function() {
-		fadeOut.hide();
-		fadeIn
-			.hide()
-			.removeClass("hidden-xs")
-			.fadeIn(250)
-	});
-
-
-}
-
-//back to the list of cards
-bootcards.backToList = function() {
-	this.crossFade(
-		$(".bootcards-cards"),
-		$(".bootcards-list")
-	)
-}
-
-bootcards.confirm = function(type, to) {
-
-	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
-		var modal = $(event.relatedTarget).closest('.modal');
-		if (modal.length) {
-			modal.modal('hide');
-		}
-	}
-
-}
-
-bootcards.confirmDelete = function(type) {
-
-	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
-		var modal = $(event.target).closest('.modal');
-		if (modal.length) {
-			modal.modal('hide');
-		}
-	}
-
-}
-
 $(document).ready( function() {
-
 
 	//enable the slide in menu
     $('.offcanvas').offcanvas({
@@ -73,13 +33,5 @@ $(document).ready( function() {
     $('.offcanvas-toggle').on('click', function() {
     	$('.offcanvas').offcanvas('toggle');
     })
-
-    //destroy modals on close (to reload the contents when using the remote property)
-    $('body').on('hidden.bs.modal', '.modal', function () {  	
-  		$(this).removeData('bs.modal');
-	});
    
 });
-
-
-
