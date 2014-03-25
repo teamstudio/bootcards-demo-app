@@ -96,11 +96,14 @@ $(document).ready( function() {
 	})
 	.on('pjax:end', function() {
 
-		bootcards.addPJaxHandlers(pjaxTarget);
+		
 		$(pjaxTarget).fadeIn(200, function() {
 		});
 
+		bootcards.addPJaxHandlers(pjaxTarget);
+
 	})
+
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 		
