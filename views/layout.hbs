@@ -2,60 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <!--<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">-->
 
+  {{#if session.isIos}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--android-->
+  {{else}}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  {{/if}}
 	<!-- Icons -->  
 	<!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
-	<link rel="apple-touch-icon" sizes="120x120" href="/bootcards/images/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/bootcards-demo-app/images/apple-touch-icon-120x120.png">
 	<!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
-	<link rel="apple-touch-icon" sizes="144x144" href="/bootcards/images/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/bootcards-demo-app/images/apple-touch-icon-144x144.png">
 
 	<!-- Splash Screen Images -->
     <!-- iOS 6 & 7 iPad (retina, portrait) -->
-    <link href="/bootcards/images/bootcards-splash-768x1004@2x.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-768x1004@2x.png"
           media="(device-width: 768px) and (device-height: 1024px)
              and (orientation: portrait)
              and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image">
 
     <!-- iOS 6 & 7 iPad (retina, landscape) -->
-    <link href="/bootcards/images/bootcards-splash-1024x748@2x.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-1024x748@2x.png"
           media="(device-width: 768px) and (device-height: 1024px)
              and (orientation: landscape)
              and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image">
 
     <!-- iOS 6 iPad (portrait) -->
-    <link href="/bootcards/images/bootcards-splash-1024x748.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-1024x748.png"
           media="(device-width: 768px) and (device-height: 1024px)
              and (orientation: portrait)
              and (-webkit-device-pixel-ratio: 1)"
           rel="apple-touch-startup-image">
 
     <!-- iOS 6 iPad (landscape) -->
-    <link href="/bootcards/images/bootcards-splash-768x1004.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-768x1004.png"
           media="(device-width: 768px) and (device-height: 1024px)
              and (orientation: landscape)
              and (-webkit-device-pixel-ratio: 1)"
           rel="apple-touch-startup-image">
 
     <!-- iOS 6 & 7 iPhone 5 -->
-    <link href="/bootcards/images/bootcards-splash-320x548@2x.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-320x548@2x.png"
           media="(device-width: 320px) and (device-height: 568px)
              and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image">
 
     <!-- iOS 6 & 7 iPhone (retina) -->
-    <link href="/bootcards/images/bootcards-splash-320x460@2x.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-320x460@2x.png"
           media="(device-width: 320px) and (device-height: 480px)
              and (-webkit-device-pixel-ratio: 2)"
           rel="apple-touch-startup-image">
 
     <!-- iOS 6 iPhone -->
-    <link href="/bootcards/images/bootcards-splash-320x460.png"
+    <link href="/bootcards-demo-app/images/bootcards-splash-320x460.png"
           media="(device-width: 320px) and (device-height: 480px)
              and (-webkit-device-pixel-ratio: 1)"
           rel="apple-touch-startup-image">	
@@ -175,7 +180,6 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>   
     <script src="/jquery-pjax/jquery.pjax.js"></script>
     <script src="/bootstrap-jasny/dist/js/jasny-bootstrap.min.js"></script>
-    <script src="/fastclick/lib/fastclick.js"></script>
     <script src="/raphael/raphael-min.js"></script>
     <script src="/morris.js/morris.min.js"></script>
     <script src="/bootcards/js/bootcards.js"></script> 

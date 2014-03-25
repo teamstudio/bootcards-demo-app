@@ -1,5 +1,4 @@
 /* toggle between the chart and data */
-
 function toggleChartData() {
 
 	var $ev = $(event.target)
@@ -28,12 +27,13 @@ function toggleChartData() {
 			
 }
 
+/* add click handlers to links to force a pjax load */
 bootcards.addPJaxHandlers = function(pjaxTarget) {
 	//add pjax click handler to links
 	$('a.pjax').on('click', function(e) {
 		e.preventDefault();
 		var tgtUrl = $(this).attr('href');
-		$(pjaxTarget).fadeOut(250, function() {
+		$(pjaxTarget).fadeOut(200, function() {
 
 			$.pjax( {
 				container : pjaxTarget,
@@ -56,8 +56,20 @@ $(document).ready( function() {
 	//on smartphones, we only use the list column
 	if (isXS) {
 		$('#listDetails').remove();
-	}
 
+		//restrict footer to only 4 items
+		var $footer = $(".navbar-fixed-bottom .btn-group");
+		if ($footer.length>0) {
+			var $links = $('a', $footer);
+		
+			if ($links.length > 4) {
+				$links.each( function(idx) {
+					if (idx >= 4) { this.remove(); }
+				});
+			}
+		}
+
+	}
 	
 	bootcards.addPJaxHandlers(pjaxTarget);
 
@@ -69,7 +81,6 @@ $(document).ready( function() {
 	})
 	.on('pjax:start', function(event) {
 
-		console.log(" start");
 		//called before initiating  a pjax content update: add an active class
 
 		$(event.relatedTarget)
@@ -81,6 +92,8 @@ $(document).ready( function() {
 	.on('pjax:end', function() {
 
 		bootcards.addPJaxHandlers(pjaxTarget);
+		$(pjaxTarget).fadeIn(200, function() {
+		});
 
 	})
 	.on('pjax:complete', function(event) {
@@ -116,7 +129,7 @@ $(document).ready( function() {
 			
 		}
 
-		$(pjaxTarget).fadeIn(250, function() {
+		
 
 			//console.log('pjax:complete');
 
@@ -145,13 +158,8 @@ $(document).ready( function() {
 				cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
 			}
 
-		});
+		//});
 
 
 	});
 });
-
-//enable fastclick
-window.addEventListener('load', function() {
-    FastClick.attach(document.body);
-}, false);
