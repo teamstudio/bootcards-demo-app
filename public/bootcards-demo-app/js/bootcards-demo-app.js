@@ -186,3 +186,7 @@ bootcards.confirmDelete = function(type) {
 	}
 
 }
+
+window.addEventListener('load', function() {
+    FastClick.attach(document.body);
+}, false);
