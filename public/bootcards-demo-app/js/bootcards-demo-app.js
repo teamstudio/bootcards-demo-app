@@ -45,9 +45,34 @@ bootcards.addPJaxHandlers = function(pjaxTarget) {
 
 }
 
+/*setup publish/ subscribe mechanism for changing main menu option */
+bootcards.topics = {};
+ 
+jQuery.Topic = function( id ) {
+  var callbacks, method,
+    topic = id && bootcards.topics[ id ];
+ 
+  if ( !topic ) {
+    callbacks = jQuery.Callbacks();
+    topic = {
+      publish: callbacks.fire,
+      subscribe: callbacks.add,
+      unsubscribe: callbacks.remove
+    };
+    if ( id ) {
+      bootcards.topics[ id ] = topic;
+    }
+  }
+  return topic;
+};
 
 //pjax on all a's that have the data-pjax attribute (the attribute's value is the pjax target container)
 $(document).ready( function() {
+
+	//publish event when changing main menu option
+	$("a[data-title]").on("click", function() {
+		$.Topic( "navigateTo" ).publish( $(this).data("title") );
+	});
 
     //destroy modals on close (to reload the contents when using the remote property)
     $('body').on('hidden.bs.modal', '.modal', function () {  	
@@ -58,8 +83,9 @@ $(document).ready( function() {
 
 	var pjaxTarget = (isXS ? '#list' : '#listDetails');
 
-	//on smartphones, we only use the list column
 	if (isXS) {
+
+		//on smartphones, we only use the list column
 		$('#listDetails').remove();
 
 		//restrict footer to only 4 items
@@ -84,18 +110,7 @@ $(document).ready( function() {
 		//use pjax to submit forms
   		$.pjax.submit(event);
 	})
-	.on('pjax:start', function(event) {
-
-		//called before initiating  a pjax content update: add an active class
-
-		$(event.relatedTarget)
-			.addClass('active')
-			.siblings('.active')
-				.removeClass('active');
-	
-	})
 	.on('pjax:end', function() {
-
 		
 		$(pjaxTarget).fadeIn(200, function() {
 		});
@@ -103,7 +118,6 @@ $(document).ready( function() {
 		bootcards.addPJaxHandlers(pjaxTarget);
 
 	})
-
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
 		
@@ -111,6 +125,7 @@ $(document).ready( function() {
 
 		if ( isXS ) {
 
+			//small screens: change class on container elements (list>card vv)
 			var tgtId = $tgt.attr('id');
 
 			if ( tgtId == 'main') {
@@ -138,21 +153,13 @@ $(document).ready( function() {
 		}
 
 		//hide the offcanvas slider
-		$(".offcanvas").offcanvas('hide');
-		$(".navbar-collapse.in").collapse('hide');
+		$("#slideInMenu").offcanvas('hide');
+		//$(".navbar-collapse.in").collapse('hide');
 
 		//check for any modals to close
 		var modal = $(event.relatedTarget).closest('.modal');
 		if (modal.length) {
 			modal.modal('hide');
-		}
-
-		//update app title to reflect current menu option
-		var $rel = $(event.relatedTarget);
-		var $title = $rel.attr('data-title');
-
-		if ($title) {
-			$('.navbar-brand').text($title);
 		}
 
 		var cards_column = $tgt.closest('.bootcards-cards');
@@ -187,6 +194,28 @@ bootcards.confirmDelete = function(type) {
 
 }
 
+//enable FastClick
 window.addEventListener('load', function() {
     FastClick.attach(document.body);
 }, false);
+
+//functions to perform if the main menu option has changed
+$.Topic( "navigateTo" ).subscribe( function(value) {
+	
+	//change header title
+	$('.navbar-brand').text(value);
+
+	//change active menu option in all navigation menus
+	$("a[data-title='" + value + "']").each( function() {
+
+		var $this = $(this);
+		var $li = $this.parent('li');
+
+		//add active class to either a parent LI or current A
+		($li.length>0 ? $li : $this)
+			.addClass('active')
+			.siblings('.active')
+				.removeClass('active');
+	});
+
+} );

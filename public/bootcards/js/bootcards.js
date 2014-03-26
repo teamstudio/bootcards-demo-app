@@ -27,11 +27,11 @@ bootcards.findBootstrapEnvironment = function() {
 $(document).ready( function() {
 
 	//enable the slide in menu
-    $('.offcanvas').offcanvas({
+    $('#slideInMenu').offcanvas({
     	toggle : false
     });
     $('.offcanvas-toggle').on('click', function() {
-    	$('.offcanvas').offcanvas('toggle');
+    	$('#slideInMenu').offcanvas('toggle');
     })
    
 });

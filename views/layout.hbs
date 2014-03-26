@@ -94,7 +94,7 @@
 </body>
 
 <!-- slide in menu (mobile) -->
-<div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+<div class="navmenu navmenu-default navmenu-fixed-left offcanvas" id="slideInMenu">
   <ul class="nav navmenu-nav">
     {{#each menu}}
     {{#if this.active }}
@@ -140,7 +140,7 @@
           {{else}}
           <li>
           {{/if}}
-            <a href="{{this.url}}">
+            <a href="{{this.url}}" data-pjax="#main" data-title="{{this.title}}"
               <i class="fa {{this.icon}}"></i>
               {{this.name}}
             </a>          
