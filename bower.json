@@ -19,6 +19,6 @@
     "jquery-pjax": "1.8.1",
     "fastclick": "1.0.0",
     "morris.js": "0.5.0",
-    "bootstrap-jasny", "*"
+    "bootstrap-jasny": "*"
   }
 }
