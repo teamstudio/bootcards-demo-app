@@ -154,7 +154,6 @@ $(document).ready( function() {
 
 		//hide the offcanvas slider
 		$("#slideInMenu").offcanvas('hide');
-		//$(".navbar-collapse.in").collapse('hide');
 
 		//check for any modals to close
 		var modal = $(event.relatedTarget).closest('.modal');
