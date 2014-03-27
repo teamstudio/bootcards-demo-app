@@ -29,18 +29,20 @@ function toggleChartData() {
 
 /* add click handlers to links to force a pjax load */
 bootcards.addPJaxHandlers = function(pjaxTarget) {
+
 	//add pjax click handler to links
 	$('a.pjax').on('click', function(e) {
+		var tgtUrl = $(this).attr('href');
 		e.preventDefault();
 		var tgtUrl = $(this).attr('href');
-		$(pjaxTarget).fadeOut(200, function() {
+		//$(pjaxTarget).fadeOut('fast', function() {
 
 			$.pjax( {
 				container : pjaxTarget,
 				url : tgtUrl
 			})
 
-		})
+		//})
 	});
 
 }
@@ -79,11 +81,9 @@ $(document).ready( function() {
   		$(this).removeData('bs.modal');
 	});
 
-	var isXS = (bootcards.findBootstrapEnvironment() == "ExtraSmall");
+	var pjaxTarget = (bootcards.isXS() ? '#list' : '#listDetails');
 
-	var pjaxTarget = (isXS ? '#list' : '#listDetails');
-
-	if (isXS) {
+	if (bootcards.isXS() ) {
 
 		//on smartphones, we only use the list column
 		$('#listDetails').remove();
@@ -110,20 +110,16 @@ $(document).ready( function() {
 		//use pjax to submit forms
   		$.pjax.submit(event);
 	})
-	.on('pjax:end', function() {
-		
-		$(pjaxTarget).fadeIn(200, function() {
-		});
+	.on('pjax:end', function(event) {
 
-		bootcards.addPJaxHandlers(pjaxTarget);
-
-	})
-	.on('pjax:complete', function(event) {
-		//called after a pjax content update
-		
 		var $tgt = $(event.target);
+		
+		//$tgt.fadeIn('fast', function() {
+		//});
 
-		if ( isXS ) {
+		if ( bootcards.isXS() ) {
+
+			var $tgt = $(event.target);
 
 			//small screens: change class on container elements (list>card vv)
 			var tgtId = $tgt.attr('id');
@@ -138,6 +134,20 @@ $(document).ready( function() {
 				$('.btn-menu').removeClass('hidden');
 				$('.btn-back').addClass('hidden');
 
+				//get the panel 
+				var $main = $("#main");
+				var $panel = $("#main > .panel");
+				if ($panel.length>0) {
+
+					var row = $('<div class="row"></div>');
+					var container = $('<div class="col-sm-5 bootcards-list" id="list"></div>')
+						.appendTo(row);
+
+					$panel.appendTo(container);
+
+					row.appendTo($main);
+				}
+
 			} else if (tgtId == 'list') {
 				
 				$('#list')
@@ -151,6 +161,14 @@ $(document).ready( function() {
 			}
 			
 		}
+		
+		bootcards.addPJaxHandlers(pjaxTarget);
+
+	})
+	.on('pjax:complete', function(event) {
+		//called after a pjax content update
+		
+		var $tgt = $(event.target);
 
 		//hide the offcanvas slider
 		$("#slideInMenu").offcanvas('hide');
@@ -171,17 +189,7 @@ $(document).ready( function() {
 	});
 });
 
-bootcards.confirm = function(type, to) {
-
-	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
-		var modal = $(event.relatedTarget).closest('.modal');
-		if (modal.length) {
-			modal.modal('hide');
-		}
-	}
-
-}
-
+//show a confirmation dialog before NOT deleting an item: this is a demp app after all...
 bootcards.confirmDelete = function(type) {
 
 	if ( confirm('Are you sure you want to delete this '  + type + '?') ) {
@@ -190,7 +198,6 @@ bootcards.confirmDelete = function(type) {
 			modal.modal('hide');
 		}
 	}
-
 }
 
 //enable FastClick

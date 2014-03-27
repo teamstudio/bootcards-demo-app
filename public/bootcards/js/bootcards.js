@@ -1,5 +1,7 @@
 var bootcards = bootcards || {};
 
+bootcards._isXS = null;
+
 /*
  * Get the Bootstrap enviroment we're in.
 
@@ -26,12 +28,23 @@ bootcards.findBootstrapEnvironment = function() {
 
 $(document).ready( function() {
 
-	//enable the slide in menu
+    //enable the slide in menu
     $('#slideInMenu').offcanvas({
-    	toggle : false
+        toggle : false
     });
     $('.offcanvas-toggle').on('click', function() {
-    	$('#slideInMenu').offcanvas('toggle');
+        $('#slideInMenu').offcanvas('toggle');
     })
    
 });
+
+bootcards.isXS = function() {
+
+    if (this._isXS === null ) {
+      
+        this._isXS = (this.findBootstrapEnvironment() == "ExtraSmall");
+
+    }
+
+    return this._isXS;
+}
