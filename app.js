@@ -93,7 +93,7 @@ hbs.registerHelper('count', function(type) {
 		case 'notes':
 			return notes.length;
 		case 'charts':
-			return 3;
+			return 4;
 	}
 
 	return 0;
