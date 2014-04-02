@@ -227,7 +227,8 @@ $.Topic( "navigateTo" ).subscribe( function(value) {
 } );
 
 //check for rubberbanding
-bootcards.disableRubberBanding() {
+bootcards.disableRubberBanding = function() {
+	//console.log("apply it");
    document.body.addEventListener('touchstart', function() {
         document.body.addEventListener('touchmove', function moveListener(e) {
             document.body.removeEventListener('touchmove', moveListener);
@@ -243,7 +244,7 @@ bootcards.disableRubberBanding() {
                 //console.log(h + ' - ' + sH + (h<sH));
 
                 if (h < sH) {
-                   // console.log("g");
+                   //console.log("g");
                     return;
                 }
             } while (el != document.body && el.parentElement != document.body && (el = el.parentElement));
