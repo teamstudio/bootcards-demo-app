@@ -225,3 +225,39 @@ $.Topic( "navigateTo" ).subscribe( function(value) {
 	});
 
 } );
+
+//check for rubberbanding
+bootcards.disableRubberBanding() {
+   document.body.addEventListener('touchstart', function() {
+        document.body.addEventListener('touchmove', function moveListener(e) {
+            document.body.removeEventListener('touchmove', moveListener);
+
+            var el = e.target;
+
+            do {
+
+                var h = parseInt(window.getComputedStyle(el, null).height, 10);
+                var sH = el.scrollHeight;
+
+                //console.log(el);
+                //console.log(h + ' - ' + sH + (h<sH));
+
+                if (h < sH) {
+                   // console.log("g");
+                    return;
+                }
+            } while (el != document.body && el.parentElement != document.body && (el = el.parentElement));
+
+            //console.log(" pd");
+            e.preventDefault();
+        });
+    });
+/*
+    var standaloneClass = navigator.standalone ? 'standalone' : 'no-standalone';
+    document.body.classList.add(standaloneClass);
+
+    if (navigator.userAgent.indexOf('iPhone OS 6') > -1) {
+        document.body.classList.add('ios6');
+        document.body.scrollIntoView();
+    }*/
+}
