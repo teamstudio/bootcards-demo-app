@@ -58,14 +58,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
-var oneDay = 86400000;
-
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneDay } ) );
-app.use(express.static(path.join(__dirname, 'bower_components'), { maxAge: oneDay } ) );
-
-//public dir for bower components
-app.use('/bower_components', 
-	express.static(__dirname + '/bower_components'), { maxAge: oneDay } );
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 86400000 } ) );
 
 //register a helper for date formatting using handlebars
 hbs.registerHelper("formatDate", function(datetime, format) {
