@@ -24,10 +24,10 @@ html, body {
     -webkit-overflow-scrolling: touch;
 }
 
+/*needed on iOS for the disabled rubberband*/
 .col-sm-6 {
 	height: 100%;
 }
-
 
 /* BUTTONS */
 
@@ -109,9 +109,8 @@ html, body {
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:hover {
-	position: absolute;
+	position: relative !important;
 	display: block;
-	width: 100%;
 	padding: 0;
 	font-size: 17px;
 	font-weight: 500;
@@ -119,12 +118,8 @@ html, body {
 	color: #000;
 	text-align: center;
 	white-space: nowrap;
-}
-
-.navbar-brand {
 	height: 44px;
-	position: relative !important;
-	width: 130px !important;
+	width: 140px !important;
 	margin: 0 auto !important;
 	float: none !important;
 }

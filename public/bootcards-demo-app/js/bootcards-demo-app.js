@@ -9,8 +9,7 @@ function toggleChartData() {
 		$chart.fadeOut( 'fast', function()  {
 			$chart
 				.siblings('.bootcards-table')
-					.fadeIn('fast')
-
+					.fadeIn('fast');
 		});
 
 	} else {
@@ -19,15 +18,17 @@ function toggleChartData() {
 		$data.fadeOut( 'fast', function()  {
 			$data
 				.siblings('.bootcards-chart')
-					.fadeIn('fast')
-
+					.fadeIn('fast');
 		});
 
 	}
 			
 }
 
-/* add click handlers to links to force a pjax load */
+/*
+ * Add click handlers to links to force a pjax (partial) load
+ * http://pjax.heroku.com/
+ */
 bootcards.addPJaxHandlers = function(pjaxTarget) {
 
 	//add pjax click handler to links
@@ -47,7 +48,11 @@ bootcards.addPJaxHandlers = function(pjaxTarget) {
 
 }
 
-/*setup publish/ subscribe mechanism for changing main menu option */
+/*
+ * Setup publish/ subscribe mechanism for changing main menu option
+ * Based on jQuery Callbacks
+ * https://api.jquery.com/jQuery.Callbacks/
+ */
 bootcards.topics = {};
  
 jQuery.Topic = function( id ) {
@@ -113,9 +118,6 @@ $(document).ready( function() {
 	.on('pjax:end', function(event) {
 
 		var $tgt = $(event.target);
-		
-		//$tgt.fadeIn('fast', function() {
-		//});
 
 		if ( bootcards.isXS() ) {
 
@@ -187,6 +189,14 @@ $(document).ready( function() {
 		}
 
 	});
+
+	//enable the Bootstrap Jasny slide in menu
+    $('#slideInMenu').offcanvas({
+        toggle : false
+    });
+    $('.offcanvas-toggle').on('click', function() {
+        $('#slideInMenu').offcanvas('toggle');
+    })
 });
 
 //show a confirmation dialog before NOT deleting an item: this is a demp app after all...
@@ -200,7 +210,10 @@ bootcards.confirmDelete = function(type) {
 	}
 }
 
-//enable FastClick
+/*
+ * Enable FTLabs' FastClick
+ * https://github.com/ftlabs/fastclick
+ */
 window.addEventListener('load', function() {
     FastClick.attach(document.body);
 }, false);
@@ -226,39 +239,3 @@ $.Topic( "navigateTo" ).subscribe( function(value) {
 
 } );
 
-//check for rubberbanding
-bootcards.disableRubberBanding = function() {
-	//console.log("apply it");
-   document.body.addEventListener('touchstart', function() {
-        document.body.addEventListener('touchmove', function moveListener(e) {
-            document.body.removeEventListener('touchmove', moveListener);
-
-            var el = e.target;
-
-            do {
-
-                var h = parseInt(window.getComputedStyle(el, null).height, 10);
-                var sH = el.scrollHeight;
-
-                //console.log(el);
-                //console.log(h + ' - ' + sH + (h<sH));
-
-                if (h < sH) {
-                   //console.log("g");
-                    return;
-                }
-            } while (el != document.body && el.parentElement != document.body && (el = el.parentElement));
-
-            //console.log(" pd");
-            e.preventDefault();
-        });
-    });
-/*
-    var standaloneClass = navigator.standalone ? 'standalone' : 'no-standalone';
-    document.body.classList.add(standaloneClass);
-
-    if (navigator.userAgent.indexOf('iPhone OS 6') > -1) {
-        document.body.classList.add('ios6');
-        document.body.scrollIntoView();
-    }*/
-}
