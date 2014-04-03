@@ -5,7 +5,7 @@ var path = require('path');
 exports.show = function(req, res){
 	
 	var appDir = path.dirname(require.main.filename);
-	var dataFile = appDir + '/public/bootcards/docs/' + req.params.id + '.html';
+	var dataFile = appDir + '/public/snippets/' + req.params.id + '.html';
 	fs.readFile(dataFile, 'utf8', function (err, data) {
 
 		if (err) {

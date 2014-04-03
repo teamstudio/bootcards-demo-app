@@ -12,7 +12,7 @@ var media 		= require('./routes/media');
 var tests 		= require('./routes/tests');
 var settings 	= require('./routes/settings');
 var dashboard 	= require('./routes/dashboard');
-var docs 		= require('./routes/docs');
+var snippets 	= require('./routes/docs');
 var sampleData	= require('./data');
 
 var pjson = require('./package.json');		//read the package.json file to get the current version
@@ -95,11 +95,11 @@ hbs.registerHelper('count', function(type) {
 //helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
 	if (session.isAndroid) {
-		return '<link href="/bootcards/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
+		return '<link href="/bower_components/bootcards/dist/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
 	} else if (session.isIos) {
-		return '<link href="/bootcards/css/bootcards-ios.css" rel="stylesheet" type="text/css" />';
+		return '<link href="/bower_components/bootcards/dist/css/bootcards-ios.css" rel="stylesheet" type="text/css" />';
 	} else {
-		return '<link href="/bootcards/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
+		return '<link href="/bower_components/bootcards/dist/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
 	}
 });
 
@@ -177,7 +177,7 @@ app.get('/more', tests.list);
 app.get('/settings', settings.read);
 app.get('/settings/edit', settings.edit);
 
-app.get('/docs/:id', docs.show);
+app.get('/snippets/:id', snippets.show);
 
 http
 	.createServer(app)

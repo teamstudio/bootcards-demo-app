@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
+    "bootcards": ">=0.0.1",
     "jquery": "2.1.0", 
     "bootstrap": "3.1.1",
     "font-awesome": "4.0.3",
