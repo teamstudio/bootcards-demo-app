@@ -58,7 +58,9 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
-app.use(express.static(path.join(__dirname, 'public'), { maxAge: 86400000 } ) );
+var fiveDays = 5*86400000;
+
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: fiveDays } ) );
 
 //register a helper for date formatting using handlebars
 hbs.registerHelper("formatDate", function(datetime, format) {
@@ -95,11 +97,11 @@ hbs.registerHelper('count', function(type) {
 //helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
 	if (session.isAndroid) {
-		return '<link href="/bower_components/bootcards/dist/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
+		return '<link href="/bower_components/bootcards/dist/css/bootcards-android.min.css" rel="stylesheet" type="text/css" />';
 	} else if (session.isIos) {
-		return '<link href="/bower_components/bootcards/dist/css/bootcards-ios.css" rel="stylesheet" type="text/css" />';
+		return '<link href="/bower_components/bootcards/dist/css/bootcards-ios.min.css" rel="stylesheet" type="text/css" />';
 	} else {
-		return '<link href="/bower_components/bootcards/dist/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
+		return '<link href="/bower_components/bootcards/dist/css/bootcards-desktop.min.css" rel="stylesheet" type="text/css" />';
 	}
 });
 
