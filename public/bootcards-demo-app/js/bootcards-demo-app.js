@@ -33,17 +33,24 @@ bootcards.addPJaxHandlers = function(pjaxTarget) {
 
 	//add pjax click handler to links
 	$('a.pjax').off().on('click', function(e) {
-		var tgtUrl = $(this).attr('href');
-		e.preventDefault();
-		var tgtUrl = $(this).attr('href');
+		var $this = $(this);
+		var tgtUrl = $this.attr('href');
 		//$(pjaxTarget).fadeOut('fast', function() {
-
 			$.pjax( {
 				container : pjaxTarget,
 				url : tgtUrl
 			})
-
 		//})
+
+		//add active class if this is a list item (removing it from all siblings)
+		if ($this.hasClass('list-group-item')) {
+			$this
+				.addClass('active')
+				.siblings()
+					.removeClass('active');
+		}
+
+		e.preventDefault();
 	});
 
 }
