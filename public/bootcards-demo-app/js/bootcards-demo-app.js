@@ -32,7 +32,7 @@ function toggleChartData() {
 bootcards.addPJaxHandlers = function(pjaxTarget) {
 
 	//add pjax click handler to links
-	$('a.pjax').on('click', function(e) {
+	$('a.pjax').off().on('click', function(e) {
 		var tgtUrl = $(this).attr('href');
 		e.preventDefault();
 		var tgtUrl = $(this).attr('href');
