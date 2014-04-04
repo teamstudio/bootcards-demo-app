@@ -2,7 +2,7 @@
   "contacts": [
     {
       "lastName": "Acey",
-      "department": "dep",
+      "department": "Finance",
       "profileImage": "Sofia Acey.jpg",
       "salutation": "mrs",
       "jobTitle": "Finance Director (ZCT)",
@@ -17,7 +17,7 @@
     },
     {
       "lastName": "Barish",
-      "department": "",
+      "department": "IT",
       "profileImage": "Joseph Barish.jpg",
       "salutation": "",
       "jobTitle": "Engineer",
@@ -33,7 +33,7 @@
     
     {
       "lastName": "Bess",
-      "department": "",
+      "department": "IT",
       "profileImage": "Jerry Bess.jpg",
       "salutation": "",
       "jobTitle": "Project Lead (Dragon Team)",
@@ -48,7 +48,7 @@
     },
     {
       "lastName": "Biddy",
-      "department": "",
+      "department": "IT",
       "profileImage": "Jamie Biddy.jpg",
       "salutation": "",
       "jobTitle": "Senior Engineer",
@@ -63,7 +63,7 @@
     },
     {
       "lastName": "Booth",
-      "department": "",
+      "department": "IT",
       "profileImage": "Mark Booth.jpg",
       "salutation": "",
       "jobTitle": "Engineer",
@@ -82,7 +82,7 @@
    
     {
       "lastName": "Burns",
-      "department": "",
+      "department": "Sales",
       "profileImage": "Sharon Burns.jpg",
       "salutation": "",
       "jobTitle": "Account Director, EMEA (ZCT)",
@@ -98,7 +98,7 @@
    
     {
       "lastName": "Donner",
-      "department": "",
+      "department": "Sales",
       "profileImage": "Terri Donner.jpg",
       "salutation": "",
       "jobTitle": "Account Manager, North America",
@@ -114,7 +114,7 @@
    
     {
       "lastName": "Driscoll",
-      "department": "",
+      "department": "IT",
       "profileImage": "Josephine Driscoll.jpg",
       "salutation": "",
       "jobTitle": "Engineer",
@@ -129,7 +129,7 @@
     },
     {
       "lastName": "Dwyer",
-      "department": "",
+      "department": "IT",
       "profileImage": "Evelyn Dwyer.jpg",
       "salutation": "",
       "jobTitle": "Engineer",
@@ -147,7 +147,7 @@
    
     {
       "lastName": "Floyd",
-      "department": "",
+      "department": "IT",
       "profileImage": "Jack Floyd.jpg",
       "salutation": "",
       "jobTitle": "Engineer",
@@ -163,7 +163,7 @@
    
     {
       "lastName": "Grocott",
-      "department": "",
+      "department": "IT",
       "profileImage": "Chris Grocott.jpg",
       "salutation": "",
       "jobTitle": "Engineer",
@@ -178,10 +178,10 @@
     },
     {
       "lastName": "Hafer",
-      "department": "",
+      "department": "Sales",
       "profileImage": "Fred Hafer.jpg",
       "salutation": "",
-      "jobTitle": "Engineer",
+      "jobTitle": "Senior account manager",
       "firstName": "Fred",
       "id": "Gv8h6f4UDL84",
       "email": "Fred.Hafer@GVSB.com",
