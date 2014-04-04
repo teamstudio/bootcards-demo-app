@@ -97,9 +97,6 @@ $(document).ready( function() {
 
 	if (bootcards.isXS() ) {
 
-		//on smartphones, we only use the list column
-		$('#listDetails').remove();
-
 		//restrict footer to only 4 items
 		var $footer = $(".navbar-fixed-bottom .btn-group");
 		if ($footer.length>0) {
@@ -127,10 +124,17 @@ $(document).ready( function() {
 		var $tgt = $(event.target);
 
 		if ( bootcards.isXS() ) {
+			//function only performed on small screens (smartphones)
 
 			var $tgt = $(event.target);
 
-			//small screens: change class on container elements (list>card vv)
+			//we only use the list column
+			var details = $('#listDetails');
+			if (details.length>0) {
+				details.remove();
+			}
+
+			//change class on container elements (list>card and vice versa)
 			var tgtId = $tgt.attr('id');
 
 			if ( tgtId == 'main') {
