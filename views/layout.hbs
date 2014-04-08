@@ -72,23 +72,17 @@
 
   <title>Customers</title>
   <!-- version: {{getAppVersion}} -->
-
-  <!-- Bootstrap core CSS -->
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Load the required CSS libraries -->
+  <!-- This is a merged file created by a local Grunt task to cut down the # of HTTP requests -->
+  <link href="/bootcards-demo-app/libs.css" rel="stylesheet" />
   <!-- FontAwesome -->	
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
-  <!-- Jasny Bootstrap for slide in menu -->
-  <link href="/bower_components/bootstrap-jasny/dist/css/jasny-bootstrap.min.css" rel="stylesheet" />
-  <!--morris charts-->
-  <link rel="stylesheet" href="/bower_components/morris.js/morris.css">
+  
   <!-- Bootcards CSS file (different for desktop, iOS and Android) -->
   {{{getCSSforOS session}}}
   <!-- Custom CSS for the demo app -->
   <link href="/bootcards-demo-app/css/bootcards-demo-app.css" rel="stylesheet" />
   
-  <!-- Documentation CSS -->
-  <!--<link href="/bootcards/css/documentation.css" rel="stylesheet" />-->
-
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -182,15 +176,12 @@
 		</div>
 	</div> 
 
-    <script src="/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>   
-    <script src="/bower_components/jquery-pjax/jquery.pjax.js"></script>
-    <script src="/bower_components/fastclick/lib/fastclick.js"></script>
-    <script src="/bower_components/bootstrap-jasny/dist/js/jasny-bootstrap.min.js"></script>
-    <script src="/bower_components/raphael/raphael-min.js"></script>
-    <script src="/bower_components/morris.js/morris.min.js"></script>
-    <script src="/bower_components/bootcards/dist/js/bootcards.min.js"></script> 
-    <script src="/bootcards-demo-app/js/bootcards-demo-app.js"></script> 
+
+  <!-- Load the required JavaScript libraries -->
+  <!-- This is a merged file created by a local Grunt task to cut down the # of HTTP requests -->
+  <script src="/bootcards-demo-app/libs.js"></script> 
+  <script src="/bower_components/bootcards/dist/js/bootcards.min.js"></script> 
+  <script src="/bootcards-demo-app/js/bootcards-demo-app.js"></script> 
 
 	<!--modals-->
 	<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
