@@ -163,18 +163,26 @@ $(document).ready( function() {
 
 			} else if (tgtId == 'list') {
 				
-				$('#list')
-					.addClass('bootcards-cards')
-					.removeClass('bootcards-list');
+				var $list = $('#list');
 
-				//show the menu button
-				$('.btn-menu').addClass('hidden');
-				$('.btn-back').removeClass('hidden');
+				if ( !$list.hasClass('bootcards-cards')) {
 
+					$list
+						.addClass('bootcards-cards')
+						.removeClass('bootcards-list');
+
+					//show the menu button
+					$('.btn-menu').addClass('hidden');
+					$('.btn-back').removeClass('hidden');
+
+					//scroll to the top of the card
+					$list.animate({scrollTop:0}, '500', 'easeOutExpo'); 
+				}
+				
 			}
 			
 		}
-		
+
 		bootcards.addPJaxHandlers(pjaxTarget);
 
 	})
@@ -183,6 +191,7 @@ $(document).ready( function() {
 		
 		var $tgt = $(event.target);
 
+
 		//hide the offcanvas slider
 		$("#slideInMenu").offcanvas('hide');
 
@@ -190,13 +199,6 @@ $(document).ready( function() {
 		var modal = $(event.relatedTarget).closest('.modal');
 		if (modal.length) {
 			modal.modal('hide');
-		}
-
-		var cards_column = $tgt.closest('.bootcards-cards');
-
-		//scroll to the target element (so it doesn't render outside the viewport
-		if (cards_column.length>0) {
-			cards_column.animate({scrollTop:0}, '500', 'easeOutExpo'); 
 		}
 
 	});
