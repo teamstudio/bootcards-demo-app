@@ -9,7 +9,6 @@ var company 	= require('./routes/company')
 var contact 	= require('./routes/contact');
 var note 		= require('./routes/note');
 var media 		= require('./routes/media');
-var tests 		= require('./routes/tests');
 var settings 	= require('./routes/settings');
 var dashboard 	= require('./routes/dashboard');
 var snippets 	= require('./routes/docs');
@@ -185,8 +184,6 @@ app.get('/notes/:id/edit', note.edit);
 app.put('/notes', note.save);
 
 app.get('/charts', media.list);
-
-app.get('/more', tests.list);
 
 app.get('/settings', settings.read);
 app.get('/settings/edit', settings.edit);

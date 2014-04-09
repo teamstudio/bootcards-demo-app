@@ -189,11 +189,16 @@
 			<div class="modal-content"></div>
 		</div>
 	</div>
+  <div class="modal fade" id="docsModal" tabindex="-1" role="dialog" aria-labelledby="docsModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content"></div>
+    </div>
+  </div>
 
   {{#if session.isIos}}
   <!--disable rubberbanding on iOS -->
   <script type="text/javascript">
-    bootcards.disableRubberBanding();
+    //bootcards.disableRubberBanding();
   </script>
   {{/if}}
 
