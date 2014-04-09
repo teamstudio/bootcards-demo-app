@@ -194,13 +194,17 @@
       <div class="modal-content"></div>
     </div>
   </div>
-
-  {{#if session.isIos}}
-  <!--disable rubberbanding on iOS -->
+  
   <script type="text/javascript">
-    //bootcards.disableRubberBanding();
+    //highlight first list group option (if non active yet)
+    if ( $('.list-group a.active').length == 0 ) {
+      $('.list-group a').first().addClass('active');
+    }
+
+    {{#if session.isIos}}
+    bootcards.disableRubberBanding();
+    {{/if}}
   </script>
-  {{/if}}
 
 </body>
 </html>

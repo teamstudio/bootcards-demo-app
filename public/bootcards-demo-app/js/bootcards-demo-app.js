@@ -185,6 +185,11 @@ $(document).ready( function() {
 
 		bootcards.addPJaxHandlers(pjaxTarget);
 
+		//highlight first list group option (if non active yet)
+		if ( $('.list-group a.active').length == 0 ) {
+			$('.list-group a').first().addClass('active');
+		}
+
 	})
 	.on('pjax:complete', function(event) {
 		//called after a pjax content update
