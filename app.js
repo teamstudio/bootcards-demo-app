@@ -47,7 +47,7 @@ app.use(function(req, res, next){
 	var ua = req.headers['user-agent'];
 	req.session.isAndroid = (ua.match(/Android/i) != null);
 	req.session.isIos = (ua.match(/iPhone|iPad|iPod/i) != null);
-	req.session.isDev = (app.get('env')=='development');
+	req.session.isDev = (process.env.NODE_ENV !='production');
 
 	res.locals.session = req.session;
 
