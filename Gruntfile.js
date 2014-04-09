@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/* <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+    banner: '/* This file combines all the (Bower) dependencies this demo app requires\n * <%= pkg.name %> <%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n\n',
    
       concat: {
         js: {
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           'public/bower_components/jquery.ui.effect-transfer.js'
 
          ],
-         dest: 'public/bootcards-demo-app/libs.js'
+         dest: 'public/bootcards-demo-app/bclibs.js'
         },
       css: {
         options: { banner: '<%= banner %>' },
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         'public/bower_components/morris.js/morris.css'
 
         ],
-        dest: 'public/bootcards-demo-app/libs.css'
+        dest: 'public/bootcards-demo-app/bclibs.css'
       }
      }
 
