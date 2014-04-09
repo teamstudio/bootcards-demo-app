@@ -96,23 +96,22 @@ hbs.registerHelper('count', function(type) {
 
 //helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
-
-	if ('development' == app.get('env')) {
-		var base = '<link href="/bower_components/bootcards/src/css/bootcards.css" rel="stylesheet" type="text/css" />';
-		if (session.isAndroid) {
-			return base + '<link href="/bower_components/bootcards/src/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
-		} else if (session.isIos) {
-			return base + '<link href="/bower_components/bootcards/src/css/bootcards-ios.css" rel="stylesheet" type="text/css" />';
-		} else {
-			return base + '<link href="/bower_components/bootcards/src/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
-		}
-	} else {
+	if ( process.env.NODE_ENV == 'production') {
 		if (session.isAndroid) {
 			return '<link href="/bower_components/bootcards/dist/css/bootcards-android.min.css" rel="stylesheet" type="text/css" />';
 		} else if (session.isIos) {
 			return '<link href="/bower_components/bootcards/dist/css/bootcards-ios.min.css" rel="stylesheet" type="text/css" />';
 		} else {
 			return '<link href="/bower_components/bootcards/dist/css/bootcards-desktop.min.css" rel="stylesheet" type="text/css" />';
+		}
+	} else {
+		var baseCSS = '<link href="/bower_components/bootcards/src/css/bootcards.css" rel="stylesheet" type="text/css" />';
+		if (session.isAndroid) {
+			return baseCSS + '<link href="/bower_components/bootcards/src/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
+		} else if (session.isIos) {
+			return baseCSS + '<link href="/bower_components/bootcards/src/css/bootcards-ios.css" rel="stylesheet" type="text/css" />';
+		} else {
+			return baseCSS + '<link href="/bower_components/bootcards/src/css/bootcards-desktop.css" rel="stylesheet" type="text/css" />';
 		}
 	}
 
