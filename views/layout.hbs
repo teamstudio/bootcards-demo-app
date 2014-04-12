@@ -203,6 +203,12 @@
 
     {{#if session.isIos}}
     bootcards.disableRubberBanding();
+
+    //fix for minimal-ui bug in Safari:
+    //http://stackoverflow.com/questions/22391157/gray-area-visible-when-switching-from-portrait-to-landscape-using-ios-7-1-minima
+    window.addEventListener("orientationchange", function() {
+      window.scrollTo(0,0);
+    }, false);
     {{/if}}
   </script>
 
