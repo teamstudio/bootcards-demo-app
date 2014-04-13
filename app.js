@@ -47,6 +47,7 @@ app.use(function(req, res, next){
 	req.session.isAndroid = (ua.match(/Android/i) != null);
 	req.session.isIos = (ua.match(/iPhone|iPad|iPod/i) != null);
 	req.session.isDev = (process.env.NODE_ENV !='production');
+	req.session.test = (process.env.NODE_ENV);
 
 	res.locals.session = req.session;
 
@@ -97,7 +98,7 @@ hbs.registerHelper('count', function(type) {
 //helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
 	if (session.isDev) {
-		var baseCSS = '<link href="/bower_components/bootcards/src/css/bootcards.css" rel="stylesheet" type="text/css" />';
+		var baseCSS = '<!--'  + session.test + '--><link href="/bower_components/bootcards/src/css/bootcards.css" rel="stylesheet" type="text/css" />';
 		if (session.isAndroid) {
 			return baseCSS + '<link href="/bower_components/bootcards/src/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
 		} else if (session.isIos) {
