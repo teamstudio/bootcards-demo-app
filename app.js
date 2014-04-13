@@ -98,7 +98,7 @@ hbs.registerHelper('count', function(type) {
 //helper to get the stylesheet for the current user agent
 hbs.registerHelper("getCSSforOS", function(session) {
 	if (session.isDev) {
-		var baseCSS = '<!--'  + session.test + '--><link href="/bower_components/bootcards/src/css/bootcards.css" rel="stylesheet" type="text/css" />';
+		var baseCSS = '<!-- hum: '  + session.test + '--><link href="/bower_components/bootcards/src/css/bootcards.css" rel="stylesheet" type="text/css" />';
 		if (session.isAndroid) {
 			return baseCSS + '<link href="/bower_components/bootcards/src/css/bootcards-android.css" rel="stylesheet" type="text/css" />';
 		} else if (session.isIos) {
@@ -108,11 +108,11 @@ hbs.registerHelper("getCSSforOS", function(session) {
 		}
 	} else {
 		if (session.isAndroid) {
-			return '<link href="/bower_components/bootcards/dist/css/bootcards-android.min.css" rel="stylesheet" type="text/css" />';
+			return '<!-- hum: '  + session.test + '--><link href="/bower_components/bootcards/dist/css/bootcards-android.min.css" rel="stylesheet" type="text/css" />';
 		} else if (session.isIos) {
-			return '<link href="/bower_components/bootcards/dist/css/bootcards-ios.min.css" rel="stylesheet" type="text/css" />';
+			return '<!-- hum: '  + session.test + '--><link href="/bower_components/bootcards/dist/css/bootcards-ios.min.css" rel="stylesheet" type="text/css" />';
 		} else {
-			return '<link href="/bower_components/bootcards/dist/css/bootcards-desktop.min.css" rel="stylesheet" type="text/css" />';
+			return '<!-- hum: '  + session.test + '--><link href="/bower_components/bootcards/dist/css/bootcards-desktop.min.css" rel="stylesheet" type="text/css" />';
 		}	
 	}
 });
