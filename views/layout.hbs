@@ -206,9 +206,15 @@
 
     //fix for minimal-ui bug in Safari:
     //http://stackoverflow.com/questions/22391157/gray-area-visible-when-switching-from-portrait-to-landscape-using-ios-7-1-minima
-    window.addEventListener("orientationchange", function() {
+    if (bootcards.isXS() ) {
+      window.addEventListener("orientationchange", function() {
+        window.scrollTo(0,0);
+      }, false);
+
+      //initial redraw - needed to fix an issue with the minimal-ui and foot location
+      //when the page if first opened 
       window.scrollTo(0,0);
-    }, false);
+    }
     {{/if}}
   </script>
 
