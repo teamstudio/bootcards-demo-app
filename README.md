@@ -1,7 +1,7 @@
 bootcards-demo-app
 ==================
 
-Bootcards demo application
+Bootcards demo application. <b>Important:</b> This is a demo app to showcase the <a href="http://bootcards.org">Bootcards</a> UI framework. Not all functios have been implemented: you cannot save, add or delete items for instance.
 
 This demo application uses the following Node plugins:
 
